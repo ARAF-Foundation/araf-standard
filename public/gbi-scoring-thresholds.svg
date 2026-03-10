@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580">
+  <title>GBI Scoring Model and Certification Thresholds</title>
+  <desc>The Governance Benchmark Index scoring model. Six dimensional scores feed into a composite GBI score adjusted by multiplier logic. The composite score maps to three certification thresholds: ARAF Certified at 1.75 or below, ARAF Compliant at 2.50 or below, and remediation required above 2.50. Lower scores represent stronger governance posture. From ARAF v2.1, 2026.</desc>
+  <defs>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="580" fill="#f7f5f0"/>
+  <rect x="20" y="20" width="920" height="540" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="20" y1="26" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="20" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="26" x2="940" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="20" x2="946" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="20" y1="554" x2="20" y2="560" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="560" x2="20" y2="560" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="554" x2="940" y2="560" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="560" x2="946" y2="560" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Header -->
+  <text x="480" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">GBI SCORING MODEL AND CERTIFICATION THRESHOLDS</text>
+  <line x1="40" y1="54" x2="920" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- ── LEFT: SIX DIMENSIONAL INPUTS ── -->
+  <text x="168" y="76" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">SIX-DIMENSIONAL ASSESSMENT</text>
+
+  <!-- D1 -->
+  <rect x="44" y="84" width="248" height="34" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="84" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="100" font-size="8" font-weight="bold" fill="#A88644" class="mono">D1</text>
+  <text x="74" y="100" font-size="10" fill="#0d0d0b" class="serif">Autonomy Gradient</text>
+  <text x="280" y="100" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="112" font-size="7" fill="#7a7a72" font-style="italic" class="mono">Operational autonomy level · oversight adequacy</text>
+
+  <!-- D2 -->
+  <rect x="44" y="122" width="248" height="34" fill="#fdfaf5" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="122" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="138" font-size="8" font-weight="bold" fill="#A88644" class="mono">D2</text>
+  <text x="74" y="138" font-size="10" fill="#0d0d0b" class="serif">Data Sensitivity Exposure</text>
+  <text x="280" y="138" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="150" font-size="7" fill="#7a7a72" font-style="italic" class="mono">Operational data · training data provenance</text>
+
+  <!-- D3 -->
+  <rect x="44" y="160" width="248" height="34" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="160" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="176" font-size="8" font-weight="bold" fill="#A88644" class="mono">D3</text>
+  <text x="74" y="176" font-size="10" fill="#0d0d0b" class="serif">Contract Infrastructure</text>
+  <text x="280" y="176" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="188" font-size="7" fill="#7a7a72" font-style="italic" class="mono">Agreements · AI liability provisions</text>
+
+  <!-- D4 -->
+  <rect x="44" y="198" width="248" height="34" fill="#fdfaf5" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="198" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="214" font-size="8" font-weight="bold" fill="#A88644" class="mono">D4</text>
+  <text x="74" y="214" font-size="10" fill="#0d0d0b" class="serif">Liability Architecture</text>
+  <text x="280" y="214" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="226" font-size="7" fill="#7a7a72" font-style="italic" class="mono">AE³ structure · liability caps · insurance</text>
+
+  <!-- D5 -->
+  <rect x="44" y="236" width="248" height="34" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="236" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="252" font-size="8" font-weight="bold" fill="#A88644" class="mono">D5</text>
+  <text x="74" y="252" font-size="10" fill="#0d0d0b" class="serif">Commercial Leverage</text>
+  <text x="280" y="252" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="264" font-size="7" fill="#7a7a72" font-style="italic" class="mono">Dependency · remediation resistance</text>
+
+  <!-- D6 -->
+  <rect x="44" y="274" width="248" height="34" fill="#fdfaf5" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="44" y="274" width="3" height="34" fill="#A88644"/>
+  <text x="56" y="290" font-size="8" font-weight="bold" fill="#A88644" class="mono">D6</text>
+  <text x="74" y="290" font-size="10" fill="#0d0d0b" class="serif">Adaptive Stability</text>
+  <text x="280" y="290" text-anchor="end" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0–5.0</text>
+  <text x="56" y="302" font-size="7" fill="#7a7a72" font-style="italic" class="mono">Governance maintenance · change governance</text>
+
+  <!-- Convergence lines D1-D6 → GBI box -->
+  <line x1="292" y1="101" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="292" y1="139" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="292" y1="177" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="292" y1="215" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="292" y1="253" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="292" y1="291" x2="360" y2="210" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- ── CENTRE: GBI COMPOSITE BOX ── -->
+  <rect x="360" y="154" width="168" height="112" fill="#0d0d0b" stroke="#0d0d0b"/>
+  <rect x="360" y="154" width="168" height="3" fill="#A88644"/>
+  <text x="444" y="174" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">GBI COMPOSITE</text>
+  <text x="444" y="200" text-anchor="middle" font-size="26" font-weight="bold" fill="white" class="serif">1.0–5.0</text>
+  <line x1="372" y1="210" x2="516" y2="210" stroke="rgba(255,255,255,0.08)" stroke-width="0.75"/>
+  <text x="444" y="226" text-anchor="middle" font-size="7.5" fill="rgba(255,255,255,0.45)" class="mono">+ multiplier logic</text>
+  <text x="444" y="241" text-anchor="middle" font-size="7" fill="rgba(168,134,68,0.7)" font-style="italic" class="mono">lower = stronger posture</text>
+  <text x="444" y="255" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.2)" class="mono">6 dims · weighted · adjusted</text>
+
+  <!-- Arrow right from GBI box -->
+  <line x1="528" y1="210" x2="556" y2="210" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="556,206 564,210 556,214" fill="#A88644"/>
+
+  <!-- Multiplier note below centre box -->
+  <rect x="360" y="276" width="168" height="42" fill="#fdf8f0" stroke="#e8e4db" stroke-width="1"/>
+  <rect x="360" y="276" width="3" height="42" fill="#c9402a"/>
+  <text x="371" y="290" font-size="7" font-weight="bold" fill="#c9402a" class="mono">MULTIPLIER CONDITIONS</text>
+  <text x="371" y="302" font-size="6.5" fill="#3a3a35" class="mono">D1+D4 · D3+D1 · D5+D4</text>
+  <text x="371" y="313" font-size="6.5" fill="#7a7a72" font-style="italic" class="mono">Weaknesses compound, not add</text>
+
+  <!-- ── RIGHT: THRESHOLD SCALE + CERTIFICATION TIERS ── -->
+  <text x="760" y="76" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">CERTIFICATION THRESHOLDS</text>
+
+  <!-- Horizontal scale bar -->
+  <!-- Scale runs 564→916, total 352px for range 1.0→5.0 (4.0 units) = 88px per unit -->
+  <!-- 1.75 marker: 564 + (0.75×88) = 564 + 66 = 630 -->
+  <!-- 2.50 marker: 564 + (1.50×88) = 564 + 132 = 696 -->
+
+  <!-- Zone fills -->
+  <rect x="564" y="168" width="66"  height="84" fill="rgba(168,134,68,0.12)"/>
+  <rect x="630" y="168" width="66"  height="84" fill="rgba(168,134,68,0.06)"/>
+  <rect x="696" y="168" width="220" height="84" fill="rgba(201,64,42,0.04)"/>
+
+  <!-- Scale baseline -->
+  <rect x="564" y="200" width="352" height="6" fill="#e8e4db" rx="2"/>
+  <rect x="564" y="200" width="66"  height="6" fill="#A88644" rx="2"/>
+  <rect x="630" y="200" width="66"  height="6" fill="rgba(168,134,68,0.5)" rx="0"/>
+
+  <!-- Threshold markers -->
+  <line x1="630" y1="168" x2="630" y2="260" stroke="#A88644" stroke-width="1.5"/>
+  <line x1="696" y1="168" x2="696" y2="260" stroke="#A88644" stroke-width="1"/>
+
+  <!-- Tick marks + values -->
+  <line x1="564" y1="206" x2="564" y2="214" stroke="#0d0d0b" stroke-width="1.5"/>
+  <text x="564" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#0d0d0b" class="mono">1.0</text>
+
+  <line x1="630" y1="206" x2="630" y2="214" stroke="#A88644" stroke-width="2"/>
+  <text x="630" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">1.75</text>
+
+  <line x1="696" y1="206" x2="696" y2="214" stroke="#A88644" stroke-width="1.5"/>
+  <text x="696" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">2.50</text>
+
+  <line x1="916" y1="206" x2="916" y2="214" stroke="#c9402a" stroke-width="1.5"/>
+  <text x="916" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">5.0</text>
+
+  <!-- Zone labels above scale -->
+  <text x="597" y="186" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">CERTIFIED</text>
+  <text x="663" y="186" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">COMPLIANT</text>
+  <text x="806" y="186" text-anchor="middle" font-size="7.5" fill="#c9402a" class="mono">REMEDIATION REQUIRED</text>
+
+  <!-- Certification tier cards -->
+  <!-- ARAF Certified -->
+  <rect x="564" y="240" width="132" height="76" fill="#0d0d0b" stroke="#A88644" stroke-width="1"/>
+  <rect x="564" y="240" width="132" height="3" fill="#A88644"/>
+  <text x="630" y="258" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">ARAF CERTIFIED</text>
+  <text x="630" y="274" text-anchor="middle" font-size="15" font-weight="bold" fill="white" class="serif">≤ 1.75</text>
+  <line x1="576" y1="282" x2="684" y2="282" stroke="rgba(255,255,255,0.08)" stroke-width="0.75"/>
+  <text x="630" y="294" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.6)" class="mono">Full agentic bankability</text>
+  <text x="630" y="305" text-anchor="middle" font-size="7" fill="rgba(168,134,68,0.7)" class="mono">Identifiable · Insurable</text>
+
+  <!-- ARAF Compliant -->
+  <rect x="700" y="240" width="132" height="76" fill="#fdf8f0" stroke="#A88644" stroke-width="1"/>
+  <rect x="700" y="240" width="132" height="3" fill="#A88644"/>
+  <text x="766" y="258" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">ARAF COMPLIANT</text>
+  <text x="766" y="274" text-anchor="middle" font-size="15" font-weight="bold" fill="#0d0d0b" class="serif">≤ 2.50</text>
+  <line x1="712" y1="282" x2="820" y2="282" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="766" y="294" text-anchor="middle" font-size="7" fill="#3a3a35" class="mono">Institutional threshold met</text>
+  <text x="766" y="305" text-anchor="middle" font-size="7" fill="#7a7a72" class="mono">Commercial deployment</text>
+
+  <!-- Remediation -->
+  <rect x="836" y="240" width="100" height="76" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="836" y="240" width="100" height="3" fill="#c9402a"/>
+  <text x="886" y="258" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#c9402a" letter-spacing="1" class="mono">ASSESSED</text>
+  <text x="886" y="276" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d0d0b" class="serif">&gt; 2.50</text>
+  <line x1="848" y1="282" x2="924" y2="282" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="886" y="294" text-anchor="middle" font-size="7" fill="#7a7a72" class="mono">Remediation</text>
+  <text x="886" y="305" text-anchor="middle" font-size="7" fill="#7a7a72" class="mono">required</text>
+
+  <!-- Scale interpretation table -->
+  <rect x="564" y="328" width="352" height="116" fill="#fdfaf5" stroke="#e8e4db" stroke-width="1"/>
+  <rect x="564" y="328" width="352" height="2" fill="#d4d0c8"/>
+  <text x="576" y="342" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">SCALE INTERPRETATION</text>
+  <line x1="576" y1="346" x2="904" y2="346" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <text x="576" y="362" font-size="8" font-weight="bold" fill="#0d0d0b" class="mono">1.00 – 1.75</text>
+  <text x="660" y="362" font-size="8" fill="#3a3a35" class="mono">Strong governance posture</text>
+
+  <text x="576" y="378" font-size="8" font-weight="bold" fill="#0d0d0b" class="mono">1.76 – 2.50</text>
+  <text x="660" y="378" font-size="8" fill="#3a3a35" class="mono">Minimum institutional threshold met</text>
+
+  <text x="576" y="394" font-size="8" font-weight="bold" fill="#c9402a" class="mono">2.51 – 3.50</text>
+  <text x="660" y="394" font-size="8" fill="#3a3a35" class="mono">Material weakness requiring remediation</text>
+
+  <text x="576" y="410" font-size="8" font-weight="bold" fill="#c9402a" class="mono">3.51 – 5.00</text>
+  <text x="660" y="410" font-size="8" fill="#3a3a35" class="mono">High governance risk / institutional inadequacy</text>
+
+  <line x1="576" y1="418" x2="904" y2="418" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="576" y="432" font-size="7.5" font-style="italic" fill="#A88644" class="mono">Higher scores indicate greater governance risk, not higher governance maturity.</text>
+
+  <!-- Bottom annotation -->
+  <rect x="44" y="328" width="302" height="116" fill="#fdf8f2" stroke="#e8e4db" stroke-width="1"/>
+  <rect x="44" y="328" width="3" height="116" fill="#A88644"/>
+  <text x="56" y="344" font-size="8.5" font-weight="bold" fill="#0d0d0b" class="serif">The GBI does not replace</text>
+  <text x="56" y="358" font-size="8.5" font-weight="bold" fill="#0d0d0b" class="serif">the dimensional profile.</text>
+  <text x="56" y="374" font-size="8" fill="#3a3a35" class="mono">The GBI produces comparability.</text>
+  <text x="56" y="388" font-size="8" fill="#3a3a35" class="mono">The dimensional profile produces</text>
+  <text x="56" y="400" font-size="8" fill="#3a3a35" class="mono">actionability.</text>
+  <text x="56" y="416" font-size="7.5" fill="#7a7a72" font-style="italic" class="mono">An assessor whose output is only a</text>
+  <text x="56" y="428" font-size="7.5" fill="#7a7a72" font-style="italic" class="mono">number has produced a score.</text>
+  <text x="56" y="440" font-size="7.5" fill="#7a7a72" font-style="italic" class="mono">Not governance infrastructure.</text>
+
+  <!-- Caption -->
+  <line x1="40" y1="460" x2="920" y2="460" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="477" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">Technical safety standards ask whether the system works. The GBI asks whether the institution deploying it</text>
+  <text x="480" y="492" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">can demonstrate accountability for the decisions it produces.</text>
+  <text x="480" y="514" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+
+</svg>

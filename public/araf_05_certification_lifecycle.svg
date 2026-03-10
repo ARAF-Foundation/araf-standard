@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Barlow+Condensed:wght@600;700;800;900&amp;display=swap');
+    </style>
+    <linearGradient id="certGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4FC38A" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#C8A84B" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#4FC38A" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="#0B0F1A"/>
+  <rect x="0" y="0" width="900" height="2" fill="#C8A84B"/>
+
+  <!-- Header -->
+  <text x="40" y="36" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">THE MARKET SIGNAL · ARAF CERTIFICATION</text>
+  <text x="40" y="68" font-family="'Barlow Condensed', sans-serif" font-size="32" font-weight="900" fill="#F0F4F8" letter-spacing="1">THE CERTIFICATION LIFECYCLE</text>
+  <text x="40" y="86" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" letter-spacing="0.5">Governance that cannot travel through markets cannot scale. Especially useful for insurers and enterprise buyers.</text>
+  <line x1="40" y1="98" x2="860" y2="98" stroke="#C8A84B" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ── LEFT COLUMN: Lifecycle steps ── -->
+
+  <!-- STEP 1: System Deployment -->
+  <rect x="40" y="116" width="360" height="60" fill="#4A556812" stroke="#4A556844" stroke-width="1"/>
+  <rect x="40" y="116" width="2" height="60" fill="#4A5568"/>
+  <!-- Step number badge -->
+  <rect x="48" y="122" width="28" height="18" fill="#4A556822" stroke="#4A556844" stroke-width="0.5"/>
+  <text x="62" y="134" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" text-anchor="middle">01</text>
+  <text x="86" y="132" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="2">SYSTEM DEPLOYMENT</text>
+  <text x="86" y="148" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">SYSTEM DEPLOYMENT</text>
+  <text x="86" y="162" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Autonomous system enters operational environment</text>
+  <text x="86" y="171" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A5568">Model / Agent / Decision Engine deployed</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="220" y1="176" x2="220" y2="192" stroke="#4A8FE8" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="216,192 224,192 220,200" fill="#4A8FE8" opacity="0.6"/>
+
+  <!-- STEP 2: ARAF Assessment -->
+  <rect x="40" y="200" width="360" height="60" fill="#4A8FE810" stroke="#4A8FE844" stroke-width="1"/>
+  <rect x="40" y="200" width="2" height="60" fill="#4A8FE8"/>
+  <rect x="48" y="206" width="28" height="18" fill="#4A8FE822" stroke="#4A8FE844" stroke-width="0.5"/>
+  <text x="62" y="218" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" text-anchor="middle">02</text>
+  <text x="86" y="216" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" letter-spacing="2">ARAF ASSESSMENT</text>
+  <text x="86" y="232" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">ARAF ASSESSMENT</text>
+  <text x="86" y="246" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Six-dimension evaluation across the decision supply chain</text>
+  <text x="86" y="255" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A8FE8" opacity="0.7">D1 · D2 · D3 · D4 · D5 · D6</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="220" y1="260" x2="220" y2="276" stroke="#E08C3A" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="216,276 224,276 220,284" fill="#E08C3A" opacity="0.6"/>
+
+  <!-- STEP 3: GBI Score -->
+  <rect x="40" y="284" width="360" height="60" fill="#E08C3A10" stroke="#E08C3A44" stroke-width="1"/>
+  <rect x="40" y="284" width="2" height="60" fill="#E08C3A"/>
+  <rect x="48" y="290" width="28" height="18" fill="#E08C3A22" stroke="#E08C3A44" stroke-width="0.5"/>
+  <text x="62" y="302" font-family="'Space Mono', monospace" font-size="8" fill="#E08C3A" text-anchor="middle">03</text>
+  <text x="86" y="300" font-family="'Space Mono', monospace" font-size="8" fill="#E08C3A" letter-spacing="2">GBI SCORE</text>
+  <text x="86" y="316" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">GBI SCORE</text>
+  <text x="86" y="330" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Compounding multiplier logic produces score 1.0–5.0</text>
+  <text x="86" y="339" font-family="'Space Mono', monospace" font-size="7.5" fill="#E08C3A" opacity="0.7">Lower score = stronger governance posture</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="220" y1="344" x2="220" y2="360" stroke="#C8A84B" stroke-width="1.5" opacity="0.9"/>
+  <polygon points="216,360 224,360 220,368" fill="#C8A84B" opacity="0.9"/>
+
+  <!-- STEP 4: Certification Tier (HIGHLIGHTED) -->
+  <rect x="40" y="368" width="360" height="72" fill="url(#certGrad)" stroke="#C8A84B" stroke-width="1.5"/>
+  <rect x="40" y="368" width="360" height="2" fill="#C8A84B"/>
+  <rect x="40" y="368" width="4" height="72" fill="#C8A84B"/>
+  <rect x="41" y="369" width="358" height="70" fill="none" stroke="#C8A84B" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.3"/>
+  <rect x="48" y="374" width="28" height="18" fill="#C8A84B22" stroke="#C8A84B55" stroke-width="0.5"/>
+  <text x="62" y="386" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" text-anchor="middle">04</text>
+  <text x="86" y="384" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="2">CERTIFICATION TIER</text>
+  <text x="86" y="400" font-family="'Barlow Condensed', sans-serif" font-size="15" font-weight="800" fill="#C8A84B" letter-spacing="0.5">CERTIFICATION TIER</text>
+  <text x="86" y="416" font-family="'Space Mono', monospace" font-size="7.5" fill="#F0F4F8">Assessed → Compliant (≤ 2.5) → Certified (≤ 1.75)</text>
+  <text x="86" y="430" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" opacity="0.8">ARAF market signal · Institutional reliance trigger</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="220" y1="440" x2="220" y2="456" stroke="#4FC38A" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="216,456 224,456 220,464" fill="#4FC38A" opacity="0.6"/>
+
+  <!-- STEP 5: Operational Monitoring -->
+  <rect x="40" y="464" width="360" height="60" fill="#4FC38A10" stroke="#4FC38A44" stroke-width="1"/>
+  <rect x="40" y="464" width="2" height="60" fill="#4FC38A"/>
+  <rect x="48" y="470" width="28" height="18" fill="#4FC38A22" stroke="#4FC38A44" stroke-width="0.5"/>
+  <text x="62" y="482" font-family="'Space Mono', monospace" font-size="8" fill="#4FC38A" text-anchor="middle">05</text>
+  <text x="86" y="480" font-family="'Space Mono', monospace" font-size="8" fill="#4FC38A" letter-spacing="2">OPERATIONAL MONITORING</text>
+  <text x="86" y="496" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">OPERATIONAL MONITORING</text>
+  <text x="86" y="510" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">D6 Adaptive Stability — ongoing governance signal</text>
+  <text x="86" y="519" font-family="'Space Mono', monospace" font-size="7.5" fill="#4FC38A" opacity="0.7">Governance maintenance · Change detection</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="220" y1="524" x2="220" y2="540" stroke="#5BBFCF" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="216,540 224,540 220,548" fill="#5BBFCF" opacity="0.6"/>
+
+  <!-- STEP 6: Reassessment -->
+  <rect x="40" y="548" width="360" height="60" fill="#5BBFCF10" stroke="#5BBFCF44" stroke-width="1"/>
+  <rect x="40" y="548" width="2" height="60" fill="#5BBFCF"/>
+  <rect x="48" y="554" width="28" height="18" fill="#5BBFCF22" stroke="#5BBFCF44" stroke-width="0.5"/>
+  <text x="62" y="566" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF" text-anchor="middle">06</text>
+  <text x="86" y="564" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF" letter-spacing="2">REASSESSMENT</text>
+  <text x="86" y="580" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">REASSESSMENT</text>
+  <text x="86" y="594" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Triggered by material change, new deployment, or schedule</text>
+  <text x="86" y="603" font-family="'Space Mono', monospace" font-size="7.5" fill="#5BBFCF" opacity="0.7">Returns to ARAF Assessment → continuous lifecycle</text>
+
+  <!-- Loop arrow back to step 2 -->
+  <path d="M 400 578 Q 420 578 420 404 Q 420 230 400 230" fill="none" stroke="#5BBFCF" stroke-width="1" stroke-dasharray="4,3" opacity="0.35"/>
+  <polygon points="396,230 404,230 400,222" fill="#5BBFCF" opacity="0.35"/>
+  <text x="424" y="408" font-family="'Space Mono', monospace" font-size="7" fill="#5BBFCF" opacity="0.4" writing-mode="tb" transform="rotate(90, 430, 408)">CONTINUOUS LIFECYCLE</text>
+
+  <!-- ── RIGHT COLUMN: Certification tiers and audience ── -->
+
+  <text x="450" y="120" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">CERTIFICATION TIERS</text>
+  <line x1="450" y1="126" x2="860" y2="126" stroke="#C8A84B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Tier: ARAF Assessed -->
+  <rect x="450" y="136" width="410" height="68" fill="#10162280" stroke="#4A8FE844" stroke-width="1"/>
+  <rect x="450" y="136" width="2" height="68" fill="#4A8FE8"/>
+  <text x="462" y="154" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" letter-spacing="2">ARAF ASSESSED</text>
+  <text x="462" y="174" font-family="'Barlow Condensed', sans-serif" font-size="22" font-weight="700" fill="#F0F4F8">GBI EVALUATED</text>
+  <text x="462" y="190" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Entry level · Minimum for institutional discussions</text>
+  <text x="462" y="200" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A8FE8" opacity="0.7">Governance posture documented · Baseline established</text>
+
+  <!-- Tier: ARAF Compliant -->
+  <rect x="450" y="212" width="410" height="68" fill="#4FC38A10" stroke="#4FC38A55" stroke-width="1"/>
+  <rect x="450" y="212" width="2" height="68" fill="#4FC38A"/>
+  <text x="462" y="230" font-family="'Space Mono', monospace" font-size="8" fill="#4FC38A" letter-spacing="2">ARAF COMPLIANT</text>
+  <text x="858" y="230" font-family="'Barlow Condensed', sans-serif" font-size="20" font-weight="700" fill="#4FC38A" text-anchor="end">GBI ≤ 2.5</text>
+  <text x="462" y="250" font-family="'Barlow Condensed', sans-serif" font-size="16" font-weight="700" fill="#F0F4F8">INSTITUTIONAL THRESHOLD</text>
+  <text x="462" y="266" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Adequate for most contexts · Commercial deployment standard</text>
+  <text x="462" y="276" font-family="'Space Mono', monospace" font-size="7.5" fill="#4FC38A" opacity="0.7">Reduction threshold · Operational adequacy confirmed</text>
+
+  <!-- Tier: ARAF Certified (highlighted) -->
+  <rect x="450" y="288" width="410" height="80" fill="#C8A84B14" stroke="#C8A84B" stroke-width="1.5"/>
+  <rect x="450" y="288" width="410" height="2" fill="#C8A84B" opacity="0.7"/>
+  <rect x="450" y="288" width="3" height="80" fill="#C8A84B"/>
+  <text x="462" y="306" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="2">ARAF CERTIFIED</text>
+  <text x="858" y="306" font-family="'Barlow Condensed', sans-serif" font-size="22" font-weight="900" fill="#C8A84B" text-anchor="end">GBI ≤ 1.75</text>
+  <text x="462" y="326" font-family="'Barlow Condensed', sans-serif" font-size="16" font-weight="800" fill="#C8A84B">FULL AGENTIC BANKABILITY</text>
+  <text x="462" y="344" font-family="'Space Mono', monospace" font-size="7.5" fill="#F0F4F8">Classified · Governed · Insured · Financeable</text>
+  <text x="462" y="358" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" opacity="0.8">Identifiable · Measurable · Governable · Insurable</text>
+
+  <!-- Audience panels -->
+  <text x="450" y="396" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">INSTITUTIONAL TRANSLATION · ONE SIGNAL · FOUR AUDIENCES</text>
+  <line x1="450" y1="402" x2="860" y2="402" stroke="#C8A84B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Boards -->
+  <rect x="450" y="410" width="196" height="72" fill="#C8A84B0A" stroke="#C8A84B33" stroke-width="1"/>
+  <rect x="450" y="410" width="196" height="2" fill="#C8A84B" opacity="0.5"/>
+  <text x="460" y="426" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#C8A84B" letter-spacing="0.5">BOARDS</text>
+  <text x="460" y="440" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">s.180(1) duty of care</text>
+  <text x="460" y="451" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Five governance questions</text>
+  <text x="460" y="462" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Board mandate + escalation</text>
+  <text x="460" y="477" font-family="'Space Mono', monospace" font-size="7" fill="#C8A84B" opacity="0.6">Corporations Act s.180(1)</text>
+
+  <!-- Insurers -->
+  <rect x="654" y="410" width="196" height="72" fill="#4FC38A0A" stroke="#4FC38A33" stroke-width="1"/>
+  <rect x="654" y="410" width="196" height="2" fill="#4FC38A" opacity="0.5"/>
+  <text x="664" y="426" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#4FC38A" letter-spacing="0.5">INSURERS</text>
+  <text x="664" y="440" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">GBI → risk tier</text>
+  <text x="664" y="451" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">D4 → AE³ coverage</text>
+  <text x="664" y="462" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">D6 → ongoing signal</text>
+  <text x="664" y="477" font-family="'Space Mono', monospace" font-size="7" fill="#4FC38A" opacity="0.6">AI insurance underwriting</text>
+
+  <!-- Investors -->
+  <rect x="450" y="490" width="196" height="72" fill="#4A8FE80A" stroke="#4A8FE833" stroke-width="1"/>
+  <rect x="450" y="490" width="196" height="2" fill="#4A8FE8" opacity="0.5"/>
+  <text x="460" y="506" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#4A8FE8" letter-spacing="0.5">INVESTORS</text>
+  <text x="460" y="520" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Operational risk diligence</text>
+  <text x="460" y="531" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Liability architecture</text>
+  <text x="460" y="542" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Regulatory exposure</text>
+  <text x="460" y="557" font-family="'Space Mono', monospace" font-size="7" fill="#4A8FE8" opacity="0.6">D4 AE³ · D5 leverage</text>
+
+  <!-- Regulators -->
+  <rect x="654" y="490" width="196" height="72" fill="#E052520A" stroke="#E0525233" stroke-width="1"/>
+  <rect x="654" y="490" width="196" height="2" fill="#E05252" opacity="0.5"/>
+  <text x="664" y="506" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#E05252" letter-spacing="0.5">REGULATORS</text>
+  <text x="664" y="520" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">EU AI Act · NIST AI RMF</text>
+  <text x="664" y="531" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">ISO 42001 · APRA CPS 230</text>
+  <text x="664" y="542" font-family="'Space Mono', monospace" font-size="7" fill="#8899AA">Corps Act s.180(1)</text>
+  <text x="664" y="557" font-family="'Space Mono', monospace" font-size="7" fill="#E05252" opacity="0.6">Supervisory filings</text>
+
+  <!-- D6 note -->
+  <rect x="450" y="572" width="410" height="40" fill="#5BBFCF0A" stroke="#5BBFCF33" stroke-width="1"/>
+  <text x="460" y="588" font-family="'Space Mono', monospace" font-size="7.5" fill="#5BBFCF" letter-spacing="2">D6 · ADAPTIVE STABILITY — THE ONGOING SIGNAL</text>
+  <text x="460" y="602" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Governance maintenance as system evolves · Reassessment triggers · Change governance · Continuous lifecycle</text>
+
+  <!-- Bottom rule -->
+  <line x1="40" y1="630" x2="860" y2="630" stroke="#C8A84B" stroke-width="0.5" opacity="0.2"/>
+  <text x="40" y="646" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5">TRUST ARCHITECTURE · CARLY MARTIN · VENTURE BENCH PTY LTD</text>
+  <text x="860" y="646" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5" text-anchor="end">araf-standard.org · CC BY 4.0</text>
+</svg>

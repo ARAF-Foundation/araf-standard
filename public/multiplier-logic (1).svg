@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <title>GBI Multiplier Logic — Compound Governance Risk</title>
+  <desc>Three multiplier conditions in the GBI: Systemic Escalation (D1 and D4 both high), Infrastructure Collapse (D3 and D1 both high), and Leverage Collapse (D5 and D4 both high). Each shows the triggering dimensional combination and governance implication. Individual weaknesses are manageable. Compound weaknesses are systemic. From ARAF v2.1, 2026.</desc>
+  <defs>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
+  </defs>
+
+  <rect width="960" height="560" fill="#f7f5f0"/>
+  <rect x="20" y="20" width="920" height="520" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="20" y1="26" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="20" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="26" x2="940" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="20" x2="946" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="20" y1="534" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="540" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="534" x2="940" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="540" x2="946" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Header -->
+  <text x="480" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">GBI MULTIPLIER LOGIC — COMPOUND GOVERNANCE RISK</text>
+  <line x1="40" y1="54" x2="920" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Intro sentence -->
+  <text x="480" y="74" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">The six dimensions are not independent. Governance weaknesses compound. Multipliers activate when dimensional combinations create systemic exposure.</text>
+
+  <!-- Column dividers -->
+  <line x1="347" y1="84" x2="347" y2="420" stroke="#e8e4db" stroke-width="1"/>
+  <line x1="654" y1="84" x2="654" y2="420" stroke="#e8e4db" stroke-width="1"/>
+
+  <!-- ── MULTIPLIER 1: SYSTEMIC ESCALATION ── -->
+  <rect x="40" y="84" width="304" height="30" fill="#f7f5f0"/>
+  <rect x="40" y="84" width="304" height="2" fill="#c9402a"/>
+  <text x="192" y="103" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" letter-spacing="2" class="mono">SYSTEMIC ESCALATION</text>
+
+  <!-- Trigger -->
+  <text x="192" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">TRIGGER</text>
+
+  <!-- D1 node -->
+  <rect x="72" y="140" width="80" height="52" fill="#0d0d0b"/>
+  <rect x="72" y="140" width="80" height="3" fill="#A88644"/>
+  <text x="112" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D1</text>
+  <text x="112" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Autonomy</text>
+  <text x="112" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Gradient</text>
+
+  <!-- Score threshold -->
+  <text x="112" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 4</text>
+
+  <!-- Plus -->
+  <text x="192" y="172" text-anchor="middle" font-size="20" fill="#c9402a" font-weight="bold" class="serif">+</text>
+
+  <!-- D4 node -->
+  <rect x="212" y="140" width="80" height="52" fill="#0d0d0b"/>
+  <rect x="212" y="140" width="80" height="3" fill="#A88644"/>
+  <text x="252" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D4</text>
+  <text x="252" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Liability</text>
+  <text x="252" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Architecture</text>
+  <text x="252" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 4</text>
+
+  <line x1="60" y1="218" x2="332" y2="218" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <!-- Implication -->
+  <text x="192" y="236" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">GOVERNANCE IMPLICATION</text>
+  <text x="60" y="254" font-size="8" fill="#3a3a35" class="mono">High autonomy combined with inadequate</text>
+  <text x="60" y="267" font-size="8" fill="#3a3a35" class="mono">liability architecture. The volume of</text>
+  <text x="60" y="280" font-size="8" fill="#3a3a35" class="mono">autonomous action consequences (AE³) is</text>
+  <text x="60" y="293" font-size="8" fill="#3a3a35" class="mono">high and the liability governance is</text>
+  <text x="60" y="306" font-size="8" fill="#3a3a35" class="mono">inadequate to manage them.</text>
+  <text x="60" y="325" font-size="7.5" font-style="italic" fill="#c9402a" class="mono">Score amplified beyond simple average.</text>
+
+  <!-- ── MULTIPLIER 2: INFRASTRUCTURE COLLAPSE ── -->
+  <rect x="350" y="84" width="301" height="30" fill="#f7f5f0"/>
+  <rect x="350" y="84" width="301" height="2" fill="#c9402a"/>
+  <text x="500" y="103" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" letter-spacing="2" class="mono">INFRASTRUCTURE COLLAPSE</text>
+
+  <text x="500" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">TRIGGER</text>
+
+  <!-- D3 node -->
+  <rect x="378" y="140" width="80" height="52" fill="#0d0d0b"/>
+  <rect x="378" y="140" width="80" height="3" fill="#A88644"/>
+  <text x="418" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D3</text>
+  <text x="418" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Contract</text>
+  <text x="418" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Infrastructure</text>
+  <text x="418" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 4</text>
+
+  <text x="500" y="172" text-anchor="middle" font-size="20" fill="#c9402a" font-weight="bold" class="serif">+</text>
+
+  <!-- D1 node -->
+  <rect x="520" y="140" width="80" height="52" fill="#0d0d0b"/>
+  <rect x="520" y="140" width="80" height="3" fill="#A88644"/>
+  <text x="560" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D1</text>
+  <text x="560" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Autonomy</text>
+  <text x="560" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Gradient</text>
+  <text x="560" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 3</text>
+
+  <line x1="366" y1="218" x2="638" y2="218" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <text x="500" y="236" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">GOVERNANCE IMPLICATION</text>
+  <text x="366" y="254" font-size="8" fill="#3a3a35" class="mono">Significant autonomy combined with</text>
+  <text x="366" y="267" font-size="8" fill="#3a3a35" class="mono">inadequate contract infrastructure.</text>
+  <text x="366" y="280" font-size="8" fill="#3a3a35" class="mono">Liability allocation at the execution</text>
+  <text x="366" y="293" font-size="8" fill="#3a3a35" class="mono">boundary is ungoverned contractually.</text>
+  <text x="366" y="306" font-size="8" fill="#3a3a35" class="mono">No mechanism to allocate or limit</text>
+  <text x="366" y="319" font-size="8" fill="#3a3a35" class="mono">autonomous action consequences.</text>
+  <text x="366" y="338" font-size="7.5" font-style="italic" fill="#c9402a" class="mono">Score amplified beyond simple average.</text>
+
+  <!-- ── MULTIPLIER 3: LEVERAGE COLLAPSE ── -->
+  <rect x="657" y="84" width="263" height="30" fill="#f7f5f0"/>
+  <rect x="657" y="84" width="263" height="2" fill="#c9402a"/>
+  <text x="788" y="103" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" letter-spacing="2" class="mono">LEVERAGE COLLAPSE</text>
+
+  <text x="788" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">TRIGGER</text>
+
+  <!-- D5 node -->
+  <rect x="680" y="140" width="80" height="52" fill="#0d0d0b"/>
+  <rect x="680" y="140" width="80" height="3" fill="#A88644"/>
+  <text x="720" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D5</text>
+  <text x="720" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Commercial</text>
+  <text x="720" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Leverage</text>
+  <text x="720" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 4</text>
+
+  <text x="788" y="172" text-anchor="middle" font-size="20" fill="#c9402a" font-weight="bold" class="serif">+</text>
+
+  <!-- D4 node -->
+  <rect x="836" y="140" width="68" height="52" fill="#0d0d0b"/>
+  <rect x="836" y="140" width="68" height="3" fill="#A88644"/>
+  <text x="870" y="160" text-anchor="middle" font-size="9" font-weight="bold" fill="#A88644" class="mono">D4</text>
+  <text x="870" y="174" text-anchor="middle" font-size="8.5" fill="white" class="serif">Liability</text>
+  <text x="870" y="185" text-anchor="middle" font-size="8.5" fill="white" class="serif">Arch.</text>
+  <text x="870" y="202" text-anchor="middle" font-size="9" font-weight="bold" fill="#c9402a" class="mono">≥ 3</text>
+
+  <line x1="668" y1="218" x2="912" y2="218" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <text x="788" y="236" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">GOVERNANCE IMPLICATION</text>
+  <text x="668" y="254" font-size="8" fill="#3a3a35" class="mono">High commercial dependency combined</text>
+  <text x="668" y="267" font-size="8" fill="#3a3a35" class="mono">with inadequate liability architecture.</text>
+  <text x="668" y="280" font-size="8" fill="#3a3a35" class="mono">The system is structurally resistant</text>
+  <text x="668" y="293" font-size="8" fill="#3a3a35" class="mono">to remediation. Governance cannot</text>
+  <text x="668" y="306" font-size="8" fill="#3a3a35" class="mono">be corrected without commercial</text>
+  <text x="668" y="319" font-size="8" fill="#3a3a35" class="mono">disruption the org cannot absorb.</text>
+  <text x="668" y="338" font-size="7.5" font-style="italic" fill="#c9402a" class="mono">Score amplified beyond simple average.</text>
+
+  <!-- Full-width separator -->
+  <line x1="40" y1="352" x2="920" y2="352" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Bottom principle box -->
+  <rect x="40" y="362" width="880" height="52" fill="#fdf8f2" stroke="#e8e4db" stroke-width="1"/>
+  <rect x="40" y="362" width="3" height="52" fill="#c9402a"/>
+  <text x="480" y="382" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d0d0b" class="serif">Individual governance weaknesses are manageable. Compound weaknesses are systemic.</text>
+  <text x="480" y="400" text-anchor="middle" font-size="8.5" fill="#3a3a35" class="mono">Where a multiplier condition is present, the composite score must not be read as a simple average. It reflects compounded governance exposure.</text>
+  <text x="480" y="414" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="mono">The compound risk of the dimensional combination, not the mechanical threshold alone, determines activation.</text>
+
+  <!-- Caption -->
+  <line x1="40" y1="424" x2="920" y2="424" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="448" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+
+</svg>

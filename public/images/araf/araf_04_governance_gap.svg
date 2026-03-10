@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Barlow+Condensed:wght@600;700;800;900&amp;display=swap');
+    </style>
+    <linearGradient id="missingGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8A84B" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#C8A84B" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#C8A84B" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="#0B0F1A"/>
+  <rect x="0" y="0" width="900" height="2" fill="#C8A84B"/>
+
+  <!-- Header -->
+  <text x="40" y="36" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">THE STRUCTURAL ARGUMENT · TRUST ARCHITECTURE</text>
+  <text x="40" y="68" font-family="'Barlow Condensed', sans-serif" font-size="32" font-weight="900" fill="#F0F4F8" letter-spacing="1">THE MISSING LAYER IN AI GOVERNANCE</text>
+  <text x="40" y="86" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" letter-spacing="0.5">Why governance frameworks cannot govern autonomous decisions without governance infrastructure.</text>
+  <line x1="40" y1="98" x2="860" y2="98" stroke="#C8A84B" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ── LEFT COLUMN: Stack (x=40–400) ── -->
+
+  <!-- LAYER 1: Institutional Decision-Making (top) -->
+  <rect x="40" y="116" width="360" height="72" fill="#C8A84B0E" stroke="#C8A84B55" stroke-width="1"/>
+  <rect x="40" y="116" width="360" height="2" fill="#C8A84B" opacity="0.7"/>
+  <rect x="40" y="116" width="3" height="72" fill="#C8A84B"/>
+  <text x="56" y="133" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="2.5">05 · INSTITUTIONAL DECISION-MAKING</text>
+  <text x="56" y="152" font-family="'Barlow Condensed', sans-serif" font-size="17" font-weight="800" fill="#C8A84B" letter-spacing="0.5">BOARDS · INSURERS</text>
+  <text x="56" y="170" font-family="'Barlow Condensed', sans-serif" font-size="17" font-weight="800" fill="#C8A84B" letter-spacing="0.5">REGULATORS · INVESTORS</text>
+  <text x="56" y="183" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Who was responsible? · What did they know? · What did they do?</text>
+
+  <!-- Arrow down: GOVERNANCE SIGNAL NEEDED -->
+  <line x1="220" y1="188" x2="220" y2="204" stroke="#C8A84B" stroke-width="1.5" opacity="0.8"/>
+  <polygon points="215,204 225,204 220,212" fill="#C8A84B" opacity="0.8"/>
+  <text x="236" y="204" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" letter-spacing="1.5">GOVERNANCE SIGNAL NEEDED</text>
+
+  <!-- Arrow up from gap to inst -->
+  <line x1="200" y1="188" x2="200" y2="204" stroke="#C8A84B" stroke-width="1" opacity="0.3" stroke-dasharray="3,2"/>
+
+  <!-- LAYER 2: MISSING LAYER — ARAF (highlighted) -->
+  <rect x="40" y="218" width="360" height="88" fill="url(#missingGlow)" stroke="#C8A84B" stroke-width="1.5"/>
+  <rect x="40" y="218" width="360" height="2" fill="#C8A84B"/>
+  <rect x="40" y="218" width="4" height="88" fill="#C8A84B"/>
+  <!-- Dashed border overlay -->
+  <rect x="41" y="219" width="358" height="86" fill="none" stroke="#C8A84B" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.4"/>
+  <text x="56" y="237" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">THE MISSING LAYER</text>
+  <text x="56" y="260" font-family="'Barlow Condensed', sans-serif" font-size="20" font-weight="900" fill="#C8A84B" letter-spacing="0.5">TRUST ARCHITECTURE</text>
+  <text x="56" y="278" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">ARAF GOVERNANCE INFRASTRUCTURE</text>
+  <text x="56" y="295" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Translates autonomous system behaviour into</text>
+  <text x="56" y="305" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">an institutional governance signal.</text>
+
+  <!-- Arrow down from gap to frameworks -->
+  <line x1="220" y1="306" x2="220" y2="322" stroke="#5BBFCF" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="215,322 225,322 220,330" fill="#5BBFCF" opacity="0.7"/>
+  <text x="236" y="320" font-family="'Space Mono', monospace" font-size="7.5" fill="#5BBFCF" letter-spacing="1.5">TRANSLATES FRAMEWORK OUTPUT</text>
+
+  <!-- LAYER 3: AI Governance Frameworks -->
+  <rect x="40" y="336" width="360" height="72" fill="#5BBFCF10" stroke="#5BBFCF44" stroke-width="1"/>
+  <rect x="40" y="336" width="3" height="72" fill="#5BBFCF"/>
+  <text x="56" y="353" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF" letter-spacing="2.5">03 · AI GOVERNANCE FRAMEWORKS</text>
+  <text x="56" y="372" font-family="'Barlow Condensed', sans-serif" font-size="15" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">NIST AI RMF · ISO 42001</text>
+  <text x="56" y="390" font-family="'Barlow Condensed', sans-serif" font-size="15" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">EU AI ACT · APRA CPS 230</text>
+  <text x="56" y="402" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Policies · Model controls · Risk management practices</text>
+
+  <!-- Arrow down to systems -->
+  <line x1="220" y1="408" x2="220" y2="424" stroke="#5BBFCF" stroke-width="1" opacity="0.4"/>
+  <polygon points="215,424 225,424 220,432" fill="#5BBFCF" opacity="0.4"/>
+  <text x="236" y="422" font-family="'Space Mono', monospace" font-size="7.5" fill="#5BBFCF" letter-spacing="1.5" opacity="0.6">MODEL CONTROLS</text>
+
+  <!-- LAYER 4: Autonomous Systems -->
+  <rect x="40" y="438" width="360" height="64" fill="#4A556814" stroke="#4A556844" stroke-width="1"/>
+  <rect x="40" y="438" width="3" height="64" fill="#4A5568"/>
+  <text x="56" y="455" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="2.5">01 · AUTONOMOUS SYSTEMS</text>
+  <text x="56" y="474" font-family="'Barlow Condensed', sans-serif" font-size="15" font-weight="700" fill="#F0F4F8" letter-spacing="0.5" opacity="0.7">MODELS · AGENTS</text>
+  <text x="56" y="492" font-family="'Barlow Condensed', sans-serif" font-size="15" font-weight="700" fill="#F0F4F8" letter-spacing="0.5" opacity="0.7">AUTOMATED DECISIONS</text>
+
+  <!-- ── RIGHT COLUMN: Argument panels (x=430–860) ── -->
+
+  <text x="440" y="120" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">THE STRUCTURAL ARGUMENT</text>
+  <line x1="440" y1="126" x2="860" y2="126" stroke="#C8A84B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Argument point 1 -->
+  <rect x="440" y="136" width="420" height="68" fill="#5BBFCF0A" stroke="#5BBFCF33" stroke-width="1"/>
+  <rect x="440" y="136" width="2" height="68" fill="#5BBFCF"/>
+  <text x="454" y="153" font-family="'Space Mono', monospace" font-size="7.5" fill="#5BBFCF" letter-spacing="2">01</text>
+  <text x="454" y="170" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">AI governance frameworks define expectations</text>
+  <text x="454" y="185" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">for system development and risk management.</text>
+  <text x="454" y="198" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">NIST AI RMF · ISO 42001 · EU AI Act · APRA CPS 230</text>
+
+  <!-- Argument point 2 -->
+  <rect x="440" y="212" width="420" height="68" fill="#C8A84B0A" stroke="#C8A84B33" stroke-width="1"/>
+  <rect x="440" y="212" width="2" height="68" fill="#C8A84B"/>
+  <text x="454" y="229" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" letter-spacing="2">02</text>
+  <text x="454" y="246" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">Institutions must make governance decisions</text>
+  <text x="454" y="261" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">about systems they do not operate directly.</text>
+  <text x="454" y="274" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Boards · Insurers · Regulators · Investors · Enterprise buyers</text>
+
+  <!-- Argument point 3 (highlighted) -->
+  <rect x="440" y="288" width="420" height="84" fill="#C8A84B12" stroke="#C8A84B66" stroke-width="1.5"/>
+  <rect x="440" y="288" width="420" height="2" fill="#C8A84B" opacity="0.6"/>
+  <rect x="440" y="288" width="3" height="84" fill="#C8A84B"/>
+  <text x="454" y="305" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" letter-spacing="2">03 · THE ARGUMENT</text>
+  <text x="454" y="322" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#C8A84B" letter-spacing="0.3">Trust Architecture provides the missing layer</text>
+  <text x="454" y="337" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">that translates autonomous system behaviour</text>
+  <text x="454" y="352" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">into a governance signal institutions can evaluate.</text>
+  <text x="454" y="366" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" opacity="0.7">GBI Score · Dimensional Profile · ARAF Certification</text>
+
+  <!-- Framework comparison table -->
+  <text x="440" y="398" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="2.5">FRAMEWORK COMPARISON</text>
+  <line x1="440" y1="404" x2="860" y2="404" stroke="#4A5568" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Table header -->
+  <text x="444" y="420" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A5568" letter-spacing="1.5">FRAMEWORK</text>
+  <text x="614" y="420" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A5568" letter-spacing="1.5">FOCUS</text>
+  <text x="734" y="420" font-family="'Space Mono', monospace" font-size="7.5" fill="#4A5568" letter-spacing="1.5">GAP</text>
+  <line x1="440" y1="424" x2="860" y2="424" stroke="#4A5568" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Rows -->
+  <!-- NIST AI RMF -->
+  <rect x="440" y="428" width="420" height="28" fill="#10162240" stroke="none"/>
+  <text x="444" y="446" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF">NIST AI RMF</text>
+  <text x="614" y="446" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Risk management</text>
+  <text x="734" y="446" font-family="'Space Mono', monospace" font-size="7.5" fill="#E05252" opacity="0.7">No governance infra</text>
+
+  <!-- ISO 42001 -->
+  <text x="444" y="470" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF">ISO 42001</text>
+  <text x="614" y="470" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Management systems</text>
+  <text x="734" y="470" font-family="'Space Mono', monospace" font-size="7.5" fill="#E05252" opacity="0.7">No liability signal</text>
+  <line x1="440" y1="476" x2="860" y2="476" stroke="#4A5568" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- EU AI Act -->
+  <text x="444" y="494" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF">EU AI ACT</text>
+  <text x="614" y="494" font-family="'Space Mono', monospace" font-size="7.5" fill="#8899AA">Risk classification</text>
+  <text x="734" y="494" font-family="'Space Mono', monospace" font-size="7.5" fill="#E05252" opacity="0.7">No institutional signal</text>
+  <line x1="440" y1="500" x2="860" y2="500" stroke="#4A5568" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- ARAF -->
+  <rect x="440" y="502" width="420" height="28" fill="#C8A84B0E" stroke="none"/>
+  <text x="444" y="520" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B">ARAF</text>
+  <text x="614" y="520" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B">Governance infrastructure</text>
+  <text x="734" y="520" font-family="'Space Mono', monospace" font-size="7.5" fill="#4FC38A">Fills the gap</text>
+
+  <!-- Caption box -->
+  <rect x="440" y="544" width="420" height="72" fill="#10162280" stroke="#4A556844" stroke-width="1"/>
+  <text x="454" y="560" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" letter-spacing="2">KEY CAPTION</text>
+  <text x="454" y="576" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" font-style="italic">Most AI governance frameworks focus on system development</text>
+  <text x="454" y="589" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" font-style="italic">and risk management. Trust Architecture provides the missing</text>
+  <text x="454" y="602" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" font-style="italic">layer that translates system behaviour into a governance</text>
+  <text x="454" y="615" font-family="'Space Mono', monospace" font-size="8.5" fill="#C8A84B" font-style="italic">signal institutions can evaluate.</text>
+
+  <!-- Bottom context: governing test -->
+  <rect x="40" y="524" width="382" height="54" fill="#10162280" stroke="#4A556830" stroke-width="1"/>
+  <text x="56" y="542" font-family="'Space Mono', monospace" font-size="7.5" fill="#C8A84B" letter-spacing="2">GOVERNING TEST · ASIC v BEKIER [2026] FCA 196</text>
+  <text x="56" y="558" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" font-style="italic">"If a decision cannot be reconstructed,</text>
+  <text x="56" y="571" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" font-style="italic">it cannot be governed."</text>
+
+  <!-- Bottom rule -->
+  <line x1="40" y1="638" x2="860" y2="638" stroke="#C8A84B" stroke-width="0.5" opacity="0.2"/>
+  <text x="40" y="654" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5">TRUST ARCHITECTURE · CARLY MARTIN · VENTURE BENCH PTY LTD</text>
+  <text x="860" y="654" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5" text-anchor="end">araf-standard.org · CC BY 4.0</text>
+</svg>

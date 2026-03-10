@@ -1,0 +1,201 @@
+---
+title: Trust Architecture
+description: The governance infrastructure that converts autonomous systems from opaque operational risk into institutional-grade assets — classification, accountability architecture, and evidence standards.
+---
+
+# Trust Architecture
+
+Trust Architecture is the structured set of governance mechanisms that converts autonomous systems from opaque operational risk into institutional-grade assets that can be classified, governed, insured, financed, and relied upon.
+
+It is not a policy framework. It is not an ethics statement. It is governance infrastructure: the equivalent of the physical infrastructure the industrial economy required and the information infrastructure the digital economy required. It is the foundation on which institutional reliance becomes possible.
+
+## 1. Why Autonomous Decisions Break Existing Accountability Structures
+
+Existing accountability structures were designed for a decision environment in which decisions have authors: identifiable humans whose authority, information position, and conduct can be examined when outcomes are disputed.
+
+Autonomous decision-making violates that design assumption in three ways.
+
+**Volume** — A human decision-maker makes consequential decisions at a rate limited by human cognitive capacity. An autonomous system makes consequential decisions at the rate permitted by its computational resources. The accountability structure must govern decisions at machine scale, not human scale.
+
+**Opacity** — A human decision-maker's reasoning is, at least in principle, examinable. An autonomous system's decision logic is not transparent in the same way. The model weights that produce a decision are the learned patterns of a statistical process, not a narrative account of reasoning.
+
+**Distribution** — A human decision-maker operates within a defined organisational role, under a defined authority structure, subject to defined accountability. An autonomous system's decisions may be the product of multiple components: a foundation model, a fine-tuning layer, a retrieval system, an execution platform. Each may be built and operated by different parties, under different contractual relationships, subject to different governance.
+
+### The Attribution Problem
+
+Legal systems allocate responsibility by attributing conduct to persons. When a consequential decision is produced by Distributed Decision Infrastructure — a model, a retrieval system, an execution layer, an offshore review team, a fractional approver — attribution becomes contested rather than self-evident.
+
+The four-link accountability chain does not merely assign responsibility in the abstract. It provides the structural basis for attributing autonomous system decisions to accountable institutions when attribution is disputed.
+
+> *A governance structure designed for supervised systems applied to autonomous ones is not a defence. It is an exhibit.*
+
+## 2. The Four-Link Accountability Chain
+
+### Link 1 — Design Accountability
+
+Design accountability addresses who is responsible for the governance architecture of the system as designed.
+
+**Scope:** The autonomy level at which the system was designed to operate; the data governance built into the training and fine-tuning process; the scope boundaries designed into the system's operational parameters; the pre-deployment risk assessment conducted before the system was released for production use.
+
+**Assignment:** Design accountability sits with the organisation that built the system, regardless of who subsequently deploys or operates it.
+
+**Required documentation:**
+
+- Classification record (ARAF dimensional assessment)
+- Scope definition documentation
+- Training data provenance documentation
+- Pre-deployment risk assessment
+- Deployment approval record
+
+### Link 2 — Deployment Accountability
+
+Deployment accountability addresses who is responsible for the governance decisions made at the point of production deployment.
+
+**Scope:** The environment assessment; the integration governance record; the oversight structure documentation; the production readiness determination that authorised the system to go live.
+
+**Assignment:** Deployment accountability sits with the organisation that made the deployment decision.
+
+**Required documentation:**
+
+- Environment assessment
+- Integration governance record
+- Oversight structure documentation
+- Production readiness determination
+
+:::note[Common gap]
+Deployment evidence is the category most commonly absent from governance records. The moment of deployment is typically treated as an engineering milestone, not a governance milestone. The production readiness determination must be a documented governance decision, not an implicit engineering sign-off.
+:::
+
+### Link 3 — Operational Accountability
+
+Operational accountability addresses who is responsible for governance during the system's ongoing operation.
+
+**Scope:** Monitoring records; anomaly records; escalation records; reassessment records.
+
+**Assignment:** Operational accountability is continuous. It accumulates across the system's operational life.
+
+**Required documentation:**
+
+- Monitoring records
+- Anomaly records
+- Escalation records
+- AIOC decision records
+- Scheduled reassessment records
+
+:::note[Common gap]
+Operational evidence is frequently inadequate not because organisations fail to produce monitoring data but because the monitoring data produced is engineering telemetry rather than governance telemetry. A system that generates thousands of performance metrics but no governance records has operational monitoring without operational accountability.
+:::
+
+### Link 4 — Outcome Accountability
+
+Outcome accountability addresses who is responsible for the consequences of the system's decisions when those decisions produce adverse outcomes.
+
+**Scope:** The incident record; the accountability record establishing which link bears responsibility; the response record; the remediation record.
+
+**Assignment:** Outcome accountability maps to the link in the chain where the governance failure occurred.
+
+**Required documentation:**
+
+- Incident record
+- Accountability record
+- Response record
+- Remediation record
+
+> *Building it before deployment is governance. Reconstructing it afterwards is litigation.*
+
+## 3. The AIOC — Institutional Home for Accountability
+
+Accountability architecture requires an institutional home: a governance structure with defined authority, defined responsibilities, and defined reporting lines.
+
+The **Autonomous Intelligence Oversight Committee (AIOC)** provides that home. The AIOC is not a technical committee. It is a governance committee: the body responsible for institutional governance of the organisation's autonomous system portfolio.
+
+### Five Core Functions
+
+1. **Authorise autonomy levels** — Approving the autonomy levels at which autonomous systems are permitted to operate
+2. **Maintain the register** — Maintaining the organisation's autonomous system register, current at all times
+3. **Receive escalations** — Receiving and reviewing anomaly escalations from operational monitoring
+4. **Commission reassessments** — Commissioning reassessments when material changes occur, without waiting for a scheduled cycle
+5. **Board reporting** — Reporting to the board on governance posture at defined intervals and on an event-triggered basis
+
+### AIOC at Each Organisational Stage
+
+| Stage | AIOC Form |
+|---|---|
+| Seed | Named founder or senior team member with a documented decision log |
+| Series A/B | Small standing committee with defined meeting cadence and board reporting |
+| Series C/Growth | Formal committee with external advisory input |
+| ASX-listed enterprise | Formal governance body with independent review and board reporting line |
+
+The AIOC's scalability is a design feature, not an accident. An organisation that defers AIOC establishment because it considers itself too early-stage is accumulating governance debt that will be priced at the worst possible moment: in a due diligence process or a regulatory inquiry.
+
+## 4. Evidence Standards
+
+### Why Demonstration Matters
+
+The institutional audiences that autonomous system governance must satisfy share a common requirement: they need evidence, not claims.
+
+- A **board** cannot discharge its duty of care by approving a policy document. It must demonstrate that it received adequate governance information, exercised adequate governance judgment, and took adequate governance action.
+- An **insurer** cannot underwrite coverage based on management representations about governance quality. It needs independently verifiable evidence of governance posture.
+- An **investor** conducting diligence cannot accept governance claims at face value.
+- A **regulator** investigating an incident cannot accept governance assertions from the organisation under investigation.
+
+### The Four Evidence Categories
+
+Evidence categories map directly to the four accountability links.
+
+**Design evidence** — Classification record, scope definition, training data provenance documentation, pre-deployment risk assessment, deployment approval record.
+
+**Deployment evidence** — Environment assessment, integration governance record, oversight structure documentation, production readiness determination.
+
+**Operational evidence** — Monitoring records, anomaly records, escalation records, reassessment records, AIOC decision records. Engineering telemetry does not constitute governance telemetry.
+
+**Outcome evidence** — Incident record, accountability record, response record, remediation record. Where outcome evidence is produced only reactively, it is reconstruction rather than contemporaneous governance.
+
+### The Independence Requirement
+
+The evidence standard requires not only that governance evidence be produced but that it be independently assessable.
+
+Self-reported evidence is evidence of intent. Independent assessment is evidence of fact: not a representation by the organisation about itself but a representation by an independent assessor operating under a defined methodology.
+
+> *Like accounting standards that allow financial statements to be compared across entities and relied upon by investors who did not prepare them, evidence standards allow governance posture to be compared across organisations and relied upon by institutions that did not conduct the governance.*
+
+### Evidentiary Standards for Decision Records
+
+Governance records must satisfy legal evidentiary requirements to function in litigation, regulatory investigation, and insurance claims assessment. A governance record that cannot be authenticated, lacks integrity verification, cannot be traced to its source, or has no chain of custody is not a governance record for legal purposes.
+
+The ARAF evidentiary standard has four components:
+
+| Component | Requirement |
+|---|---|
+| **Authenticity** | The record must be demonstrably produced by the system or process it purports to document, at the time it purports to have been produced |
+| **Integrity** | The record must be demonstrably unaltered since production; tamper-evident logging architecture satisfies this requirement |
+| **Traceability** | The record must be traceable to the specific decision, system, and accountability holder it documents, without requiring reconstruction from partial sources |
+| **Chain of custody** | The record must have a documented custody history from production to presentation, sufficient to satisfy the requirements of the jurisdiction in which it may be tendered |
+
+Build to the evidentiary standard from the outset. Retrofitting evidentiary integrity requirements onto governance records produced without them is expensive, incomplete, and frequently insufficient.
+
+## 5. The Foreseeability Standard
+
+Negligence law asks two questions: was the risk foreseeable, and were reasonable precautions taken?
+
+The risks that autonomous system governance is designed to address — accountability displacement, evidence absence, scale compression, training data provenance liability — are foreseeable risks. They are documented in regulatory guidance, institutional investor frameworks, insurance market exclusion schedules, and an accumulating body of governance practice. An organisation deploying autonomous systems cannot credibly argue that the governance risks those systems create were not foreseeable.
+
+The second question, whether reasonable precautions were taken, is where ARAF certification has direct evidentiary value. An organisation that has obtained ARAF Certified or ARAF Compliant status from an accredited assessor has contemporaneous, independently produced evidence that its governance architecture was assessed against a defined standard and found adequate at the time of assessment.
+
+That evidence does not constitute a statutory safe harbour. But it is precisely the kind of contemporaneous evidence that a court, insurer, or regulator will find relevant when assessing whether reasonable precautions were taken.
+
+## 6. Governing the Decision Supply Chain
+
+The accountability architecture applies not only to the autonomous system at the centre of a deployment but to each link in the Decision Supply Chain: the full sequence of systems, actors, and processes through which a consequential decision is produced.
+
+A consequential decision in a modern autonomous deployment may involve an AI system built by one organisation, fine-tuned on data assembled by another, reviewed by an offshore team under a contractor relationship, approved by a fractional executive with authority across multiple principals, and executed through cloud infrastructure hosted in a third jurisdiction.
+
+**Three principles apply to Decision Supply Chain governance:**
+
+**Chain mapping** — The AIOC maintains a documented map of each chain: what systems are involved, what human actors contribute at each stage, what contractual relationships govern each link, and where jurisdictional boundaries are crossed.
+
+**Accountability assignment at each link** — The four-link accountability chain applies to the Decision Supply Chain as a whole. Each link must have a named accountability assignment and a documented contractual basis.
+
+**Evidence continuity** — The evidence record must follow the decision through the chain. A complete evidence record for the autonomous system at the centre of the chain that has no record for the offshore review stage or the fractional approver is not a complete governance record.
+
+> *Organisations that govern only the autonomous system and not the Decision Supply Chain in which it operates are governing a subset of the risk they have assumed.*

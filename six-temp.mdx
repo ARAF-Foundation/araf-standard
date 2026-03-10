@@ -1,0 +1,152 @@
+---
+title: Six ARAF Dimensions
+description: The six dimensions of the ARAF governance risk assessment — methodology, sub-factors, scoring guidance, and institutional implications for each dimension.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+# Six ARAF Dimensions
+
+ARAF assesses governance posture across six dimensions. Each dimension captures a distinct category of governance risk. Together they produce a composite picture of the governance architecture of an autonomous system deployment.
+
+The six dimensions are designed to answer the three accountability questions that institutional governance requires: who was responsible, what did they know, what did they do. Each dimension produces the governance information needed to answer those questions for a different category of risk.
+
+A classification without a dimensional profile has produced a score. A classification with a dimensional profile has produced governance infrastructure: the information that allows remediation to be targeted, governance investment to be prioritised, and institutional audiences to understand where governance strength and weakness sit.
+
+## How the Dimensions Map to the Decision Supply Chain
+
+Each ARAF dimension addresses a governance requirement at a specific stage of the Decision Supply Chain: the distributed chain of data, models, operators, and execution systems through which consequential decisions are produced.
+
+Decision Supply Chain Stage
+Governance Requirement
+ARAF Dimension
+Data Inputs
+What data does the system process, and under what legal basis?
+D2: Data Sensitivity Exposure
+Model Processing
+At what level of autonomy does the system operate, and is oversight adequate?
+D1: Autonomy Gradient
+Decision Formation
+How is liability for the system's decisions structured and documented?
+D4: Liability Architecture
+Execution
+Do commercial agreements govern the consequences of autonomous execution?
+D3: Contract Infrastructure
+Institutional Exposure
+Has operational dependency created governance vulnerability?
+D5: Commercial Leverage
+Chain Lifecycle
+Can governance be maintained as the system and its deployment evolve?
+D6: Adaptive Stability
+
+Copy table
+Download table
+Expand table
+
+The dimensions assess governance at each stage of the chain. Technical safety standards assess whether the system operates correctly at each stage. Both are necessary. ARAF addresses whether the institution deploying the system can demonstrate accountability for the decisions the chain produces.
+
+## Overview
+
+D1: Autonomy Gradient. Operational autonomy level, commitment authority, exception handling, scope boundaries, and oversight adequacy.
+D2: Data Sensitivity Exposure. Operational data sensitivity and training data provenance, two distinct risk categories, both assessed.
+D3: Contract Infrastructure. Customer agreements, vendor agreements, data processing agreements, and liability provisions.
+D4: Liability Architecture. Autonomous action consequences, liability caps, carve-out structure, and insurance coverage for autonomous action consequences.
+D5: Commercial Leverage. Operational dependency, revenue concentration, remediation commercial resistance, and lock-in dynamics.
+D6: Adaptive Stability. Governance maintenance capacity as the system evolves: update governance, change triggers, monitoring architecture.
+
+## Dimension 1: Autonomy Gradient
+
+The Autonomy Gradient is the foundational dimension. It establishes the governance burden that all other dimensions must address. A system operating at low autonomy with weak contract infrastructure faces a different risk profile than a system operating at high autonomy with the same contract weakness.
+
+### What it assesses
+
+Dimension 1 assesses five sub-factors:
+
+Operational autonomy level. What decisions does the system make without requiring human authorisation for each individual decision? What categories of action does the system take autonomously?
+
+Commitment authority. What is the maximum financial or operational commitment the system can make autonomously? Commitments below a defined threshold may be appropriate for autonomous execution; commitments above that threshold require governance attention proportional to their scale.
+
+Exception handling. What happens when the system encounters a decision that falls outside its trained parameters? The exception handling design reveals whether autonomy boundaries are enforced in practice or only in specification.
+
+Scope boundary enforcement. How are the system's operational scope boundaries enforced technically and contractually? Scope drift, where a system begins operating beyond its defined parameters, is a governance failure that Dimension 1 is designed to detect.
+
+Human oversight adequacy. Is the human oversight structure adequate for the autonomy level at which the system operates? A supervisory governance structure applied to a high-autonomy deployment is not an oversight structure. It is the appearance of oversight without the substance.
+
+### Institutional implication
+
+Boards exercising governance over a high-autonomy system have materially different obligations than boards exercising governance over a supervised system. Insurers underwriting coverage for a high-autonomy deployment face materially different risk than insurers covering a human-supervised process. The Autonomy Gradient establishes those differences in quantified form.
+
+Dimension 1 maps to the inference boundary in the governance architecture: the point at which model interaction occurs, where jurisdictional accountability for AI inference is established, and where governance telemetry must record what the system processed and under whose authority.
+
+A governance structure designed for supervised systems applied to autonomous ones is not a defence. It is an exhibit.
+
+## Dimension 2: Data Sensitivity Exposure
+
+Data Sensitivity Exposure assesses two distinct but related risk categories. Operational data sensitivity creates immediate exposure. Training data provenance creates latent exposure: risks embedded at the time of training that surface through litigation, regulatory inquiry, and investor diligence, often years later.
+
+### Operational data sensitivity
+
+The system is assessed against the categories of data it processes in production:
+
+- personal information
+- health information
+- financial information
+- commercially sensitive information
+- data subject to jurisdictional restrictions on cross-border transfer
+
+### Training data provenance
+
+Training data provenance is assessed as a separate risk category. The relevant questions are:
+
+Foundation model layer. What representations has the foundation model developer made about training data provenance? What warranties do those representations carry? What indemnification is available if provenance issues surface?
+
+Fine-tuning layer. What is the legal basis for using each category of data in fine-tuning? What intellectual property rights does the organisation hold? What consent did the individuals whose data was used provide? What documentation exists to support those positions?
+
+Retrieval-augmented generation layer. Where the system retrieves content from external sources at inference time, what copyright exposure does that retrieval create? What accuracy exposure arises where retrieved content is incorrect? What data protection exposure arises where it includes personal information?
+
+### The backward-compounding characteristic
+
+Training data provenance risk is backward-compounding: the exposure is created at the moment of training but compounds across the system's entire operational history. Every decision the system makes from deployment forward is a decision made by a system trained on that data.
+
+Dimension 2 maps to the data boundary in the governance architecture: the point at which governance determines whether the system's inputs are legally and regulatorily defensible before any model invocation occurs.
+
+Contemporaneous provenance documentation is the mechanism that answers the liability question with evidence rather than reconstruction. It cannot be produced retrospectively. It must be established at the time of training or fine-tuning.
+
+## Dimension 3: Contract Infrastructure
+
+Contract infrastructure is the governance layer closest to commercial consequence. Gaps in contract infrastructure become visible at the worst possible time: when an adverse outcome has occurred and the parties are determining who bears the loss.
+
+### What it assesses
+
+Master services agreement maturity. Do customer agreements contain AI-specific provisions?
+
+Vendor agreement adequacy. Do agreements with AI infrastructure providers, foundation model developers, and data suppliers address the governance obligations those relationships create?
+
+Data processing agreements. Are data processing agreements in place and adequate for the categories of data the system processes, including training data where applicable?
+
+Liability adequacy. Do liability provisions reflect the actual exposure created by the system's autonomous operation, or do they reflect the exposure of a conventional software service?
+
+Negotiation governance. Does the organisation have a defined process for reviewing and approving deviations from standard contract positions?
+
+### The timing problem
+
+Contract infrastructure gaps are invisible until they matter. An organisation operating under an agreement that lacks AI-specific liability provisions may operate without incident for years. When an adverse outcome occurs, the absence of adequate contract infrastructure becomes the central issue in determining who bears the loss.
+
+Dimension 3 interacts with the action boundary in the governance architecture: contract infrastructure is the legal expression of the rules governing what the system is permitted to do. Where the governance enforcement layer operationalises those rules at runtime, contract infrastructure establishes their legal authority.
+
+## Dimension 4: Liability Architecture
+
+Liability Architecture is the dimension that most directly addresses the accountability question that autonomous systems create. It assesses how liability for the system's autonomous decisions is structured, documented, and governed.
+
+Autonomous Action Consequences
+
+The central concept in Dimension 4 is the category of autonomous action consequences: the outcomes produced by the system's decisions without per-step human authorisation.
+
+This is the category of liability that existing frameworks were not designed to address:
+
+professional indemnity frameworks were designed for the negligence of a professional person, not for the autonomous decisions of a software system
+product liability frameworks were designed for defective goods, not for the consequences of software-generated decisions at machine scale
+technology errors and omissions frameworks were designed for system failures, not for decisions that system made correctly according to its design but that produced adverse outcomes
+
+What it a
+evaluated...'

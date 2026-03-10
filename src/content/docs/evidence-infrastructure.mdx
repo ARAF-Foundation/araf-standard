@@ -1,0 +1,172 @@
+---
+title: Evidence Infrastructure
+description: The governance records architecture that enables evidence continuity and reconstructability across the Decision Supply Chain.
+---
+
+Evidence Infrastructure defines how governance records are produced, linked, and preserved so autonomous decisions can be reconstructed from contemporaneous evidence.
+
+ARAF does not treat evidence as a documentation appendix. Evidence is governance infrastructure: the operational layer that allows institutions to answer the accountability questions that matter under board review, insurance analysis, regulatory inquiry, and litigation.
+
+## Why Evidence Infrastructure Matters
+
+Autonomous decisions are produced through a Decision Supply Chain, not a single actor. Governance claims are therefore only as strong as the records that follow decisions across the full chain.
+
+Without evidence continuity, accountability becomes narrative.
+
+With evidence continuity, accountability becomes demonstrable.
+
+The governing test remains the same for every consequential decision:
+
+- who was responsible
+- what did they know
+- what did they do
+
+## The Four Evidence Categories
+
+ARAF evidence architecture is organized into four categories that map to governance lifecycle stages.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Governance Question</th>
+        <th>Typical Records</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Design Evidence</td>
+        <td>Was governance architecture adequate at design time?</td>
+        <td>Classification record, scope boundaries, training data provenance, pre-deployment risk assessment</td>
+      </tr>
+      <tr>
+        <td>Deployment Evidence</td>
+        <td>Was deployment approved under defined governance conditions?</td>
+        <td>Environment assessment, integration governance record, oversight assignment, production readiness decision</td>
+      </tr>
+      <tr>
+        <td>Operational Evidence</td>
+        <td>Was governance exercised during live operation?</td>
+        <td>Monitoring logs, anomaly records, escalation records, reassessment triggers, AIOC decisions</td>
+      </tr>
+      <tr>
+        <td>Outcome Evidence</td>
+        <td>Can adverse outcomes be investigated and attributed?</td>
+        <td>Incident record, accountability determination, response actions, remediation record</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Coverage across all four categories is required for reconstructability.
+
+## 1. Design Evidence
+
+Design evidence establishes what was built, what governance assumptions were made, and what risk posture existed before production operation.
+
+Minimum design evidence should include:
+
+- ARAF dimensional profile and initial GBI reasoning
+- declared autonomy scope and out-of-scope boundary definitions
+- training and fine-tuning data provenance basis
+- pre-deployment governance risk assessment
+- design-time accountability assignments
+
+If design evidence is absent, later claims about intended governance controls are difficult to verify.
+
+## 2. Deployment Evidence
+
+Deployment evidence proves that production authorization was a governance decision, not only an engineering event.
+
+Minimum deployment evidence should include:
+
+- deployment environment assessment
+- integration risk and control mapping
+- named accountability holders for live operation
+- production readiness determination with date and approver
+- applicable contractual and jurisdictional controls at go-live
+
+If deployment evidence is absent, institutions cannot reliably determine whether governance was exercised at the point risk became real.
+
+## 3. Operational Evidence
+
+Operational evidence demonstrates that governance remained active after go-live as systems changed and decision volume scaled.
+
+Minimum operational evidence should include:
+
+- periodic governance monitoring records
+- threshold breach and anomaly records
+- escalation and intervention records
+- reassessment trigger logs
+- AIOC or equivalent oversight decisions
+
+Engineering telemetry alone is not sufficient. Operational evidence must show governance action, not only system performance metrics.
+
+## 4. Outcome Evidence
+
+Outcome evidence supports investigation and attribution when decisions are challenged.
+
+Minimum outcome evidence should include:
+
+- incident timeline linked to decision IDs
+- accountability analysis by chain link
+- response actions and responsible parties
+- remediation actions and closure verification
+- post-incident governance adjustments
+
+If outcome evidence is produced only after an event from fragmented sources, the record is reconstructed rather than contemporaneous.
+
+## Evidence Continuity Across the Decision Supply Chain
+
+Evidence continuity means records remain linked across every material Decision Supply Chain link, including data inputs, model interaction, human review, and execution.
+
+Evidence continuity requires:
+
+- stable decision identifiers across chain stages
+- link-level accountability assignment records
+- handoff records between systems and actors
+- time alignment across records (event chronology)
+- cross-entity record availability under contractual terms
+
+A chain with one unrecorded link is accountability-incomplete.
+
+## Governance Records: Quality Requirements
+
+ARAF governance records should satisfy the evidence quality requirements used in assessment:
+
+- Authenticity: record origin is verifiable
+- Integrity: tampering is detectable
+- Traceability: record is linked to decision, system, and accountable party
+- Exportability: record can be produced for independent review
+
+These properties determine whether institutional audiences can rely on the record without reproducing the underlying governance process.
+
+## Reconstructability Standard
+
+A decision is reconstructable when an independent reviewer can, from records created during operation, determine:
+
+- what decision was made
+- which inputs and controls governed the decision
+- which actors/systems participated in the chain
+- which accountability holder approved or supervised the relevant link
+- what response occurred after anomalies or adverse outcomes
+
+Reconstructability is the operational proof condition for institutional reliance.
+
+## Relationship to Assessment and Certification
+
+Evidence Infrastructure supports assessment and certification but is not identical to either.
+
+- Assessment evaluates governance posture using evidence inputs
+- Certification communicates assessment outputs as an institutional signal
+- Evidence Infrastructure produces the records that make both credible
+
+No evidence infrastructure means low confidence governance claims, even where policy statements exist.
+
+## See also
+
+- [ARAF Evidence Standard](/methodology/evidence-standard/)
+- [Decision Supply Chain](/decision-supply-chain/)
+- [Trust Architecture](/trust-architecture/#evidence-standards)
+- [Certification](/certification/)

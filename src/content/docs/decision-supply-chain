@@ -1,0 +1,137 @@
+---
+title: Decision Supply Chain
+description: How modern organisations produce consequential decisions through distributed networks of systems, actors, and providers — and the governance infrastructure required to govern them.
+---
+
+# Decision Supply Chain
+
+For most of the history of corporate governance, consequential decisions were made by identifiable humans within defined organisational boundaries. A credit officer approved a loan. A board voted on an acquisition. A general counsel advised on a contract. The chain of accountability was traceable because decisions had authors.
+
+That description no longer fits how many organisations operate.
+
+## 1. Distributed Decision Infrastructure
+
+The modern organisation increasingly produces consequential decisions through **Distributed Decision Infrastructure (DDI)**: the network of human experts, autonomous systems, data infrastructure, and external providers through which organisations produce consequential decisions, operating across organisational boundaries, employment relationships, and jurisdictional lines simultaneously.
+
+A single operational decision in a contemporary AI-enabled business might involve:
+
+- an autonomous system generating a recommendation
+- an offshore analyst reviewing the output
+- a fractional executive approving the action
+- a cloud infrastructure provider executing the transaction
+
+Each element operates in a different jurisdiction, under a different contractual relationship, with different accountability to the organisation at the centre.
+
+This is not an edge case. It is an increasingly common operational structure across financial services, legal technology, procurement, and enterprise operations.
+
+> *Governance infrastructure designed for hierarchical, human-authored decisions does not govern Distributed Decision Infrastructure. That mismatch is the governance gap.*
+
+## 2. The Decision Supply Chain
+
+The **Decision Supply Chain** is the sequence of systems, actors, and processes through which a consequential decision is produced. It extends from the data inputs that inform the decision, through the autonomous systems and human actors that shape it, to the execution infrastructure that implements it.
+
+Governing the Decision Supply Chain means applying accountability architecture, evidence standards, and classification logic not only to the autonomous system at the centre of the chain but to each link in the sequence through which the decision travels.
+
+### Why the Chain Matters for Accountability
+
+The question regulators, insurers, and investors will ask is not simply whether the AI system functioned correctly. It is:
+
+- whether the organisation deploying it can demonstrate who controlled it
+- where decisions were made
+- under which jurisdictional authority those decisions occurred
+- what each participant in the chain knew and did
+
+When the accountability question is asked about a decision produced by Distributed Decision Infrastructure, it does not have a single answer. It has a chain of answers, each corresponding to a link in the decision chain. The chain is only as governable as its least governed link.
+
+## 3. The Chain in Practice
+
+### The Autonomous System Layer
+
+The autonomous system is typically the most visible component of the chain, and frequently the most governed. Classification, monitoring, and evidence programmes tend to focus here. That focus is necessary but insufficient.
+
+### The Data Infrastructure Layer
+
+Below the autonomous system layer, the chain includes the data infrastructure that supplies the system with inputs: training data, retrieval-augmented sources, real-time operational data feeds. Each data source introduces provenance questions: legal basis for use, intellectual property rights, consent frameworks where personal data is involved.
+
+Training data provenance risk is backward-compounding: exposure is created at the moment of training but accumulates across the system's entire operational history. Every decision the system makes from deployment forward is a decision made by a system trained on that data.
+
+→ See [Six Dimensions — Dimension 2](/six-dimensions#dimension-2-data-sensitivity-exposure) for the full data provenance assessment methodology.
+
+### The Human Review Layer
+
+Many autonomous system deployments include a human review stage: an offshore analyst, a fractional executive, an internal approval function. These human actors are links in the Decision Supply Chain. Their accountability must be:
+
+- assigned by role and documented
+- supported by contractual structure that reflects their actual function
+- included in the operational evidence record
+
+A governance record that documents the autonomous system's decisions but not the human review stage does not satisfy the accountability requirement.
+
+### The Execution Infrastructure Layer
+
+The infrastructure that executes the system's decisions, cloud providers, payment processors, data exchange platforms, is the final link in many chains. Where that infrastructure is operated by a third party in a different jurisdiction, the chain includes a contractual and jurisdictional complexity that governance architecture must address.
+
+## 4. Governance Requirements for Each Link
+
+### Chain Mapping
+
+The AIOC is responsible for maintaining a documented map of each Decision Supply Chain in the organisation's portfolio. The map must identify:
+
+- each system involved, with its ARAF classification
+- each human actor contributing at each stage, with their accountability assignment
+- the contractual relationship governing each link
+- each jurisdictional boundary crossed in the chain
+
+Chain mapping is not a one-time exercise. It must be maintained as the chain evolves: as providers change, as systems are updated, and as human roles shift.
+
+### Accountability Assignment at Each Link
+
+The [four-link accountability chain](/trust-architecture#2-the-four-link-accountability-chain) applies to the Decision Supply Chain as a whole, not only to the autonomous system at its centre.
+
+| Chain Link | Accountability Assignment |
+|---|---|
+| Foundation model developer | Design accountability for base model behaviour |
+| Fine-tuning organisation | Design accountability for fine-tuning decisions |
+| Deploying organisation | Deployment accountability |
+| Offshore review team | Operational accountability for review stage |
+| Fractional executive approver | Operational accountability for approval stage |
+| Cloud execution provider | Operational accountability for execution stage |
+| Deploying organisation (overall) | Outcome accountability for the chain's consequences |
+
+Each link must have a named accountability assignment and a documented contractual basis. Where a link lacks a contractual basis, the deploying organisation bears undivided exposure for that link's conduct.
+
+### Evidence Continuity
+
+The evidence record must follow the decision through the chain. An incomplete record, one that documents the autonomous system's output but not the offshore review, or documents the review but not the fractional approver's decision, is not a complete governance record.
+
+Evidence continuity requires that each link in the chain produce governance records in the categories appropriate to its function: operational records for ongoing links, outcome records when adverse outcomes occur.
+
+## 5. The Jurisdictional Dimension
+
+When a Decision Supply Chain spans multiple jurisdictions, governance architecture must address which legal framework governs each link.
+
+The deploying organisation at the centre of the chain retains accountability for the chain's outputs regardless of where individual links operate. That accountability does not transfer to offshore providers or fractional executives by virtue of contractual arrangement. What contractual arrangements can do is allocate liability between the parties, but only if those arrangements were designed for the purpose and are adequately documented.
+
+Jurisdictional complexity is a multiplier of governance risk, not a distributor of accountability.
+
+## 6. Why This Gap Persists
+
+Organisations that deploy autonomous systems often govern the system well and the chain poorly. Three reasons explain the pattern:
+
+**Visibility** — The autonomous system is the visible technology. The offshore review team and the fractional approver are organisational arrangements, not technology. Governance attention follows technological visibility.
+
+**Contractual inertia** — Standard contracts were drafted before Decision Supply Chain governance was understood as a requirement. The offshore services agreement that was adequate for a human review function is not adequate for a human review function that is a link in a Decision Supply Chain for an autonomous system making consequential decisions at scale.
+
+**Assumption of coverage** — Organisations frequently assume that their general liability, professional indemnity, or technology errors and omissions coverage addresses the full chain. It almost never does. Autonomous action exposure is the liability category that falls into the gaps between existing policies precisely because the chain through which those decisions were produced was not governed as a chain.
+
+## 7. Implementation Principles
+
+Three principles apply to Decision Supply Chain governance regardless of organisational stage:
+
+**Govern the chain, not just the system** — The autonomous system at the centre of the chain is one governance object. The chain is a different, and larger, governance object. An organisation that classifies its autonomous system against ARAF but does not map and govern the chain has addressed a subset of its risk.
+
+**Contracts must reflect function** — Each link in the chain should be governed by a contract that reflects the actual governance function that link performs. Standard offshore services agreements and standard fractional executive arrangements were not designed for Decision Supply Chain participation.
+
+**Evidence must be chain-complete** — The governance record for a Decision Supply Chain is complete only when it covers every link through which the decision travelled. Chain-incomplete evidence records are the most common governance gap identified in ARAF assessments.
+
+> *Building that evidence now is substantially less expensive than building it in response to institutional pressure.*

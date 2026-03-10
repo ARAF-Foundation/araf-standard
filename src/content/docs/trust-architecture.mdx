@@ -1,0 +1,539 @@
+---
+title: Trust Architecture
+description: The governance infrastructure that converts autonomous systems from opaque operational risk into institutional-grade assets — classification, accountability architecture, and evidence standards.
+---
+
+import PrinciplesToSignalDiagram from '../../components/PrinciplesToSignalDiagram.astro';
+
+Trust Architecture is the governance infrastructure required to convert autonomous systems from opaque operational risk into institutional-grade assets that can be classified, governed, insured, financed, and relied upon.
+
+It is not a policy framework. It is not an ethics statement. It is governance infrastructure: the institutional layer that connects autonomous system operation to the accountability structures that boards, insurers, investors, and regulators require before institutional reliance becomes possible.
+
+<nav className="standard-toc" aria-label="On this page">
+  <ul>
+    <li><a href="#institutional-problem">The Institutional Problem</a></li>
+    <li><a href="#governance-by-architecture">Why Autonomous Decisions Break Existing Accountability Structures</a></li>
+    <li><a href="#accountability-chain">The Four-Link Accountability Chain</a></li>
+    <li><a href="#aioc">The AIOC</a></li>
+    <li><a href="#evidence-standards">Evidence Standards</a></li>
+    <li><a href="#decision-supply-chain">Governing the Decision Supply Chain</a></li>
+    <li><a href="#trust-stack">Institutional Trust Stack</a></li>
+    <li><a href="#institutional-translation">Institutional Translation</a></li>
+    <li><a href="#classification-signal">ARAF Classification</a></li>
+    <li><a href="#certification-ecosystem">Certification Ecosystem</a></li>
+    <li><a href="#agentic-bankability">Agentic Bankability</a></li>
+  </ul>
+</nav>
+
+<h2 id="institutional-problem">The Institutional Problem</h2>
+
+Decision authority is migrating into autonomous systems faster than governance infrastructure is evolving to supervise it. This is the Delegation Gap: the structural condition in which the governance infrastructure that every prior delegation of institutional authority has required does not yet exist for autonomous decision-making.
+
+Technical safety standards address whether a system operates reliably. They do not address whether the institution that deployed it can answer the three questions that courts, regulators, and insurers ask when autonomous decisions produce adverse outcomes:
+
+Who was responsible? What did they know? What did they do?
+
+Trust Architecture is designed to answer those questions before they are asked.
+
+Many AI governance initiatives describe desirable system properties: transparency, fairness, safety. ARAF assesses something different: the governance architecture through which autonomous decisions are produced.
+
+The framework evaluates structural properties of the decision system: how much autonomy the system exercises, what data it touches, whether contracts allocate responsibility across the supply chain, whether liability is insurable, whether the deploying organisation can enforce governance requirements against its vendors, and whether governance controls survive as the system changes.
+
+These are infrastructure questions, not ethics questions. They determine whether an autonomous system is institutionally governable.
+
+### Objectives to Signal
+
+<PrinciplesToSignalDiagram />
+
+<hr className="section-divider" />
+
+<h2 id="governance-by-architecture">1. Why Autonomous Decisions Break Existing Accountability Structures</h2>
+
+Existing accountability structures were designed for a decision environment in which decisions have authors: identifiable humans whose authority, information position, and conduct can be examined when outcomes are disputed.
+
+Autonomous decision-making violates that design assumption in three ways.
+
+Volume. A human decision-maker makes consequential decisions at a rate limited by human cognitive capacity. An autonomous system makes consequential decisions at the rate permitted by its computational resources. The accountability structure must govern decisions at machine scale, not human scale.
+
+Opacity. A human decision-maker's reasoning is, at least in principle, examinable. An autonomous system's decision logic is not transparent in the same way. The model weights that produce a decision are the learned patterns of a statistical process, not a narrative account of reasoning.
+
+Distribution. A human decision-maker operates within a defined organisational role, under a defined authority structure, subject to defined accountability. An autonomous system's decisions may be the product of multiple components: a foundation model, a fine-tuning layer, a retrieval system, an execution platform. Each may be built and operated by different parties, under different contractual relationships, subject to different governance.
+
+Together, these three properties define the challenge. Autonomous decisions are produced through what this book calls the Decision Supply Chain: the distributed chain of data, models, operators, and execution systems through which consequential decisions are produced across organisational boundaries, employment relationships, and jurisdictional lines. The organisational network that supports this chain is the Distributed Decision Infrastructure (DDI). Together, the Decision Supply Chain and DDI constitute the organisation's decision infrastructure: the full system through which institutional decisions are now produced.
+
+Governance of autonomous systems is, in institutional terms, governance of decision infrastructure.
+
+<figure className="diagram-figure">
+  <img src="/images/araf/araf_02_decision_supply_chain.svg" alt="Decision Supply Chain" loading="lazy" />
+  <figcaption>Decision Supply Chain. Autonomous outcomes are produced through a distributed chain of systems, human actors, and infrastructure providers. Governance accountability must follow the entire chain.</figcaption>
+</figure>
+
+## The Attribution Problem
+
+Legal systems allocate responsibility by attributing conduct to persons. When a consequential decision is produced by Distributed Decision Infrastructure, attribution becomes contested rather than self-evident.
+
+The four-link accountability chain does not merely assign responsibility in the abstract. It provides the structural basis for attributing autonomous system decisions to accountable institutions when attribution is disputed.
+
+A governance structure designed for supervised systems applied to autonomous ones is not a defence. It is an exhibit.
+
+<figure className="diagram-figure">
+  <img src="/images/araf/araf_04_governance_gap.svg" alt="The Governance Gap" loading="lazy" />
+  <figcaption>The Governance Gap. Existing AI governance frameworks regulate models and policies but do not define the institutional governance architecture required to supervise autonomous decision systems.</figcaption>
+</figure>
+
+<h2 id="governance-by-architecture-2">2. Governance by Architecture</h2>
+
+Probabilistic systems cannot enforce deterministic governance internally. A model that governs itself is not governed. Governance requires a boundary: an enforcement layer that the governed system cannot influence, that operates independently of the system's outputs, and that produces evidence of its own operation.
+
+This principle is not novel. It is the same principle that requires external auditors rather than self-certification of financial accounts, independent directors rather than executive-only boards, and courts rather than private dispute resolution for legally consequential decisions.
+
+Applied to autonomous systems, governance must exist outside the model, at the architectural boundaries through which the model's inputs and outputs flow. Three boundaries matter.
+
+The data boundary governs what information enters the system, under what consent framework, with what provenance documentation, subject to what privacy and sensitivity controls.
+
+The inference boundary governs how model interaction occurs: which models receive which data, under whose jurisdictional authority, with what sovereignty protections, producing what audit record.
+
+The action boundary governs what the system is permitted to do as a consequence of its outputs: what consequential actions are authorised, against what rule set, with what escalation mechanism, producing what admission record.
+
+These three boundaries produce governance telemetry: contemporaneous, independently generated evidence records that institutional reliance requires. Technical safety standards assess whether the system operates correctly. Governance architecture assesses whether the institution deploying it can demonstrate accountability when the system's decisions are questioned.
+
+<h2 id="accountability-chain">3. The Four-Link Accountability Chain</h2>
+
+<div className="accountability-link">
+  <h3>Link 1: Design Accountability</h3>
+  <p className="link-label"><strong>Addresses</strong> who is responsible for the governance architecture of the system as designed.</p>
+  <p><strong>Scope:</strong> The autonomy level at which the system was designed to operate; the data governance built into the training and fine-tuning process; the scope boundaries designed into the system's operational parameters; the pre-deployment risk assessment.</p>
+  <p><strong>Assignment:</strong> Design accountability sits with the organisation that built the system, regardless of who subsequently deploys or operates it.</p>
+  <p><strong>Required documentation:</strong> Classification record (ARAF dimensional assessment). Scope definition documentation. Training data provenance documentation. Pre-deployment risk assessment. Deployment approval record.</p>
+</div>
+
+<div className="accountability-link">
+  <h3>Link 2: Deployment Accountability</h3>
+  <p className="link-label"><strong>Addresses</strong> who is responsible for the governance decisions made at the point of production deployment.</p>
+  <p><strong>Scope:</strong> The environment assessment; the integration governance record; the oversight structure documentation; the production readiness determination that authorised the system to go live.</p>
+  <p><strong>Assignment:</strong> Deployment accountability sits with the organisation that made the deployment decision.</p>
+  <p><strong>Required documentation:</strong> Environment assessment. Integration governance record. Oversight structure documentation. Production readiness determination.</p>
+  <p><strong>Common gap:</strong> Deployment evidence is the category most commonly absent from governance records. The moment of deployment is typically treated as an engineering milestone, not a governance milestone. The production readiness determination must be a documented governance decision, not an implicit engineering sign-off.</p>
+</div>
+
+<div className="accountability-link">
+  <h3>Link 3: Operational Accountability</h3>
+  <p className="link-label"><strong>Addresses</strong> who is responsible for governance during the system's ongoing operation.</p>
+  <p><strong>Scope:</strong> Monitoring records; anomaly records; escalation records; reassessment records.</p>
+  <p><strong>Assignment:</strong> Operational accountability is continuous. It accumulates across the system's operational life.</p>
+  <p><strong>Required documentation:</strong> Monitoring records. Anomaly records. Escalation records. AIOC decision records. Scheduled reassessment records.</p>
+  <p><strong>Common gap:</strong> Operational evidence is frequently inadequate not because organisations fail to produce monitoring data but because the monitoring data produced is engineering telemetry rather than governance telemetry. A system that generates thousands of performance metrics but no governance records has operational monitoring without operational accountability.</p>
+</div>
+
+<div className="accountability-link">
+  <h3>Link 4: Outcome Accountability</h3>
+  <p className="link-label"><strong>Addresses</strong> who is responsible for the consequences of the system's decisions when those decisions produce adverse outcomes.</p>
+  <p><strong>Scope:</strong> The incident record; the accountability record establishing which link bears responsibility; the response record; the remediation record.</p>
+  <p><strong>Assignment:</strong> Outcome accountability maps to the link in the chain where the governance failure occurred.</p>
+  <p><strong>Required documentation:</strong> Incident record. Accountability record. Response record. Remediation record.</p>
+</div>
+
+Building it before deployment is governance. Reconstructing it afterwards is litigation.
+
+<h2 id="aioc">4. The AIOC: Institutional Home for Accountability</h2>
+
+Accountability architecture requires an institutional home: a governance structure with defined authority, defined responsibilities, and defined reporting lines.
+
+The Autonomous Intelligence Oversight Committee (AIOC) provides that home. The AIOC is not a technical committee. It is a governance committee: the body responsible for institutional governance of the organisation's autonomous system portfolio.
+
+### Five Core Functions
+
+<ul className="standard-list">
+  <li>Authorise autonomy levels at which autonomous systems are permitted to operate</li>
+  <li>Maintain the organisation's autonomous system register, current at all times</li>
+  <li>Receive and review anomaly escalations from operational monitoring</li>
+  <li>Commission reassessments when material changes occur, without waiting for a scheduled cycle</li>
+  <li>Report to the board on governance posture at defined intervals and on an event-triggered basis</li>
+</ul>
+
+### AIOC at Each Organisational Stage
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Stage</th>
+        <th>AIOC Form</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Seed</td>
+        <td>Named founder or senior team member with a documented decision log</td>
+      </tr>
+      <tr>
+        <td>Series A/B</td>
+        <td>Small standing committee with defined meeting cadence and board reporting</td>
+      </tr>
+      <tr>
+        <td>Series C/Growth</td>
+        <td>Formal committee with external advisory input</td>
+      </tr>
+      <tr>
+        <td>Enterprise</td>
+        <td>Formal governance body with independent review and board reporting line</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The AIOC's scalability is a design feature. An organisation that defers AIOC establishment because it considers itself too early-stage is accumulating governance debt that will be priced at the worst possible moment: in a due diligence process or a regulatory inquiry.
+
+<h2 id="evidence-standards">5. Evidence Standards</h2>
+
+### Why Demonstration Matters
+
+The institutional audiences that autonomous system governance must satisfy share a common requirement: they need evidence, not claims.
+
+A board cannot discharge its duty of care by approving a policy document. It must demonstrate that it received adequate governance information, exercised adequate governance judgment, and took adequate governance action. An insurer cannot underwrite coverage based on management representations about governance quality. It needs independently verifiable evidence of governance posture. An investor conducting diligence cannot accept governance claims at face value. A regulator investigating an incident cannot accept governance assertions from the organisation under investigation.
+
+The four evidence categories
+
+Evidence categories map directly to the four accountability links.
+
+Design evidence: Classification record, scope definition, training data provenance documentation, pre-deployment risk assessment, deployment approval record.
+
+Deployment evidence: Environment assessment, integration governance record, oversight structure documentation, production readiness determination.
+
+Operational evidence: Monitoring records, anomaly records, escalation records, reassessment records, AIOC decision records. Engineering telemetry does not constitute governance telemetry.
+
+Outcome evidence: Incident record, accountability record, response record, remediation record. Where outcome evidence is produced only reactively, it is reconstruction rather than contemporaneous governance.
+
+### Reconstructability
+
+The four components of the ARAF evidentiary standard, authenticity, integrity, traceability, and chain of custody, exist to produce a single institutional property: reconstructability. A system whose decisions can be reconstructed from contemporaneous records is a system whose governance can be demonstrated. A system whose decisions cannot be reconstructed is a system whose governance claims are assertions without evidence.
+
+#### Evidence Quality Tiers
+
+Not all governance evidence is equal.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Evidence Type</th>
+        <th>Institutional Confidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tier 1: Infrastructure-generated</td>
+        <td>Contemporaneous, tamper-evident records produced by governance infrastructure as a natural output of governance operations</td>
+        <td>Highest confidence. Produced at the moment of governance exercise, in a form the organisation cannot alter retroactively.</td>
+      </tr>
+      <tr>
+        <td>Tier 2: Contemporaneous documentation</td>
+        <td>Records produced at the time of governance decisions (board papers, AIOC minutes, deployment approval records)</td>
+        <td>High confidence for documented decisions. Depends on consistency and completeness of documentation practices.</td>
+      </tr>
+      <tr>
+        <td>Tier 3: Reconstructed documentation</td>
+        <td>Records assembled in response to assessment requests, reconstructing governance claims from existing materials</td>
+        <td>Lower confidence. Produced after the fact, subject to selection and framing choices that retrospective documentation involves.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The standard for ARAF evidence is not what the organisation says about its governance. It is what the governance infrastructure produces.
+
+### The Independence Requirement
+
+Self-reported evidence is evidence of intent. Independent assessment is evidence of fact: not a representation by the organisation about itself but a representation by an independent assessor operating under a defined methodology.
+
+Like accounting standards that allow financial statements to be compared across entities and relied upon by investors who did not prepare them, evidence standards allow governance posture to be compared across organisations and relied upon by institutions that did not conduct the governance.
+
+### Evidentiary Standard for Decision Records
+
+Governance records must satisfy legal evidentiary requirements to function in litigation, regulatory investigation, and insurance claims assessment.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Authenticity</td>
+        <td>The record must be demonstrably produced by the system or process it purports to document, at the time it purports to have been produced</td>
+      </tr>
+      <tr>
+        <td>Integrity</td>
+        <td>The record must be demonstrably unaltered since production; tamper-evident logging architecture satisfies this requirement</td>
+      </tr>
+      <tr>
+        <td>Traceability</td>
+        <td>The record must be traceable to the specific decision, system, and accountability holder it documents, without requiring reconstruction from partial sources</td>
+      </tr>
+      <tr>
+        <td>Chain of custody</td>
+        <td>The record must have a documented custody history from production to presentation, sufficient to satisfy the requirements of the jurisdiction in which it may be tendered</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Build to the evidentiary standard from the outset. Retrofitting evidentiary integrity requirements onto governance records produced without them is expensive, incomplete, and frequently insufficient.
+
+<h2 id="foreseeability-standard">6. The Foreseeability Standard</h2>
+
+Negligence law asks two questions: was the risk foreseeable, and were reasonable precautions taken?
+
+The risks that autonomous system governance is designed to address, accountability displacement, evidence absence, scale compression, training data provenance liability, are foreseeable risks. They are documented in regulatory guidance, institutional investor frameworks, insurance market exclusion schedules, and an accumulating body of governance practice.
+
+An organisation deploying autonomous systems cannot credibly argue that the governance risks those systems create were not foreseeable.
+
+The second question, whether reasonable precautions were taken, is where ARAF certification has direct evidentiary value. An organisation that has obtained ARAF Certified or ARAF Compliant status from an accredited assessor has contemporaneous, independently produced evidence that its governance architecture was assessed against a defined standard and found adequate at the time of assessment.
+
+That evidence does not constitute a statutory safe harbour. But it is precisely the kind of contemporaneous evidence that a court, insurer, or regulator will find relevant when assessing whether reasonable precautions were taken.
+
+<h2 id="decision-supply-chain">7. Governing the Decision Supply Chain</h2>
+
+The accountability architecture applies not only to the autonomous system at the centre of a deployment but to each link in the Decision Supply Chain: the full sequence of systems, actors, and processes through which a consequential decision is produced.
+
+Three principles apply to Decision Supply Chain governance:
+
+Chain mapping. The AIOC maintains a documented map of each chain: what systems are involved, what human actors contribute at each stage, what contractual relationships govern each link, and where jurisdictional boundaries are crossed.
+
+Accountability assignment at each link. The four-link accountability chain applies to the Decision Supply Chain as a whole. Each link must have a named accountability assignment and a documented contractual basis.
+
+Evidence continuity. The evidence record must follow the decision through the chain. A complete evidence record for the autonomous system at the centre of the chain that has no record for the offshore review stage or the fractional approver is not a complete governance record.
+
+Organisations that govern only the autonomous system and not the Decision Supply Chain in which it operates are governing a subset of the risk they have assumed.
+
+<h2 id="trust-stack">8. Where Trust Architecture Sits in the Institutional Trust Stack</h2>
+
+Technical safety standards and governance architecture serve different institutional functions. Both are necessary. Neither is sufficient alone.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Function</th>
+        <th>Question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Technical Assurance</td>
+        <td>System-level safety testing, security controls, operational reliability</td>
+        <td>Is the system technically safe to operate?</td>
+      </tr>
+      <tr>
+        <td>Governance Enforcement Infrastructure</td>
+        <td>Architectural enforcement at the data, inference, and action boundaries; production of governance telemetry</td>
+        <td>Is governance enforced at the boundaries where the system operates?</td>
+      </tr>
+      <tr>
+        <td>Governance Classification (ARAF)</td>
+        <td>Institutional classification of autonomy, accountability, and oversight architecture across six dimensions; GBI score</td>
+        <td>Is the system's governance posture classifiable and institutionally accountable?</td>
+      </tr>
+      <tr>
+        <td>Independent Assessment and Certification</td>
+        <td>Evidence verification by accredited assessors; certification tiers communicating governance posture</td>
+        <td>Can governance posture be independently verified and communicated?</td>
+      </tr>
+      <tr>
+        <td>Governance Intelligence</td>
+        <td>Aggregation of assessment data for sector analysis, portfolio monitoring, and market-scale comparability</td>
+        <td>Can governance quality be compared across organisations and sectors?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Technical safety tells you whether the system works. Governance architecture tells you whether the institution deploying it can be held accountable when it does.
+
+Autonomous systems cannot become institutional infrastructure unless both layers exist.
+
+<h2 id="institutional-translation">9. Institutional Translation: Four Audiences, One Architecture</h2>
+
+The governance architecture described above produces a single set of outputs: a GBI composite score, a dimensional profile, a certification tier, an accountability chain, and an evidence programme. Those outputs translate differently for each institutional audience.
+
+<div className="audience-grid">
+  <section className="audience-card">
+    <h3>For Boards</h3>
+    <p>Directors are responsible for supervising the systems through which their organisations produce consequential decisions. The duty of care requires informed judgment, not policy approval. A board that receives a GBI composite score, a dimensional profile, and an active multiplier status has a governance signal it can interrogate. A board that receives an unstructured assurance that the organisation's AI systems are performing well has a claim it cannot verify.</p>
+    <p>The five governance questions every board should be positioned to answer:</p>
+    <ol>
+      <li>What autonomous systems is this organisation operating, and at what autonomy levels?</li>
+      <li>Who is accountable for governance of each system, and is that accountability documented?</li>
+      <li>What is the evidence base for governance claims management is making?</li>
+      <li>When was governance posture last independently assessed, and what did it find?</li>
+      <li>How will the board know if governance posture deteriorates between formal assessments?</li>
+    </ol>
+    <p>ARAF provides the assessment infrastructure through which boards can obtain and maintain those answers.</p>
+  </section>
+  <section className="audience-card">
+    <h3>For Insurers</h3>
+    <p>Insurance markets do not price technology. They price risk. The constraint on AI insurance is not that autonomous systems are probabilistic. Insurance has always underwritten probabilistic risk. The constraint is that most autonomous system deployments are unbounded: they operate without the governance architecture that allows underwriters to define the exposure they are being asked to price.</p>
+    <p>What makes a system bounded, from an underwriting perspective, is that its decisions are reconstructable. Bounded systems are reconstructable, reconstructable systems are insurable, and governance architecture is the infrastructure that produces both properties.</p>
+    <p>The GBI composite score provides the risk tier signal. The Dimension 4 profile provides the AE3 exposure architecture. The Dimension 6 profile provides the ongoing governance maintenance signal across the coverage period. The four-link accountability chain provides the coverage trigger map: which accountability link corresponds to which coverage event.</p>
+    <p>Insurance markets have historically created governance standards through coverage conditions rather than regulatory mandate. Aviation safety, maritime classification, and cyber security controls all became governance infrastructure because the insurance market needed them to be. AI governance is following the same trajectory.</p>
+  </section>
+  <section className="audience-card">
+    <h3>For Investors</h3>
+    <p>Autonomous system governance posture is a financial variable. A governance failure in an autonomous system is not bounded by human cognitive capacity. It is bounded by the system's computational resources and the time between failure and detection. Governance deficits created at deployment compound across the system's operational history.</p>
+    <p>ARAF provides the governance diligence infrastructure that investment analysis requires. A GBI composite score above 2.50 is a remediation liability. A score below 1.75 is a governance asset. The dimensional profile tells the investor which risks are structural (Dimension 4 and Dimension 3) and which are operational (Dimension 1 and Dimension 6), and therefore which risks respond to remediation within normal investment timelines and which require architectural change.</p>
+  </section>
+  <section className="audience-card">
+    <h3>For Regulators</h3>
+    <p>ARAF aligns with the major AI governance regulatory frameworks currently in force or development. The six ARAF dimensions map to the requirements of the EU AI Act, NIST AI RMF, ISO 42001, APRA CPS 230, and the Corporations Act section 180(1) duty of care standard.</p>
+    <p>ARAF is positioned as operational proof infrastructure for regulatory compliance: it converts principle-based regulatory requirements into assessable governance evidence, providing regulators with an independently assessed, comparably expressed measure of governance posture that principle-based frameworks alone cannot produce.</p>
+  </section>
+</div>
+
+<h2 id="classification-signal">10. ARAF Classification: The Governance Signal</h2>
+
+ARAF assesses governance posture across six dimensions. Each dimension captures a distinct category of governance risk. Together they produce a composite picture of the governance architecture of an autonomous system deployment.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Governance Risk Addressed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>D1: Autonomy Gradient</td>
+        <td>What decisions does the system make without human authorisation? What oversight is adequate for that autonomy level?</td>
+      </tr>
+      <tr>
+        <td>D2: Data Sensitivity Exposure</td>
+        <td>What is the sensitivity of operational data processed and training data used? What latent liability does training data provenance create?</td>
+      </tr>
+      <tr>
+        <td>D3: Contract Infrastructure</td>
+        <td>Do commercial agreements address the autonomous decision-making the system performs? Are liability provisions adequate?</td>
+      </tr>
+      <tr>
+        <td>D4: Liability Architecture</td>
+        <td>Is AE3 (autonomous action consequences) recognised as a liability category? Are liability caps, carve-outs, and insurance coverage adequate?</td>
+      </tr>
+      <tr>
+        <td>D5: Commercial Leverage</td>
+        <td>Has operational dependency on the system created governance vulnerability, where adequate remediation would create commercial disruption?</td>
+      </tr>
+      <tr>
+        <td>D6: Adaptive Stability</td>
+        <td>Can governance architecture keep pace with the system's evolution? Are reassessment triggers and monitoring processes adequate?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### The GBI Score and Certification Tiers
+
+ARAF assessments produce a Governance Benchmark Index (GBI) composite score on a scale from 1.0 to 5.0. Lower scores indicate stronger governance posture. The scale follows credit rating convention: institutional audiences read it immediately.
+
+<div className="table-wrap">
+  <table className="standard-table">
+    <thead>
+      <tr>
+        <th>GBI Score</th>
+        <th>Certification Tier</th>
+        <th>Institutional Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>≤ 1.75</td>
+        <td>ARAF Certified</td>
+        <td>Full agentic bankability conditions met. Governance posture supports classification, insurance, financing, and institutional reliance.</td>
+      </tr>
+      <tr>
+        <td>≤ 2.5</td>
+        <td>ARAF Compliant</td>
+        <td>Minimum institutional threshold. Governance posture adequate for institutional reliance in most deployment contexts.</td>
+      </tr>
+      <tr>
+        <td>&gt; 2.5</td>
+        <td>Remediation Required</td>
+        <td>Governance posture inadequate for institutional reliance. Dimensional profile identifies priority remediation obligations.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+ARAF Assessed is an entry-level designation available to any organisation that has completed an independent ARAF assessment, regardless of GBI score. It indicates that governance posture has been independently evaluated and is available for institutional review.
+
+### Compounding Multiplier Logic
+
+Individual dimensional weaknesses amplify each other. ARAF incorporates three multiplier combinations:
+
+Systemic Escalation (D1 ≥ 4 and D4 ≥ 4): High autonomy combined with inadequate liability architecture. The volume of AE3 consequences is high and the liability governance is inadequate to manage them.
+
+Infrastructure Collapse (D3 ≥ 4 and D1 ≥ 3): Significant autonomy combined with inadequate contract infrastructure. The commercial relationships through which liability is allocated are inadequately governed.
+
+Leverage Collapse (D5 ≥ 4 and D4 ≥ 3): High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation.
+
+<h2 id="certification-ecosystem">11. The Certification Ecosystem</h2>
+
+Certification issued only by the organisation that designed the framework is not certification in any meaningful institutional sense. The credibility of ARAF certification depends on a functioning ecosystem of independent assessors: organisations and practitioners with the competence to apply the ARAF methodology, the independence from assessed organisations to produce credible results, and the accountability to the certification standard to maintain assessment quality over time.
+
+The assessor ecosystem model follows established governance precedent. ISO certification is conducted by accredited certification bodies, not by ISO itself. PCI DSS compliance is assessed by Qualified Security Assessors, not by the card networks. CREST-accredited penetration testing is conducted by firms that have demonstrated competence against a defined standard, not by CREST itself.
+
+Three principles govern the ARAF assessor ecosystem:
+
+Independence. No material financial or organisational relationship with assessed organisations that would compromise assessment objectivity. Assessors must disclose all relevant relationships before accepting an engagement.
+
+Methodology adherence. Assessors apply the ARAF framework as specified, with documented reasoning for every dimensional score and every certification decision.
+
+Accountability. Assessors accept responsibility for assessment quality, including through a defined review process for disputed assessments and a withdrawal mechanism for sustained quality failure.
+
+Governance infrastructure platforms may seek ARAF Evidence Infrastructure certification, demonstrating that their audit outputs satisfy ARAF evidentiary standards. This is a product-level designation, not an organisational assessment. Organisations deploying certified infrastructure inherit an evidentiary advantage in their own ARAF assessments, because the evidence their infrastructure produces has already been verified against the standard.
+
+<h2 id="agentic-bankability">12. Agentic Bankability: The Four Conditions</h2>
+
+Autonomous systems can only become institutional infrastructure when four conditions are satisfied.
+
+Identifiability. Institutions cannot govern what they cannot classify. The system's risk posture must be classifiable against a defined framework, producing a GBI score and dimensional profile that institutional audiences can interpret and compare.
+
+Measurability. Institutions cannot price what they cannot measure. Governance posture must be independently assessable against a defined methodology, producing outputs comparable across different systems and organisations.
+
+Governability. Institutions cannot enforce accountability for what is not governed. The accountability architecture must assign responsibility before outcomes occur, produce contemporaneous evidence that governance was exercised, and provide a mechanism for institutional oversight.
+
+Insurability. Institutions cannot finance at scale what they cannot insure. The governance posture must be sufficiently defined and evidenced that risk carriers can construct coverage addressing the system's specific exposure profile rather than relying on broad exclusions.
+
+Technical capability does not determine scale. Institutional bankability does.
+
+## Standards Architecture
+
+ARAF is designed as open market infrastructure, not proprietary methodology. The framework specification is licensed under CC BY 4.0, making the methodology publicly available and independently reviewable.
+
+Three conditions determine whether a classification framework can function as market infrastructure:
+
+Openness. The methodology is publicly available and independently reviewable.
+
+Independence. Assessments are conducted by assessors independent of the organisations being assessed.
+
+Comparability. Assessment outputs are comparable across different systems and organisations.
+
+ARAF satisfies all three. The open methodology enables regulatory reference and institutional adoption without proprietary barriers. The accredited assessor model provides independence. The GBI scoring system provides comparability.
+
+## The Governing Test
+
+Every element of Trust Architecture returns to the three questions that institutional accountability requires:
+
+Who was responsible? What did they know? What did they do?
+
+The governance infrastructure stack answers those questions at each layer. The data governance boundary establishes what data the system operated on and under what legal basis. The inference gateway establishes what the system processed and under whose jurisdictional authority. The action admission system establishes what the system was authorised to do and what it actually did. The ARAF assessment establishes whether the total architecture was adequate. The governance intelligence layer establishes how that posture compares to the institutional standard the market has adopted.
+
+Trust Architecture does not only govern autonomous systems. It creates the institutional infrastructure through which those systems become investable, insurable, and governable at scale.
+
+The market is not waiting for perfect governance. It is waiting for measurable governance.
+
+ARAF · Venture Bench Pty Ltd · CC BY 4.0

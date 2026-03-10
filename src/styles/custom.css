@@ -1,0 +1,941 @@
+/* ARAF Standard design tokens */
+
+:root {
+  /* Core colours */
+  --sl-color-accent-low: #eae7e1;
+  --sl-color-accent: #1f2933;
+  --sl-color-accent-high: #111827;
+
+  /* Background */
+  --sl-color-bg: #f5f3ee;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #ffffff;
+
+  /* Text */
+  --sl-color-text: #1f2933;
+  --sl-color-text-accent: #111827;
+
+  /* Borders */
+  --sl-color-border: #e5e7eb;
+
+  /* Typography */
+  --sl-font-system:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* Optional: tighten documentation layout */
+
+main {
+  max-width: 860px;
+}
+
+/* Standard table styling */
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.standard-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.standard-table th,
+.standard-table td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--sl-color-gray-6);
+  vertical-align: top;
+}
+
+/* Trust Architecture page TOC */
+
+.standard-toc {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  background: var(--sl-color-bg);
+}
+
+.standard-toc p {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.standard-toc ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.standard-toc li + li {
+  margin-top: 0.35rem;
+}
+
+.standard-toc a {
+  text-decoration: none;
+}
+
+.standard-toc a:hover {
+  text-decoration: underline;
+}
+
+.standard-toc {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  background: var(--sl-color-bg);
+}
+
+.standard-toc ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.standard-toc li {
+  margin: 0.35rem 0;
+}
+
+.section-divider {
+  border: 0;
+  border-top: 1px solid var(--sl-color-gray-6);
+  margin: 2.5rem 0 2rem;
+}
+
+.accountability-link {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  background: var(--sl-color-bg);
+}
+
+.accountability-link h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.link-label {
+  margin-bottom: 0.75rem;
+}
+
+.audience-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.audience-card {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  background: var(--sl-color-bg);
+}
+
+.standard-page h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 5rem;
+}
+
+.standard-page ul,
+.standard-page ol {
+  margin: 1rem 0 1.25rem 1.25rem;
+  padding-left: 1rem;
+}
+
+.standard-page li {
+  margin: 0.35rem 0;
+  line-height: 1.7;
+}
+
+.audience-block {
+  margin-top: 1.25rem;
+}
+
+.audience-block h3 {
+  margin-top: 0;
+}
+
+.diagram-figure {
+  margin: 1.5rem auto 2rem;
+  text-align: center;
+}
+
+.diagram-figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-figure figcaption {
+  margin-top: 0.7rem;
+}
+
+/* Getting Started page components */
+
+.purpose-box {
+  margin: 1.4rem 0 1.8rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  background: #f2f6f8;
+}
+
+.purpose-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.purpose-box p {
+  margin: 0.5rem 0;
+}
+
+.flow-block {
+  margin: 1.4rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  background: var(--sl-color-bg);
+}
+
+.flow-step {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 600;
+}
+
+.flow-arrow {
+  text-align: center;
+  margin: 0.35rem 0;
+  color: var(--sl-color-text-accent);
+}
+
+.key-card {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  background: #f8f4ec;
+}
+
+.key-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+}
+
+.compare-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 1.8rem;
+}
+
+.compare-card {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  background: #fff;
+}
+
+.compare-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.compare-card--positive {
+  background: #eef6f1;
+}
+
+.compare-card--neutral {
+  background: #f8f7ef;
+}
+
+.stage-card-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 1.8rem;
+}
+
+.stage-card {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  background: var(--sl-color-bg);
+}
+
+.stage-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+}
+
+.stage-card p {
+  margin: 0.4rem 0;
+}
+
+.evidence-stack {
+  margin: 1rem 0 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.evidence-layer {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.evidence-layer--outcome {
+  background: #f9efe8;
+}
+
+.evidence-layer--operational {
+  background: #f7f5ea;
+}
+
+.evidence-layer--deployment {
+  background: #eef4f7;
+}
+
+.evidence-layer--design {
+  background: #edf7f2;
+}
+
+.warning-box {
+  margin: 1rem 0 1.8rem;
+  border: 1px solid #d9b06f;
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  background: #fff7e8;
+}
+
+.warning-box h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.warning-box ul {
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .audience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .compare-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stage-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Institutional page: Enterprise Procurement */
+
+.enterprise-procurement-page {
+  --inst-ink: #0d0d0b;
+  --inst-ink-mid: #3a3a35;
+  --inst-ink-muted: #7a7a72;
+  --inst-rule: #d4d0c8;
+  --inst-paper: #f7f5f0;
+  --inst-cream: #ede9e0;
+  --inst-gold: #a88644;
+
+  background: var(--inst-paper);
+  color: var(--inst-ink);
+  font-family: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  border: 1px solid var(--inst-rule);
+}
+
+.enterprise-procurement-page .site-header {
+  padding: 1.6rem 2rem;
+  border-bottom: 1px solid var(--inst-rule);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.enterprise-procurement-page .site-brand {
+  margin: 0;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.enterprise-procurement-page .site-header nav {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--inst-ink-muted);
+}
+
+.enterprise-procurement-page .site-header nav a {
+  color: var(--inst-ink-muted);
+  text-decoration: none;
+}
+
+.enterprise-procurement-page .site-header nav a:hover,
+.enterprise-procurement-page .site-header nav a:focus-visible {
+  color: var(--inst-gold);
+  text-decoration: underline;
+}
+
+.enterprise-procurement-page .callout {
+  background: var(--inst-cream);
+  border-left: 2px solid var(--inst-gold);
+  padding: 1.1rem 1.2rem;
+  margin: 1.2rem 0;
+  color: var(--inst-ink-mid);
+  line-height: 1.7;
+}
+
+.enterprise-procurement-page .callout--intro {
+  margin: 0;
+  border-left: 0;
+  border-bottom: 1px solid var(--inst-rule);
+  text-align: center;
+  background: #f1eee8;
+}
+
+.enterprise-procurement-page .hero {
+  padding: 3rem 2rem 2.4rem;
+  border-bottom: 1px solid var(--inst-rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.enterprise-procurement-page .hero-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin-bottom: 1rem;
+}
+
+.enterprise-procurement-page .hero h2 {
+  margin: 0 0 1rem;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.enterprise-procurement-page .hero-lede {
+  color: var(--inst-ink-mid);
+  line-height: 1.75;
+}
+
+.enterprise-procurement-page .problem-box {
+  border-left: 2px solid var(--inst-gold);
+  padding-left: 1rem;
+  margin-top: 0.4rem;
+}
+
+.enterprise-procurement-page .problem-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin-bottom: 0.55rem;
+}
+
+.enterprise-procurement-page .problem-statement {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--inst-ink);
+  margin: 0;
+}
+
+.enterprise-procurement-page .content-section {
+  padding: 2.2rem 2rem;
+  border-bottom: 1px solid var(--inst-rule);
+}
+
+.enterprise-procurement-page .section-num {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.4rem;
+}
+
+.enterprise-procurement-page .section-title {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.enterprise-procurement-page .body-text {
+  color: var(--inst-ink-mid);
+  margin: 0.75rem 0;
+}
+
+.enterprise-procurement-page .examples-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+.enterprise-procurement-page .example-tag {
+  border: 1px solid var(--inst-rule);
+  background: #fff;
+  color: var(--inst-ink-mid);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.5rem;
+}
+
+.enterprise-procurement-page .needs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--inst-rule);
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .needs-cell {
+  background: var(--inst-paper);
+  padding: 1rem;
+}
+
+.enterprise-procurement-page .needs-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.45rem;
+}
+
+.enterprise-procurement-page .needs-desc {
+  font-size: 0.76rem;
+  color: var(--inst-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enterprise-procurement-page .araf-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.enterprise-procurement-page .araf-list li {
+  padding: 0.55rem 0 0.55rem 1rem;
+  position: relative;
+  border-bottom: 1px solid var(--inst-rule);
+  color: var(--inst-ink-mid);
+}
+
+.enterprise-procurement-page .araf-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--inst-gold);
+}
+
+.enterprise-procurement-page .compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.1rem 0;
+  min-width: 640px;
+}
+
+.enterprise-procurement-page .compare-table th,
+.enterprise-procurement-page .compare-table td {
+  text-align: left;
+  border-bottom: 1px solid var(--inst-rule);
+  padding: 0.7rem 0.75rem;
+  vertical-align: top;
+}
+
+.enterprise-procurement-page .compare-table .fw {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--inst-ink);
+}
+
+.enterprise-procurement-page .trigger-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.enterprise-procurement-page .trigger-item {
+  border: 1px solid var(--inst-rule);
+  background: #fff;
+  padding: 0.9rem;
+}
+
+.enterprise-procurement-page .trigger-head {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.45rem;
+}
+
+.enterprise-procurement-page .trigger-body {
+  color: var(--inst-ink-mid);
+  font-size: 0.76rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enterprise-procurement-page .flow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem 0;
+  max-width: 420px;
+}
+
+.enterprise-procurement-page .flow-node {
+  width: 100%;
+  border: 1px solid var(--inst-rule);
+  background: var(--inst-cream);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--inst-ink);
+}
+
+.enterprise-procurement-page .flow-arrow {
+  color: var(--inst-gold);
+  padding: 0.1rem 0.75rem;
+}
+
+.enterprise-procurement-page .spec-section {
+  padding: 2.1rem 2rem;
+  border-bottom: 1px solid var(--inst-rule);
+}
+
+.enterprise-procurement-page .spec-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin-bottom: 0.8rem;
+}
+
+.enterprise-procurement-page .spec-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.enterprise-procurement-page .spec-link {
+  border: 1px solid var(--inst-rule);
+  color: var(--inst-ink-mid);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.enterprise-procurement-page .spec-link:hover,
+.enterprise-procurement-page .spec-link:focus-visible {
+  border-color: var(--inst-gold);
+  color: var(--inst-ink);
+}
+
+.enterprise-procurement-page footer {
+  padding: 1.3rem 2rem;
+  font-size: 0.65rem;
+  color: var(--inst-ink-muted);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .enterprise-procurement-page .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .enterprise-procurement-page .needs-grid,
+  .enterprise-procurement-page .trigger-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.enterprise-procurement-page .callout strong {
+  color: var(--inst-ink);
+  font-weight: 600;
+}
+
+.enterprise-procurement-page .question-stack {
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .q-item {
+  border: 1px solid var(--inst-rule);
+  margin-bottom: -1px;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+}
+
+.enterprise-procurement-page .q-num {
+  background: var(--inst-cream);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--inst-gold);
+}
+
+.enterprise-procurement-page .q-body {
+  padding: 1rem 1rem;
+}
+
+.enterprise-procurement-page .q-question {
+  margin: 0 0 0.4rem;
+  color: var(--inst-ink);
+  font-size: 0.8rem;
+}
+
+.enterprise-procurement-page .q-note {
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--inst-ink-muted);
+  line-height: 1.6;
+}
+
+.enterprise-procurement-page .report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--inst-rule);
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .report-cell {
+  background: var(--inst-paper);
+  padding: 1rem;
+}
+
+.enterprise-procurement-page .report-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.45rem;
+}
+
+.enterprise-procurement-page .report-desc {
+  font-size: 0.75rem;
+  color: var(--inst-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enterprise-procurement-page .flow-return {
+  font-size: 0.66rem;
+  color: var(--inst-ink-muted);
+  border-left: 1px dashed var(--inst-gold);
+  margin-left: 1.2rem;
+  padding: 0.25rem 0 0.3rem 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .enterprise-procurement-page .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Institutional page: Investors */
+
+.enterprise-procurement-page .risk-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--inst-rule);
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .risk-cell {
+  background: var(--inst-paper);
+  padding: 1rem;
+}
+
+.enterprise-procurement-page .risk-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.45rem;
+}
+
+.enterprise-procurement-page .risk-desc {
+  font-size: 0.75rem;
+  color: var(--inst-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enterprise-procurement-page .gbi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .gbi-table th,
+.enterprise-procurement-page .gbi-table td {
+  text-align: left;
+  border-bottom: 1px solid var(--inst-rule);
+  padding: 0.7rem 0.75rem;
+  vertical-align: top;
+}
+
+.enterprise-procurement-page .gbi-table th {
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  font-weight: 400;
+}
+
+.enterprise-procurement-page .gbi-table td {
+  font-size: 0.75rem;
+  color: var(--inst-ink-mid);
+  line-height: 1.6;
+}
+
+.enterprise-procurement-page .gbi-table .tier {
+  color: var(--inst-ink);
+}
+
+.enterprise-procurement-page .investor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--inst-rule);
+  margin: 1.2rem 0;
+}
+
+.enterprise-procurement-page .investor-cell {
+  background: var(--inst-paper);
+  padding: 1rem;
+}
+
+.enterprise-procurement-page .investor-cell--summary {
+  background: var(--inst-cream);
+}
+
+.enterprise-procurement-page .investor-type {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inst-gold);
+  margin: 0 0 0.45rem;
+}
+
+.enterprise-procurement-page .investor-focus {
+  font-size: 0.77rem;
+  color: var(--inst-ink);
+  margin: 0 0 0.3rem;
+}
+
+.enterprise-procurement-page .investor-use {
+  font-size: 0.73rem;
+  color: var(--inst-ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .enterprise-procurement-page .risk-grid,
+  .enterprise-procurement-page .investor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Principles to signal pipeline diagram */
+
+.principles-pipeline {
+  margin: 1.5rem 0 2rem;
+  max-width: 860px;
+}
+
+.pipeline-zone {
+  border: 1px solid var(--sl-color-gray-6);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+
+.pipeline-zone + .pipeline-zone {
+  margin-top: 0.75rem;
+}
+
+.pipeline-zone-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-accent);
+}
+
+.pipeline-zone h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.pipeline-zone p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.pipeline-zone--objectives {
+  background: #f3f0e8;
+}
+
+.pipeline-zone--architecture {
+  background: #ece2cc;
+  border-color: #b8913a;
+}
+
+.pipeline-zone--signal {
+  background: #f6f5f1;
+}
+
+.pipeline-arrow {
+  text-align: center;
+  margin: 0.45rem 0 0.2rem;
+  color: #a88644;
+}
+
+.pipeline-arrow-label {
+  text-align: center;
+  margin: 0 0 0.55rem;
+  font-size: 0.8rem;
+  color: var(--sl-color-gray-3);
+}
+
+.pipeline-audiences {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+}

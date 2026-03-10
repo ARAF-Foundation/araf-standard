@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Barlow+Condensed:wght@600;700;800;900&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="#0B0F1A"/>
+
+  <!-- Gold top rule -->
+  <rect x="0" y="0" width="900" height="2" fill="#C8A84B"/>
+
+  <!-- Header -->
+  <text x="40" y="36" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3" text-anchor="start">TRUST ARCHITECTURE · CARLY MARTIN · ARAF CC BY 4.0</text>
+  <text x="40" y="70" font-family="'Barlow Condensed', sans-serif" font-size="32" font-weight="900" fill="#F0F4F8" letter-spacing="1" text-anchor="start" text-transform="uppercase">THE DECISION SUPPLY CHAIN</text>
+  <text x="40" y="88" font-family="'Space Mono', monospace" font-size="8.5" fill="#8899AA" letter-spacing="1">The governance object is the decision infrastructure, not the model.</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="100" x2="860" y2="100" stroke="#C8A84B" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ── LEFT COLUMN: Chain nodes (x=40–340) ── -->
+
+  <!-- NODE 1: Training Data Sources -->
+  <rect x="40" y="118" width="300" height="52" fill="#10162280" stroke="#4A556844" stroke-width="1"/>
+  <rect x="40" y="118" width="2" height="52" fill="#4A5568"/>
+  <text x="56" y="134" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="2">01 · TRAINING DATA SOURCES</text>
+  <text x="56" y="152" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">TRAINING DATA SOURCES</text>
+  <text x="56" y="163" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568">Structured · Unstructured · Synthetic</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="190" y1="170" x2="190" y2="186" stroke="#4A5568" stroke-width="1" opacity="0.6"/>
+  <polygon points="186,186 194,186 190,192" fill="#4A5568" opacity="0.6"/>
+
+  <!-- DATA BOUNDARY marker -->
+  <rect x="40" y="196" width="300" height="18" fill="#9B6FD408" stroke="#9B6FD455" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="53" cy="205" r="3" fill="#9B6FD4"/>
+  <text x="62" y="209" font-family="'Space Mono', monospace" font-size="8" fill="#9B6FD4" letter-spacing="2.5">DATA BOUNDARY</text>
+  <line x1="165" y1="205" x2="335" y2="205" stroke="#9B6FD4" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Arrow boundary→2 -->
+  <line x1="190" y1="214" x2="190" y2="226" stroke="#9B6FD4" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,226 194,226 190,232" fill="#9B6FD4" opacity="0.5"/>
+
+  <!-- NODE 2: Data Infrastructure -->
+  <rect x="40" y="232" width="300" height="52" fill="#10162280" stroke="#5BBFCF44" stroke-width="1"/>
+  <rect x="40" y="232" width="2" height="52" fill="#5BBFCF"/>
+  <text x="56" y="248" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF" letter-spacing="2">02 · DATA INFRASTRUCTURE</text>
+  <text x="56" y="266" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">DATA INFRASTRUCTURE</text>
+  <text x="56" y="277" font-family="'Space Mono', monospace" font-size="8" fill="#5BBFCF" opacity="0.7">Storage · Pipelines · Labelling</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="190" y1="284" x2="190" y2="300" stroke="#5BBFCF" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,300 194,300 190,306" fill="#5BBFCF" opacity="0.5"/>
+
+  <!-- NODE 3: Autonomous System -->
+  <rect x="40" y="306" width="300" height="52" fill="#4A8FE812" stroke="#4A8FE866" stroke-width="1"/>
+  <rect x="40" y="306" width="3" height="52" fill="#4A8FE8"/>
+  <text x="56" y="322" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" letter-spacing="2">03 · AUTONOMOUS SYSTEM</text>
+  <text x="56" y="340" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">AUTONOMOUS SYSTEM</text>
+  <text x="56" y="351" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" opacity="0.7">Model / Agent / Decision Engine</text>
+
+  <!-- Arrow 3→boundary -->
+  <line x1="190" y1="358" x2="190" y2="374" stroke="#4A8FE8" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,374 194,374 190,380" fill="#4A8FE8" opacity="0.5"/>
+
+  <!-- INFERENCE BOUNDARY marker -->
+  <rect x="40" y="380" width="300" height="18" fill="#4A8FE808" stroke="#4A8FE855" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="53" cy="389" r="3" fill="#4A8FE8"/>
+  <text x="62" y="393" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" letter-spacing="2.5">INFERENCE BOUNDARY</text>
+  <line x1="180" y1="389" x2="335" y2="389" stroke="#4A8FE8" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Arrow boundary→4 -->
+  <line x1="190" y1="398" x2="190" y2="410" stroke="#4A8FE8" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,410 194,410 190,416" fill="#4A8FE8" opacity="0.5"/>
+
+  <!-- NODE 4: Human Review -->
+  <rect x="40" y="416" width="300" height="52" fill="#10162280" stroke="#4FC38A44" stroke-width="1"/>
+  <rect x="40" y="416" width="2" height="52" fill="#4FC38A"/>
+  <text x="56" y="432" font-family="'Space Mono', monospace" font-size="8" fill="#4FC38A" letter-spacing="2">04 · HUMAN REVIEW LAYER</text>
+  <text x="56" y="450" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">HUMAN REVIEW LAYER</text>
+  <text x="56" y="461" font-family="'Space Mono', monospace" font-size="8" fill="#4FC38A" opacity="0.7">Operators · Analysts · Oversight</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="190" y1="468" x2="190" y2="484" stroke="#4FC38A" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,484 194,484 190,490" fill="#4FC38A" opacity="0.5"/>
+
+  <!-- NODE 5: Execution -->
+  <rect x="40" y="490" width="300" height="52" fill="#10162280" stroke="#E08C3A44" stroke-width="1"/>
+  <rect x="40" y="490" width="2" height="52" fill="#E08C3A"/>
+  <text x="56" y="506" font-family="'Space Mono', monospace" font-size="8" fill="#E08C3A" letter-spacing="2">05 · EXECUTION INFRASTRUCTURE</text>
+  <text x="56" y="524" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">EXECUTION INFRASTRUCTURE</text>
+  <text x="56" y="535" font-family="'Space Mono', monospace" font-size="8" fill="#E08C3A" opacity="0.7">APIs · Cloud · Payments · Services</text>
+
+  <!-- Arrow 5→boundary -->
+  <line x1="190" y1="542" x2="190" y2="558" stroke="#E08C3A" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,558 194,558 190,564" fill="#E08C3A" opacity="0.5"/>
+
+  <!-- ACTION BOUNDARY marker -->
+  <rect x="40" y="564" width="300" height="18" fill="#E0525208" stroke="#E0525255" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="53" cy="573" r="3" fill="#E05252"/>
+  <text x="62" y="577" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" letter-spacing="2.5">ACTION BOUNDARY</text>
+  <line x1="162" y1="573" x2="335" y2="573" stroke="#E05252" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Arrow boundary→6 -->
+  <line x1="190" y1="582" x2="190" y2="594" stroke="#E05252" stroke-width="1" opacity="0.5"/>
+  <polygon points="186,594 194,594 190,600" fill="#E05252" opacity="0.5"/>
+
+  <!-- NODE 6: Outcome -->
+  <rect x="40" y="600" width="300" height="52" fill="#E0525212" stroke="#E0525266" stroke-width="1"/>
+  <rect x="40" y="600" width="3" height="52" fill="#E05252"/>
+  <text x="56" y="616" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" letter-spacing="2">06 · OUTCOME</text>
+  <text x="56" y="634" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">OUTCOME</text>
+  <text x="56" y="645" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" opacity="0.7">Decision · Action · Consequence · AE³</text>
+
+  <!-- ── RIGHT COLUMN: Governance context (x=380–860) ── -->
+
+  <!-- Section header -->
+  <text x="390" y="134" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="3">ARAF GOVERNANCE BOUNDARIES</text>
+  <line x1="390" y1="140" x2="860" y2="140" stroke="#C8A84B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Boundary card 1 -->
+  <rect x="390" y="152" width="460" height="80" fill="#9B6FD410" stroke="#9B6FD455" stroke-width="1"/>
+  <rect x="390" y="152" width="3" height="80" fill="#9B6FD4"/>
+  <text x="405" y="168" font-family="'Space Mono', monospace" font-size="8" fill="#9B6FD4" letter-spacing="2.5">DATA BOUNDARY</text>
+  <text x="405" y="186" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">D2 · DATA SENSITIVITY EXPOSURE</text>
+  <text x="405" y="201" font-family="'Space Mono', monospace" font-size="8" fill="#8899AA">Governs operational data exposure · Training provenance</text>
+  <text x="405" y="215" font-family="'Space Mono', monospace" font-size="8" fill="#9B6FD4" opacity="0.7">Backward-compounding latent risk · Dataset traceability</text>
+
+  <!-- Boundary card 2 -->
+  <rect x="390" y="252" width="460" height="80" fill="#4A8FE810" stroke="#4A8FE855" stroke-width="1"/>
+  <rect x="390" y="252" width="3" height="80" fill="#4A8FE8"/>
+  <text x="405" y="268" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" letter-spacing="2.5">INFERENCE BOUNDARY</text>
+  <text x="405" y="286" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">D1 · AUTONOMY GRADIENT</text>
+  <text x="405" y="301" font-family="'Space Mono', monospace" font-size="8" fill="#8899AA">Governs model decision authority · Scope bounds</text>
+  <text x="405" y="315" font-family="'Space Mono', monospace" font-size="8" fill="#4A8FE8" opacity="0.7">Human oversight · Commitment authority · Autonomy transfer</text>
+
+  <!-- Autonomy Transfer label -->
+  <rect x="390" y="352" width="460" height="22" fill="#E0525210" stroke="#E0525240" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="405" y="367" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" letter-spacing="2">AUTONOMY TRANSFER BOUNDARY — AE³ CRYSTALLISES HERE</text>
+
+  <!-- Boundary card 3 -->
+  <rect x="390" y="390" width="460" height="80" fill="#E0525210" stroke="#E0525255" stroke-width="1"/>
+  <rect x="390" y="390" width="3" height="80" fill="#E05252"/>
+  <text x="405" y="406" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" letter-spacing="2.5">ACTION BOUNDARY</text>
+  <text x="405" y="424" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="#F0F4F8" letter-spacing="0.5">D4 · LIABILITY ARCHITECTURE</text>
+  <text x="405" y="439" font-family="'Space Mono', monospace" font-size="8" fill="#8899AA">Governs AE³ · Autonomous Action Consequences</text>
+  <text x="405" y="453" font-family="'Space Mono', monospace" font-size="8" fill="#E05252" opacity="0.7">Liability surface · Liability caps · AI insurance coverage</text>
+
+  <!-- Key message box -->
+  <rect x="390" y="492" width="460" height="110" fill="#C8A84B0C" stroke="#C8A84B44" stroke-width="1"/>
+  <rect x="390" y="492" width="460" height="2" fill="#C8A84B" opacity="0.5"/>
+  <text x="405" y="510" font-family="'Space Mono', monospace" font-size="8" fill="#C8A84B" letter-spacing="2.5">GOVERNING PRINCIPLE</text>
+  <text x="405" y="530" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">ARAF maps where risk originates,</text>
+  <text x="405" y="547" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">where it compounds,</text>
+  <text x="405" y="564" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="700" fill="#F0F4F8" letter-spacing="0.3">and where liability crystallises.</text>
+  <text x="405" y="585" font-family="'Space Mono', monospace" font-size="8" fill="#8899AA">Most governance frameworks stop before the execution boundary.</text>
+
+  <!-- Governing test -->
+  <text x="390" y="626" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="2">GOVERNING TEST · ASIC v BEKIER [2026] FCA 196</text>
+  <text x="390" y="642" font-family="'Space Mono', monospace" font-size="8.5" fill="#6B8299">Who was responsible?  ·  What did they know?  ·  What did they do?</text>
+
+  <!-- Bottom rule -->
+  <line x1="40" y1="688" x2="860" y2="688" stroke="#C8A84B" stroke-width="0.5" opacity="0.2"/>
+  <text x="40" y="704" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5">TRUST ARCHITECTURE · CARLY MARTIN · VENTURE BENCH PTY LTD</text>
+  <text x="860" y="704" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5" text-anchor="end">araf-standard.org · CC BY 4.0</text>
+</svg>

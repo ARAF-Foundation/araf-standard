@@ -1,0 +1,76 @@
+---
+title: Version History
+description: The complete version record for the Agentic Risk Architecture Framework (ARAF), including publication dates, scope of changes, and governance notes.
+---
+
+# Version History
+
+The ARAF standard is actively maintained. Version history is published here to provide transparency about how the framework has evolved, to allow institutional audiences to identify the version against which an assessment was conducted, and to signal that the standard will continue to evolve as autonomous system governance practice develops.
+
+Assessments conducted under earlier versions remain valid for the period of their certification. Reassessments are conducted against the current version at the time of reassessment.
+
+## Version Table
+
+| Version | Date | Status | Notes |
+|---|---|---|---|
+| v2.1 | 2026 | **Current — active** | Initial public release of the open standard |
+| v2.2 | TBD | Planned | Minor clarifications to dimensional sub-factor definitions and evidence standard requirements |
+| v3.0 | Future | Planned | Expanded certification model, additional regulatory alignment mappings, and further Decision Supply Chain governance elaboration |
+
+## Version 2.1 — Detail
+
+**Publication date:** 2026  
+**Status:** Current public open standard
+
+### What v2.1 establishes
+
+- the six ARAF dimensions and their sub-factor methodology
+- the Governance Benchmark Index (GBI) composite scoring model
+- multiplier logic for compound dimensional weaknesses
+- three certification tiers
+- the four-link accountability chain
+- the AIOC governance model
+- evidence standards for governance documentation
+- the assessor accreditation standard
+- the 12-month maximum reassessment interval and event-triggered reassessment requirements
+
+### Relationship to earlier versions
+
+ARAF v2.1 is the first public open release. Earlier versions were internal working documents developed during the design and validation phase. They are not publicly available and were not used for public external assessments.
+
+## Governance of the Standard
+
+The ARAF standard is currently maintained by Venture Bench Pty Ltd.
+
+The governance model at v2.1 is founder-maintained. Future governance development may include:
+
+- a technical advisory group drawing on assessment practice experience
+- an institutional advisory group including insurer, investor, and regulatory participants
+- a certification partner network contributing to methodology refinement
+- a formal amendment and consultation process for major version changes
+
+The goal is governance transparency, not governance complexity.
+
+## Citing a Specific Version
+
+When citing ARAF in research, policy documents, regulatory submissions, or assessment reports, include the specific version number.
+
+**Recommended citation format:**
+
+Martin, Carly. *Agentic Risk Architecture Framework (ARAF)*, Version [x.x]. Venture Bench Pty Ltd, [year].
+
+**Example for v2.1:**
+
+Agentic Risk Architecture Framework (ARAF), Version 2.1. Maintained by ARAF Standards Authority Ltd (a company limited by guarantee), 2026
+
+## Notification of Updates
+
+Significant version updates will be announced through ARAF standard communications channels. Organisations holding ARAF certification will be notified of updates that affect certification or trigger reassessment obligations.
+
+## License
+
+The ARAF standard is published under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+You are free to share and adapt the framework material for any purpose, including commercial purposes, provided that appropriate credit is given, a link to the licence is provided, and any changes made are indicated.
+
+The CC BY 4.0 licence applies to the standard's methodology and documentation. Certification designations, assessor accreditation, and certification body functions remain governed by the assessor accreditation standard and are not freely licensed for unrestricted certification use.

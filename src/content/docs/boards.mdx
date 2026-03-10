@@ -1,0 +1,198 @@
+---
+title: ARAF for Boards
+description: How boards use ARAF governance signals to supervise autonomous decision infrastructure.
+---
+
+## Boards
+
+Boards do not supervise models. They supervise the governance architecture through which autonomous decisions are produced. ARAF provides the structured, evidence-based governance signal boards need to exercise informed oversight, and to demonstrate that oversight when it is examined.
+
+<div class="callout" style="margin:0; border-left:none; text-align:center; border-bottom:1px solid var(--rule);">
+	ARAF is a governance standard for autonomous decision infrastructure. These pages describe how institutional audiences use the governance signals the standard produces.
+</div>
+
+**The board governance problem**
+
+The governance question is not whether the system performs well in normal conditions. It is whether the organisation can demonstrate how consequential decisions are governed when outcomes are challenged by regulators, counterparties, or the public.
+
+---
+
+## 01. The Oversight Gap
+
+Traditional board oversight assumes that consequential decisions, decisions with material impact on individuals, markets, or institutional obligations, have identifiable human authors. When outcomes are questioned, boards can examine who made the decision, what information they relied upon, and whether their conduct met the required standard of care.
+
+Autonomous systems change this accountability structure. Decisions may be produced through distributed technical and organisational infrastructure involving machine learning models, external data sources, human review stages, and execution systems operating across multiple jurisdictions. The effective author of the decision becomes the architecture that produced it, and if that architecture cannot be reconstructed from contemporaneous records, records created at the time the decision was made, oversight becomes difficult to exercise and difficult to demonstrate. This framing is consistent with the manuscript's account of accountability and reconstructability.
+
+**The institutional accountability test**
+Articulated by Matthias Bekier, the governing questions are: who was responsible, what did they know, what did they do. These three questions must be answerable for every consequential decision the organisation's systems produce. ARAF is designed to help ensure they can be. The manuscript uses these questions as the governing accountability test throughout the framework.
+
+---
+
+## 02. The Five Governance Questions
+
+Boards overseeing autonomous systems must be able to ask, and receive adequate answers to, five governance questions. An adequate answer is one grounded in documented evidence, not management assertion.
+
+**Q1. What autonomous systems is this organisation operating, and at what autonomy levels?**
+An adequate answer identifies each material system by name, describes the decisions it makes autonomously, and specifies the autonomy level at which it operates. "We use AI in various parts of the business" is evidence that governance infrastructure is absent.
+
+**Q2. Who is accountable for governance of each system, and is that accountability documented?**
+Accountability must be assigned by name and role across the core governance layers of system design, deployment approval, operational oversight, and outcome review. Undocumented accountability is unenforceable accountability.
+
+**Q3. What is the evidence base for governance claims management is making?**
+Boards should be able to distinguish between governance claims supported by infrastructure-generated evidence and governance claims supported by management narrative. "Our team follows best practices" is a management narrative, not an evidence base.
+
+**Q4. When was governance posture last independently assessed, and what did the assessment find?**
+Independent assessment means assessment by an accredited assessor with no commercial, operational, or reporting relationship to the team that built or manages the system. Internal audit, consulting firms with concurrent advisory mandates, and self-assessment by the build or management team do not satisfy this requirement. The certification materials make the independence requirement explicit.
+
+**Q5. How will the board know if governance posture degrades between formal assessments?**
+Governance posture can drift as systems are retrained, deployment contexts expand, or operational practices change. An adequate answer identifies the specific monitoring mechanisms in place: threshold-based alerts, interim governance reports, or defined escalation triggers that surface degradation to the board without relying solely on the next scheduled assessment.
+
+> **How ARAF answers each question.** Q1 (what systems, what autonomy levels) is answered by the ARAF system register and Dimension 1 classification. Q2 (who is accountable) is answered by the four-link accountability chain documented in the assessment. Q3 (evidence base) is answered by the evidence quality tier assessment. Q4 (last independent assessment) is answered by the certification date, assessor identity, and assessment report. Q5 (governance deterioration) is answered by Dimension 6 (Adaptive Stability) and the event-triggered reassessment mechanism.
+
+---
+
+## 03. The Governance Signals Boards Receive
+
+An ARAF assessment produces five outputs relevant to board oversight.
+
+**Dimensional governance profile**
+Governance posture across the six ARAF dimensions: Autonomy Gradient, Data Sensitivity Exposure, Contract Infrastructure, Liability Architecture, Commercial Leverage, and Adaptive Stability. The dimensional profile identifies where governance exposure exists and where remediation must occur. These are governance architecture dimensions, not principle categories. They assess the structure through which autonomous decisions are produced rather than abstract governance objectives. The six dimensions are defined this way in both the Six Dimensions page and the GBI methodology.
+
+**Governance Benchmark Index (GBI)**
+A composite governance signal derived from the six-dimensional assessment. The GBI compresses the dimensional profile into a comparable institutional signal. Lower scores indicate stronger governance posture and higher scores indicate greater governance risk exposure. The GBI is expressly designed to provide comparability while preserving the need for dimensional visibility.
+
+**Multiplier analysis**
+Identification of structural governance risks where dimensional weaknesses compound, producing governance exposure that cannot be understood through individual dimensions alone. The GBI methodology identifies primary multiplier conditions including Systemic Escalation, Infrastructure Collapse, and Leverage Collapse.
+
+**Evidence quality tier**
+Classification of the governance evidence supporting the assessment:
+
+- Infrastructure-generated evidence
+- Contemporaneous documentation
+- Reconstructed documentation
+
+**Certification tier**
+The designation based on the GBI score, indicating whether the governance posture meets defined institutional thresholds (ARAF Assessed, ARAF Compliant at GBI &le; 2.50, ARAF Certified at GBI &le; 1.75)
+
+These are the formal evidence tiers used in the GBI methodology.
+
+ARAF defines three certification tiers based on the GBI score.
+
+<div className="report-grid">
+	<div className="report-cell">
+		<p className="report-label">ARAF Assessed</p>
+		<p className="report-desc">Independent evaluation completed by an accredited assessor. No minimum GBI score required. Entry level: the minimum a board should require before accepting management governance representations.</p>
+	</div>
+	<div className="report-cell">
+		<p className="report-label">ARAF Compliant · GBI &le; 2.50</p>
+		<p className="report-desc">Minimum institutional governance threshold met. A board receiving a GBI at or below 2.50 can confirm that governance posture supports standard institutional reliance.</p>
+	</div>
+	<div className="report-cell">
+		<p className="report-label">ARAF Certified · GBI &le; 1.75</p>
+		<p className="report-desc">Full agentic bankability conditions met. Governance posture supports classification, insurance, financing, and the highest level of institutional reliance. A GBI above 2.50 should be treated as a remediation requirement.</p>
+	</div>
+</div>
+
+Together these outputs allow boards to exercise informed oversight without requiring technical expertise in the systems themselves. The dimensional profile explains where governance exposure exists. The GBI provides a comparable institutional signal. Evidence quality determines the confidence that institutional audiences can place in the assessment. That distinction between dimensional profile, composite comparability, and evidentiary confidence is explicit in the current ARAF materials.
+
+**Certification and board reliance**
+Certification is the independently issued market signal built on top of the assessment output. It allows boards and other institutional audiences to rely on governance posture without reproducing the full assessment. Certification does not eliminate the board's oversight responsibility. It provides the structured governance information required to exercise that responsibility. The certification specification distinguishes clearly between the assessment output and certification as the market-facing signal, with tiers anchored to GBI thresholds.
+
+---
+
+## 04. Board Reporting Architecture
+
+Boards require governance signals that allow oversight to be exercised efficiently. An effective reporting structure should include six components.
+
+**System inventory**
+Portfolio-level view of autonomous systems operating within the organisation, classified by autonomy level.
+
+**GBI scores**
+Composite governance signals allowing the board to identify systems whose posture requires attention. Lower scores indicate stronger posture.
+
+**Dimensional exposure indicators**
+Which governance dimensions create exposure, the diagnostic layer beneath the composite score.
+
+**Evidence maturity indicators**
+Whether governance evidence is infrastructure-generated evidence, contemporaneous documentation, or reconstructed documentation.
+
+**Remediation status**
+Progress against remediation plans where governance posture falls below institutional thresholds.
+
+**Independent assurance line**
+Mechanism through which the board receives governance information not filtered through management.
+
+This reporting logic is consistent with the role the GBI and dimensional profile are intended to play for boards and other institutional audiences.
+
+---
+
+## 05. Oversight Triggers
+
+**System deployment approval**
+Before approving deployment of an autonomous system capable of producing consequential decisions, the board should receive a classification assessment and governance architecture review.
+
+**Periodic governance review**
+Governance posture for systems already operating within the organisation should be reviewed at least annually, or more frequently for systems operating at higher autonomy levels. Governance drift requires active monitoring, not only baseline assessment.
+
+**Incident investigation**
+Following adverse outcomes where an autonomous system's decision is questioned, the governance record must demonstrate how the decision was produced and governed.
+
+**Third-party governance inquiries**
+When insurers, regulators, investors, or enterprise customers request governance documentation, the board must ensure that documentation exists before the request arrives.
+
+This is directionally consistent with the certification lifecycle and event-triggered reassessment logic in the standard.
+
+---
+
+## 06. Assessment Credibility
+
+ARAF certifications are issued by independent, accredited assessors operating under a published methodology with defined qualification, independence, and accountability requirements. The methodology is open (licensed under CC BY 4.0), making the assessment process independently reviewable by any board member or independent adviser.
+
+Self-assessment does not satisfy the ARAF independence requirement. An organisation that produces its own ARAF assessment has produced a self-assessment, not a certification. Self-reported governance is evidence of intent. Independent assessment is evidence of fact. When an accredited assessor issues a certification, it accepts professional responsibility for the quality of the assessment that produced it.
+
+> **The foreseeability standard.** An organisation holding ARAF Certified or ARAF Compliant status holds contemporaneous, independently produced evidence that its governance architecture was assessed against a defined standard and found adequate at the time of assessment. That evidence does not constitute a statutory safe harbour. It is, however, the kind of contemporaneous evidence that courts assessing the standard of care under s 180(1) of the Corporations Act, insurers evaluating coverage, and regulators conducting supervisory review will find relevant to whether reasonable precautions were taken.
+
+---
+
+## 07. Decision Supply Chain Oversight
+
+Most autonomous decisions are produced through Distributed Decision Infrastructure (DDI): the network of human experts, autonomous systems, data infrastructure, and external providers through which organisations generate consequential decisions. The Decision Supply Chain that forms within this infrastructure may include foundation model providers, fine-tuning organisations, data providers, offshore review teams, and cloud infrastructure providers. This language aligns with the Decision Supply Chain and manuscript definitions of DDI and the chain itself.
+
+The organisation deploying the system retains accountability for the consequences of the decisions the chain produces. That accountability does not transfer to offshore providers or outsourced management functions by virtue of contractual arrangement. What contractual arrangements can do is allocate liability, but only if those arrangements were designed for the purpose and are adequately documented. The Decision Supply Chain materials make this point directly.
+
+ARAF assessments therefore examine governance architecture across the entire Decision Supply Chain. The board's oversight responsibility extends to the chain, not only the model at its centre. The manuscript and Decision Supply Chain page both frame governance of autonomous systems as governance of decision infrastructure, not merely governance of an isolated model.
+
+---
+
+## 08. Governance Oversight Flow
+
+<div className="flow">
+	<div className="flow-node">Autonomous System</div>
+	<div className="flow-arrow">&darr;</div>
+	<div className="flow-node">Governance Architecture</div>
+	<div className="flow-arrow">&darr;</div>
+	<div className="flow-node">Independent ARAF Assessment (Accredited Assessor)</div>
+	<div className="flow-arrow">&darr;</div>
+	<div className="flow-node">Dimensional Profile + Evidence Quality Tier</div>
+	<div className="flow-arrow">&darr;</div>
+	<div className="flow-node">GBI Score + Certification Tier</div>
+	<div className="flow-arrow">&darr;</div>
+	<div className="flow-node">Board Oversight</div>
+</div>
+
+Feedback loop: remediation directives flow back to Governance Architecture.
+
+The flow above is not a single pass. Where board oversight identifies governance posture below institutional thresholds, remediation directives feed back into the governance architecture. The board should receive confirmation that remediation has been completed, verified by the independent assurance line where the deficiency is material.
+
+---
+
+## Specification
+
+- [Six Dimensions](/six-dimensions/)
+- [Decision Supply Chain](/decision-supply-chain/)
+- [Governance Benchmark Index](/gbi-methodology/)
+- [Evidence Standard](/methodology/evidence-standard/)
+- [Certification](/certification/)
+- [Assessor Accreditation Standard](/methodology/assessor-accreditation-standard/)
+- [Glossary](/glossary/)
+- [All Institutional Applications](/institutional-applications/)

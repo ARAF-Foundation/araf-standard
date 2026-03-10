@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 112" fill="none">
+  <title>ARAF Certified</title>
+  <rect x="0" y="0" width="80" height="112" rx="3" fill="none" stroke="#9C7A3C" stroke-width="1"/>
+  <rect x="11" y="11" width="14" height="14" fill="#9C7A3C"/>
+  <rect x="28" y="11" width="14" height="14" fill="#9C7A3C"/>
+  <rect x="45" y="11" width="14" height="14" fill="#9C7A3C"/>
+  <rect x="11" y="28" width="14" height="14" fill="#9C7A3C"/>
+  <rect x="28" y="28" width="14" height="14" fill="#9C7A3C"/>
+  <rect x="45" y="28" width="14" height="14" fill="#9C7A3C"/>
+  <line x1="11" y1="57" x2="69" y2="57" stroke="#9C7A3C" stroke-width="0.75"/>
+  <text x="40" y="76" text-anchor="middle" font-family="'Libre Baskerville',Georgia,serif" font-size="16" font-weight="700" letter-spacing="-0.4" fill="#0d0d0b">ARAF</text>
+  <text x="40" y="92" text-anchor="middle" font-family="'DM Mono','Courier New',monospace" font-size="7" letter-spacing="1.8" fill="#9C7A3C">CERTIFIED</text>
+  <text x="40" y="103" text-anchor="middle" font-family="'DM Mono','Courier New',monospace" font-size="6" letter-spacing="0.5" fill="#7a7a72">GBI ≤ 1.75</text>
+</svg>

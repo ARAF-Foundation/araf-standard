@@ -1,0 +1,164 @@
+# ARAF Standard — Copilot Instructions
+
+## Project overview
+
+This is the ARAF Standard website (araf-standard.org). It is a documentation site for an open governance standard built with Astro and the Starlight documentation framework, deployed to Netlify.
+
+This is a standards body site, not a startup site. Write like NIST, W3C, or ISO — precise, institutional, no marketing language.
+
+## Tech stack
+
+- Framework: Astro with Starlight documentation theme
+- Content: MDX files in `src/content/docs/`
+- Config: `astro.config.mjs` controls sidebar and site settings
+- Static assets: SVG logos and PDFs in `public/`
+- Deployment: Netlify
+
+## Project structure
+
+```
+araf-standard/
+├── .github/
+│   └── copilot-instructions.md
+├── src/
+│   └── content/
+│       └── docs/
+│           ├── index.mdx
+│           ├── specification.mdx
+│           ├── trust-architecture.mdx
+│           ├── decision-supply-chain.mdx
+│           ├── six-dimensions.mdx
+│           ├── gbi-methodology.mdx
+│           ├── certification.mdx
+│           ├── version-history.mdx
+│           ├── downloads.mdx
+│           └── standard-governance.mdx
+├── public/
+│   ├── araf-mark-primary-dark.svg
+│   ├── araf-mark-primary-light.svg
+│   ├── araf-mark-stacked-dark.svg
+│   └── araf-certification-marks.svg
+└── astro.config.mjs
+```
+
+## All pages — current status
+
+| Page | Slug | Status |
+|---|---|---|
+| Homepage | `index` | Complete |
+| Specification | `specification` | Complete |
+| Trust Architecture | `trust-architecture` | Complete |
+| Decision Supply Chain | `decision-supply-chain` | Complete |
+| Six ARAF Dimensions | `six-dimensions` | Complete |
+| GBI Methodology | `gbi-methodology` | Complete |
+| Certification | `certification` | Complete |
+| Version History | `version-history` | Complete |
+| Downloads | `downloads` | Complete |
+| Standard Governance | `standard-governance` | Complete |
+
+## Page summaries
+
+### downloads.mdx
+Lists available public materials in a table (document, version, format, status). Current documents: ARAF Specification v2.1 (PDF, to be uploaded), Trust Architecture Overview v2.1 (PDF, to be uploaded), Decision Supply Chain Diagram v2.1 (PNG/PDF, to be uploaded), Version History (web, live), Standard Governance (web, live). Includes a standard status table and citation block. PDFs are not yet uploaded to `public/` — status column reads "To be uploaded" until files are added.
+
+### standard-governance.mdx
+Describes how the ARAF standard is maintained. Current model: founder-led governance under Venture Bench Pty Ltd. Four governance principles: version discipline, public transparency, methodological consistency, institutional usability. Scope covers version publication, methodology maintenance, interpretive clarification, version history, and public documentation stewardship. Explicitly states that standard governance does not constitute assessor accreditation, certification issuance, or statutory authority. Future governance may include technical contributors, institutional advisory group, certification partners, accredited assessors, and a formal amendment process.
+
+## Sidebar navigation (astro.config.mjs)
+
+```
+Overview
+  └── Introduction (index)
+
+The Standard
+  ├── Specification
+  ├── Trust Architecture
+  └── Decision Supply Chain
+
+Framework
+  ├── Six ARAF Dimensions
+  └── Governance Benchmark Index (GBI)
+
+Certification
+  └── Certification Tiers
+
+Reference
+  ├── Version History
+  ├── Downloads
+  └── Standard Governance
+```
+
+## ARAF framework — critical definitions
+
+Use these terms and values exactly. Do not invent variations.
+
+- **GBI (Governance Benchmark Index):** Score 1.0–5.0. Lower = better. Higher = more governance risk. Never reverse this.
+- **ARAF Certified:** GBI ≤ 1.75
+- **ARAF Compliant:** GBI ≤ 2.50
+- **ARAF Assessed:** Any GBI score — assessment completed
+- **AE3:** Autonomous Action Consequences — the liability category for outcomes produced by autonomous decisions without per-step human authorisation
+- **AIOC:** Autonomous Intelligence Oversight Committee
+- **DDI:** Distributed Decision Infrastructure
+- **The six dimensions:** Autonomy Gradient (D1), Data Sensitivity Exposure (D2), Contract Infrastructure (D3), Liability Architecture (D4), Commercial Leverage (D5), Adaptive Stability (D6)
+- **The governing test:** "Who was responsible? What did they know? What did they do?"
+- **The anchor case:** ASIC v Bekier [2026] FCA 196
+- **The four bankability conditions:** Identifiability, Measurability, Governability, Insurability
+- **The four accountability links:** Design, Deployment, Operational, Outcome
+- **Multiplier conditions:** Systemic Escalation (D1≥4 AND D4≥4), Infrastructure Collapse (D3≥4 AND D1≥3), Leverage Collapse (D5≥4 AND D4≥3)
+
+## Design tokens
+
+```
+Serif:      Libre Baskerville (headings, wordmark)
+Mono:       DM Mono (labels, metadata, code)
+Sans:       DM Sans (body)
+
+Ink:        #0d0d0b
+Gold:       #A88644
+Paper:      #f7f5f0
+Muted:      #7a7a72
+Rule:       #d4d0c8
+Cream:      #ede9e0
+White:      #ffffff
+```
+
+## Logo files (in public/)
+
+- `araf-mark-primary-dark.svg` — horizontal mark for light backgrounds
+- `araf-mark-primary-light.svg` — horizontal mark for dark backgrounds
+- `araf-mark-stacked-dark.svg` — stacked mark for documents and PDFs
+- `araf-certification-marks.svg` — all three certification tier badges
+
+Logo usage in astro.config.mjs:
+```js
+logo: {
+  dark: './src/assets/araf-mark-primary-light.svg',
+  light: './src/assets/araf-mark-primary-dark.svg',
+},
+```
+
+## MDX conventions
+
+Use Starlight components where appropriate:
+
+```mdx
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+:::note[Label]
+Content
+:::
+
+:::caution[Label]
+Content
+:::
+```
+
+Use tables for reference material. Use `:::caution` for the GBI score direction warning wherever GBI is introduced for the first time on a page.
+
+## Content rules
+
+- If unsure about a framework definition, ask before writing — ARAF terms have specific meanings
+- Never add certification tiers, dimension names, or GBI thresholds that differ from the definitions above
+- The site should be citable in regulatory submissions and policy papers — accuracy matters
+- Version references in content should say "ARAF v2.1" — version is not part of the logo lockup
+- Standard governance does not constitute assessor accreditation, certification 

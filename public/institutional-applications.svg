@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="860" viewBox="0 0 900 860">
+
+  <title>Institutional Applications — ARAF Standard</title>
+  <desc>Five institutional audience cards showing how the ARAF framework translates into different decision languages. Institutional Reliance group: Boards, Insurers, Investors, Regulators. Deployment Decision group: Enterprise Procurement. One framework. Five translations. From ARAF v2.1, 2026.</desc>
+
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .mono  { font-family: 'Courier New', Courier, monospace; }
+    </style>
+  </defs>
+
+  <!-- ── PAGE BACKGROUND ── -->
+  <rect width="900" height="860" fill="#f7f5f0"/>
+  <rect x="24" y="24" width="852" height="812" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="24" y1="30"  x2="24"  y2="24"  stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="18" y1="24"  x2="24"  y2="24"  stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="876" y1="30" x2="876" y2="24"  stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="876" y1="24" x2="882" y2="24"  stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="24" y1="830" x2="24"  y2="836" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="18" y1="836" x2="24"  y2="836" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="876" y1="830" x2="876" y2="836" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="876" y1="836" x2="882" y2="836" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- ── HEADER ── -->
+  <text x="450" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">ARAF STANDARD · INSTITUTIONAL APPLICATIONS</text>
+  <line x1="40" y1="54" x2="860" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- ── HERO ── -->
+  <text x="40" y="76" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">INSTITUTIONAL APPLICATIONS</text>
+  <text x="40" y="104" font-size="26" font-weight="bold" fill="#0d0d0b" class="serif">The framework, in your language.</text>
+  <text x="40" y="126" font-size="9.5" fill="#3a3a35" class="mono">ARAF produces a single governance signal. Four institutional audiences evaluate that signal through different decision lenses.</text>
+  <text x="40" y="140" font-size="9.5" fill="#3a3a35" class="mono">Enterprise procurement evaluates it before deployment. These pages translate the framework into the decision language</text>
+  <text x="40" y="154" font-size="9.5" fill="#3a3a35" class="mono">each audience requires — without introducing new methodology.</text>
+
+  <line x1="40" y1="164" x2="860" y2="164" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- GROUP 1: INSTITUTIONAL RELIANCE -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <text x="40" y="184" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">INSTITUTIONAL RELIANCE</text>
+  <text x="40" y="200" font-size="9" fill="#7a7a72" font-style="italic" class="mono">These audiences evaluate governance after deployment risk exists. They ask: can we rely on this system?</text>
+
+  <!-- ── CARD 1: BOARDS ── x=40, y=212, w=192, h=174 -->
+  <rect x="40"  y="212" width="192" height="174" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="40"  y="212" width="192" height="3"   fill="#A88644"/>
+  <text x="52"  y="230" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">BOARDS</text>
+  <text x="52"  y="250" font-size="13" font-weight="bold" fill="#0d0d0b" class="serif">ARAF for Boards</text>
+  <line x1="52" y1="256" x2="220" y2="256" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="52"  y="272" font-size="8.5" fill="#3a3a35" class="mono">How to exercise informed</text>
+  <text x="52"  y="285" font-size="8.5" fill="#3a3a35" class="mono">oversight of autonomous</text>
+  <text x="52"  y="298" font-size="8.5" fill="#3a3a35" class="mono">systems, receive governance</text>
+  <text x="52"  y="311" font-size="8.5" fill="#3a3a35" class="mono">signals that satisfy directors'</text>
+  <text x="52"  y="324" font-size="8.5" fill="#3a3a35" class="mono">duties, and structure board-</text>
+  <text x="52"  y="337" font-size="8.5" fill="#3a3a35" class="mono">level reporting.</text>
+  <line x1="52" y1="348" x2="220" y2="348" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="52"  y="364" font-size="8" fill="#7a7a72" font-style="italic" class="mono">"Can we demonstrate how</text>
+  <text x="52"  y="376" font-size="8" fill="#7a7a72" font-style="italic" class="mono">this system's decisions</text>
+  <text x="220" y="382" text-anchor="end" font-size="8" fill="#7a7a72" font-style="italic" class="mono">are governed?"</text>
+
+  <!-- ── CARD 2: INSURERS ── x=246, y=212 -->
+  <rect x="246" y="212" width="192" height="174" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="246" y="212" width="192" height="3"   fill="#A88644"/>
+  <text x="258" y="230" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">INSURERS</text>
+  <text x="258" y="250" font-size="13" font-weight="bold" fill="#0d0d0b" class="serif">ARAF for Insurers</text>
+  <line x1="258" y1="256" x2="426" y2="256" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="258" y="272" font-size="8.5" fill="#3a3a35" class="mono">How governance posture</text>
+  <text x="258" y="285" font-size="8.5" fill="#3a3a35" class="mono">translates into underwriting</text>
+  <text x="258" y="298" font-size="8.5" fill="#3a3a35" class="mono">signals, evidence quality</text>
+  <text x="258" y="311" font-size="8.5" fill="#3a3a35" class="mono">affects claims defensibility,</text>
+  <text x="258" y="324" font-size="8.5" fill="#3a3a35" class="mono">and classification replaces</text>
+  <text x="258" y="337" font-size="8.5" fill="#3a3a35" class="mono">exclusion.</text>
+  <line x1="258" y1="348" x2="426" y2="348" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="258" y="364" font-size="8" fill="#7a7a72" font-style="italic" class="mono">"Is this risk classifiable</text>
+  <text x="426" y="376" text-anchor="end" font-size="8" fill="#7a7a72" font-style="italic" class="mono">and underwritable?"</text>
+
+  <!-- ── CARD 3: INVESTORS ── x=452, y=212 -->
+  <rect x="452" y="212" width="192" height="174" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="452" y="212" width="192" height="3"   fill="#A88644"/>
+  <text x="464" y="230" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">INVESTORS</text>
+  <text x="464" y="250" font-size="13" font-weight="bold" fill="#0d0d0b" class="serif">ARAF for Investors</text>
+  <line x1="464" y1="256" x2="632" y2="256" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="464" y="272" font-size="8.5" fill="#3a3a35" class="mono">How governance architecture</text>
+  <text x="464" y="285" font-size="8.5" fill="#3a3a35" class="mono">affects operational durability,</text>
+  <text x="464" y="298" font-size="8.5" fill="#3a3a35" class="mono">regulatory exposure, and</text>
+  <text x="464" y="311" font-size="8.5" fill="#3a3a35" class="mono">institutional adoption across</text>
+  <text x="464" y="324" font-size="8.5" fill="#3a3a35" class="mono">the investment lifecycle.</text>
+  <line x1="464" y1="348" x2="632" y2="348" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="464" y="364" font-size="8" fill="#7a7a72" font-style="italic" class="mono">"Is this governance posture</text>
+  <text x="632" y="376" text-anchor="end" font-size="8" fill="#7a7a72" font-style="italic" class="mono">investable?"</text>
+
+  <!-- ── CARD 4: REGULATORS ── x=658, y=212 -->
+  <rect x="658" y="212" width="202" height="174" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="658" y="212" width="202" height="3"   fill="#A88644"/>
+  <text x="670" y="230" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">REGULATORS</text>
+  <text x="670" y="250" font-size="13" font-weight="bold" fill="#0d0d0b" class="serif">ARAF for Regulators</text>
+  <line x1="670" y1="256" x2="848" y2="256" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="670" y="272" font-size="8.5" fill="#3a3a35" class="mono">How ARAF enables supervisory</text>
+  <text x="670" y="285" font-size="8.5" fill="#3a3a35" class="mono">visibility into autonomous</text>
+  <text x="670" y="298" font-size="8.5" fill="#3a3a35" class="mono">decision infrastructure —</text>
+  <text x="670" y="311" font-size="8.5" fill="#3a3a35" class="mono">without replacing regulatory</text>
+  <text x="670" y="324" font-size="8.5" fill="#3a3a35" class="mono">authority.</text>
+  <line x1="670" y1="348" x2="848" y2="348" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="670" y="364" font-size="8" fill="#7a7a72" font-style="italic" class="mono">"Can accountability be</text>
+  <text x="670" y="376" font-size="8" fill="#7a7a72" font-style="italic" class="mono">demonstrated when outcomes</text>
+  <text x="848" y="382" text-anchor="end" font-size="8" fill="#7a7a72" font-style="italic" class="mono">are challenged?"</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- GROUP 2: DEPLOYMENT DECISION -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <line x1="40" y1="400" x2="860" y2="400" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <text x="40"  y="420" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">DEPLOYMENT DECISION</text>
+  <text x="40"  y="436" font-size="9" fill="#7a7a72" font-style="italic" class="mono">This audience evaluates governance before adoption. They ask: should we deploy or buy this system?</text>
+
+  <!-- ── CARD 5: ENTERPRISE PROCUREMENT ── centred, wider -->
+  <rect x="40"  y="448" width="302" height="174" fill="#0d0d0b" stroke="#0d0d0b"/>
+  <rect x="40"  y="448" width="302" height="3"   fill="#A88644"/>
+  <text x="52"  y="466" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">ENTERPRISE PROCUREMENT</text>
+  <text x="52"  y="488" font-size="13" font-weight="bold" fill="white" class="serif">ARAF for Enterprise</text>
+  <text x="52"  y="504" font-size="13" font-weight="bold" fill="white" class="serif">Procurement</text>
+  <line x1="52" y1="512" x2="330" y2="512" stroke="rgba(255,255,255,0.1)" stroke-width="0.75"/>
+  <text x="52"  y="528" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">How governance certification</text>
+  <text x="52"  y="541" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">functions as vendor assurance,</text>
+  <text x="52"  y="554" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">what procurement teams need</text>
+  <text x="52"  y="567" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">from governance documentation,</text>
+  <text x="52"  y="580" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">and how to evaluate the</text>
+  <text x="52"  y="593" font-size="8.5" fill="rgba(255,255,255,0.65)" class="mono">Decision Supply Chain.</text>
+  <line x1="52" y1="604" x2="330" y2="604" stroke="rgba(255,255,255,0.08)" stroke-width="0.75"/>
+  <text x="52"  y="620" font-size="8" fill="rgba(168,134,68,0.7)" font-style="italic" class="mono">"Can this vendor demonstrate how</text>
+  <text x="52"  y="632" font-size="8" fill="rgba(168,134,68,0.7)" font-style="italic" class="mono">the system's decisions are</text>
+  <text x="330" y="638" text-anchor="end" font-size="8" fill="rgba(168,134,68,0.7)" font-style="italic" class="mono">produced and governed?"</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- FRAMEWORK NOTE -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <line x1="40" y1="638" x2="860" y2="638" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <rect x="40" y="650" width="820" height="108" fill="#fdf8f0" stroke="#e8e4db" stroke-width="1"/>
+  <rect x="40" y="650" width="3"   height="108" fill="#A88644"/>
+
+  <text x="56"  y="668" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">ONE FRAMEWORK. FIVE TRANSLATIONS.</text>
+  <text x="56"  y="690" font-size="13" font-weight="bold" fill="#0d0d0b" class="serif">The framework is the same. The interpretive frame is different.</text>
+  <line x1="56" y1="698" x2="848" y2="698" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="56"  y="714" font-size="9" fill="#3a3a35" class="mono">ARAF produces a single dimensional governance profile and a single GBI composite score. Each of these pages applies that output</text>
+  <text x="56"  y="728" font-size="9" fill="#3a3a35" class="mono">to the specific decision language, accountability obligations, and institutional requirements of a different audience. No audience</text>
+  <text x="56"  y="742" font-size="9" fill="#3a3a35" class="mono">needs to understand the full specification to use its output. The specification is available in full for those who do.</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SPEC LINKS ROW -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <line x1="40" y1="770" x2="860" y2="770" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <text x="40" y="788" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">SPECIFICATION</text>
+
+  <!-- Link chips -->
+  <rect x="40"  y="796" width="100" height="20" fill="white" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="90"  y="810" text-anchor="middle" font-size="7.5" fill="#7a7a72" letter-spacing="1" class="mono">Six Dimensions</text>
+
+  <rect x="148" y="796" width="128" height="20" fill="white" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="212" y="810" text-anchor="middle" font-size="7.5" fill="#7a7a72" letter-spacing="1" class="mono">Decision Supply Chain</text>
+
+  <rect x="284" y="796" width="168" height="20" fill="white" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="368" y="810" text-anchor="middle" font-size="7.5" fill="#7a7a72" letter-spacing="1" class="mono">Governance Benchmark Index</text>
+
+  <rect x="460" y="796" width="100" height="20" fill="white" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="510" y="810" text-anchor="middle" font-size="7.5" fill="#7a7a72" letter-spacing="1" class="mono">Certification</text>
+
+  <rect x="568" y="796" width="72" height="20" fill="white" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="604" y="810" text-anchor="middle" font-size="7.5" fill="#7a7a72" letter-spacing="1" class="mono">Glossary</text>
+
+  <!-- ── FOOTER ── -->
+  <line x1="40" y1="824" x2="860" y2="824" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="40"  y="840" font-size="7.5" fill="#7a7a72" class="mono">ARAF Standard · Institutional Applications · CC BY 4.0</text>
+  <text x="860" y="840" text-anchor="end" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026</text>
+
+</svg>

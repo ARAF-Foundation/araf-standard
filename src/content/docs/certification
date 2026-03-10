@@ -1,0 +1,127 @@
+---
+title: Certification
+description: The three ARAF certification tiers, assessor accreditation standard, certification lifecycle, and how certification functions as a market signal for institutional audiences.
+---
+
+# Certification
+
+Trust requires a signal.
+
+Governance that has been built, documented, and independently assessed still cannot function as market infrastructure unless it can be communicated in a form that institutional audiences can use without conducting the full assessment themselves. Certification is the mechanism that produces that communication: the compressed, independently verified signal that allows governance quality to travel through markets.
+
+## What Certification Does
+
+ARAF certification serves the same economic function for governance risk that credit ratings serve for credit risk. Three functions are performed.
+
+**Information compression** — A credit rating compresses the complex analysis of a borrower's creditworthiness into a single comparable symbol. An ARAF certification compresses the complex assessment of an autonomous system's governance posture into a GBI score and certification tier that communicates governance quality without requiring the recipient to conduct the full assessment.
+
+**Accountability transfer** — When an accredited ARAF assessor issues a certification, it accepts responsibility for the quality of the assessment that produced the certification. That accountability transfer is what gives the signal credibility: it is not a claim by the organisation about itself, but a representation by an independent assessor operating under a defined methodology.
+
+**Market creation** — ARAF certification does not merely describe governance posture. It creates the market for governance quality by making governance posture comparable across autonomous system deployments. Without comparability, governance quality cannot be priced. Without pricing, governance investment cannot produce a return.
+
+> *The market is not waiting for perfect governance. It is waiting for measurable governance.*
+
+## The Three Certification Tiers
+
+### ARAF Assessed
+
+**Entry designation — Independent evaluation completed**
+
+ARAF Assessed status indicates that the organisation's autonomous system governance posture has been independently evaluated by an accredited ARAF assessor against the ARAF framework. It indicates that governance posture is documented, that a GBI score and dimensional profile exist, and that the assessment was conducted by an assessor operating under the ARAF methodology.
+
+ARAF Assessed status does not indicate that governance posture meets any particular threshold. It indicates that governance posture is known and documented.
+
+### ARAF Compliant
+
+**GBI score ≤ 2.50 — Minimum institutional threshold met**
+
+ARAF Compliant status indicates that the governance posture of the assessed autonomous system meets the minimum institutional threshold for reliance in most deployment contexts.
+
+### ARAF Certified
+
+**GBI score ≤ 1.75 — Full agentic bankability supported**
+
+ARAF Certified is the highest designation. It indicates that the governance posture of the assessed autonomous system supports the full conditions of institutional reliance: the system can be classified, governed, insured, financed, and relied upon by institutional audiences that must assume responsibility for its behaviour.
+
+## Certification Tiers at a Glance
+
+| Tier | Threshold | Signal |
+|---|---|---|
+| ARAF Assessed | Assessment completed | Governance posture is documented and independently reviewed |
+| ARAF Compliant | GBI ≤ 2.50 | Minimum institutional threshold met |
+| ARAF Certified | GBI ≤ 1.75 | Strong governance posture / institutional-grade deployment |
+
+## The Assessor Accreditation Standard
+
+Certification is only as credible as the assessors who produce it.
+
+The ARAF assessor accreditation standard establishes four requirements:
+
+- demonstrated qualification
+- documented methodology adherence
+- independence
+- accountability
+
+:::caution[Self-certification]
+Self-certification does not satisfy the ARAF independence requirement. An organisation that produces its own ARAF assessment has produced a self-assessment, not a certification.
+:::
+
+## The Certification Lifecycle
+
+### Initial Assessment
+
+The initial ARAF assessment produces:
+
+- GBI composite score
+- full dimensional profile
+- multiplier analysis
+- remediation roadmap where required
+- certification designation
+- assessment date and validity period
+
+### Scheduled Reassessment
+
+The maximum interval between formal reassessments is **12 months**.
+
+### Event-Triggered Reassessment
+
+Material changes trigger reassessment regardless of the ordinary reassessment cycle, including:
+
+- significant model updates
+- new deployment contexts
+- material changes to data sources
+- anomaly patterns suggesting scope drift
+- regulatory developments materially affecting governance obligations
+- adverse outcomes implicating governance architecture
+- material changes to contract infrastructure
+
+### Certification Withdrawal
+
+Certification may be withdrawn where:
+
+- material changes were not notified or addressed
+- governance posture deteriorates below the certified threshold
+- the assessment was based on materially inaccurate or incomplete information
+
+## Certification and the Foreseeability Standard
+
+An organisation that has obtained ARAF Certified or ARAF Compliant status from an accredited assessor has contemporaneous, independently produced evidence that its governance architecture was assessed against a defined standard and found adequate at the time of assessment.
+
+That evidence does not constitute a statutory safe harbour. But it is precisely the kind of contemporaneous evidence that a court, insurer, or regulator will find relevant to whether reasonable precautions were taken.
+
+## Getting Assessed
+
+Organisations seeking ARAF assessment should:
+
+1. conduct a preliminary self-review against the six ARAF dimensions
+2. prepare governance documentation across the four evidence categories
+3. engage an accredited ARAF assessor
+4. complete the structured assessment process
+5. review the GBI score, dimensional profile, and remediation roadmap
+6. address remediation items before seeking higher certification where necessary
+
+→ [Downloads](/downloads)
+
+## Citation
+
+Agentic Risk Architecture Framework (ARAF), Version 2.1. Maintained by ARAF Standards Authority Ltd (a company limited by guarantee), 2026

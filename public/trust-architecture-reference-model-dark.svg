@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="960" viewBox="0 0 800 960">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .mono  { font-family: 'Courier New', Courier, monospace; }
+    </style>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="800" height="960" fill="#0d0d0b"/>
+  <rect x="28" y="28" width="744" height="904" fill="#111110" stroke="#2a2a26" stroke-width="1"/>
+
+  <!-- ── EVIDENCE SPINE ── -->
+  <line x1="680" y1="56" x2="680" y2="848" stroke="#A88644" stroke-width="2"/>
+  <circle cx="680" cy="56"  r="3" fill="#A88644"/>
+  <circle cx="680" cy="452" r="4" fill="#A88644"/>
+  <circle cx="680" cy="848" r="3" fill="#A88644"/>
+  <!-- Spine label backgrounds -->
+  <rect x="650" y="390" width="60" height="120" fill="#111110"/>
+  <text transform="rotate(-90,680,450)" x="680" y="450" text-anchor="middle"
+        font-size="8.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">EVIDENCE INFRASTRUCTURE</text>
+  <rect x="650" y="518" width="60" height="64" fill="#111110"/>
+  <text transform="rotate(-90,680,550)" x="680" y="550" text-anchor="middle"
+        font-size="8" fill="rgba(168,134,68,0.6)" letter-spacing="1.5" class="mono">Contemporaneous Records</text>
+  <!-- Spine ticks -->
+  <line x1="673" y1="64"  x2="687" y2="64"  stroke="#A88644" stroke-width="1.5"/>
+  <line x1="673" y1="840" x2="687" y2="840" stroke="#A88644" stroke-width="1.5"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- OPERATIONAL LAYER -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="44" y="646" width="612" height="178" fill="#161614" stroke="#2a2a26" stroke-width="1"/>
+  <!-- Tab -->
+  <rect x="56" y="638" width="122" height="14" fill="#0d0d0b"/>
+  <text x="62" y="649" font-size="7.5" font-weight="bold" fill="#3a3a35" letter-spacing="2.5" class="mono">OPERATIONAL LAYER</text>
+  <text x="518" y="649" font-size="7" fill="#2a2a26" font-style="italic" class="mono">Decision supply chain</text>
+
+  <text x="60" y="678" font-size="12" font-weight="bold" fill="rgba(255,255,255,0.6)" class="serif">Decision Supply Chain</text>
+
+  <!-- Chain box -->
+  <rect x="60" y="686" width="568" height="118" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+
+  <!-- Node 1 -->
+  <rect x="70"  y="698" width="112" height="90" fill="#161614" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="70"  y="698" width="112" height="2"  fill="#3a3a35"/>
+  <text x="126" y="726" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.5)" letter-spacing="1" class="mono">DATA</text>
+  <text x="126" y="740" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.5)" letter-spacing="1" class="mono">SOURCES</text>
+  <text x="126" y="758" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">Input</text>
+  <text x="126" y="770" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">infrastructure</text>
+
+  <text x="198" y="744" text-anchor="middle" font-size="14" fill="#2a2a26">→</text>
+
+  <!-- Node 2 -->
+  <rect x="212" y="698" width="112" height="90" fill="#161614" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="212" y="698" width="112" height="2"  fill="#A88644"/>
+  <text x="268" y="726" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.7)" letter-spacing="1" class="mono">MODEL</text>
+  <text x="268" y="740" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.7)" letter-spacing="1" class="mono">SYSTEMS</text>
+  <text x="268" y="758" text-anchor="middle" font-size="8" fill="rgba(168,134,68,0.5)" font-style="italic" class="mono">Processing</text>
+  <text x="268" y="770" text-anchor="middle" font-size="8" fill="rgba(168,134,68,0.5)" font-style="italic" class="mono">layer</text>
+
+  <text x="340" y="744" text-anchor="middle" font-size="14" fill="#2a2a26">→</text>
+
+  <!-- Node 3 -->
+  <rect x="354" y="698" width="112" height="90" fill="#161614" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="354" y="698" width="112" height="2"  fill="rgba(255,255,255,0.3)"/>
+  <text x="410" y="726" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.7)" letter-spacing="1" class="mono">HUMAN</text>
+  <text x="410" y="740" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.7)" letter-spacing="1" class="mono">OVERSIGHT</text>
+  <text x="410" y="758" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">Review &amp;</text>
+  <text x="410" y="770" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">escalation</text>
+
+  <text x="482" y="744" text-anchor="middle" font-size="14" fill="#2a2a26">→</text>
+
+  <!-- Node 4 -->
+  <rect x="496" y="698" width="120" height="90" fill="#161614" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="496" y="698" width="120" height="2"  fill="#3a3a35"/>
+  <text x="556" y="722" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.5)" letter-spacing="1" class="mono">EXECUTION</text>
+  <text x="556" y="736" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.5)" letter-spacing="1" class="mono">INFRA-</text>
+  <text x="556" y="750" text-anchor="middle" font-size="9" font-weight="bold" fill="rgba(255,255,255,0.5)" letter-spacing="1" class="mono">STRUCTURE</text>
+  <text x="556" y="768" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">Output &amp;</text>
+  <text x="556" y="780" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="mono">consequence</text>
+
+  <!-- ── ARROW: Operational → Governance ── -->
+  <line x1="350" y1="644" x2="350" y2="620" stroke="#3a3a35" stroke-width="1.5"/>
+  <polygon points="350,610 343,625 357,625" fill="#3a3a35"/>
+  <text x="362" y="634" font-size="8" fill="#3a3a35" letter-spacing="1.2" class="mono">GOVERNANCE POSTURE</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- GOVERNANCE LAYER -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="44" y="322" width="612" height="312" fill="#141412" stroke="#A88644" stroke-width="1"/>
+  <rect x="44" y="322" width="612" height="1.5" fill="rgba(168,134,68,0.4)"/>
+  <!-- Tab -->
+  <rect x="56" y="314" width="130" height="14" fill="#0d0d0b"/>
+  <text x="62" y="325" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">GOVERNANCE LAYER</text>
+  <text x="490" y="325" font-size="7" fill="rgba(168,134,68,0.45)" font-style="italic" class="mono">Six dimensions assessment</text>
+
+  <text x="60" y="354" font-size="12" font-weight="bold" fill="rgba(255,255,255,0.75)" class="serif">Six Dimensions Governance Assessment</text>
+
+  <!-- D1 -->
+  <rect x="60" y="362" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="60" y="362" width="3"   height="42" fill="#A88644"/>
+  <text x="72" y="378" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D1</text>
+  <text x="90" y="378" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Autonomy Gradient</text>
+  <text x="90" y="393" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">Degree of independent decision authority exercised</text>
+
+  <!-- D2 -->
+  <rect x="366" y="362" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="366" y="362" width="3"   height="42" fill="#A88644"/>
+  <text x="378" y="378" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D2</text>
+  <text x="396" y="378" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Data Sensitivity Exposure</text>
+  <text x="396" y="393" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">Categories and legal basis of data processed</text>
+
+  <!-- D3 -->
+  <rect x="60" y="412" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="60" y="412" width="3"   height="42" fill="#A88644"/>
+  <text x="72" y="428" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D3</text>
+  <text x="90" y="428" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Contract Infrastructure</text>
+  <text x="90" y="443" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">Contractual governance across the supply chain</text>
+
+  <!-- D4 -->
+  <rect x="366" y="412" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="366" y="412" width="3"   height="42" fill="#A88644"/>
+  <text x="378" y="428" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D4</text>
+  <text x="396" y="428" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Liability Architecture</text>
+  <text x="396" y="443" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">AE³ liability structure, documentation and insurance</text>
+
+  <!-- D5 -->
+  <rect x="60" y="462" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="60" y="462" width="3"   height="42" fill="#A88644"/>
+  <text x="72" y="478" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D5</text>
+  <text x="90" y="478" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Commercial Leverage</text>
+  <text x="90" y="493" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">Operational dependency and governance vulnerability</text>
+
+  <!-- D6 -->
+  <rect x="366" y="462" width="290" height="42" fill="#0d0d0b" stroke="#2a2a26" stroke-width="1"/>
+  <rect x="366" y="462" width="3"   height="42" fill="#A88644"/>
+  <text x="378" y="478" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">D6</text>
+  <text x="396" y="478" font-size="11" fill="rgba(255,255,255,0.8)" class="serif">Adaptive Stability</text>
+  <text x="396" y="493" font-size="8"  fill="#3a3a35" font-style="italic" class="mono">Governance maintained as system and context evolve</text>
+
+  <!-- GBI composite -->
+  <rect x="60" y="514" width="596" height="100" fill="#0d0d0b" stroke="#A88644" stroke-width="1"/>
+  <rect x="60" y="514" width="596" height="2" fill="rgba(168,134,68,0.5)"/>
+  <text x="72" y="532" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">COMPOSITE OUTPUT — GOVERNANCE BENCHMARK INDEX (GBI)</text>
+  <line x1="72" y1="536" x2="644" y2="536" stroke="#2a2a26" stroke-width="0.75"/>
+
+  <text x="72"  y="555" font-size="10" fill="rgba(255,255,255,0.4)" class="mono">GBI Score:</text>
+  <text x="148" y="555" font-size="13" font-weight="bold" fill="white" class="serif">1.0 – 5.0</text>
+  <text x="230" y="555" font-size="9"  fill="#3a3a35" font-style="italic" class="mono">  Lower score = stronger governance posture</text>
+
+  <!-- Score bar -->
+  <rect x="72" y="562" width="400" height="4" fill="#2a2a26" rx="1.5"/>
+  <rect x="72" y="562" width="70"  height="4" fill="#A88644" rx="1.5"/>
+
+  <!-- Tier chips -->
+  <rect x="72"  y="574" width="86"  height="18" fill="#161614" stroke="#2a2a26" stroke-width="1" rx="1"/>
+  <text x="115" y="586" text-anchor="middle" font-size="8.5" fill="#3a3a35" class="mono">ARAF Assessed</text>
+
+  <rect x="168" y="574" width="110" height="18" fill="#1e1a10" stroke="#A88644" stroke-width="1" rx="1"/>
+  <text x="223" y="586" text-anchor="middle" font-size="8.5" fill="#A88644" font-weight="bold" class="mono">Compliant  ≤ 2.5</text>
+
+  <rect x="288" y="574" width="110" height="18" fill="#A88644" rx="1"/>
+  <text x="343" y="586" text-anchor="middle" font-size="8.5" fill="#0d0d0b" font-weight="bold" class="mono">Certified  ≤ 1.75</text>
+
+  <text x="412" y="586" font-size="8" fill="#3a3a35" font-style="italic" class="mono">Derived from Six-Dimension Assessment</text>
+
+  <text x="72" y="604" font-size="8" fill="#2a2a26" font-style="italic" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v2.1, 2026</text>
+
+  <!-- ── ARROW: Governance → Institutional ── -->
+  <line x1="350" y1="320" x2="350" y2="296" stroke="#3a3a35" stroke-width="1.5"/>
+  <polygon points="350,286 343,302 357,302" fill="#3a3a35"/>
+  <text x="362" y="312" font-size="8" fill="#3a3a35" letter-spacing="1.2" class="mono">ASSESSMENT OUTPUT</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- INSTITUTIONAL LAYER -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="44" y="56" width="612" height="256" fill="#1a180f" stroke="#A88644" stroke-width="1.5"/>
+  <rect x="44" y="56" width="612" height="2" fill="#A88644"/>
+  <!-- Tab -->
+  <rect x="56" y="48" width="130" height="14" fill="#0d0d0b"/>
+  <text x="62" y="59" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2.5" class="mono">INSTITUTIONAL LAYER</text>
+  <text x="498" y="59" font-size="7" fill="rgba(168,134,68,0.4)" font-style="italic" class="mono">External signal</text>
+
+  <text x="60" y="90" font-size="14" font-weight="bold" fill="white" class="serif">Institutional Governance Signal</text>
+
+  <!-- LEFT: Certification + GBI -->
+  <rect x="60" y="100" width="285" height="196" fill="rgba(168,134,68,0.05)" stroke="rgba(168,134,68,0.15)" stroke-width="1"/>
+  <text x="72" y="118" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">CERTIFICATION</text>
+  <line x1="72" y1="122" x2="333" y2="122" stroke="rgba(168,134,68,0.15)" stroke-width="1"/>
+
+  <rect x="72" y="130" width="261" height="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="84" y="145" font-size="10" fill="rgba(255,255,255,0.3)" class="mono">ARAF Assessed</text>
+  <text x="321" y="145" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.15)" class="mono">Any score</text>
+
+  <rect x="72" y="156" width="261" height="22" fill="rgba(168,134,68,0.08)" stroke="rgba(168,134,68,0.2)" stroke-width="1"/>
+  <text x="84" y="171" font-size="10" fill="rgba(255,255,255,0.65)" class="mono">ARAF Compliant</text>
+  <text x="321" y="171" text-anchor="end" font-size="9" fill="#A88644" font-weight="bold" class="mono">≤ 2.5</text>
+
+  <rect x="72" y="182" width="261" height="22" fill="#A88644"/>
+  <text x="84" y="197" font-size="10" fill="#0d0d0b" font-weight="bold" class="mono">ARAF Certified</text>
+  <text x="321" y="197" text-anchor="end" font-size="9" fill="#0d0d0b" font-weight="bold" class="mono">≤ 1.75</text>
+
+  <line x1="72" y1="214" x2="333" y2="214" stroke="rgba(168,134,68,0.12)" stroke-width="1"/>
+  <text x="72" y="230" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">GBI SCORE</text>
+  <text x="190" y="230" font-size="12" font-weight="bold" fill="white" class="serif">1.0 – 5.0</text>
+  <text x="72" y="248" font-size="8" fill="rgba(255,255,255,0.25)" font-style="italic" class="mono">Lower = stronger governance posture</text>
+  <text x="72" y="263" font-size="7.5" fill="rgba(168,134,68,0.35)" font-style="italic" class="mono">Derived from Six-Dimension Assessment</text>
+  <text x="72" y="276" font-size="7" fill="rgba(255,255,255,0.12)" class="mono">trust-architecture.com/specification/reference-model</text>
+  <text x="72" y="288" font-size="7" fill="rgba(255,255,255,0.1)" class="mono">ASIC v Bekier [2026] FCA 196</text>
+
+  <!-- RIGHT: Institutional Decisions -->
+  <rect x="361" y="100" width="283" height="196" fill="rgba(168,134,68,0.05)" stroke="rgba(168,134,68,0.15)" stroke-width="1"/>
+  <text x="373" y="118" font-size="7.5" font-weight="bold" fill="#A88644" letter-spacing="2" class="mono">INSTITUTIONAL DECISIONS</text>
+  <line x1="373" y1="122" x2="632" y2="122" stroke="rgba(168,134,68,0.15)" stroke-width="1"/>
+
+  <rect x="373" y="130" width="259" height="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+  <text x="385" y="145" font-size="8" fill="rgba(168,134,68,0.55)" font-weight="bold" class="mono">BOARD</text>
+  <text x="446" y="145" font-size="10" fill="rgba(255,255,255,0.7)" class="serif">Deployment Approval</text>
+
+  <rect x="373" y="156" width="259" height="22" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+  <text x="385" y="171" font-size="8" fill="rgba(168,134,68,0.55)" font-weight="bold" class="mono">INSURER</text>
+  <text x="446" y="171" font-size="10" fill="rgba(255,255,255,0.7)" class="serif">Insurance Coverage</text>
+
+  <rect x="373" y="182" width="259" height="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+  <text x="385" y="197" font-size="8" fill="rgba(168,134,68,0.55)" font-weight="bold" class="mono">INVESTOR</text>
+  <text x="446" y="197" font-size="10" fill="rgba(255,255,255,0.7)" class="serif">Capital Allocation</text>
+
+  <rect x="373" y="208" width="259" height="22" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+  <text x="385" y="223" font-size="8" fill="rgba(168,134,68,0.55)" font-weight="bold" class="mono">REGULATOR</text>
+  <text x="446" y="223" font-size="10" fill="rgba(255,255,255,0.7)" class="serif">Supervisory Permission</text>
+
+  <rect x="373" y="234" width="259" height="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+  <text x="385" y="249" font-size="8" fill="rgba(168,134,68,0.55)" font-weight="bold" class="mono">PROCUREMENT</text>
+  <text x="446" y="249" font-size="10" fill="rgba(255,255,255,0.7)" class="serif">Vendor Adoption</text>
+
+  <line x1="373" y1="262" x2="632" y2="262" stroke="rgba(168,134,68,0.12)" stroke-width="1"/>
+  <text x="373" y="276" font-size="8" fill="rgba(255,255,255,0.2)" font-style="italic" class="mono">Decisions enabled by governance signal</text>
+  <text x="373" y="288" font-size="7.5" fill="rgba(168,134,68,0.25)" font-style="italic" class="mono">Who was responsible? What did they know? What did they do?</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- CAPTION -->
+  <!-- ══════════════════════════════════════ -->
+  <line x1="44" y1="858" x2="772" y2="858" stroke="#2a2a26" stroke-width="1"/>
+  <text x="400" y="878" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#3a3a35" letter-spacing="2.5" class="mono">FIGURE — TRUST ARCHITECTURE REFERENCE MODEL</text>
+  <text x="400" y="896" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-style="italic" class="serif">The model illustrates how autonomous decision infrastructure, governance assessment,</text>
+  <text x="400" y="912" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-style="italic" class="serif">evidence generation, and certification interact to produce institutional governance signals.</text>
+  <text x="400" y="928" text-anchor="middle" font-size="8.5" fill="#2a2a26" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v2.1, 2026 · trust-architecture.com</text>
+
+</svg>
