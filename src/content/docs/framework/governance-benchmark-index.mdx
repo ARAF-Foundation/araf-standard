@@ -1,0 +1,136 @@
+---
+title: "Governance Benchmark Index (GBI)"
+description: "The composite scoring methodology used within ARAF to translate six-dimensional governance assessment into a comparable institutional signal."
+sidebar:
+  order: 5
+---
+
+The Governance Benchmark Index (GBI) is the composite scoring methodology used within ARAF to translate six-dimensional governance assessment into a comparable institutional signal.
+
+The GBI does not replace the dimensional profile. It compresses it.
+
+Technical safety standards tell you whether the system works. The GBI tells you whether the institution deploying it has the governance architecture to be held accountable when it does.
+
+## 1. Purpose of the GBI
+
+Institutional audiences need comparability. Boards, insurers, investors, and regulators cannot each re-run a full governance assessment every time they encounter an autonomous system deployment. They need a way to understand governance posture in a form that is:
+
+- Comparable across entities
+- Understandable without reproducing the full methodology
+- Grounded in a structured assessment framework
+- Capable of signalling threshold distinctions
+
+The GBI performs that function. It is the governance equivalent of a credit rating in bond markets or a classification society survey in marine insurance: an independently produced, comparably expressed signal that allows risk to be assessed rather than excluded.
+
+## 2. Scoring Logic
+
+### Scale and Interpretation
+
+Each autonomous system deployment is assessed across six dimensions. Each dimension receives a score on a 1.0 to 5.0 scale. The scale is intentionally inverted relative to intuition - it mirrors the logic of credit ratings: a score of 1.0 represents the strongest governance posture, and 5.0 represents critical governance exposure.
+
+| Score Range | Interpretation |
+| --- | --- |
+| 1.00-1.75 | Strong governance posture |
+| 1.76-2.50 | Minimum institutional threshold met |
+| 2.51-3.50 | Material governance weakness requiring remediation |
+| 3.51-5.00 | High governance risk / institutional inadequacy |
+
+Higher scores indicate greater governance risk, not higher governance maturity.
+
+## 3. Composite Score
+
+The GBI composite score is derived from the six-dimensional assessment and adjusted by multiplier logic where compound weaknesses are present.
+
+The composite score answers a narrow but important question: what is the overall governance posture of this deployment in institutionally comparable form? The dimensional profile answers the broader governance question: where, specifically, does the exposure sit?
+
+Both outputs are required. The GBI produces comparability. The dimensional profile produces actionability.
+
+## 4. Multiplier Logic
+
+### Governance Weaknesses Compound, Not Just Add
+
+The GBI includes multiplier logic because governance weaknesses are not additive only. They compound.
+
+| Primary multiplier condition | Compound exposure | Description |
+| --- | --- | --- |
+| D1 &ge; 4 AND D4 &ge; 4 | Systemic Escalation | High autonomy combined with inadequate liability architecture. The volume of autonomous action consequences is high and the liability governance is inadequate to manage them. Most severe compound exposure. |
+| D3 &ge; 4 AND D1 &ge; 3 | Infrastructure Collapse | Significant autonomy combined with inadequate contract infrastructure. Liability allocation at the execution boundary is ungoverned contractually. |
+| D5 &ge; 4 AND D4 &ge; 3 | Leverage Collapse | High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation. |
+| D5 &ge; 4 AND D3 &ge; 3 with single-provider dependency and government-adjacent customer concentration | Political Cascade | High commercial dependency combined with inadequate political force majeure provisions. Provider designation event converts customer concentration into existential revenue loss where contract infrastructure does not address the cascade mechanism. |
+
+Where a multiplier condition is present, the composite score must not be read as a simple average. It reflects compounded governance exposure.
+
+## 5. Certification Thresholds
+
+### Governance Thresholds, Not Actuarial Thresholds
+
+The GBI anchors the certification thresholds within ARAF. The thresholds are derived from the bankability conditions (identifiability, measurability, governability, insurability) that the framework establishes.
+
+| Tier | Designation | Threshold | Institutional meaning |
+| --- | --- | --- | --- |
+| ENTRY LEVEL | ARAF Assessed | Assessment completed. No minimum score. | Governance posture independently evaluated and available for institutional review. Minimum for institutional discussions. |
+| INSTITUTIONAL MINIMUM | ARAF Compliant | GBI &le; 2.50 | Governance posture adequate for institutional reliance in most deployment contexts. |
+| FULL BANKABILITY | ARAF Certified | GBI &le; 1.75 | Full agentic bankability conditions met. Governance posture supports classification, insurance, financing, and institutional reliance. |
+
+The tiers are not labels. They are market signals that institutional audiences can act on.
+
+## 6. Evidence Quality and the GBI
+
+The GBI score communicates governance posture. The evidence quality tier communicates the confidence warranted in that assessment. Not all governance evidence supporting a GBI score is equal.
+
+| Tier | Evidence type | Interpretation |
+| --- | --- | --- |
+| TIER 1 | Infrastructure-Generated Evidence | Contemporaneous, tamper-evident records produced by governance infrastructure as a natural output of governance operations. Highest confidence. Produced at the moment of governance exercise, in a form the organisation cannot alter retroactively. |
+| TIER 2 | Contemporaneous Documentation | Records produced at the time of governance decisions (board papers, AIOC minutes, deployment approval records). High confidence for documented decisions. Depends on consistency and completeness of documentation practices. |
+| TIER 3 | Reconstructed Documentation | Records assembled in response to assessment requests, reconstructing governance claims from existing materials. Lower confidence. Produced after the fact, subject to selection and framing choices. May limit certification tier achievable. |
+
+The standard for ARAF evidence is not what the organisation says about its governance. It is what the governance infrastructure produces.
+
+## 7. What the GBI Is and Is Not
+
+### The GBI is:
+
+- a governance classification tool
+- a comparability mechanism
+- a certification input
+- an institutional signal
+
+### The GBI is not:
+
+- a measure of model accuracy
+- a measure of technical safety
+- a measure of commercial success
+- a substitute for board judgement
+- a replacement for the full dimensional assessment
+
+## 8. Institutional Use Cases
+
+### Boards
+
+Boards use the GBI to understand whether the organisation's autonomous system portfolio is operating inside or outside acceptable governance thresholds. A board that receives a GBI composite score, a dimensional profile, and multiplier status has a governance signal it can interrogate. A board that receives an unstructured assurance that AI systems are performing well has a claim it cannot verify.
+
+### Insurers
+
+Insurers use the GBI as the risk tier signal when assessing underwriting posture, exclusions, pricing, and evidence adequacy. The Dimension 4 profile maps directly to autonomous action consequences exposure. The Dimension 6 profile provides the ongoing governance maintenance signal across the coverage period. Without the GBI, the insurer faces the adverse selection problem: the inability to distinguish between systems whose governance posture warrants coverage and those whose posture does not.
+
+### Investors
+
+Investors use the GBI to compare governance posture across AI-enabled companies and to identify diligence areas requiring deeper review. A GBI composite score above 2.50 is a remediation liability. A score below 1.75 is a governance asset. The dimensional profile tells the investor which risks are structural (Dimensions 4 and 3) and which are operational (Dimensions 1 and 6).
+
+### Regulators
+
+Regulators can use the GBI as a comparable, assessable governance signal across supervised organisations, replacing the current condition in which each organisation describes its AI governance in terms that resist comparison. The GBI dimensional profile maps to the requirements of the EU AI Act, NIST AI RMF, ISO 42001, APRA CPS 230, and the Corporations Act section 180(1) duty of care standard.
+
+### Why the Dimensional Profile Still Matters
+
+A composite score without dimensional visibility can obscure concentrated weakness. A deployment with moderate weakness across all six dimensions and a deployment with acute weakness in two dimensions may produce superficially similar composites. Their governance implications are not the same.
+
+An assessor whose output is only a number has produced a score. An assessor whose output includes a full dimensional profile, multiplier analysis, evidence quality assessment, and remediation roadmap has produced governance infrastructure.
+
+## Citation
+
+Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version 2.1. Institute for Autonomous Governance Pty Ltd, 2026.
+
+Institute for Autonomous Governance Pty Ltd - ACN 696 112 277 - March 2026 - Licensed CC BY 4.0
+
+araf-standard.org

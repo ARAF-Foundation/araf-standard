@@ -5,95 +5,163 @@ description: Frequently asked questions about the ARAF standard, governance sign
 
 ## Frequently Asked Questions
 
+## About The Framework
+
 ### What is ARAF?
 
-The Agentic Risk Architecture Framework (ARAF) is an open governance standard for autonomous decision infrastructure. It provides a structured method for classifying governance posture, assessing evidence quality, and communicating institutional governance signals.
+ARAF is the Agentic Risk Architecture Framework: a classification standard for assessing the governance posture of autonomous system deployments. It assesses governance across six dimensions, produces a composite Governance Benchmark Index (GBI) score on a 1.0 to 5.0 scale (lower is stronger), and generates the dimensional profile and evidence record that institutional audiences require. ARAF is governance infrastructure. It addresses whether the institution deploying an autonomous system can demonstrate accountability for the decisions that system produces.
 
-### Is ARAF a responsible AI framework?
+### What problem does ARAF solve?
 
-ARAF is a governance architecture assessment framework. Responsible AI frameworks typically describe governance principles or ethical objectives such as transparency, fairness, and accountability. ARAF assesses whether the governance infrastructure required to achieve those objectives exists within a specific autonomous system deployment. Its purpose is to produce a measurable governance signal, the Governance Benchmark Index, that institutions can rely upon for oversight, underwriting, investment, and regulatory supervision.
+Autonomous systems make consequential decisions without per-step human authorisation. Existing frameworks provide process compliance and risk management guidance at two levels: the technology level (model cards, safety benchmarks) and the organisational management level (ISO 42001, NIST AI RMF). Neither addresses the governance architecture of a specific decision system in a form that institutional audiences can classify, measure, compare, or rely upon. That gap is structural. Boards cannot discharge governance obligations they cannot measure. Insurers cannot price coverage for risks they cannot classify. Investors cannot assess exposure they cannot benchmark. Regulators cannot enforce accountability they cannot verify. ARAF provides the measurement methodology and evidence standard that converts autonomous risk from unclassifiable exposure into institutionally manageable risk.
 
-Principles describe what governance should achieve. ARAF measures whether the architecture to achieve it is present.
+### How does ARAF relate to ISO 42001 and NIST AI RMF?
 
-### Is ARAF a technical safety framework?
+ARAF operates as the governance architecture assessment layer above process compliance frameworks. ISO 42001 addresses management system requirements. NIST AI RMF addresses risk management across the system lifecycle. Both are necessary. Neither produces the institutionally comparable governance signal that boards, insurers, investors, and regulators require. An organisation with ISO 42001 certification has demonstrated it operates an AI management system. An organisation with ARAF Certified status has demonstrated that its autonomous system governance posture meets the institutional threshold for agentic bankability. ARAF translates the outputs of process compliance frameworks into signals that capital markets, insurance markets, and regulatory supervision can act on.
 
-No. ARAF is a governance architecture framework. It complements technical safety and security standards, but its focus is accountability architecture, evidence quality, and institutional reliance.
+### What is agentic bankability?
 
-### Does ARAF assess model accuracy?
+Agentic bankability is the condition in which an autonomous system can be classified, governed, insured, financed, and relied upon by the institutions that must assume responsibility for its behaviour. It is the threshold at which autonomous systems cross from technical capability into institutional deployability. The term is derived from the project finance concept of bankability. Four conditions must be met: identifiability (institutions cannot govern what they cannot classify), measurability (institutions cannot price what they cannot measure), governability (institutions cannot enforce accountability for what is not governed), and insurability (institutions cannot finance at scale what they cannot insure).
 
-No. ARAF does not assess model accuracy. It evaluates governance architecture, accountability assignments, evidence quality, and reconstructability.
+### What is the difference between platform governance and deployment governance?
 
-### Does ARAF guarantee safety?
+Platform governance addresses how an AI system is developed, trained, tested, and maintained by the organisation that builds it. Deployment governance addresses how that system is operated, supervised, and held accountable within the organisation that deploys it. The adequacy of platform governance does not determine the adequacy of deployment governance. A system that behaves exactly as its vendor designed it can still produce consequential outcomes that the deploying enterprise cannot account for, cannot attribute, and cannot demonstrate were adequately governed. ARAF assesses deployment governance. Platform governance documentation (such as a vendor's responsible AI report) is not a substitute for deployment governance, and an ARAF assessment evaluates the deploying organisation's governance architecture, not the platform vendor's.
 
-No. ARAF does not guarantee safety outcomes. It strengthens governance and evidentiary accountability around autonomous decisions, but it does not replace system-level safety engineering, testing, or assurance.
+## The Six Dimensions
 
-### Does ARAF replace regulatory compliance?
+### What are the six ARAF dimensions?
 
-No. ARAF does not replace regulatory compliance. It provides structured governance evidence that can support compliance work, but organisations remain responsible for meeting all applicable legal and regulatory requirements.
+The six dimensions assess governance across the full Decision Supply Chain: the distributed chain of data, models, operators, and execution systems through which consequential decisions are produced.
 
-### How does ARAF relate to ISO 42001, NIST AI RMF, and the EU AI Act?
+- D1 Autonomy Gradient assesses the level of operational autonomy the system exercises and whether oversight architecture is adequate to that level.
+- D2 Data Sensitivity Exposure assesses two distinct risk categories: operational data sensitivity (immediate exposure) and training data provenance (latent, backward-compounding exposure).
+- D3 Contract Infrastructure assesses whether the commercial agreements governing the deployment reflect the liability consequences of autonomous operation.
+- D4 Liability Architecture assesses how liability for the system's autonomous decisions is structured, documented, and managed, centring on AE3 (autonomous action consequences).
+- D5 Commercial Leverage assesses whether operational dependency on the system has created governance vulnerability or reduced the organisation's capacity to remediate.
+- D6 Adaptive Stability assesses whether governance can be maintained as the system, its deployment context, and its operating environment evolve. D6 evidence adequacy requires a two-layer evidentiary model: a runtime enforcement log (recording which rule set governed each decision) and an MKP registry (recording the version history and authorisation chain for that rule set). The D6 closing assessment criterion is whether a traversal path exists between the two.
 
-ARAF complements these frameworks. ISO 42001 and NIST AI RMF provide process and risk-management structures, and the EU AI Act provides legal obligations. ARAF assesses whether the governance architecture of a specific deployment is institutionally accountable and reconstructable, then translates that assessment into a comparable governance signal (GBI and certification tiers).
+### Which dimensions can be evidenced by enforcement infrastructure?
 
-### What does ARAF measure?
+D1, D2, and D6 are partially or fully evidenceable by runtime enforcement infrastructure (deterministic enforcement logs, drift monitoring outputs, MKP identification). D3, D4, and D5 are institutional-layer dimensions that require evidence from contractual, legal, and financial records. No enforcement log, regardless of quality, can satisfy a D3, D4, or D5 assessment. This is the correct division of labour between execution architecture and governance standard.
 
-ARAF assesses governance posture across six dimensions:
+### Why does a lower GBI score mean stronger governance?
 
-- Autonomy Gradient
-- Data Sensitivity Exposure
-- Contract Infrastructure
-- Liability Architecture
-- Commercial Leverage
-- Adaptive Stability
+The GBI scale is intentionally inverted. It mirrors the logic of credit ratings: 1.0 represents the strongest governance posture, 5.0 represents critical governance exposure. The inversion is the signal. Every institutional audience reading a GBI score understands that a score of 4.2 is a problem, not an achievement.
 
-### What is the Governance Benchmark Index (GBI)?
+### What is the multiplier logic?
 
-GBI is the composite signal derived from dimensional assessment outputs. It uses a 1.0 to 5.0 scale, where lower scores indicate stronger governance posture.
+Governance weaknesses compound. ARAF incorporates four structural multipliers:
 
-### Does a single GBI number replace dimensional analysis?
+- Systemic Escalation: D1 at or above 4 and D4 at or above 4. High autonomy combined with inadequate liability architecture. The most severe compound exposure.
+- Infrastructure Collapse: D3 at or above 4 and D1 at or above 3. Significant autonomy combined with inadequate contract infrastructure. Liability allocation at the execution boundary is ungoverned contractually.
+- Leverage Collapse: D5 at or above 4 and D4 at or above 3. High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation.
+- Political Cascade: D5 at or above 4 and D3 at or above 3, with single-provider dependency and government-adjacent customer concentration. Government designation events can convert customer concentration into immediate revenue disruption where contract infrastructure does not address the cascade mechanism.
 
-No. The GBI provides comparability, while the dimensional profile provides diagnosis. Both are required to understand governance posture and remediation priorities.
+Where a multiplier condition is present, the composite GBI score reflects compounded governance exposure, not a simple average. The dimensional profile is required alongside the composite score because multiplier activation depends on dimensional combinations that the composite alone does not reveal.
 
-### What are multiplier conditions?
+### What is political designation risk and why does ARAF assess it?
 
-Multiplier conditions identify structural risk interactions where dimensional weaknesses compound. These conditions can materially increase governance exposure beyond what isolated dimensional scores would suggest.
+Political designation risk is the exposure created when a government designates an AI provider as a supply chain risk, triggering cascade effects through enterprise customer procurement obligations. The February 2026 Anthropic-Pentagon designation event was the first documented instance: the US Pentagon designated a domestic AI company using a mechanism previously reserved for foreign adversaries, triggered by a contract negotiation dispute rather than a security vulnerability. The cascade was immediate: every enterprise whose AI products relied on the designated provider and whose customers held government procurement obligations faced revenue disruption that no existing contract clause addressed.
 
-### What evidence quality tiers does ARAF use?
+ARAF assesses this risk across three dimensions. D3 (Contract Infrastructure) evaluates whether commercial agreements include political force majeure provisions and provider substitution rights with political designation triggers. D5 (Commercial Leverage) evaluates whether government-adjacent customer concentration creates cascade exposure. D6 (Adaptive Stability) evaluates whether the organisation monitors for government actions affecting its provider stack and has reassessment protocols for designation events. Where D5 and D3 scores combine with single-provider dependency and government-adjacent customer concentration, the Political Cascade multiplier captures the compounding exposure.
 
-ARAF uses three evidence quality tiers:
+## Governance Coherence
 
-- Infrastructure-generated evidence
-- Contemporaneous documentation
-- Reconstructed documentation
+### What is Governance Coherence?
 
-These tiers indicate confidence in governance claims and reconstructability of decision accountability.
+Governance Coherence is the evaluation layer that assesses whether documented governance architecture is actually exercised in operation. It applies across all six dimensions and is required for ARAF Compliant and Certified tiers. The design assessment (GBI) corresponds to SOC 2 Type I: point-in-time design adequacy. Governance Coherence corresponds to Type II: operational effectiveness over a defined period. The GBI and Governance Coherence Index (GCI) together determine certification tier eligibility. They cannot be produced simultaneously: a minimum 180-day assessment window separates the GBI assessment from GCI evaluation.
 
-### What is the difference between assessment and certification?
+The normative requirements are defined in the [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
 
-Assessment produces the governance outputs (dimensional profile, GBI, multiplier analysis, evidence quality). Certification is the market-facing signal issued by an accredited independent assessor based on that assessment.
+### What are the three coherence components?
 
-### What are the certification tiers?
+- Authority Adherence: Did operational decisions occur within defined governance boundaries?
+- Control Exercise: Were specified governance controls performed at the required cadence and depth?
+- Drift Detection: Has the system's operational behaviour diverged from the governance assumptions made at the time of assessment?
 
-ARAF defines three tiers:
+Drift Detection is the component that distinguishes Governance Coherence from standard audit methodology. It is specific to autonomous systems, which can change their own effective behaviour post-deployment through model updates, scope expansion, and adaptive logic.
 
-- ARAF Assessed
-- ARAF Compliant (`GBI <= 2.50`)
-- ARAF Certified (`GBI <= 1.75`)
+### How does the GCI affect the GBI score?
 
-### Who can issue ARAF certifications?
+The GCI operates as a divisor on the base GBI dimensional score:
 
-Only accredited assessors operating under the ARAF Assessor Accreditation Standard can issue certifications. Self-assessment does not satisfy the independence requirement for certification.
+`Effective Dimension Score = GBI Dimension Score / GCI Dimension Score`
 
-### How often should systems be reassessed?
+A GCI of 0.5 applied to a GBI dimensional score of 2.0 produces an effective score of 4.0, correctly reflecting that poor operational coherence significantly worsens the effective governance posture. Good governance design does not compensate for poor operational execution.
 
-Reassessment follows certification lifecycle requirements, including scheduled reassessment intervals and event-triggered reassessment when material governance changes occur.
+## Certification
 
-### Where should I start if my organisation is new to ARAF?
+### What are the three certification tiers?
 
-Start with:
+- ARAF Assessed is the entry-level designation. Assessment completed by an accredited assessor. No minimum GBI score threshold. No GCI required. Design adequacy assessment only.
+- ARAF Compliant requires GBI 2.50 or lower and GCI 0.70 or higher across all assessed dimensions. No unresolved critical coherence findings. Tier 1 or Tier 2 evidence required. This is the minimum institutional threshold for reliance.
+- ARAF Certified requires GBI 1.75 or lower and GCI 0.85 or higher across all assessed dimensions. Tier 1 evidence for at least 80% of sampled controls. No unresolved critical or significant coherence findings. Full agentic bankability conditions met.
 
-- [Getting Started](/getting-started/)
-- [Trust Architecture](/trust-architecture/)
-- [Six Dimensions Methodology](/six-dimensions/)
-- [Governance Benchmark Index](/gbi-methodology/)
-- [Certification](/certification/)
+These thresholds are provisional and subject to formal review after 50 completed assessments.
+
+Detailed tier logic and report obligations are defined in the [Certification Framework](/certification/certification-framework/) and [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
+
+### Does ARAF certification constitute a legal safe harbour?
+
+No. Certification does not constitute a statutory safe harbour in any jurisdiction. What certification provides is contemporaneous, independently produced evidence that governance architecture was assessed against a defined standard and found adequate at the time of assessment. That is the kind of evidence that courts assessing the standard of care, insurers evaluating coverage, and regulators conducting supervisory review will find relevant to whether reasonable precautions were taken. Certification is evidence of governance adequacy, not a guarantee of immunity.
+
+### What triggers reassessment?
+
+Organisations holding ARAF certification must notify their accredited assessor of material changes within 60 days of occurrence. Triggers include: material change to autonomy level, substitution of a primary AI provider or model, significant expansion of operational scope, a material incident in which the governance architecture was engaged or found insufficient, discovery of systematic governance drift, and regulatory developments materially affecting governance obligations. Continued use of a certification after a triggering event without initiating reassessment constitutes a certification breach.
+
+## Evidence And Reconstructability
+
+### What is the difference between governance telemetry and engineering telemetry?
+
+Engineering telemetry records whether a system is performing as designed: latency, throughput, error rates. Governance telemetry records whether the institution deploying the system is governing it as required: decision records, oversight actions, escalation events, approval logs. A system that generates extensive performance metrics but no governance records has monitoring without accountability.
+
+### What is reconstructability?
+
+Reconstructability is the property of a decision record that allows any decision the system has made to be independently reconstructed from contemporaneous evidence: what data the system processed, what logic it applied, what decision it produced, and what human oversight accompanied it. A system whose decisions can be reconstructed is a system whose governance can be demonstrated. A system whose decisions cannot be reconstructed is a system whose governance claims are assertions without evidence. Reconstructability is the threshold condition converting opaque autonomous risk into bounded, insurable risk.
+
+### What are the four evidence quality tiers?
+
+- Tier 1: Infrastructure-Generated Evidence. Contemporaneous, tamper-evident records produced by governance infrastructure as a natural output of operations. Highest confidence. Cannot be retrospectively assembled.
+- Tier 2: Contemporaneous Documentation. Records produced at the time of governance decisions (board papers, AIOC minutes, approval records). Acceptable where Tier 1 is structurally unavailable, primarily for D3, D4, and D5.
+- Tier 3: Reconstructed Documentation. Records assembled retrospectively. Acceptable only for the ARAF Assessed tier. Not acceptable for Compliant or Certified coherence assessment.
+- Tier 4: Management Representation. Formal written representations where no contemporaneous record exists. Not acceptable for coherence assessment at any tier. Its presence as the primary evidence source for any control is a significant coherence finding.
+
+## Institutional Audiences
+
+### How do boards use ARAF?
+
+The three accountability questions that governance failures generate (who was responsible, what did they know, what did they do) are questions about governance infrastructure, not management assertion. ARAF provides the classification, evidence standard, and accountability architecture that allows those questions to be answered from contemporaneous records. The GBI composite score and dimensional profile give boards the information required to understand which autonomous system deployments generate material governance exposure and what remediation is required. Section 180(1) of the Corporations Act 2001 (Cth), and comparable director duty obligations in every major jurisdiction, requires that governance of autonomous systems be demonstrable, not merely claimed.
+
+### How do insurers use ARAF?
+
+Insurers face an adverse selection problem: without governance classification data, they cannot distinguish between deployments whose governance posture warrants coverage and those whose posture does not. The GBI provides the standardised intake mechanism for AI liability underwriting, equivalent to the role CVE/CVSS scoring plays in cyber underwriting. D4 weakness maps to AE3 coverage gap assessment. D1 weakness maps to commitment authority limits. D3 weakness maps to claims ambiguity risk. D6 weakness maps to renewal and ongoing monitoring conditions. The insurer that begins collecting ARAF assessment data now is the insurer that has the actuarial foundation for AI liability underwriting when the portfolio reaches modelling scale.
+
+### How do investors use ARAF?
+
+A GBI composite score above 2.50 is a remediation liability. A score below 1.75 is a governance asset. The dimensional profile distinguishes structural risks (D3 and D4, requiring contractual and architectural remediation) from operational risks (D1 and D6, responding to process and monitoring improvements). That distinction determines remediation timelines and valuation impact.
+
+### How do regulators use ARAF?
+
+ARAF provides a comparable, assessable governance signal across supervised organisations, replacing the current condition in which each organisation describes its AI governance in terms that resist comparison. The GBI dimensional profile maps to the requirements of the EU AI Act, NIST AI RMF, ISO 42001, APRA CPS 230, and the Corporations Act section 180(1) duty of care standard.
+
+## Standard Governance
+
+### Who maintains the ARAF standard?
+
+The ARAF standard is maintained by Institute for Autonomous Governance Pty Ltd (ACN 696 112 277), incorporated in New South Wales in March 2026. The standard is published under Creative Commons Attribution 4.0 (CC BY 4.0). The Institute is structurally distinct from Venture Bench Pty Ltd, which serves as the founding implementation partner and operates as an accredited assessor under the same independence requirements that apply to all accredited assessors. The Institute does not conduct assessments. Venture Bench does not maintain the standard. This separation follows established governance precedent: ISO maintains standards; accredited certification bodies conduct assessments.
+
+### What is the governance model for the standard?
+
+The standard is currently maintained under a founder-led governance model with governance authority held by the Institute. Five principles guide maintenance: purpose primacy, version discipline, public transparency, methodological consistency, and institutional usability. The governance model is designed to scale with the ecosystem: from the current founder-led stage, through an advisory stage incorporating institutional and technical contributors, toward a multi-stakeholder governance model as the certification ecosystem reaches institutional scale. Transition is triggered by ecosystem maturity, not calendar time.
+
+### Who conducts ARAF assessments?
+
+Assessments are conducted by accredited assessors. Accreditation requires demonstrated governance assessment competence, ARAF methodology proficiency, structural independence from assessed organisations, and submission to quality assurance review. The standard maintainer in its advisory services capacity (Venture Bench Pty Ltd) operates under identical independence requirements. Self-certification does not satisfy the ARAF independence requirement.
+
+### How is the standard versioned?
+
+Each public version is clearly identified, dated, and distinguishable from prior and future versions. Material changes to dimensional definitions, scoring logic, multiplier thresholds, or certification tier boundaries follow a defined amendment process with documented rationale and public consultation. The current version and amendment history are publicly available at araf-standard.org.
+
+### Does ARAF apply only in Australia?
+
+No. The framework is jurisdiction-neutral. Its six dimensions, GBI scoring methodology, evidence standards, and certification tiers apply to autonomous system deployments regardless of operating jurisdiction. Where regulatory context is relevant (EU AI Act, NIST AI RMF, APRA CPS 230, UK AI Governance Code), ARAF assessment produces the governance architecture evidence that maps to each framework's requirements. ARAF does not replace those frameworks. It provides the governance architecture layer that makes compliance with them demonstrable to institutional audiences.

@@ -1,11 +1,7 @@
 ---
-title: Governance Benchmark Index (GBI)
-description: The composite scoring methodology used within ARAF to convert six-dimensional governance assessment into a comparable institutional signal.
+title: Governance Benchmark Index
+description: Normative scoring model translating six-dimensional assessment into comparable governance classification.
 ---
-
-:::note[Legacy route]
-This page remains available under its original v2.x route. The canonical v3.0 page is [Governance Benchmark Index](/certification/governance-benchmark-index/).
-:::
 
 <div className="standard-page">
 
@@ -23,6 +19,7 @@ Technical safety standards tell you whether the system works. The GBI tells you 
 		<li><a href="#composite-score">Composite Score</a></li>
 		<li><a href="#multiplier-logic">Multiplier Logic</a></li>
 		<li><a href="#certification-thresholds">Certification Thresholds</a></li>
+		<li><a href="#gbi-and-gci-role-split">GBI and GCI Role Split</a></li>
 		<li><a href="#evidence-quality-and-the-gbi">Evidence Quality and the GBI</a></li>
 		<li><a href="#what-the-gbi-is-and-is-not">What the GBI Is and Is Not</a></li>
 		<li><a href="#institutional-use-cases">Institutional Use Cases</a></li>
@@ -145,11 +142,6 @@ The six dimensions are not independent. Weaknesses in one dimension compound wea
 				<td>Dimension 5 ≥ 4 and Dimension 4 ≥ 3</td>
 				<td>High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation.</td>
 			</tr>
-			<tr>
-				<td>Political Cascade</td>
-				<td>D5 ≥ 4 AND D3 ≥ 3 with single-provider dependency and government-adjacent customer concentration</td>
-				<td>High commercial dependency combined with inadequate political force majeure provisions. Provider designation event converts customer concentration into existential revenue loss where contract infrastructure does not address the cascade mechanism.</td>
-			</tr>
 		</tbody>
 	</table>
 </div>
@@ -184,13 +176,13 @@ The GBI anchors the certification thresholds within ARAF.
 			</tr>
 			<tr>
 				<td>ARAF Compliant</td>
-				<td>GBI ≤ 2.50</td>
-				<td>Minimum institutional threshold. Governance posture adequate for institutional reliance in most deployment contexts.</td>
+				<td>GBI ≤ 2.50 with GCI ≥ 0.70</td>
+				<td>Minimum institutional threshold. Design adequacy and operational coherence both demonstrated for institutional reliance in most deployment contexts.</td>
 			</tr>
 			<tr>
 				<td>ARAF Certified</td>
-				<td>GBI ≤ 1.75</td>
-				<td>Full agentic bankability conditions met. Governance posture supports classification, insurance, financing, and institutional reliance.</td>
+				<td>GBI ≤ 1.75 with GCI ≥ 0.85</td>
+				<td>Full agentic bankability conditions met. Strong design adequacy and strong operational coherence support classification, insurance, financing, and institutional reliance.</td>
 			</tr>
 		</tbody>
 	</table>
@@ -202,12 +194,24 @@ These thresholds do not merely label governance posture. They define whether the
 
 The tiers create a governance progression that institutions can track over time. An insurer can price conditional coverage during a remediation period and transition to standard terms on Compliant certification. An investor can model the governance discount at the current score and the valuation uplift on reaching the next threshold. The tiers are not labels. They are market signals that institutional audiences can act on.
 
+<a id="gbi-and-gci-role-split"></a>
+## 6. GBI and GCI Role Split
+
+The GBI and GCI serve different functions and must be interpreted together for Compliant and Certified determinations.
+
+- GBI evaluates design adequacy: whether governance architecture is correctly structured for the system risk profile.
+- GCI evaluates operational coherence: whether that architecture was actually exercised over a defined assessment window.
+
+In practical terms, GBI answers whether governance was designed correctly. GCI answers whether governance operated correctly. Compliant and Certified determinations require both conditions.
+
+The coherence assessment is specified in the [Governance Coherence Addendum](/certification/governance-coherence-addendum/), including the minimum 180-day assessment-window separation between GBI assessment date and GCI assessment date.
+
 <a id="evidence-quality-and-the-gbi"></a>
-## 6. Evidence Quality and the GBI
+## 7. Evidence Quality and the GBI
 
 The GBI score communicates governance posture. The evidence quality tier communicates the confidence warranted in that assessment.
 
-Not all governance evidence supporting a GBI score is equal. ARAF distinguishes three evidence quality tiers:
+Not all governance evidence supporting a GBI score is equal. ARAF distinguishes four evidence quality tiers. Tier 4 (management representation) is not admissible for coherence determination.
 
 <div className="table-wrap">
 	<table className="standard-table">
@@ -234,6 +238,11 @@ Not all governance evidence supporting a GBI score is equal. ARAF distinguishes 
 				<td>Records assembled in response to assessment requests, reconstructing governance claims from existing materials</td>
 				<td>Lower. Produced after the fact, subject to selection and framing choices. May limit certification tier achievable.</td>
 			</tr>
+			<tr>
+				<td>Tier 4: Management representation</td>
+				<td>Formal written representation where no contemporaneous record exists</td>
+				<td>Not admissible for coherence determination. If primary for a control, the control is assessed as not evidenced.</td>
+			</tr>
 		</tbody>
 	</table>
 </div>
@@ -245,7 +254,7 @@ An insurer underwriting coverage based on an assessment supported by Tier 1 evid
 The standard for ARAF evidence is not what the organisation says about its governance. It is what the governance infrastructure produces.
 
 <a id="what-the-gbi-is-and-is-not"></a>
-## 7. What the GBI Is and Is Not
+## 8. What the GBI Is and Is Not
 
 The GBI is:
 
@@ -267,7 +276,7 @@ A high-performing autonomous system may still have a poor GBI if its governance 
 Technical safety standards (such as operational safety certifications for AI agents) and the GBI serve different institutional functions. Technical safety asks whether the system operates correctly. The GBI asks whether the institution deploying it can demonstrate accountability for the decisions the system produces. Both are necessary. Neither substitutes for the other.
 
 <a id="institutional-use-cases"></a>
-## 8. Institutional Use Cases
+## 9. Institutional Use Cases
 
 <section className="audience-block">
 
@@ -302,7 +311,7 @@ Regulators can use the GBI as a comparable, assessable governance signal across 
 </section>
 
 <a id="dimensional-profile-vs-composite-score"></a>
-## 9. Dimensional Profile vs Composite Score
+## 10. Dimensional Profile vs Composite Score
 
 The dimensional profile is more important than the composite score for governance action.
 
@@ -328,7 +337,7 @@ Every GBI output should therefore be accompanied by:
 An assessor whose output is only a number has produced a score. An assessor whose output includes a full dimensional profile, multiplier analysis, evidence quality assessment, and remediation roadmap has produced governance infrastructure.
 
 <a id="certification-use"></a>
-## 10. Certification Use
+## 11. Certification Use
 
 The GBI is the scoring layer beneath certification.
 

@@ -215,6 +215,6 @@
 
   <!-- Bottom rule -->
   <line x1="40" y1="658" x2="860" y2="658" stroke="#C8A84B" stroke-width="0.5" opacity="0.2"/>
-  <text x="40" y="674" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5">TRUST ARCHITECTURE · CARLY MARTIN · VENTURE BENCH PTY LTD</text>
+  <text x="40" y="674" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5">TRUST ARCHITECTURE · CARLY MARTIN · ARAF STANDARDS AUTHORITY LTD</text>
   <text x="860" y="674" font-family="'Space Mono', monospace" font-size="8" fill="#4A5568" letter-spacing="1.5" text-anchor="end">araf-standard.org · CC BY 4.0</text>
 </svg>

@@ -3,6 +3,10 @@ title: Six ARAF Dimensions
 description: The six dimensions of the ARAF governance risk assessment — methodology, sub-factors, scoring guidance, and institutional implications for each dimension.
 ---
 
+:::note[Legacy route]
+This page remains available under its original v2.x route. The canonical v3.0 page is [Six Dimensions](/standard/six-dimensions/).
+:::
+
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import PrinciplesToSignalDiagram from '../../components/PrinciplesToSignalDiagram.astro';
 
@@ -128,11 +132,17 @@ Liability adequacy. Do liability provisions reflect the actual exposure created 
 
 Negotiation governance. Does the organisation have a defined process for reviewing and approving deviations from standard contract positions?
 
+Political force majeure provisions. Do commercial agreements address government supply chain risk designation events as a distinct trigger, separate from technical failure or standard force majeure? Standard SaaS force majeure clauses do not cover provider designation events. Agreements executed after March 2026 that do not include political force majeure provisions for deployments relying on a single US-hosted provider carry an unaddressed structural gap.
+
+Provider substitution rights with political designation trigger. Are substitution rights in customer and vendor agreements limited to technical API failure, or do they explicitly extend to government supply chain risk designation events affecting the primary AI provider?
+
 ### The timing problem
 
 Contract infrastructure gaps are invisible until they matter. An organisation operating under an agreement that lacks AI-specific liability provisions may operate without incident for years. When an adverse outcome occurs, the absence of adequate contract infrastructure becomes the central issue in determining who bears the loss.
 
 Dimension 3 interacts with the action boundary in the governance architecture: contract infrastructure is the legal expression of the rules governing what the system is permitted to do. Where the governance enforcement layer operationalises those rules at runtime, contract infrastructure establishes their legal authority.
+
+The February 2026 Anthropic-Pentagon designation event demonstrated that a government supply chain risk designation operates in hours, requires no judicial review, and cascades through enterprise customer supply chains contractually rather than technically. Enterprises whose AI provider is designated do not lose API access. Their customers become non-compliant if they continue using the product. This cascade mechanism is a D3 assessment item because the gap is contractual: no existing standard SaaS contract template addresses it. See [ARAF Assessor Guidance Note GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/) for detailed cross-border liability architecture assessment.
 
 ## Dimension 4: Liability Architecture
 
@@ -182,6 +192,8 @@ The leverage dynamic emerges when a system becomes embedded in the organisation'
 
 ●	technology lock-in
 
+●	Government-adjacent customer exposure: whether the customer base includes entities holding government, defence, or regulated procurement relationships that create cascade risk in the event of a provider designation. This is the mechanism through which a government action against the AI provider converts customer concentration into existential revenue loss for the deploying organisation. The assessment identifies which customers hold government procurement obligations and what proportion of revenue they represent.
+
 Commercial leverage is the dimension that most directly explains why governance gaps, once opened, tend to remain open.
 
 ### Institutional implication
@@ -202,9 +214,28 @@ Adaptive Stability assesses the organisation's capacity to maintain adequate gov
 
 ●	monitoring architecture
 
+●	provider designation monitoring: whether the organisation monitors for government actions, including supply chain risk designations, affecting its primary AI provider stack. A government designation event is a reassessment trigger under D6 because it can invalidate the governance architecture within hours.
+
 A system that generates extensive performance metrics but no governance records has monitoring without accountability.
 
 ### Institutional implication
 
 For insurers, Dimension 6 is the ongoing governance maintenance signal across the coverage period. An ARAF assessment captures governance posture at a point in time. Dimension 6 assesses whether the organisation has the infrastructure to maintain that posture between assessments. A low D6 score at the time of assessment is a positive signal. A high D6 score means the governance posture the insurer priced at policy inception may not be the governance posture operating at the time of a claim.
+
+## The Multiplier Logic
+
+The six dimensions are not independent. Weaknesses in one dimension compound weaknesses in others. ARAF incorporates multiplier logic that captures this compounding effect.
+
+### Primary Multiplier Combinations
+
+| Multiplier | Trigger | Compounding exposure |
+|---|---|---|
+| Systemic Escalation | D1 >= 4 AND D4 >= 4 | High autonomy combined with inadequate liability architecture. The most severe compound exposure. |
+| Infrastructure Collapse | D3 >= 4 AND D1 >= 3 | Significant autonomy combined with inadequate contract infrastructure. Liability allocation at the execution boundary is ungoverned contractually. |
+| Leverage Collapse | D5 >= 4 AND D4 >= 3 | High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation. |
+| Political Cascade | D5 >= 4 AND D3 >= 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure contract provisions. Provider designation converts customer concentration into revenue loss. |
+
+### What the multiplier logic means in practice
+
+Individual dimensional weaknesses are manageable. Compound weaknesses create systemic exposure because the compounding reduces the options available for remediation and increases the cost of each option.
 

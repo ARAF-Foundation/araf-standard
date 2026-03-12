@@ -43,7 +43,7 @@
   <rect x="40" y="108" width="3" height="136" fill="#A88644"/>
 
   <text x="52" y="126" font-size="7.5" font-weight="bold" fill="#0d0d0b" class="mono">Authority holder:</text>
-  <text x="52" y="139" font-size="8" fill="#3a3a35" class="mono">Venture Bench Pty Ltd /</text>
+  <text x="52" y="139" font-size="8" fill="#3a3a35" class="mono">ARAF Standards Authority Ltd /</text>
   <text x="52" y="151" font-size="8" fill="#3a3a35" class="mono">originating author</text>
 
   <line x1="52" y1="158" x2="336" y2="158" stroke="#e8e4db" stroke-width="0.75"/>

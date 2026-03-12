@@ -104,7 +104,133 @@ Use these terms and values exactly. Do not invent variations.
 - **The anchor case:** ASIC v Bekier [2026] FCA 196
 - **The four bankability conditions:** Identifiability, Measurability, Governability, Insurability
 - **The four accountability links:** Design, Deployment, Operational, Outcome
-- **Multiplier conditions:** Systemic Escalation (D1≥4 AND D4≥4), Infrastructure Collapse (D3≥4 AND D1≥3), Leverage Collapse (D5≥4 AND D4≥3)
+- **Multiplier conditions:** Systemic Escalation (D1≥4 AND D4≥4), Infrastructure Collapse (D3≥4 AND D1≥3), Leverage Collapse (D5≥4 AND D4≥3), Political Cascade (D5≥4 AND D3≥3 with single-provider dependency and government-adjacent customer concentration)
+
+## Governance Coherence Addendum (GCA v1.0)
+
+Use this as a normative companion instruction set for certification content.
+
+- **Document title:** Governance Coherence Addendum (GCA v1.0)
+- **Scope:** Applies to ARAF Compliant and ARAF Certified determinations only.
+- **Assessed tier:** Remains a design adequacy assessment only (no GCI requirement).
+
+### Relationship to the ARAF standard
+
+- Governance Coherence is **not** a seventh dimension.
+- It is an evaluation layer applied across all six dimensions.
+- **GBI** assesses design adequacy.
+- **GCI** assesses operational coherence.
+- Use the SOC 2 analogy consistently:
+  - GBI = Type I (point-in-time design adequacy)
+  - GCI = Type II (operational effectiveness over time)
+- GBI and GCI cannot be produced simultaneously for Compliant/Certified tiers.
+- A minimum **180-day assessment window** must separate GBI assessment date and GCI assessment date.
+
+### Governance Coherence components
+
+#### 1) Authority Adherence
+
+Did operational decisions occur within defined authority boundaries?
+
+Use indicators such as decision logs, escalation records, and override logs.
+Systematic boundary violations are a **critical coherence finding** and must be remediated before certification can be issued or maintained.
+
+#### 2) Control Exercise
+
+Were required governance controls exercised at required cadence and depth?
+
+Use indicators such as governance meeting records, approval documentation, monitoring outputs, and incident records.
+Treat zero exceptions as a negative indicator that must be assessed, not assumed to represent clean operation.
+
+#### 3) Drift Detection
+
+Has operational behaviour diverged from governance assumptions?
+
+Use indicators such as model version tracking, scope variance evidence, decision pattern shifts, and provider substitution records.
+For D6, evaluate the two-layer evidentiary model:
+
+- runtime enforcement log (decision-level drift evidence)
+- MKP registry (version lineage)
+
+The traversal path between runtime record and MKP lineage is the D6 closing criterion.
+
+### Governance Coherence Index (GCI)
+
+- Score GCI on a 0.0 to 1.0 scale, per dimension.
+- Report dimensional GCI scores individually.
+- Combined GCI for tier determination is a weighted average based on GBI-derived system risk profile.
+- Apply modifier logic exactly:
+
+`Effective Dimension Score = GBI Dimension Score / GCI Dimension Score`
+
+Low GCI must degrade effective posture, even where design adequacy is strong.
+
+### Certification thresholds (coherence-enabled tiers)
+
+| Tier | Threshold rule | Key conditions |
+|---|---|---|
+| ARAF Assessed | Assessment completed | No GCI required; design adequacy only |
+| ARAF Compliant | GBI <= 2.50 and GCI >= 0.70 across all assessed dimensions | No unresolved critical coherence findings; Tier 1 or Tier 2 evidence required |
+| ARAF Certified | GBI <= 1.75 and GCI >= 0.85 across all assessed dimensions | Tier 1 evidence for at least 80% of sampled controls; no unresolved critical or significant coherence findings |
+
+These thresholds are provisional and subject to formal review after 50 completed assessments.
+
+### Evidence requirements for coherence
+
+Use four evidence tiers:
+
+- **Tier 1 (Infrastructure-generated):** automated decision logs, enforcement records, override/exception logs, drift outputs.
+- **Tier 2 (Contemporaneous documentation):** governance records, approvals, escalation logs, manual review records.
+- **Tier 3 (Reconstructed documentation):** retrospective assembly; acceptable for Assessed only; not acceptable for Compliant/Certified coherence.
+- **Tier 4 (Management representation):** not acceptable for coherence at any tier; if primary evidence for a control, assess as not evidenced.
+
+Expected evidence orientation:
+
+- D1, D2, D6: Tier 1 expected where structurally available.
+- D3, D4, D5: Tier 2 commonly expected (institutional-layer dimensions).
+
+### Assessment window and reassessment triggers
+
+- Minimum coherence assessment window: **180 days**.
+- Sample artefacts across the full window, not just immediately pre-assessment periods.
+- Mandatory reassessment triggers include:
+  - autonomy increase of more than one Autonomy Gradient level
+  - substitution of primary AI provider/model
+  - significant operational scope expansion beyond assessed scope
+  - material incident testing/failing governance architecture
+  - systematic governance drift identified outside normal cycle
+- Organisations must notify assessors within **60 days** of trigger occurrence.
+- Continued certification use without initiated reassessment after trigger = certification breach.
+
+### Report structure requirements
+
+All Compliant/Certified reports must separate design adequacy and operational coherence findings.
+
+Required sections:
+
+- Executive Summary
+- Scope and Assessment Window
+- Design Adequacy Assessment (GBI)
+- Governance Coherence Assessment (GCI)
+- Evidence Summary
+- Findings and Observations
+- Scope Limitation and Disclaimer
+
+Required scope limitation language:
+
+"This certification covers the governance architecture design and operational coherence of [Organisation] during the assessment window specified above. It does not guarantee future system performance, safety, or absence of adverse outcomes. Certification is subject to re-assessment upon the occurrence of material change events as defined in the ARAF Standard."
+
+### Assessor competence
+
+Treat coherence assessment as requiring dedicated competencies beyond design adequacy, including evidence evaluation methodology, sampling design, and drift analysis techniques.
+
+### Citation
+
+Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version 2.1: Governance Coherence Addendum. Institute for Autonomous Governance Pty Ltd, 2026.
+
+Institute for Autonomous Governance Pty Ltd · ACN 696 112 277 · March 2026 · Licensed CC BY 4.0
+
+araf-standard.org
 
 ## Design tokens
 
@@ -161,4 +287,4 @@ Use tables for reference material. Use `:::caution` for the GBI score direction 
 - Never add certification tiers, dimension names, or GBI thresholds that differ from the definitions above
 - The site should be citable in regulatory submissions and policy papers — accuracy matters
 - Version references in content should say "ARAF v2.1" — version is not part of the logo lockup
-- Standard governance does not constitute assessor accreditation, certification 
+- Standard governance does not constitute assessor accreditation, certification issuance, or statutory authority

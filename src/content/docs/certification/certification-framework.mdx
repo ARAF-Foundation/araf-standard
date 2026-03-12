@@ -1,11 +1,7 @@
 ---
-title: Certification
-description: The three ARAF certification tiers, assessor accreditation standard, certification lifecycle, and how certification functions as a market signal for institutional audiences.
+title: Certification Framework
+description: Normative certification framework defining tiers, decision logic, and lifecycle controls.
 ---
-
-:::note[Legacy route]
-This page remains available under its original v2.x route. For the canonical v3.0 certification set, see [Certification Framework](/certification/certification-framework/), [Governance Benchmark Index](/certification/governance-benchmark-index/), and [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
-:::
 
 Trust requires a signal.
 
@@ -29,28 +25,28 @@ ARAF certification evaluates governance architecture across six structural dimen
 
 ## Certification Tiers
 
-ARAF defines three certification tiers based on the Governance Benchmark Index (GBI). Lower GBI scores indicate stronger governance posture.
+ARAF defines three certification tiers. The ARAF Assessed tier is determined by design adequacy assessment (GBI). The ARAF Compliant and ARAF Certified tiers are determined by both design adequacy (GBI) and operational coherence (GCI).
+
+For Governance Coherence requirements and scoring mechanics, see [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
 
 <figure className="diagram-figure">
 	<img src="/images/araf/araf_05_certification_lifecycle.svg" alt="ARAF Certification Lifecycle" loading="lazy" />
 	<figcaption>ARAF Certification Lifecycle. Governance assessments produce certification status which must be maintained through monitoring and periodic reassessment.</figcaption>
 </figure>
 
-**ARAF Assessed**
+| Tier | Threshold Rule | Additional Conditions |
+| --- | --- | --- |
+| ARAF Assessed | Assessment completed. No minimum GBI threshold. | Design adequacy assessment only. No GCI required. |
+| ARAF Compliant | GBI &le; 2.50 and GCI &ge; 0.70 | GCI &ge; 0.70 across all assessed dimensions. No unresolved critical coherence findings. Tier 1 or Tier 2 evidence required. |
+| ARAF Certified | GBI &le; 1.75 and GCI &ge; 0.85 | GCI &ge; 0.85 across all assessed dimensions. Tier 1 evidence for at least 80% of sampled controls. No unresolved critical or significant coherence findings. |
 
-Independent evaluation completed. The system's governance posture has been assessed and documented by an accredited assessor. The system may require remediation before reaching institutional thresholds.
+The GBI and GCI cannot be produced simultaneously for Compliant and Certified determinations. A minimum 180-day assessment window must separate the GBI assessment date from the GCI assessment date.
 
-**ARAF Compliant (GBI ≤ 2.50)**
+These thresholds are provisional and subject to formal review after 50 completed assessments.
 
-Minimum institutional threshold met. The governance posture supports standard insurance coverage terms and satisfies the governance threshold that enterprise procurement and regulatory engagement require.
+Certification tiers are governance architecture classifications, not qualitative judgments about ethical alignment.
 
-**ARAF Certified (GBI ≤ 1.75)**
-
-Full agentic bankability supported. The governance posture supports the full conditions of institutional reliance: the system can be classified, governed, insured, financed, and relied upon by the institutional audiences that must assume responsibility for its behaviour. Certification at this tier supports the most favourable coverage terms, the strongest investor governance signal, and the fullest board assurance.
-
-The tiers create a governance progression that institutions can track over time. An insurer can price conditional coverage during the remediation period and transition to standard terms upon Compliant certification. An investor can model the governance discount at one tier and the valuation benefit on reaching the next.
-
-Certification tiers correspond to GBI score thresholds. They are governance architecture classifications, not qualitative judgments about ethical alignment.
+The tiers create a governance progression that institutions can track over time. An insurer can price conditional coverage during remediation and transition to standard terms on Compliant certification. An investor can model the governance discount at one tier and valuation uplift on reaching the next.
 
 ## The Assessor Accreditation Standard
 
@@ -74,14 +70,24 @@ Self-certification does not satisfy the ARAF independence requirement. An organi
 
 Autonomous systems change faster than most governed assets. Models are retrained. Deployment contexts expand. Data sources evolve. A certification that was accurate at issuance may not describe the system operating six months later. The ARAF certification lifecycle is designed to address this, following the structural model that aviation applies to airworthiness: initial certification, event-triggered reassessment, and scheduled maintenance.
 
-**Initial assessment.** The initial ARAF assessment evaluates governance posture across all six dimensions and produces:
+**Initial assessment (design adequacy).** The initial ARAF assessment evaluates governance posture across all six dimensions and produces:
 
 - GBI composite score
 - Full dimensional profile
 - Multiplier analysis
 - Remediation roadmap (where required)
-- Certification designation
+- Assessed designation, or preliminary tier pathway pending coherence evaluation
 - Assessment date and validity period
+
+**Operational coherence assessment.** Compliant and Certified determinations require a separate Governance Coherence assessment over a defined operational window. A minimum 180-day period must separate the initial GBI assessment date and GCI assessment date.
+
+The coherence assessment produces:
+
+- dimensional GCI scores
+- combined GCI for tier determination
+- coherence findings (critical, significant, or minor)
+- evidence admissibility summary by control
+- final tier determination where all thresholds are satisfied
 
 **Scheduled reassessment.** The maximum interval between formal reassessments is 12 months. Reassessment confirms that governance posture has been maintained, or identifies where it has changed and what remediation is required.
 

@@ -1,0 +1,232 @@
+---
+title: The Six ARAF Dimensions
+description: Normative six-dimension governance assessment model used by ARAF, including the D6 two-layer evidentiary model.
+---
+
+## Overview
+
+Six dimensions. One composite score.
+
+The Six ARAF Dimensions provide the governance assessment framework for autonomous system deployments. They define how ARAF classifies, measures, and benchmarks governance posture across six dimensions that determine institutional readiness.
+
+- Published by: Institute for Autonomous Governance Pty Ltd
+- Date: March 2026
+- Version: 1.1 - D6 two-layer evidentiary model
+- Reference: araf-standard.org
+
+The six dimensions are:
+
+- D1 - Autonomy Gradient: what decisions the system makes without human authorisation for each individual decision.
+- D2 - Data Sensitivity Exposure: what data the system processes and where that data comes from.
+- D3 - Contract Infrastructure: what legal architecture governs the deployment.
+- D4 - Liability Architecture: how liability for autonomous decisions is structured, documented, and governed.
+- D5 - Commercial Leverage: how commercially dependent the organisation is on the system.
+- D6 - Adaptive Stability: whether governance can be maintained as the system and deployment evolve.
+
+<figure className="diagram-figure">
+	<img src="/images/araf/araf_03_six_dimensions.svg" alt="ARAF Six-Dimensional Governance Framework" loading="lazy" />
+	<figcaption>ARAF Six-Dimensional Governance Framework. Governance posture is evaluated across six interacting dimensions that collectively determine the Governance Benchmark Index.</figcaption>
+</figure>
+
+Lower GBI scores indicate stronger governance. Scores are produced on a 1.0 to 5.0 scale.
+
+Four structural multipliers - Systemic Escalation, Infrastructure Collapse, Leverage Collapse, and Political Cascade - can compound scores where dimensional combinations exceed activation thresholds.
+
+## Governance Benchmark Index Certification Tiers
+
+| Tier | Threshold | Meaning |
+| --- | --- | --- |
+| ARAF Assessed | Any score | Assessment completed. Dimensional profile available for institutional use. |
+| ARAF Compliant | GBI &le; 2.50 | Governance posture meets institutional baseline across all six dimensions. |
+| ARAF Certified | GBI &le; 1.75 | Governance posture meets the highest institutional confidence threshold. |
+
+## 1. Autonomy Gradient (D1)
+
+What decisions does the system make without requiring human authorisation for each individual decision?
+
+The Autonomy Gradient is the foundational dimension. Its score determines the governance burden all other dimensions must address. A system operating at high autonomy with weak liability architecture or contract infrastructure creates compounding exposure that multiplier logic is designed to capture.
+
+### What it assesses
+
+- Operational autonomy level and categories of action performed without per-decision human authorisation.
+- Commitment authority, including maximum financial or operational commitment executed autonomously.
+- Exception handling for decisions outside trained parameters.
+- Scope boundary enforcement through technical and contractual controls.
+- Human oversight adequacy proportionate to deployed autonomy level.
+
+### Institutional implication
+
+D1 is foundational for boards, insurers, investors, and regulators because it determines exposure scale at the point of autonomous decision execution.
+
+### Evidence profile
+
+Machine-enforceable evidence is available for part of D1. Deterministic enforcement logs, including `FAIL_CLOSED`, `HARD_BLOCK` on scope violations, and `PASS_CONFIRMED` on benign inputs, can provide Tier 1 D1 evidence. Human oversight structure still requires institutional-layer evidence.
+
+## 2. Data Sensitivity Exposure (D2)
+
+What data does the system process, and where does that data come from?
+
+Data Sensitivity Exposure assesses two risk categories that require separate governance treatment. Operational data creates immediate exposure at the point of processing. Training data provenance creates latent exposure carried into every downstream decision.
+
+### What it assesses
+
+- Operational data categories, including sensitivity classification, access governance, and handling controls.
+- Training data provenance, including legal basis, IP clearance, and consent frameworks for training and fine-tuning datasets.
+- Foundation model provider representations on training data governance.
+- Retraining cycles as new provenance governance triggers.
+- RAG provenance exposure where inference-time retrieval is deployed.
+
+### Institutional implication
+
+For boards and legal counsel, D2 maps latent liability created before deployment. Provenance gaps identified post-deployment cannot be remediated retroactively because they are embedded in operational history.
+
+### Evidence profile
+
+Partial runtime evidence is available. Enforcement logs can evidence operational data handling at evaluation time. Training data provenance requires institutional-layer artefacts, including provider representations, fine-tuning legal basis, and IP clearance records.
+
+## 3. Contract Infrastructure (D3)
+
+What legal architecture governs the deployment?
+
+Contract Infrastructure assesses the legal architecture through which liability is allocated, obligations are defined, and accountability is assigned across the deployment chain. It is directly connected to the four accountability links: design, deployment, operational, and outcome.
+
+### What it assesses
+
+- Customer agreements, including AI-specific provisions, scope limitations, and liability carve-outs.
+- Vendor agreements, including model and infrastructure contracts, SLAs, and indemnification structure.
+- Data processing agreements and legal basis across deployment chain entities.
+- Liability provisions governing AE3 consequences.
+- Contractual allocation of accountability across the Decision Supply Chain.
+- Political force majeure provisions addressing government supply chain risk designation events as distinct triggers.
+- Provider substitution rights with political designation triggers, extending beyond technical API failure scenarios.
+
+### Institutional implication
+
+D3 is a foundational liability dimension. Without adequate contract infrastructure, the organisation has no legal architecture through which to manage adverse autonomous outcomes. The February 2026 Anthropic-Pentagon designation event demonstrated that a government supply chain risk designation can cascade through enterprise customer procurement obligations contractually rather than technically. See [ARAF Assessor Guidance Note GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/) for cross-border liability architecture assessment methodology.
+
+### Evidence profile
+
+D3 is an institutional-layer dimension. No enforcement log can satisfy D3. It is assessed through legal document review and accountability allocation quality.
+
+## 4. Liability Architecture (D4)
+
+How is liability for the system's autonomous decisions structured, documented, and governed?
+
+Liability Architecture assesses how liability for autonomous action consequences is structured. AE3 outcomes accumulate at operational speed, creating liability exposure that conventional frameworks were not designed to absorb.
+
+### What it assesses
+
+- AE3 liability structure and cap adequacy.
+- Carve-out provisions for specific autonomous decision categories.
+- Insurance coverage adequacy for AE3 exposure.
+- Liability allocation across design, deployment, operational, and outcome links.
+- Governance of liability architecture, including review authority, review interval, and trigger events.
+
+### Institutional implication
+
+For insurers, D4 is the coverage architecture dimension. It determines what must be covered, what can be excluded, and how large exposure can become under autonomous decision volume.
+
+### Evidence profile
+
+Enforcement evidence is the precondition, not the structure. Tier 1 enforcement logs demonstrate that controls operated when decisions were made. Independent assessment is still required to determine whether the liability structure itself is adequate.
+
+## 5. Commercial Leverage (D5)
+
+How commercially dependent is the organisation on this system, and how does that dependency constrain governance remediation?
+
+Commercial Leverage assesses the degree to which operational and commercial dependency limits governance remediation options. Where remediation disruption exceeds what the organisation is willing to accept, the governance gap becomes structural rather than contingent.
+
+### What it assesses
+
+- Operational dependency of core processes on the system.
+- Revenue concentration linked to system availability and performance.
+- Remediation commercial resistance.
+- Technology lock-in, portability constraints, and vendor dependency.
+- Customer relationship embedding tied to continued system operation.
+- Government-adjacent customer exposure, including concentration risk linked to customers with government, defence, or regulated procurement obligations.
+
+### Institutional implication
+
+For investors, D5 is a structural risk signal. A high D5 score with high D3 or D4 indicates a governance deficit the commercial structure is working against correcting.
+
+## 6. Adaptive Stability (D6)
+
+Can governance be maintained as the system and its deployment evolve?
+
+Adaptive Stability assesses the organisation's capacity to maintain governance adequacy over time. A deployment that is governable at initial release may become inadequately governed months later if governance architecture does not evolve with system behaviour.
+
+### What it assesses
+
+- Governance maintenance processes and formal reassessment triggers.
+- Change governance over model and rule updates.
+- Monitoring architecture and behavioural drift detection.
+- Provider designation monitoring for government actions affecting the primary AI provider stack.
+- MKP version lineage and rule evolution governance.
+- AIOC authority over governance rule-set changes.
+
+### The Two-Layer Evidentiary Model
+
+D6 evidence adequacy requires two components serving distinct institutional audiences. They are assessed separately and should be maintained separately.
+
+| Component | Records | Primary audience | Evidence tier | What it satisfies |
+| --- | --- | --- | --- | --- |
+| Runtime enforcement log | MKP identifier governing each decision, enforcement outcome, drift score per evaluation | Insurer or regulator interrogating a specific enforcement decision | Tier 1 if infrastructure-generated and tamper-evident | Rule attribution: which rule set governed this decision at this time |
+| MKP registry | Version graph, update authorisation chain, rule change history, change timestamps | Assessor evaluating rule adequacy and evolution over time | Tier 1 if append-only and tamper-evident; Tier 2 if documented institutional record | Rule evolution: how governing rule set changed, when, and who authorised it |
+
+Separation is the correct architecture. Decision-level interrogation needs runtime precision. Governance adequacy assessment needs rule-lineage visibility across time.
+
+### The Traversal Path - D6 closing criterion
+
+The runtime log records MKP identifier. The registry records version history for that identifier. The D6 closing criterion is whether a traversal path exists between the two.
+
+| Criterion | Assessment implication |
+| --- | --- |
+| Runtime log records MKP identifier per decision | Verifiable from enforcement log. Required for rule attribution. |
+| MKP registry exists and is maintained | Assessor verifies access, tamper-evidence, and append-only architecture. |
+| Traversal path from MKP identifier to version graph | Closing criterion. If absent, records exist in isolation and rule lineage cannot be reconstructed from enforcement evidence alone. |
+
+A deterministic system enforcing the wrong rules is deterministically wrong. Rule attribution proves that rules were applied. Independent assessment determines whether those rules were adequate for the risk profile.
+
+### Institutional implication
+
+For insurers, D6 is the ongoing governance maintenance signal across the coverage period. A high D6 score indicates that governance posture at policy inception may not match governance posture at claim time.
+
+## Compound Risk
+
+### Multiplier logic
+
+The six dimensions are not independent. Weaknesses compound rather than merely add. Individual weaknesses may be manageable. Compound weaknesses create systemic exposure by reducing remediation options and increasing remediation cost.
+
+| Multiplier | Trigger | Compound exposure |
+| --- | --- | --- |
+| Systemic Escalation | D1 >= 4 and D4 >= 4 | High autonomy with inadequate liability architecture. AE3 volume is high and liability framework is not designed to absorb consequences. Most severe compound exposure. |
+| Infrastructure Collapse | D3 >= 4 and D1 >= 3 | Significant autonomy with inadequate contract infrastructure. Liability allocation at execution boundary is contractually ungoverned. |
+| Leverage Collapse | D5 >= 4 and D4 >= 3 | High commercial dependency with inadequate liability architecture. System becomes structurally resistant to remediation. |
+| Political Cascade | D5 >= 4 and D3 >= 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure contract provisions. Provider designation converts customer concentration into revenue loss. |
+
+GBI scoring direction is fixed: higher numbers represent greater governance risk, not stronger performance.
+
+## Institutional Use
+
+The dimensional profile serves each audience differently.
+
+### For Boards
+
+Identifies which governance questions require immediate attention and which dimensions are producing multiplier exposure the board must address.
+
+### For Insurers
+
+D4 weakness determines AE3 coverage requirements. D1 weakness determines commitment authority exposure. D6 weakness determines ongoing monitoring conditions that should be required through the coverage period.
+
+### For Investors
+
+Distinguishes structural risks (D3 and D4, requiring contractual and architectural remediation) from operational risks (D1 and D6, responding to process and monitoring improvements). This distinction governs remediation timelines and cost expectations.
+
+### For Regulators
+
+Provides a comparable, independently assessed governance posture classification across supervised populations, aligned with EU AI Act, NIST AI RMF, ISO 42001, and APRA CPS 230.
+
+## Citation
+
+Institute for Autonomous Governance Pty Ltd. Agentic Risk Architecture Framework (ARAF), The Six ARAF Dimensions, Version 1.1, March 2026.
+

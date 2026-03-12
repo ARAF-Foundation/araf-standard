@@ -160,7 +160,7 @@ The chain is only as governable as its least governed link.
 
 Governance must exist outside the model, at the architectural boundaries through which model inputs and outputs flow.
 
-Three boundaries define the operational structure of the Decision Supply Chain:
+Four boundaries define the operational structure of the Decision Supply Chain:
 
 **Data Boundary**  
 Governs the information entering the system.
@@ -170,6 +170,9 @@ Governs how models interact with inputs and produce outputs.
 
 **Action Boundary**  
 Governs the consequential actions the system is permitted to trigger.
+
+**Jurisdictional Boundary**  
+Governs where the decision's consequences take legal effect.
 
 Each boundary corresponds to a layer of the Decision Supply Chain.
 
@@ -233,6 +236,14 @@ Commodity infrastructure providers require different governance treatment than d
 
 Governance obligations should be proportional to the provider's influence on the decision outcome.
 
+### The Jurisdictional Boundary
+
+The jurisdictional boundary governs where the decision's consequences take legal effect. It is the governance point for cross-border liability, regulatory compliance, and provider designation risk. Agentic AI deployments routinely cross jurisdictional boundaries without deliberate organisational decision: the vendor's foundation model may operate under US law; customer data may be subject to GDPR, the Australian Privacy Act, or equivalent national privacy frameworks; enterprise customers may operate across multiple jurisdictions; and the agent may execute actions inside those environments without regard for borders.
+
+The jurisdictional boundary requires governance treatment distinct from the data, inference, and action boundaries. A system that is correctly governed at the action boundary, with functioning scope enforcement, may still produce ungoverned consequences at the jurisdictional boundary where the action takes legal effect in a jurisdiction where the governance architecture does not apply. D3 Contract Infrastructure assesses the contractual layer at this boundary. The Decision Supply Chain map must identify each jurisdictional boundary crossed in the chain and the governance treatment applied at each crossing.
+
+For detailed jurisdictional footprint mapping procedures, cross-border liability architecture requirements, and regulatory exposure mapping methodology, see [ARAF Assessor Guidance Note GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/).
+
 ## 7. Governance Requirements for Each Link
 
 ### Chain Mapping
@@ -288,6 +299,10 @@ Accountability must be explicitly assigned at every link.
 			<tr>
 				<td>Deploying organisation (overall)</td>
 				<td>Outcome accountability</td>
+			</tr>
+			<tr>
+				<td>Jurisdictional counsel (per deployment geography)</td>
+				<td>Regulatory accountability for compliance in each jurisdiction where the chain produces consequences</td>
 			</tr>
 		</tbody>
 	</table>

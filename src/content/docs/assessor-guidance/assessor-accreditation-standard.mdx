@@ -1,11 +1,7 @@
 ---
-title: ARAF Assessor Accreditation Standard
-description: Accreditation requirements for ARAF governance assessors, including qualification, independence, methodology adherence, documentation, quality assurance, and maintenance obligations.
+title: Assessor Accreditation Standard
+description: Accreditation requirements for assessors, including independence, methodology adherence, and quality assurance obligations.
 ---
-
-:::note[Legacy route]
-This page remains available under its original v2.x route. The canonical v3.0 page is [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/).
-:::
 
 Accreditation Requirements for ARAF Governance Assessors
 
@@ -37,6 +33,7 @@ An accredited assessor is authorised to:
 - apply the six-dimensional governance framework
 - classify evidence quality tier per dimension
 - calculate Governance Benchmark Index (GBI) scores
+- assess Governance Coherence components and calculate Governance Coherence Index (GCI) scores for Compliant and Certified determinations
 - determine multiplier conditions
 - issue certification determinations where thresholds are met
 
@@ -125,10 +122,12 @@ This includes:
 
 - applying the six-dimensional governance framework, including all sub-factors within each dimension
 - evaluating governance evidence according to the ARAF Evidence Standard, including the four quality requirements of authenticity, integrity, traceability, and exportability
-- classifying evidence quality tier per dimension (Tier 1: infrastructure-generated, Tier 2: contemporaneous documentation, Tier 3: reconstructed documentation)
+- classifying evidence quality tier per dimension (Tier 1: infrastructure-generated, Tier 2: contemporaneous documentation, Tier 3: reconstructed documentation, Tier 4: management representation)
 - assessing evidence continuity across the full Decision Supply Chain
 - applying multiplier logic where dimensional interactions create compound risk
 - calculating Governance Benchmark Index scores using the defined methodology
+- applying Governance Coherence assessment components (Authority Adherence, Control Exercise, Drift Detection) where tier determination requires coherence
+- calculating GCI scores and enforcing the minimum 180-day separation between GBI assessment date and GCI assessment date for Compliant and Certified determinations
 - documenting dimensional reasoning and scoring rationale for each dimension
 
 Assessors must not modify the scoring framework, dimensional definitions, multiplier thresholds, or certification tier boundaries.
@@ -143,22 +142,59 @@ When the methodology is updated, assessors must apply the current published vers
 
 Each ARAF assessment must produce a structured assessment report. The report must provide sufficient explanation for institutional audiences, including boards, insurers, investors, and regulators, to understand the reasoning behind dimensional scores and the certification determination.
 
-The assessment report must include:
+For ARAF Compliant and ARAF Certified outcomes, the report must explicitly separate design adequacy findings from operational coherence findings.
+
+The assessment report must include the following required sections:
+
+- Executive Summary
+- Scope and Assessment Window
+- Design Adequacy Assessment (GBI)
+- Governance Coherence Assessment (GCI)
+- Evidence Summary
+- Findings and Observations
+- Scope Limitation and Disclaimer
+
+The report must also include:
 
 - System description: description of the system under assessment, including the autonomous system, the decisions it is authorised to make, and the operational environment
 - Decision Supply Chain map: identification of each link in the chain, accountability assignments, contractual relationships, and jurisdictional boundaries
 - Dimensional profile: individual scores for all six dimensions, with scoring rationale for each dimension
 - Evidence quality assessment: evidence quality tier classification per dimension, with explanation of the basis for each classification
 - GBI composite score: calculated according to the published methodology
+- GCI dimensional profile and combined GCI where coherence is required for tier determination
 - Multiplier analysis: identification of any multiplier conditions present, with explanation of the compound governance exposure each condition produces
 - Evidence summary: description of the governance evidence reviewed, organised by evidence category (design, deployment, operational, and outcome evidence), with identification of evidence gaps
 - Remediation roadmap: where governance weaknesses are identified, specific remediation recommendations distinguishing structural risks from operational risks, with implications for remediation timelines and costs
 - Certification determination: certification tier where thresholds are satisfied, or explanation of why certification thresholds were not met
 - Assessment metadata: assessment date, validity period, assessor identity, accreditation reference, and methodology version applied
 
+Required scope limitation language:
+
+"This certification covers the governance architecture design and operational coherence of [Organisation] during the assessment window specified above. It does not guarantee future system performance, safety, or absence of adverse outcomes. Certification is subject to reassessment upon the occurrence of material change events as defined in the ARAF standard."
+
 An assessor whose output is only a GBI score has produced a number. An assessor whose output includes a full dimensional profile, multiplier analysis, evidence quality assessment, and remediation roadmap has produced governance infrastructure.
 
-## 6. Quality Assurance and Review
+## 6. Reassessment Trigger Obligations
+
+Assessors must apply mandatory reassessment triggers consistently across certified organisations. The following events invalidate coherence assessment and require reassessment before certified status can be maintained:
+
+- material change to system autonomy level (increase of more than one Autonomy Gradient level)
+- substitution of a primary AI provider or model
+- significant expansion of operational scope beyond assessed scope
+- a material incident where governance architecture was engaged, tested, or found insufficient
+- discovery of systematic governance drift outside the normal assessment cycle
+
+Certified organisations must notify their accredited assessor of triggering events within 60 days of occurrence.
+
+Assessors must document:
+
+- trigger event date and notification date
+- determination on whether reassessment is mandatory
+- date reassessment was initiated
+
+Continued use of certification after a triggering event without initiating reassessment constitutes a certification breach and must be recorded in assessor documentation.
+
+## 7. Quality Assurance and Review
 
 The ARAF certification ecosystem includes quality assurance mechanisms to maintain assessment consistency and credibility.
 
@@ -174,7 +210,7 @@ Assessors must provide documentation supporting their assessment decisions durin
 
 Quality assurance findings are used to identify systemic issues across the assessor ecosystem and to inform methodology clarifications issued through the standard governance process.
 
-## 7. Assessment Dispute Resolution
+## 8. Assessment Dispute Resolution
 
 Where an organisation disagrees with an assessment outcome, the following dispute resolution process applies.
 
@@ -192,7 +228,7 @@ Disputes involving interpretation of the published methodology, rather than appl
 
 The dispute resolution process does not permit modification of the scoring framework or certification thresholds. It addresses whether the methodology was correctly applied to the evidence presented.
 
-## 8. Accreditation Maintenance
+## 9. Accreditation Maintenance
 
 Assessor accreditation must be maintained through continued compliance with the accreditation standard.
 
@@ -207,7 +243,7 @@ Accredited assessors must:
 
 Failure to maintain these requirements results in accreditation suspension or withdrawal.
 
-## 9. Accreditation Withdrawal
+## 10. Accreditation Withdrawal
 
 Accreditation is withdrawn where an assessor fails to meet the requirements of the accreditation standard.
 
@@ -223,7 +259,7 @@ Grounds for withdrawal include:
 
 Where accreditation is withdrawn, the assessor may no longer conduct ARAF assessments or issue certification determinations. Certifications previously issued by a withdrawn assessor are not automatically invalidated, but organisations holding those certifications may be subject to reassessment by a different accredited assessor.
 
-## 10. Relationship to Standard Governance
+## 11. Relationship to Standard Governance
 
 The ARAF standard defines the assessment methodology. The Assessor Accreditation Standard defines who may apply that methodology in certification assessments.
 
@@ -239,7 +275,7 @@ The standard maintainer does not hold a privileged position within the assessmen
 
 When standard governance produces a material methodology change, that change flows through to the assessment ecosystem. Assessors are responsible for applying the current published version of the methodology in all assessments. Certified organisations are subject to the reassessment obligations described in the Certification Lifecycle.
 
-## 11. The Assessor Ecosystem
+## 12. The Assessor Ecosystem
 
 The ARAF certification ecosystem depends on independent assessors drawn from disciplines with relevant governance assessment expertise. As adoption expands, the assessor ecosystem is expected to include:
 

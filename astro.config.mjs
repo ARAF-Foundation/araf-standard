@@ -21,12 +21,12 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/venturebench/araf-standard',
+          href: 'https://github.com/ARAF-Foundation/araf-standard',
         },
       ],
 
       editLink: {
-        baseUrl: 'https://github.com/venturebench/araf-standard/edit/main/',
+        baseUrl: 'https://github.com/ARAF-Foundation/araf-standard/edit/main/',
       },
 
       sidebar: [
@@ -35,11 +35,50 @@ export default defineConfig({
           items: [{ label: 'ARAF Standard', slug: '' }],
         },
         {
-          label: 'The Standard',
+          label: 'Framework (v3.0)',
           items: [
-            { label: 'Specification', slug: 'specification' },
-            { label: 'Trust Architecture', slug: 'trust-architecture' },
-            { label: 'Decision Supply Chain', slug: 'decision-supply-chain' },
+            { label: 'Architecture Specification', slug: 'standard/architecture-specification' },
+            { label: 'Governance Ontology', slug: 'standard/governance-ontology' },
+            { label: 'Reference Architecture', slug: 'standard/reference-architecture' },
+            { label: 'Six Governance Dimensions', slug: 'standard/six-dimensions' },
+            { label: 'Governance Benchmark Index (GBI)', slug: 'framework/governance-benchmark-index' },
+          ],
+        },
+        {
+          label: 'Certification (v3.0)',
+          items: [
+            { label: 'Certification Framework', slug: 'certification/certification-framework' },
+            { label: 'Governance Coherence Addendum', slug: 'certification/governance-coherence-addendum' },
+            { label: 'Governance Benchmark Index', slug: 'certification/governance-benchmark-index' },
+          ],
+        },
+        {
+          label: 'Assessor Guidance (v3.0)',
+          items: [
+            { label: 'Assessor Guidance Notes', slug: 'assessor-guidance/assessor-guidance-note' },
+            { label: 'Assessor Accreditation Standard', slug: 'assessor-guidance/assessor-accreditation-standard' },
+            { label: 'GN-002: Cross-Border Deployment Assessment', slug: 'assessor-guidance/gn-002' },
+          ],
+        },
+        {
+          label: 'Evidence (v3.0)',
+          items: [{ label: 'Evidence Standard', slug: 'evidence/evidence-standard' }],
+        },
+        {
+          label: 'Governance (v3.0)',
+          items: [
+            { label: 'Standard Governance', slug: 'standard-governance' },
+            { label: 'Version History', slug: 'governance/version-history' },
+          ],
+        },
+        {
+          label: 'Institutional Use',
+          items: [
+            { label: 'Institutional Applications', slug: 'institutional-applications' },
+            { label: 'ARAF for Boards', slug: 'boards' },
+            { label: 'ARAF for Enterprise Procurement', slug: 'enterprise-procurement' },
+            { label: 'ARAF for Investors', slug: 'investors' },
+            { label: 'ARAF for Regulators', slug: 'regulators' },
           ],
         },
         {
@@ -69,38 +108,38 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Methodology',
+          label: 'Pilot',
           items: [
-            { label: 'Six Dimensions Methodology', slug: 'six-dimensions' },
-            { label: 'Governance Benchmark Index', slug: 'gbi-methodology' },
-            { label: 'Evidence Standard', slug: 'methodology/evidence-standard' },
-            { label: 'Evidence Infrastructure', slug: 'evidence-infrastructure' },
-            { label: 'Assessment Preparation Guide', link: '/certification/#the-assessment' },
-            { label: 'Certification', slug: 'certification' },
+            { label: 'Pilot Sub-section', slug: 'pilot' },
+            { label: 'Worked Examples', slug: 'pilot/worked-examples' },
+            { label: 'Evidence Checklist', slug: 'pilot/evidence-checklist' },
+          ],
+        },
+        {
+          label: 'Resources',
+          items: [
             {
-              label: 'ARAF Assessor Accreditation Standard',
-              slug: 'methodology/assessor-accreditation-standard',
+              label: 'Supporting Diagrams and Reference Materials',
+              slug: 'resources/supporting-diagrams-and-reference-materials',
             },
           ],
         },
         {
-          label: 'Institutional Use',
+          label: 'Legacy v2.x Routes',
           items: [
-            { label: 'Institutional Applications', slug: 'institutional-applications' },
-            { label: 'ARAF for Boards', slug: 'boards' },
-            { label: 'ARAF for Enterprise Procurement', slug: 'enterprise-procurement' },
-            { label: 'ARAF for Investors', slug: 'investors' },
-            { label: 'ARAF for Regulators', slug: 'regulators' },
-          ],
-        },
-        {
-          label: 'Reference',
-          items: [
-            { label: 'ARAF Glossary', slug: 'glossary' },
-            { label: 'FAQ', slug: 'faq' },
-            { label: 'Standard Governance', slug: 'standard-governance' },
-            { label: 'Version History', slug: 'version-history' },
-            { label: 'Downloads', slug: 'downloads' },
+            { label: 'Specification (v2.x)', slug: 'specification' },
+            { label: 'Specification Index (v2.x)', slug: 'specification-index' },
+            { label: 'Six Dimensions (v2.x)', slug: 'six-dimensions' },
+            { label: 'Governance Benchmark Index (v2.x)', slug: 'gbi-methodology' },
+            { label: 'Certification (v2.x)', slug: 'certification' },
+            { label: 'Evidence Standard (v2.x)', slug: 'methodology/evidence-standard' },
+            {
+              label: 'Assessor Accreditation Standard (v2.x)',
+              slug: 'methodology/assessor-accreditation-standard',
+            },
+            { label: 'Standard Governance (compat route)', slug: 'governance/standard-governance' },
+            { label: 'Version History (v2.x)', slug: 'version-history' },
+            { label: 'Glossary (v2.x)', slug: 'glossary' },
           ],
         },
       ],
