@@ -13,16 +13,16 @@ Assessments conducted under earlier versions remain valid for the period of thei
 
 | Version | Date | Status | Notes |
 |---|---|---|---|
-| v2.1 | 2026 | **Current — active** | Initial public release of the open standard |
+| v3.0 | 2026 | **Current — active** | Initial public release of the open standard |
 | v2.2 | TBD | Planned | Minor clarifications to dimensional sub-factor definitions and evidence standard requirements |
 | v3.0 | Future | Planned | Expanded certification model, additional regulatory alignment mappings, and further Decision Supply Chain governance elaboration |
 
-## Version 2.1 — Detail
+## Version 3.0 — Detail
 
 **Publication date:** 2026  
 **Status:** Current public open standard
 
-### What v2.1 establishes
+### What v3.0 establishes
 
 - the six ARAF dimensions and their sub-factor methodology
 - the Governance Benchmark Index (GBI) composite scoring model
@@ -36,13 +36,13 @@ Assessments conducted under earlier versions remain valid for the period of thei
 
 ### Relationship to earlier versions
 
-ARAF v2.1 is the first public open release. Earlier versions were internal working documents developed during the design and validation phase. They are not publicly available and were not used for public external assessments.
+ARAF v3.0 is the first public open release. Earlier versions were internal working documents developed during the design and validation phase. They are not publicly available and were not used for public external assessments.
 
 ## Governance of the Standard
 
 The ARAF standard is currently maintained by Venture Bench Pty Ltd.
 
-The governance model at v2.1 is founder-maintained. Future governance development may include:
+The governance model at v3.0 is founder-maintained. Future governance development may include:
 
 - a technical advisory group drawing on assessment practice experience
 - an institutional advisory group including insurer, investor, and regulatory participants
@@ -59,9 +59,9 @@ When citing ARAF in research, policy documents, regulatory submissions, or asses
 
 Martin, Carly. *Agentic Risk Architecture Framework (ARAF)*, Version [x.x]. Venture Bench Pty Ltd, [year].
 
-**Example for v2.1:**
+**Example for v3.0:**
 
-Agentic Risk Architecture Framework (ARAF), Version 2.1. Maintained by ARAF Standards Authority Ltd (a company limited by guarantee), 2026
+Agentic Risk Architecture Framework (ARAF), Version 3.0. Maintained by ARAF Standards Authority Ltd (a company limited by guarantee), 2026
 
 ## Notification of Updates
 
