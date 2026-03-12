@@ -3,7 +3,7 @@ title: Reference Architecture
 description: Reference governance architecture for institutional reliance on autonomous decision systems.
 ---
 
-import PrinciplesToSignalDiagram from '../../../components/PrinciplesToSignalDiagram.astro';
+This page describes the reference architecture through which ARAF converts autonomous system operation into institutional governance infrastructure.
 
 Trust Architecture is the governance infrastructure required to convert autonomous systems from opaque operational risk into institutional-grade assets that can be classified, governed, insured, financed, and relied upon.
 
@@ -25,6 +25,8 @@ It is not a policy framework. It is not an ethics statement. It is governance in
   </ul>
 </nav>
 
+![ARAF governance objectives to institutional signal flow](/images/araf/araf_objectives_to_signal.png)
+
 <h2 id="institutional-problem">The Institutional Problem</h2>
 
 Decision authority is migrating into autonomous systems faster than governance infrastructure is evolving to supervise it. This is the Delegation Gap: the structural condition in which the governance infrastructure that every prior delegation of institutional authority has required does not yet exist for autonomous decision-making.
@@ -40,12 +42,6 @@ Many AI governance initiatives describe desirable system properties: transparenc
 The framework evaluates structural properties of the decision system: how much autonomy the system exercises, what data it touches, whether contracts allocate responsibility across the supply chain, whether liability is insurable, whether the deploying organisation can enforce governance requirements against its vendors, and whether governance controls survive as the system changes.
 
 These are infrastructure questions, not ethics questions. They determine whether an autonomous system is institutionally governable.
-
-### Objectives to Signal
-
-<PrinciplesToSignalDiagram />
-
-<hr className="section-divider" />
 
 <h2 id="governance-by-architecture">1. Why Autonomous Decisions Break Existing Accountability Structures</h2>
 
@@ -98,6 +94,8 @@ The action boundary governs what the system is permitted to do as a consequence 
 These three boundaries produce governance telemetry: contemporaneous, independently generated evidence records that institutional reliance requires. Technical safety standards assess whether the system operates correctly. Governance architecture assesses whether the institution deploying it can demonstrate accountability when the system's decisions are questioned.
 
 <h2 id="accountability-chain">3. The Four-Link Accountability Chain</h2>
+
+![ARAF four-link accountability chain: Design, Deployment, Operational, Outcome](/images/araf/araf_four_link_accountability_chain.png)
 
 <div className="accountability-link">
   <h3>Link 1: Design Accountability</h3>
@@ -237,9 +235,16 @@ Not all governance evidence is equal.
         <td>Records assembled in response to assessment requests, reconstructing governance claims from existing materials</td>
         <td>Lower confidence. Produced after the fact, subject to selection and framing choices that retrospective documentation involves.</td>
       </tr>
+      <tr>
+        <td>Tier 4: Management representation</td>
+        <td>Formal written representation where no contemporaneous record exists</td>
+        <td>Not admissible for coherence assessment at any certification tier. Where management representation is the only available source for a control, the control must be assessed as not evidenced. The presence of Tier 4 as the primary evidence source for any control is a significant coherence finding.</td>
+      </tr>
     </tbody>
   </table>
 </div>
+
+Tier 4 management representations are not admissible for coherence assessment at any certification tier.
 
 The standard for ARAF evidence is not what the organisation says about its governance. It is what the governance infrastructure produces.
 
@@ -311,6 +316,8 @@ Evidence continuity. The evidence record must follow the decision through the ch
 Organisations that govern only the autonomous system and not the Decision Supply Chain in which it operates are governing a subset of the risk they have assumed.
 
 <h2 id="trust-stack">8. Where Trust Architecture Sits in the Institutional Trust Stack</h2>
+
+![ARAF institutional trust stack: five layers from technical assurance to governance intelligence](/images/araf/araf_institutional_trust_stack.png)
 
 Technical safety standards and governance architecture serve different institutional functions. Both are necessary. Neither is sufficient alone.
 
@@ -472,13 +479,15 @@ ARAF Assessed is an entry-level designation available to any organisation that h
 
 ### Compounding Multiplier Logic
 
-Individual dimensional weaknesses amplify each other. ARAF incorporates three multiplier combinations:
+Individual dimensional weaknesses amplify each other. ARAF incorporates four multiplier combinations:
 
 Systemic Escalation (D1 ≥ 4 and D4 ≥ 4): High autonomy combined with inadequate liability architecture. The volume of AE3 consequences is high and the liability governance is inadequate to manage them.
 
 Infrastructure Collapse (D3 ≥ 4 and D1 ≥ 3): Significant autonomy combined with inadequate contract infrastructure. The commercial relationships through which liability is allocated are inadequately governed.
 
 Leverage Collapse (D5 ≥ 4 and D4 ≥ 3): High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation.
+
+Political Cascade (D5 ≥ 4 AND D3 ≥ 3 with single-provider dependency and government-adjacent customer concentration): A provider designation event converts customer concentration risk into existential revenue loss where contract infrastructure does not address the cascade mechanism.
 
 <h2 id="certification-ecosystem">11. The Certification Ecosystem</h2>
 
@@ -536,4 +545,4 @@ Trust Architecture does not only govern autonomous systems. It creates the insti
 
 The market is not waiting for perfect governance. It is waiting for measurable governance.
 
-ARAF · ARAF Standards Authority Ltd (a company limited by guarantee) · CC BY 4.0
+ARAF · Institute for Autonomous Governance Pty Ltd · CC BY 4.0
