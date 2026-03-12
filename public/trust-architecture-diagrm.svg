@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="980" viewBox="0 0 800 980">
 
   <title>Trust Architecture Reference Model</title>
-  <desc>The Trust Architecture Reference Model. Three layers — Operational (Decision Supply Chain), Governance (Six ARAF Dimensions), and Institutional (GBI, Certification Tiers, Institutional Reliance) — connected by upward arrows representing governance posture and assessment output. Evidence Infrastructure runs as a vertical gold spine on the right. The governing question throughout: Who was responsible? What did they know? What did they do? From Trust Architecture: Making Autonomous Systems Bankable by Carly Martin, ARAF v2.1, 2026.</desc>
+  <desc>The Trust Architecture Reference Model. Three layers — Operational (Decision Supply Chain), Governance (Six ARAF Dimensions), and Institutional (GBI, Certification Tiers, Institutional Reliance) — connected by upward arrows representing governance posture and assessment output. Evidence Infrastructure runs as a vertical gold spine on the right. The governing question throughout: Who was responsible? What did they know? What did they do? From Trust Architecture: Making Autonomous Systems Bankable by Carly Martin, ARAF v3.0, 2026.</desc>
 
   <defs>
     <style>
@@ -299,6 +299,6 @@
   <text x="400" y="900" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">FIGURE — TRUST ARCHITECTURE REFERENCE MODEL</text>
   <text x="400" y="918" text-anchor="middle" font-size="9.5" fill="#4b5563" font-style="italic" class="serif">The Trust Architecture Reference Model illustrates how autonomous decision infrastructure, governance assessment,</text>
   <text x="400" y="932" text-anchor="middle" font-size="9.5" fill="#4b5563" font-style="italic" class="serif">evidence generation, and certification interact to produce institutional governance signals.</text>
-  <text x="400" y="952" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+  <text x="400" y="952" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026 · trust-architecture.com</text>
 
 </svg>

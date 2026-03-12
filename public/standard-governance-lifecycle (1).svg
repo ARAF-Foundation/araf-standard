@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
   <title>ARAF Standard Governance Lifecycle</title>
-  <desc>The governance lifecycle of the ARAF standard. Three maturation stages (Founder-Led, Ecosystem Development, Institutional-Scale) run horizontally. The perpetual maintenance cycle (version publication, methodology updates, interpretive guidance, reassessment triggers, certification flow) runs vertically as a continuous loop. Governance of the standard and operation of the certification ecosystem are related but distinct. From ARAF v2.1, 2026.</desc>
+  <desc>The governance lifecycle of the ARAF standard. Three maturation stages (Founder-Led, Ecosystem Development, Institutional-Scale) run horizontally. The perpetual maintenance cycle (version publication, methodology updates, interpretive guidance, reassessment triggers, certification flow) runs vertically as a continuous loop. Governance of the standard and operation of the certification ecosystem are related but distinct. From ARAF v3.0, 2026.</desc>
   <defs>
     <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
   </defs>
@@ -238,6 +238,6 @@
   <line x1="40" y1="528" x2="920" y2="528" stroke="#d4d0c8" stroke-width="0.75"/>
   <text x="480" y="546" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">A governance standard that cannot explain how it is governed invites the same criticism</text>
   <text x="480" y="561" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">ARAF levels at organisations with governance claims but no governance infrastructure.</text>
-  <text x="480" y="582" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+  <text x="480" y="582" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026 · trust-architecture.com</text>
 
 </svg>

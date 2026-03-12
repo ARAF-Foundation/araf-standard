@@ -11,7 +11,7 @@ Do not track execution status in content files, inline TODO text, or commit-mess
 
 - [ ] Certification lifecycle text: apply tier-specific reassessment validity windows (Assessed 12 months, Compliant 18 months, Certified 24 months) where legacy wording still states a single 12-month maximum.
 - [ ] Certification and FAQ terminology pass: align Founding Stewardship and Institute naming consistently across all governance references.
-- [ ] Governance citation pass: confirm citation consistency (v2.1 historical citations vs v3.0 canonical routing notes) across governance and certification pages.
+- [ ] Governance citation pass: confirm citation consistency (legacy citations vs v3.0 canonical routing notes) across governance and certification pages.
 - [ ] Downloads and resource references: confirm all companion/addendum entries and version labels are internally consistent.
 
 ### Architecture queue

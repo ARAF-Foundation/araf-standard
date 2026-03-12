@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
   <title>From Governance Assessment to Institutional Reliance</title>
-  <desc>Four-zone flow diagram showing how ARAF six-dimensional governance assessment produces a GBI score, which maps to a certification tier, which becomes an institutional reliance signal for boards, insurers, investors, regulators, and enterprise procurement teams. From ARAF v2.1, 2026.</desc>
+  <desc>Four-zone flow diagram showing how ARAF six-dimensional governance assessment produces a GBI score, which maps to a certification tier, which becomes an institutional reliance signal for boards, insurers, investors, regulators, and enterprise procurement teams. From ARAF v3.0, 2026.</desc>
   <defs>
     <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
   </defs>
@@ -193,6 +193,6 @@
   <line x1="40" y1="406" x2="920" y2="406" stroke="#d4d0c8" stroke-width="0.75"/>
   <text x="480" y="424" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">The Governance Benchmark Index converts six-dimensional governance assessment into a comparable institutional signal.</text>
   <text x="480" y="439" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">Certification communicates that signal in a form institutional audiences can rely upon without reproducing the full methodology.</text>
-  <text x="480" y="460" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+  <text x="480" y="460" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026 · trust-architecture.com</text>
 
 </svg>

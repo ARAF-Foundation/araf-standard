@@ -59,7 +59,7 @@ araf-standard/
 ## Page summaries
 
 ### downloads.mdx
-Lists available public materials in a table (document, version, format, status). Current documents: ARAF Specification v2.1 (PDF, to be uploaded), Trust Architecture Overview v2.1 (PDF, to be uploaded), Decision Supply Chain Diagram v2.1 (PNG/PDF, to be uploaded), Version History (web, live), Standard Governance (web, live). Includes a standard status table and citation block. PDFs are not yet uploaded to `public/` — status column reads "To be uploaded" until files are added.
+Lists available public materials in a table (document, version, format, status). Current documents: ARAF Specification v3.0 (PDF, to be uploaded), Trust Architecture Overview v3.0 (PDF, to be uploaded), Decision Supply Chain Diagram v3.0 (PNG/PDF, to be uploaded), Version History (web, live), Standard Governance (web, live). Includes a standard status table and citation block. PDFs are not yet uploaded to `public/` — status column reads "To be uploaded" until files are added.
 
 ### standard-governance.mdx
 Describes how the ARAF standard is maintained. Current model: founder-led governance under Venture Bench Pty Ltd. Four governance principles: version discipline, public transparency, methodological consistency, institutional usability. Scope covers version publication, methodology maintenance, interpretive clarification, version history, and public documentation stewardship. Explicitly states that standard governance does not constitute assessor accreditation, certification issuance, or statutory authority. Future governance may include technical contributors, institutional advisory group, certification partners, accredited assessors, and a formal amendment process.
@@ -226,7 +226,7 @@ Treat coherence assessment as requiring dedicated competencies beyond design ade
 
 ### Citation
 
-Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version 2.1: Governance Coherence Addendum. Institute for Autonomous Governance Pty Ltd, 2026.
+Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version 3.0: Governance Coherence Addendum. Institute for Autonomous Governance Pty Ltd, 2026.
 
 Institute for Autonomous Governance Pty Ltd · ACN 696 112 277 · March 2026 · Licensed CC BY 4.0
 
@@ -286,5 +286,5 @@ Use tables for reference material. Use `:::caution` for the GBI score direction 
 - If unsure about a framework definition, ask before writing — ARAF terms have specific meanings
 - Never add certification tiers, dimension names, or GBI thresholds that differ from the definitions above
 - The site should be citable in regulatory submissions and policy papers — accuracy matters
-- Version references in content should say "ARAF v2.1" — version is not part of the logo lockup
+- Version references in content should say "ARAF v3.0" — version is not part of the logo lockup
 - Standard governance does not constitute assessor accreditation, certification issuance, or statutory authority

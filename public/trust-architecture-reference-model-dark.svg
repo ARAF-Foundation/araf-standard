@@ -164,7 +164,7 @@
 
   <text x="412" y="586" font-size="8" fill="#3a3a35" font-style="italic" class="mono">Derived from Six-Dimension Assessment</text>
 
-  <text x="72" y="604" font-size="8" fill="#2a2a26" font-style="italic" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v2.1, 2026</text>
+  <text x="72" y="604" font-size="8" fill="#2a2a26" font-style="italic" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v3.0, 2026</text>
 
   <!-- ── ARROW: Governance → Institutional ── -->
   <line x1="350" y1="320" x2="350" y2="296" stroke="#3a3a35" stroke-width="1.5"/>
@@ -244,6 +244,6 @@
   <text x="400" y="878" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#3a3a35" letter-spacing="2.5" class="mono">FIGURE — TRUST ARCHITECTURE REFERENCE MODEL</text>
   <text x="400" y="896" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-style="italic" class="serif">The model illustrates how autonomous decision infrastructure, governance assessment,</text>
   <text x="400" y="912" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-style="italic" class="serif">evidence generation, and certification interact to produce institutional governance signals.</text>
-  <text x="400" y="928" text-anchor="middle" font-size="8.5" fill="#2a2a26" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v2.1, 2026 · trust-architecture.com</text>
+  <text x="400" y="928" text-anchor="middle" font-size="8.5" fill="#2a2a26" class="mono">Martin, C. Agentic Risk Architecture Framework (ARAF) v3.0, 2026 · trust-architecture.com</text>
 
 </svg>

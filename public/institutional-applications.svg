@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="860" viewBox="0 0 900 860">
 
   <title>Institutional Applications — ARAF Standard</title>
-  <desc>Five institutional audience cards showing how the ARAF framework translates into different decision languages. Institutional Reliance group: Boards, Insurers, Investors, Regulators. Deployment Decision group: Enterprise Procurement. One framework. Five translations. From ARAF v2.1, 2026.</desc>
+  <desc>Five institutional audience cards showing how the ARAF framework translates into different decision languages. Institutional Reliance group: Boards, Insurers, Investors, Regulators. Deployment Decision group: Enterprise Procurement. One framework. Five translations. From ARAF v3.0, 2026.</desc>
 
   <defs>
     <style>
@@ -174,6 +174,6 @@
   <!-- ── FOOTER ── -->
   <line x1="40" y1="824" x2="860" y2="824" stroke="#d4d0c8" stroke-width="0.75"/>
   <text x="40"  y="840" font-size="7.5" fill="#7a7a72" class="mono">ARAF Standard · Institutional Applications · CC BY 4.0</text>
-  <text x="860" y="840" text-anchor="end" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026</text>
+  <text x="860" y="840" text-anchor="end" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026</text>
 
 </svg>

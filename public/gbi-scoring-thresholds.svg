@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580">
   <title>GBI Scoring Model and Certification Thresholds</title>
-  <desc>The Governance Benchmark Index scoring model. Six dimensional scores feed into a composite GBI score adjusted by multiplier logic. The composite score maps to three certification thresholds: ARAF Certified at 1.75 or below, ARAF Compliant at 2.50 or below, and remediation required above 2.50. Lower scores represent stronger governance posture. From ARAF v2.1, 2026.</desc>
+  <desc>The Governance Benchmark Index scoring model. Six dimensional scores feed into a composite GBI score adjusted by multiplier logic. The composite score maps to three certification thresholds: ARAF Certified at 1.75 or below, ARAF Compliant at 2.50 or below, and remediation required above 2.50. Lower scores represent stronger governance posture. From ARAF v3.0, 2026.</desc>
   <defs>
     <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
   </defs>
@@ -208,6 +208,6 @@
   <line x1="40" y1="460" x2="920" y2="460" stroke="#d4d0c8" stroke-width="0.75"/>
   <text x="480" y="477" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">Technical safety standards ask whether the system works. The GBI asks whether the institution deploying it</text>
   <text x="480" y="492" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">can demonstrate accountability for the decisions it produces.</text>
-  <text x="480" y="514" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+  <text x="480" y="514" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026 · trust-architecture.com</text>
 
 </svg>

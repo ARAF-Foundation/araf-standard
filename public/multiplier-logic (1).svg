@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
   <title>GBI Multiplier Logic — Compound Governance Risk</title>
-  <desc>Three multiplier conditions in the GBI: Systemic Escalation (D1 and D4 both high), Infrastructure Collapse (D3 and D1 both high), and Leverage Collapse (D5 and D4 both high). Each shows the triggering dimensional combination and governance implication. Individual weaknesses are manageable. Compound weaknesses are systemic. From ARAF v2.1, 2026.</desc>
+  <desc>Three multiplier conditions in the GBI: Systemic Escalation (D1 and D4 both high), Infrastructure Collapse (D3 and D1 both high), and Leverage Collapse (D5 and D4 both high). Each shows the triggering dimensional combination and governance implication. Individual weaknesses are manageable. Compound weaknesses are systemic. From ARAF v3.0, 2026.</desc>
   <defs>
     <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
   </defs>
@@ -153,6 +153,6 @@
 
   <!-- Caption -->
   <line x1="40" y1="424" x2="920" y2="424" stroke="#d4d0c8" stroke-width="0.75"/>
-  <text x="480" y="448" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v2.1, 2026 · trust-architecture.com</text>
+  <text x="480" y="448" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="mono">Martin, C. Trust Architecture: Making Autonomous Systems Bankable · ARAF v3.0, 2026 · trust-architecture.com</text>
 
 </svg>
