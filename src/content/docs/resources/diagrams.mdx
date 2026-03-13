@@ -3,25 +3,79 @@ title: Diagrams
 description: Index of ARAF reference diagrams and explanatory visual models used across the standard.
 ---
 
-This page indexes canonical diagrams used in the ARAF standard.
+This page indexes canonical diagrams used in the ARAF standard. Each diagram is version-identified, captioned, and linked to its normative section. All diagrams are published under CC BY 4.0 and may be reproduced with attribution.
+
+---
 
 ## Core Diagrams
 
-- Decision Supply Chain
-- Six Dimensions Framework
-- Governance Gap
-- Certification Lifecycle
-- Standard Governance Lifecycle
+### D-001 — Decision Supply Chain
+
+**Version:** ARAF v3.0 · 2026  
+**Normative reference:** Decision Supply Chain §2; Six Dimensions §1
+
+![Decision Supply Chain diagram showing six ARAF dimensions mapped to chain stages from Data Inputs through Model Processing, Decision Formation, Execution, and Institutional Exposure](/images/araf/D001_Decision_Supply_Chain.png)
+
+Each stage of the Decision Supply Chain is governed by a corresponding ARAF dimension. Technical safety standards assess whether the system operates correctly at each stage. ARAF addresses whether the institution deploying it can be held accountable when it does. The three accountability questions — who was responsible, what did they know, what did they do — must be answerable for every link in the chain.
+
+---
+
+### D-002 — Six Dimensions Framework
+
+**Version:** ARAF v3.0 · 2026  
+**Normative reference:** Six Dimensions §1–2; GBI Scoring Logic
+
+![Six Dimensions Framework showing burden layer (D1, D2, D5) and absorption layer (D3, D4, D6) with GBI scale and certification tiers](/images/araf/D002_Six_Dimensions_Framework.png)
+
+The six dimensions divide into a burden layer (D1, D2, D5) that identifies governance exposure, and an absorption layer (D3, D4, D6) that determines governance absorption capacity. The GBI translates the dimensional profile into a comparable institutional signal on a 1.0–5.0 inverted scale. Lower is stronger. Three multipliers — Systemic Escalation, Infrastructure Collapse, and Leverage Collapse — apply in defined compound exposure conditions.
+
+---
+
+### D-003 — Governance Gap
+
+**Version:** ARAF v3.0 · 2026  
+**Normative reference:** Decision Supply Chain §1; Architecture Specification §2
+
+![Governance Gap diagram showing three-layer framework architecture with ARAF positioned at the decision-system layer between technical safety standards and organisational management systems](/images/araf/D003_Governance_Gap.png)
+
+Existing frameworks govern at the technical safety layer (does the system work?) and the organisational management layer (are enterprise controls adequate?). Neither layer addresses how governance posture is assessed, measured, or communicated at the decision-system layer — the layer at which autonomous system accountability, measurability, and insurability must be established. ARAF occupies this gap.
+
+---
+
+### D-004 — Certification Lifecycle
+
+**Version:** ARAF v3.0 · 2026  
+**Normative reference:** Certification Framework; GCA Addendum §7
+
+![Certification Lifecycle diagram showing three phases: Assessment (minimum 180 days), Report Issued (60-day reliance freshness), and Certification Tier with validity periods for Assessed, Compliant, and Certified tiers](/images/araf/D004_Certification_Lifecycle.png)
+
+Assessment windows run for a minimum of 180 days. Reports carry a 60-day reliance freshness window from the date of issue. Certification validity is tier-dependent: Assessed carries a 60-day reliance window only; Compliant is valid for 12 months; Certified is valid for 24 months with a mandatory 12-month interim surveillance requirement. Trigger notification opens 60 days before expiry.
+
+---
+
+### D-005 — Standard Governance Lifecycle
+
+**Version:** ARAF v3.0 · 2026  
+**Normative reference:** Standard Governance §1–5; Version History
+
+![Standard Governance Lifecycle diagram showing five principles: Version Discipline, Public Transparency, Methodological Consistency, Institutional Usability, and Structured Evolution, maintained by the Institute for Autonomous Governance](/images/araf/D005_Standard_Governance_Lifecycle.png)
+
+The standard governance lifecycle is governed by five principles: version discipline, public transparency, methodological consistency, institutional usability, and structured evolution. The standard is maintained by the Institute for Autonomous Governance Pty Ltd and published under Creative Commons Attribution 4.0. Amendments follow a defined process; all versions are documented in the [Version History](/governance/version-history/) page.
+
+---
 
 ## Diagram Usage Guidance
 
-Each diagram should be referenced with:
+**Version identifier.** Each diagram carries a version tag (ARAF v3.0 · 2026). When citing a diagram in regulatory guidance, procurement requirements, or underwriting guidelines, include the version identifier to ensure the referenced version is unambiguous.
 
-- version identifier
-- purpose statement
-- interpretation notes
-- linked normative section
+**Purpose statement.** Each diagram caption states what the diagram communicates and what it does not. Diagrams represent canonical framework architecture, not implementation guidance. Implementation detail is contained in the normative specification documents.
+
+**Interpretation notes.** The GBI scale runs 1.0–5.0 — lower is stronger. The burden/absorption distinction is architectural, not evaluative: both layers are assessed in every ARAF assessment. Multipliers are additive overlays applied to the GBI composite score in defined trigger conditions.
+
+**Reproduction.** All ARAF diagrams are published under CC BY 4.0. They may be reproduced in reports, regulatory submissions, board presentations, and insurance underwriting materials with the following attribution: *© 2026 Institute for Autonomous Governance Pty Ltd · CC BY 4.0.*
+
+---
 
 ## Source Assets
 
-Primary assets are currently maintained under `public/images/araf` and `public`.
+Primary diagram assets are maintained under `public/images/araf/` in the [ARAF Standard repository](https://github.com/ARAF-Foundation/araf-standard). SVG source files for each diagram are available at the same path. The canonical version of each diagram is identified by its version tag. Earlier versions remain accessible through the [Version History](/governance/version-history/) page.
