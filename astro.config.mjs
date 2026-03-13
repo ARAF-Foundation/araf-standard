@@ -9,6 +9,7 @@ export default defineConfig({
     '/six-dimensions/': { status: 301, destination: '/standard/six-dimensions/' },
     '/standard-governance/': { status: 301, destination: '/governance/standard-governance/' },
     '/gbi-methodology/': { status: 301, destination: '/certification/governance-benchmark-index/' },
+    '/standard/decision-supply-chain/': { status: 301, destination: '/decision-supply-chain/' },
     '/framework/governance-benchmark-index/': {
       status: 301,
       destination: '/certification/governance-benchmark-index/',
