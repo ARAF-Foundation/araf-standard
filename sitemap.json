@@ -1,0 +1,85 @@
+﻿{
+    "site":  "https://araf-standard.org",
+    "generatedAt":  "2026-03-13",
+    "totalRoutes":  46,
+    "routes":  [
+                   "/",
+                   "/assessor-guidance/assessor-accreditation-standard/",
+                   "/assessor-guidance/assessor-guidance-note/",
+                   "/assessor-guidance/gn-001/",
+                   "/assessor-guidance/gn-002/",
+                   "/boards/",
+                   "/certification/certification-framework/",
+                   "/certification/governance-benchmark-index/",
+                   "/certification/governance-coherence-addendum/",
+                   "/decision-supply-chain/",
+                   "/downloads/",
+                   "/enterprise-procurement/",
+                   "/evidence/evidence-standard/",
+                   "/evidence-infrastructure/",
+                   "/faq/",
+                   "/getting-started/",
+                   "/getting-started/how-long-assessments-typically-take/",
+                   "/getting-started/internal-preparation-checklist/",
+                   "/getting-started/what-systems-should-be-assessed/",
+                   "/getting-started/when-to-conduct-an-assessment/",
+                   "/getting-started/who-should-lead-the-process/",
+                   "/governance/standard-governance/",
+                   "/governance/version-history/",
+                   "/institutional-applications/",
+                   "/insurers/",
+                   "/investors/",
+                   "/methodology/assessor-accreditation-standard/",
+                   "/methodology/evidence-standard/",
+                   "/pilot/",
+                   "/pilot/evidence-checklist/",
+                   "/pilot/founder-assessment-brief/",
+                   "/pilot/participation-agreement/",
+                   "/pilot/worked-examples/",
+                   "/regulators/",
+                   "/resources/citations/",
+                   "/resources/diagrams/",
+                   "/resources/glossary/",
+                   "/resources/supporting-diagrams-and-reference-materials/",
+                   "/specification/",
+                   "/specification-index/",
+                   "/standard/architecture-specification/",
+                   "/standard/governance-ontology/",
+                   "/standard/reference-architecture/",
+                   "/standard/six-dimensions/",
+                   "/trust-architecture/",
+                   "/version-history/"
+               ],
+    "redirects":  [
+                      {
+                          "from":  "/certification/",
+                          "to":  "/certification/certification-framework/",
+                          "status":  301
+                      },
+                      {
+                          "from":  "/six-dimensions/",
+                          "to":  "/standard/six-dimensions/",
+                          "status":  301
+                      },
+                      {
+                          "from":  "/standard-governance/",
+                          "to":  "/governance/standard-governance/",
+                          "status":  301
+                      },
+                      {
+                          "from":  "/gbi-methodology/",
+                          "to":  "/certification/governance-benchmark-index/",
+                          "status":  301
+                      },
+                      {
+                          "from":  "/framework/governance-benchmark-index/",
+                          "to":  "/certification/governance-benchmark-index/",
+                          "status":  301
+                      },
+                      {
+                          "from":  "/glossary/",
+                          "to":  "/resources/glossary/",
+                          "status":  301
+                      }
+                  ]
+}

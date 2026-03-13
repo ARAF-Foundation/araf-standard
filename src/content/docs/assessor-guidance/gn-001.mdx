@@ -3,36 +3,191 @@ title: "GN-001: Conducting an ARAF Governance Assessment"
 description: Assessor Guidance Note GN-001.
 ---
 
-# GN-001: Conducting an ARAF Governance Assessment
+*Assessor Guidance Note GN-001 · Agentic Risk Architecture Framework v3.0*
 
-*Assessor Guidance Note GN-001*
+---
 
-This guidance note provides end-to-end methodology for assessment practice, from engagement setup through report delivery. It is the primary operational reference for accredited assessors conducting ARAF governance assessments.
+This guidance note defines the end-to-end operational sequence for conducting an ARAF governance assessment. It applies from engagement setup through certification determination, report delivery, and post-assessment obligations.
 
-### Scope
+GN-001 is the foundational assessor methodology document. It must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), [GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/), [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/), and the normative specification documents referenced in the cross-reference section below.
 
-GN-001 covers:
+![ARAF Assessment Lifecycle](/images/araf/araf_gn001_assessment_lifecycle.svg)
 
-- engagement setup and pre-engagement independence checks
-- system scoping and Decision Supply Chain mapping
-- evidence collection procedures by category
-- dimensional scoring guidance for D1 through D6
-- multiplier assessment and compound weakness identification
-- Governance Benchmark Index calculation
-- coherence evaluation and GCI procedures
-- assessment report drafting
-- certification determination and communication
-- post-assessment obligations
+ARAF Assessment Lifecycle — Operational sequence applied by accredited assessors when conducting a governance architecture assessment under the Agentic Risk Architecture Framework (ARAF).
 
-### Relationship to Other Documents
+Step 7 in the lifecycle sequence: Governance Coherence Assessment (GCI) — required for Compliant and Certified determinations.
 
-GN-001 is the foundational assessor methodology document. GN-002 (Cross-Border Deployment) and GN-003 (Governance Coherence Assessment) are supplementary documents that extend GN-001 for specific assessment contexts. All guidance notes must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/).
+---
 
-### Publication Status
+## Engagement Setup
 
-Content for this guidance note is forthcoming. This page establishes the published reference location and scope pending full guidance publication.
+Establish engagement terms, assessor independence, methodology version, and scope boundaries before evidence requests begin.
 
-Return to [Assessor Guidance Notes](/assessor-guidance/) for current resources.
+The engagement setup stage must confirm:
+
+- assessor independence and conflict disclosure status
+- assessment objective and intended institutional audiences
+- methodology version applied and documentation baseline
+- expected assessment outputs: dimensional profile, GBI score, multiplier analysis, and certification pathway position
+- engagement governance protocol, including escalation contacts and document control
+
+---
+
+## System Scoping and Decision Supply Chain Mapping
+
+Define the assessed system boundary and map the full Decision Supply Chain before dimensional scoring.
+
+The minimum scoping output is a chain-complete map covering all decision-forming links and accountability handoffs.
+
+### Decision Supply Chain Template
+
+| Chain Link | Function | Provider / Entity | Jurisdiction | Governance Responsibility | Contract Instrument | Decision Participation |
+|---|---|---|---|---|---|---|
+| Training Data Origin | Source and provenance of training corpus |  |  |  |  |  |
+| Foundation Model | Base model development and upstream controls |  |  |  |  |  |
+| Fine-Tuning Layer | Domain adaptation and alignment controls |  |  |  |  |  |
+| RAG Layer (if applicable) | Retrieval context and source governance |  |  |  |  |  |
+| Application Layer | Decision logic orchestration and policy binding |  |  |  |  |  |
+| Delivery Interface | Human/system interface where consequential output is acted upon |  |  |  |  |  |
+
+---
+
+## Evidence Collection
+
+Evidence collection must be chain-complete, contemporaneous where possible, and reconstructable by institutional reviewers.
+
+Evidence tiers are defined as follows:
+
+- Tier 1 — infrastructure-generated records
+- Tier 2 — contemporaneous documentation
+- Tier 3 — reconstructed documentation
+- Tier 4 — management representation
+
+Tier 4 evidence is management representation without contemporaneous supporting records.
+
+Not admissible for coherence assessment at any certification tier.
+
+---
+
+## Dimensional Scoring
+
+Assess governance posture across the six ARAF dimensions:
+
+- D1 Autonomy Gradient
+- D2 Data Sensitivity Exposure
+- D3 Contract Infrastructure
+- D4 Liability Architecture
+- D5 Commercial Leverage
+- D6 Adaptive Stability
+
+Dimensional scoring output must include per-dimension reasoning, evidence tier basis, and any limitations affecting confidence in the score.
+
+---
+
+## Multiplier Assessment
+
+Evaluate multiplier conditions after dimensional scoring and before final composite interpretation.
+
+| Multiplier | Trigger Condition | Canonical Definition |
+|---|---|---|
+| Systemic Escalation | D1 &ge; 4 and D4 &ge; 4 | High autonomy with inadequate liability architecture. AE3 volume is high and liability framework is not designed to absorb consequences. |
+| Infrastructure Collapse | D3 &ge; 4 and D1 &ge; 3 | Significant autonomy with inadequate contract infrastructure. Liability allocation at the execution boundary is contractually ungoverned. |
+| Leverage Collapse | D5 &ge; 4 and D4 &ge; 3 | High commercial dependency with inadequate liability architecture. System becomes structurally resistant to remediation. |
+| Political Cascade | D5 &ge; 4 and D3 &ge; 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure or provider substitution provisions governing government designation events. |
+
+---
+
+## GBI Calculation and Coherence Assessment
+
+Calculate the Governance Benchmark Index (GBI) from the six-dimensional profile and apply multiplier interpretation where triggered.
+
+For ARAF Compliant and ARAF Certified determination attempts, Governance Coherence Index (GCI) assessment is mandatory and must be evaluated over the required operational window.
+
+The GBI and GCI role split is fixed:
+
+- GBI assesses governance design adequacy
+- GCI assesses operational coherence
+
+---
+
+## Report Drafting
+
+Prepare a structured report with sufficient detail for boards, insurers, investors, regulators, and other institutional audiences to reconstruct assessment reasoning.
+
+The report must include scope, methodology version, dimensional findings, multiplier findings, evidence basis, certification determination basis, and limitations.
+
+Validity periods must be stated explicitly as follows:
+
+- ARAF Assessed — reliance period up to 60 days from report issue date
+- ARAF Compliant — certification valid up to 12 months
+- ARAF Certified — certification valid up to 24 months subject to 12-month surveillance
+
+---
+
+## Certification Determination and Communication
+
+Apply certification thresholds without modification and communicate determination with supporting dimensional and evidence rationale.
+
+Thresholds:
+
+- ARAF Certified — GBI ≤ 1.75 AND GCI ≥ 0.85
+- ARAF Compliant — GBI ≤ 2.50 AND GCI ≥ 0.70
+- ARAF Assessed — any GBI score
+
+Certification communication must state the certification tier, score basis, evidence basis, validity period, and reassessment obligations.
+
+---
+
+## Post-Assessment Obligations
+
+Post-assessment obligations apply to assessor records, surveillance, and reassessment trigger handling.
+
+Minimum obligations include:
+
+- communicate reassessment trigger obligations at determination issuance
+- monitor and document triggering events for Compliant and Certified outcomes
+- conduct 12-month surveillance for Certified outcomes
+- retain assessment records to support quality assurance and dispute review
+
+Reassessment trigger categories are maintained in the [Reassessment Trigger Taxonomy](/assessor-guidance/reassessment-trigger-taxonomy/).
+
+---
+
+## Appendix A (Report Template)
+
+Use this template structure for all issued reports:
+
+- Executive Summary
+- Scope and Assessment Window
+- Design Adequacy Assessment (GBI)
+- Governance Coherence Assessment (GCI), where required
+- Evidence Summary
+- Findings and Observations
+- Scope Limitation and Disclaimer
+- Determination, Validity, and Reassessment Conditions
+
+Validity periods (mandatory wording):
+
+- ARAF Assessed — reliance period up to 60 days from report issue date
+- ARAF Compliant — certification valid up to 12 months
+- ARAF Certified — certification valid up to 24 months subject to 12-month surveillance
+
+---
+
+## Cross-References
+
+- [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/)
+- [GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/)
+- [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/)
+- [Reassessment Trigger Taxonomy](/assessor-guidance/reassessment-trigger-taxonomy/)
+- [Decision Supply Chain](/standard/decision-supply-chain/)
+- [Six ARAF Dimensions](/standard/six-dimensions/)
+- [Governance Benchmark Index](/certification/governance-benchmark-index/)
+- [Certification Framework](/certification/certification-framework/)
+
+---
+
+*Martin, Carly. Agentic Risk Architecture Framework (ARAF), Assessor Guidance Note GN-001: Conducting an ARAF Governance Assessment, Version 3.0. Institute for Autonomous Governance Pty Ltd, 2026.*
 
 ---
 

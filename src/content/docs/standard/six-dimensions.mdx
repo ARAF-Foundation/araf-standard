@@ -11,7 +11,7 @@ The Six ARAF Dimensions provide the governance assessment framework for autonomo
 
 - Published by: Institute for Autonomous Governance Pty Ltd
 - Date: March 2026
-- Version: 1.1 - D6 two-layer evidentiary model
+- Version: 3.0
 - Reference: araf-standard.org
 
 The six dimensions are:
@@ -23,22 +23,23 @@ The six dimensions are:
 - D5 - Commercial Leverage: how commercially dependent the organisation is on the system.
 - D6 - Adaptive Stability: whether governance can be maintained as the system and deployment evolve.
 
-<figure className="diagram-figure">
-	<img src="/images/araf/araf_03_six_dimensions.svg" alt="ARAF Six-Dimensional Governance Framework" loading="lazy" />
-	<figcaption>ARAF Six-Dimensional Governance Framework. Governance posture is evaluated across six interacting dimensions that collectively determine the Governance Benchmark Index.</figcaption>
-</figure>
+### ARAF Six-Dimensional Governance Framework
 
-Lower GBI scores indicate stronger governance. Scores are produced on a 1.0 to 5.0 scale.
+![ARAF six-dimensional governance framework showing six dimensions, GBI composite score, and four multiplier interactions](/images/araf/araf_03_six_dimensions.svg)
+
+Governance Benchmark Index scores range from 1.0 to 5.0. Lower scores indicate stronger governance posture.
 
 Four structural multipliers - Systemic Escalation, Infrastructure Collapse, Leverage Collapse, and Political Cascade - can compound scores where dimensional combinations exceed activation thresholds.
+
+The six dimensions are assessed independently but interpreted together through the Governance Benchmark Index (GBI) composite score and multiplier logic.
 
 ## Governance Benchmark Index Certification Tiers
 
 | Tier | Threshold | Meaning |
 | --- | --- | --- |
-| ARAF Assessed | Any score | Assessment completed. Dimensional profile available for institutional use. |
-| ARAF Compliant | GBI &le; 2.50 | Governance posture meets institutional baseline across all six dimensions. |
-| ARAF Certified | GBI &le; 1.75 | Governance posture meets the highest institutional confidence threshold. |
+| **ARAF Certified** | GBI &le; 1.75 | Governance posture meets the highest institutional confidence threshold |
+| **ARAF Compliant** | GBI &le; 2.50 | Governance posture meets institutional baseline across all six dimensions |
+| **ARAF Assessed** | Any score | Assessment completed. Dimensional profile available for institutional use |
 
 ## 1. Autonomy Gradient (D1)
 
@@ -99,6 +100,31 @@ Contract Infrastructure assesses the legal architecture through which liability 
 - Contractual allocation of accountability across the Decision Supply Chain.
 - Political force majeure provisions addressing government supply chain risk designation events as distinct triggers.
 - Provider substitution rights with political designation triggers, extending beyond technical API failure scenarios.
+
+#### Item A - Upstream Governance Dependency
+
+**Assessment question**
+
+Do upstream AI provider agreements allocate operational liability to the deploying organisation while withholding governance authority, including audit rights, model change notification, or behavioural guarantees?
+
+**Failure indicators**
+
+- provider liability exclusions for AI outputs
+- no audit rights over model behaviour
+- unilateral model modification rights
+- no notification obligations for material model updates
+
+#### Item B - Policy Governance Dependency
+
+**Assessment question**
+
+Do upstream provider acceptable use policies impose governance constraints on the deploying organisation's autonomous system operations that the organisation cannot contractually resist or anticipate?
+
+**Failure indicators**
+
+- provider discretion to suspend deployment categories
+- unclear policy interpretation mechanisms
+- no contractual protection against retrospective policy change
 
 ### Institutional implication
 
@@ -164,6 +190,32 @@ Adaptive Stability assesses the organisation's capacity to maintain governance a
 - MKP version lineage and rule evolution governance.
 - AIOC authority over governance rule-set changes.
 
+#### Infrastructure Dependency Stability
+
+**Assessment question**
+
+Does the organisation rely on upstream AI providers whose service termination or unilateral modification could materially disrupt operational decision systems?
+
+**Evidence required**
+
+- provider contracts
+- dependency mapping documentation
+- fallback architecture documentation
+- operational contingency plan
+
+**Failure indicators**
+
+- no alternative provider capability
+- no internal fallback system
+- termination clauses permitting immediate suspension
+- no documented operational contingency
+
+**Resilience diagnostic**
+
+Can the system continue operating if the primary model provider becomes unavailable for 72 hours?
+
+If the answer is no, the Dimension 6 score increases.
+
 ### The Two-Layer Evidentiary Model
 
 D6 evidence adequacy requires two components serving distinct institutional audiences. They are assessed separately and should be maintained separately.
@@ -172,6 +224,8 @@ D6 evidence adequacy requires two components serving distinct institutional audi
 | --- | --- | --- | --- | --- |
 | Runtime enforcement log | MKP identifier governing each decision, enforcement outcome, drift score per evaluation | Insurer or regulator interrogating a specific enforcement decision | Tier 1 if infrastructure-generated and tamper-evident | Rule attribution: which rule set governed this decision at this time |
 | MKP registry | Version graph, update authorisation chain, rule change history, change timestamps | Assessor evaluating rule adequacy and evolution over time | Tier 1 if append-only and tamper-evident; Tier 2 if documented institutional record | Rule evolution: how governing rule set changed, when, and who authorised it |
+
+Management representations without supporting runtime or registry evidence constitute Tier 4 evidence and are not admissible for coherence assessment.
 
 Separation is the correct architecture. Decision-level interrogation needs runtime precision. Governance adequacy assessment needs rule-lineage visibility across time.
 
@@ -202,7 +256,30 @@ The six dimensions are not independent. Weaknesses compound rather than merely a
 | Systemic Escalation | D1 >= 4 and D4 >= 4 | High autonomy with inadequate liability architecture. AE3 volume is high and liability framework is not designed to absorb consequences. Most severe compound exposure. |
 | Infrastructure Collapse | D3 >= 4 and D1 >= 3 | Significant autonomy with inadequate contract infrastructure. Liability allocation at execution boundary is contractually ungoverned. |
 | Leverage Collapse | D5 >= 4 and D4 >= 3 | High commercial dependency with inadequate liability architecture. System becomes structurally resistant to remediation. |
-| Political Cascade | D5 >= 4 and D3 >= 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure contract provisions. Provider designation converts customer concentration into revenue loss. |
+| Political Cascade | D5 >= 4 and D3 >= 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure or provider substitution provisions governing government designation events. |
+
+Infrastructure Collapse applies where autonomous decision systems depend on infrastructure whose availability, behaviour, or governance cannot be reliably controlled by the deploying organisation.
+
+This includes dependencies created through contractual arrangements with upstream AI providers whose termination rights, policy authority, or unilateral modification powers could materially disrupt system operation or remove governance authority from the deploying organisation.
+
+### Infrastructure Collapse (+2) Trigger Conditions
+
+Infrastructure Collapse (+2) is triggered when one or more of the following conditions are present:
+
+1. Upstream governance dependency  
+Critical AI infrastructure is controlled by an external provider whose contractual rights exceed the governance authority of the deploying organisation.
+
+2. Termination dependency  
+A provider can suspend or terminate access to infrastructure required for system operation.
+
+3. Policy governance dependency  
+Upstream acceptable use policies allow the provider to veto or suspend deployment categories operated by the deploying organisation.
+
+4. Unilateral model modification risk  
+The provider may change model behaviour, training, or safety parameters without the deploying organisation's governance approval or prior notice.
+
+5. Single-provider infrastructure concentration  
+No operational fallback capability exists if the primary provider becomes unavailable.
 
 GBI scoring direction is fixed: higher numbers represent greater governance risk, not stronger performance.
 
@@ -228,5 +305,5 @@ Provides a comparable, independently assessed governance posture classification 
 
 ## Citation
 
-Institute for Autonomous Governance Pty Ltd. Agentic Risk Architecture Framework (ARAF), The Six ARAF Dimensions, Version 1.1, March 2026.
+Martin, Carly. *Agentic Risk Architecture Framework (ARAF), The Six ARAF Dimensions, Version 3.0.* Institute for Autonomous Governance Pty Ltd, 2026.
 

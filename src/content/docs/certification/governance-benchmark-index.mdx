@@ -146,6 +146,86 @@ The six dimensions are not independent. Weaknesses in one dimension compound wea
 	</table>
 </div>
 
+Infrastructure collapse risk may arise from technical failure or from contractual dependency on upstream infrastructure providers whose governance authority over model behaviour, availability, or acceptable use exceeds that of the deploying organisation.
+
+Infrastructure Collapse applies where autonomous decision systems depend on infrastructure whose availability, behaviour, or governance cannot be reliably controlled by the deploying organisation.
+
+This includes dependencies created through contractual arrangements with upstream AI providers whose termination rights, policy authority, or unilateral modification powers could materially disrupt system operation or remove governance authority from the deploying organisation.
+
+### Infrastructure Collapse (+2) Trigger Conditions
+
+Infrastructure Collapse (+2) is triggered when one or more of the following conditions are present:
+
+1. Upstream governance dependency  
+Critical AI infrastructure is controlled by an external provider whose contractual rights exceed the governance authority of the deploying organisation.
+
+2. Termination dependency  
+A provider can suspend or terminate access to infrastructure required for system operation.
+
+3. Policy governance dependency  
+Upstream acceptable use policies allow the provider to veto or suspend deployment categories operated by the deploying organisation.
+
+4. Unilateral model modification risk  
+The provider may change model behaviour, training, or safety parameters without the deploying organisation's governance approval or prior notice.
+
+5. Single-provider infrastructure concentration  
+No operational fallback capability exists if the primary provider becomes unavailable.
+
+### Dimension 3 Additive Assessment Items (IC-001)
+
+#### Item A - Upstream Governance Dependency
+
+**Assessment question**
+
+Do upstream AI provider agreements allocate operational liability to the deploying organisation while withholding governance authority, including audit rights, model change notification, or behavioural guarantees?
+
+**Failure indicators**
+
+- provider liability exclusions for AI outputs
+- no audit rights over model behaviour
+- unilateral model modification rights
+- no notification obligations for material model updates
+
+#### Item B - Policy Governance Dependency
+
+**Assessment question**
+
+Do upstream provider acceptable use policies impose governance constraints on the deploying organisation's autonomous system operations that the organisation cannot contractually resist or anticipate?
+
+**Failure indicators**
+
+- provider discretion to suspend deployment categories
+- unclear policy interpretation mechanisms
+- no contractual protection against retrospective policy change
+
+### Dimension 6 Additive Assessment Item (IC-001)
+
+#### Infrastructure Dependency Stability
+
+**Assessment question**
+
+Does the organisation rely on upstream AI providers whose service termination or unilateral modification could materially disrupt operational decision systems?
+
+**Evidence required**
+
+- provider contracts
+- dependency mapping documentation
+- fallback architecture documentation
+- operational contingency plan
+
+**Failure indicators**
+
+- no alternative provider capability
+- no internal fallback system
+- termination clauses permitting immediate suspension
+- no documented operational contingency
+
+**Resilience diagnostic**
+
+Can the system continue operating if the primary model provider becomes unavailable for 72 hours?
+
+If the answer is no, the Dimension 6 score increases.
+
 Where a multiplier condition is present, the composite score must not be read as a simple average. It reflects compounded governance exposure.
 
 ### What the multiplier logic means in practice
@@ -357,4 +437,4 @@ The assessor ecosystem model follows established governance precedent: ISO certi
 
 **Citation**
 
-Agentic Risk Architecture Framework (ARAF), Version 3.0. Maintained by ARAF Standards Authority Ltd (a company limited by guarantee), 2026
+Martin, Carly. *Agentic Risk Architecture Framework (ARAF), Version 3.0.* Institute for Autonomous Governance Pty Ltd, 2026.

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1280" viewBox="0 0 1400 1280" role="img" aria-labelledby="title desc">
+  <title id="title">ARAF Assessment Lifecycle</title>
+  <desc id="desc">Operational sequence applied by accredited assessors when conducting a governance architecture assessment under the Agentic Risk Architecture Framework.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f5f0; }
+      .panel { fill: #ffffff; stroke: #2b3a42; stroke-width: 2; rx: 12; }
+      .num { fill: #2b3a42; font: 700 22px 'DM Mono', monospace; }
+      .text { fill: #1f2a30; font: 600 24px 'Libre Baskerville', serif; }
+      .sub { fill: #33464f; font: 400 17px 'DM Mono', monospace; }
+      .arrow { stroke: #2b3a42; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .title { fill: #1f2a30; font: 700 34px 'Libre Baskerville', serif; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2b3a42" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="1280" />
+  <text class="title" x="700" y="68" text-anchor="middle">ARAF Assessment Lifecycle</text>
+
+  <rect class="panel" x="90" y="120" width="1220" height="94" />
+  <text class="num" x="120" y="176">1.</text>
+  <text class="text" x="180" y="176">Engagement Setup</text>
+
+  <rect class="panel" x="90" y="248" width="1220" height="94" />
+  <text class="num" x="120" y="304">2.</text>
+  <text class="text" x="180" y="304">System Scoping and Decision Supply Chain Mapping</text>
+
+  <rect class="panel" x="90" y="376" width="1220" height="94" />
+  <text class="num" x="120" y="432">3.</text>
+  <text class="text" x="180" y="432">Evidence Collection</text>
+
+  <rect class="panel" x="90" y="504" width="1220" height="94" />
+  <text class="num" x="120" y="560">4.</text>
+  <text class="text" x="180" y="560">Dimensional Scoring</text>
+
+  <rect class="panel" x="90" y="632" width="1220" height="94" />
+  <text class="num" x="120" y="688">5.</text>
+  <text class="text" x="180" y="688">Multiplier Assessment</text>
+
+  <rect class="panel" x="90" y="760" width="1220" height="94" />
+  <text class="num" x="120" y="816">6.</text>
+  <text class="text" x="180" y="816">GBI Calculation</text>
+
+  <rect class="panel" x="90" y="888" width="1220" height="94" />
+  <text class="num" x="120" y="944">7.</text>
+  <text class="text" x="180" y="944">Governance Coherence Assessment (GCI) — required for Compliant and Certified determinations</text>
+
+  <rect class="panel" x="90" y="1016" width="1220" height="94" />
+  <text class="num" x="120" y="1072">8.</text>
+  <text class="text" x="180" y="1072">Report Drafting and Certification Determination Communication</text>
+
+  <rect class="panel" x="90" y="1144" width="1220" height="94" />
+  <text class="num" x="120" y="1200">9.</text>
+  <text class="text" x="180" y="1200">Post-Assessment Obligations</text>
+
+  <path class="arrow" d="M700 214 L700 246" />
+  <path class="arrow" d="M700 342 L700 374" />
+  <path class="arrow" d="M700 470 L700 502" />
+  <path class="arrow" d="M700 598 L700 630" />
+  <path class="arrow" d="M700 726 L700 758" />
+  <path class="arrow" d="M700 854 L700 886" />
+  <path class="arrow" d="M700 982 L700 1014" />
+  <path class="arrow" d="M700 1110 L700 1142" />
+
+  <text class="sub" x="700" y="1268" text-anchor="middle">ARAF v3.0 lifecycle sequence for accredited assessor operations</text>
+</svg>

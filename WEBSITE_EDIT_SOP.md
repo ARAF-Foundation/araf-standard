@@ -200,7 +200,7 @@ When describing the framework, pages should reference the current version in the
 
 Example citation:
 
-Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version X.X. Venture Bench Pty Ltd.
+Martin, Carly. Agentic Risk Architecture Framework (ARAF), Version X.X. Institute for Autonomous Governance Pty Ltd.
 
 ## 11. Certification Distinction
 

@@ -3,32 +3,44 @@ title: Governance Ontology
 description: Canonical definition model for ARAF governance entities, relationships, control objects, and evidence semantics.
 ---
 
-This page defines the canonical ontology used across ARAF specification, assessment, certification, and evidence artifacts.
+## Purpose
+
+The Governance Ontology defines the canonical entity classes, relationships, and terminology used across ARAF specification, assessment, certification, and evidence artefacts. It provides the shared definitional layer that enables interoperability between assessors, evidence platforms, certification bodies, and institutional reporting systems.
 
 ## Scope
 
-The governance ontology standardizes terminology and relationships for:
-
-- decision actors and authority holders
-- system and model components
-- governance controls and control ownership
-- evidence objects and chain-of-custody links
-- assessment objects and scoring outputs
-- certification statuses and lifecycle states
+The ontology standardises terminology and relationships for decision actors and authority holders, system and model components, governance controls and control ownership, evidence objects and chain-of-custody continuity, assessment objects and scoring outputs, and certification statuses and lifecycle states.
 
 ## Core Entity Classes
 
-- Decision Subject
-- Decision System
-- Control Owner
-- Evidence Artifact
-- Assessment Record
-- Certification Record
+**Decision Subject.** The organisation that has deployed an autonomous system and holds primary accountability for the governance of decisions that system produces. The Decision Subject is the entity against which ARAF assessment is conducted and to which certification status is attributed. It is distinct from the system developer, the model provider, and any third-party infrastructure operator, each of whom may hold accountability at a specific link in the four-link accountability chain.
+
+**Decision System.** The autonomous system, model, or constellation of systems through which consequential decisions are produced. A Decision System is not assessed in isolation. ARAF treats it as one component within a broader Decision Supply Chain that includes data sources, inference infrastructure, human reviewers, execution layers, and oversight functions. Assessment covers the governance architecture surrounding the Decision System, not its internal technical performance.
+
+**Control Owner.** The individual, role, or organisational unit with defined accountability for a specific governance control within the Decision Subject's governance architecture. Each control must have an identified Control Owner for the corresponding evidence to be admissible. Control ownership must be documented prior to the assessment period to which it applies; retrospective ownership assignment does not satisfy the evidence standard.
+
+**Evidence Artefact.** A record produced contemporaneously with the governance activity it evidences. Evidence artefacts are classified by tier: infrastructure-generated evidence (Tier 1), contemporaneous documentation (Tier 2), reconstructed documentation (Tier 3), and management representation (Tier 4). Tier 4 artefacts are not admissible as evidence for coherence assessment. The admissibility tier of each evidence artefact is recorded in the Assessment Record.
+
+**Assessment Record.** The structured output of a completed ARAF assessment. An Assessment Record contains the dimensional profile across the six governance dimensions, the composite GBI score, any active multipliers, the evidence quality classification for each dimension, identified governance gaps, and the assessor's certification recommendation. Assessment Records are version-stamped against the ARAF release under which the assessment was conducted.
+
+**Certification Record.** The institutional artefact issued upon successful assessment. A Certification Record specifies the Decision Subject, the Decision System assessed, the certification tier achieved (ARAF Assessed, ARAF Compliant, or ARAF Certified), the GBI score at time of certification, the assessment date, the reassessment interval, and the accredited assessor responsible for the assessment. Certification Records are time-bounded and lapse if reassessment is not completed within the specified interval.
+
+## Ontology Relationship Diagram
+
+![ARAF Governance Ontology entity relationship model](/images/araf/araf_governance_ontology_diagram.png)
 
 ## Relationship Model
 
-This section will define normative relationships and mandatory fields used for interoperability between assessors, evidence platforms, and institutional reporting systems.
+The ontology defines the following normative relationships between entity classes.
+
+A Decision Subject deploys one or more Decision Systems and holds accountability for the governance architecture surrounding each. A Decision System operates within a Decision Supply Chain that may involve multiple contributing entities, each of which may hold accountability at a specific chain link. Control Owners are assigned to governance controls by the Decision Subject and must be identified in the Assessment Record. Evidence Artefacts are produced by Control Owners and linked to specific controls in the Assessment Record by chain-of-custody reference. An Assessment Record is produced by an accredited assessor against a specific Decision System for a specific Decision Subject at a specific point in time. A Certification Record is issued on the basis of a completed Assessment Record and remains valid for the reassessment interval specified at issuance.
+
+Normative field specifications and machine-readable schema definitions are published in the ARAF v3.0 technical specification on GitHub.
 
 ## Versioning and Backward Compatibility
 
-Ontology changes will be versioned and cross-referenced with the ARAF version history.
+Ontology changes are versioned and cross-referenced with the ARAF version history. Changes to core entity class definitions or mandatory relationship fields constitute a Major amendment and follow the standard amendment process, including the public consultation period. Additive changes, including new optional fields and new relationship types that do not alter existing definitions, may be issued as Minor amendments. Assessment Records and Certification Records must identify the ontology version against which they were produced.
+
+## Citation
+
+Martin, Carly. *Agentic Risk Architecture Framework (ARAF), Version 3.0.* Institute for Autonomous Governance Pty Ltd, 2026.
