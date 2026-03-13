@@ -17,7 +17,7 @@ Technical safety standards tell you whether the system works. The GBI tells you 
 		<li><a href="#purpose-of-the-gbi">Purpose of the GBI</a></li>
 		<li><a href="#scoring-logic">Scoring Logic</a></li>
 		<li><a href="#composite-score">Composite Score</a></li>
-		<li><a href="#multiplier-logic">Multiplier Logic</a></li>
+		<li><a href="#multiplier-logic">The Multiplier Logic</a></li>
 		<li><a href="#certification-thresholds">Certification Thresholds</a></li>
 		<li><a href="#gbi-and-gci-role-split">GBI and GCI Role Split</a></li>
 		<li><a href="#evidence-quality-and-the-gbi">Evidence Quality and the GBI</a></li>
@@ -52,12 +52,9 @@ Each autonomous system deployment is assessed across six dimensions:
 - Commercial Leverage
 - Adaptive Stability
 
-The six ARAF dimensions are governance architecture dimensions, not AI ethics principles. Each one assesses a structural property of the Decision Supply Chain that determines whether autonomous outcomes can be traced, attributed, and governed within institutional accountability structures. The GBI aggregates these assessments into a single comparable governance signal.
+![ARAF Six-Dimensional Governance Framework. Governance posture is evaluated across six interacting dimensions which collectively determine the Governance Benchmark Index.](/six-dimensions-framework-v2.png)
 
-<figure className="diagram-figure">
-	<img src="/images/araf/araf_03_six_dimensions.svg" alt="ARAF Six-Dimensional Governance Framework" loading="lazy" />
-	<figcaption>ARAF Six-Dimensional Governance Framework. Governance posture is evaluated across six interacting dimensions which collectively determine the Governance Benchmark Index.</figcaption>
-</figure>
+The six ARAF dimensions are governance architecture dimensions, not AI ethics principles. Each one assesses a structural property of the Decision Supply Chain that determines whether autonomous outcomes can be traced, attributed, and governed within institutional accountability structures. The GBI aggregates these assessments into a single comparable governance signal.
 
 Each dimension receives a score from 1.0 to 5.0.
 
@@ -109,6 +106,43 @@ The GBI composite score is derived from the six-dimensional assessment and adjus
 The composite score answers a narrow but important question: what is the overall governance posture of this deployment in institutionally comparable form?
 
 The dimensional profile answers the broader governance question: where, specifically, does the exposure sit? Both outputs are required. The GBI produces comparability. The dimensional profile produces actionability. An institutional audience that receives only a composite score knows whether the system is above or below a threshold. An audience that receives the dimensional profile knows which governance investments will move the score and which risks are structural rather than operational.
+
+<a id="composite-score-calculation"></a>
+### Composite Score Calculation
+
+The GBI composite score is calculated in three steps.
+
+Step 1 - Base composite: sum the six dimensional scores and divide by six. Each dimension contributes equally to the base composite.
+
+Step 2 - Multiplier adjustment: identify active multipliers against the trigger conditions. Add the value of each active multiplier to the base composite. Where two multipliers are active simultaneously, both values are added (additive, not sequential).
+
+Step 3 - Scale ceiling: if the adjusted composite exceeds 5.0, the GBI is recorded as 5.0. A capped score indicates critical governance exposure. The precise adjusted figure above 5.0 carries no additional interpretive value.
+
+GBI = (D1 + D2 + D3 + D4 + D5 + D6) / 6 + active multiplier values, capped at 5.0
+
+### Worked example (single multiplier)
+
+Example A - Single multiplier activation
+
+Dimensional scores: D1 = 3.0, D2 = 2.0, D3 = 4.0, D4 = 2.5, D5 = 1.5, D6 = 2.0
+
+Base composite: (3.0 + 2.0 + 4.0 + 2.5 + 1.5 + 2.0) / 6 = 15.0 / 6 = 2.50
+
+Active multiplier: Infrastructure Collapse (+2) - triggered by D3 >= 4 and D1 >= 3
+
+GBI = 2.50 + 2 = 4.50
+
+Certification outcome: above 2.50 threshold - remediation required.
+
+### Worked example (dual multiplier)
+
+Example B - Dual multiplier activation
+
+This example reflects the FinCo Credit Engine assessment (Chapter 5).
+
+Author hold: not published pending manuscript confirmation of D2, D5, and D6 and arithmetic reconciliation. Under the locked formula and multiplier values (+3 and +2), dual activation caps at 5.0 and does not reproduce 3.42.
+
+Any assessor applying this methodology to identical dimensional inputs must produce an identical GBI composite score.
 
 <a id="multiplier-logic"></a>
 ## 4. The Multiplier Logic
@@ -437,4 +471,4 @@ The assessor ecosystem model follows established governance precedent: ISO certi
 
 **Citation**
 
-Martin, Carly. *Agentic Risk Architecture Framework (ARAF), Version 3.0.* Institute for Autonomous Governance Pty Ltd, 2026.
+Agentic Risk Architecture Framework (ARAF), Version 3.0. Maintained by Institute for Autonomous Governance Pty Ltd (ACN 696 112 277), 2026

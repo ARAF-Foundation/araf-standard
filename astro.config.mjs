@@ -147,7 +147,7 @@ export default defineConfig({
           tag: 'link',
           attrs: {
             rel: 'stylesheet',
-            href: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=DM+Mono:wght@300;400&display=swap',
+            href: 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap',
           },
         },
         {
