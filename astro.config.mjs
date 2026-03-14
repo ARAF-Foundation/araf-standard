@@ -69,11 +69,17 @@ export default defineConfig({
             { label: 'Governance Ontology', slug: 'standard/governance-ontology' },
             { label: 'Six Dimensions', slug: 'standard/six-dimensions' },
             { label: 'Decision Supply Chain', slug: 'decision-supply-chain' },
-            { label: 'Evidence Standard', slug: 'evidence/evidence-standard' },
           ],
         },
         {
-          label: 'CERTIFICATION & SCORING',
+          label: 'EVIDENCE AND ASSESSMENT',
+          items: [
+            { label: 'Evidence Standard', slug: 'evidence/evidence-standard' },
+            { label: 'Evidence Infrastructure Standard (EIS-01)', slug: 'evidence/evidence-infrastructure-standard' },
+          ],
+        },
+        {
+          label: 'CERTIFICATION AND SCORING',
           items: [
             { label: 'Governance Benchmark Index', slug: 'certification/governance-benchmark-index' },
             { label: 'Governance Coherence Addendum', slug: 'certification/governance-coherence-addendum' },
@@ -115,11 +121,11 @@ export default defineConfig({
         {
           label: 'INSTITUTIONAL APPLICATIONS',
           items: [
-            { label: 'For Boards', slug: 'boards' },
-            { label: 'For Insurers', slug: 'insurers' },
-            { label: 'For Investors', slug: 'investors' },
-            { label: 'For Regulators', slug: 'regulators' },
-            { label: 'For Enterprise Procurement', slug: 'enterprise-procurement' },
+            { label: 'Boards', slug: 'boards' },
+            { label: 'Insurers', slug: 'insurers' },
+            { label: 'Investors', slug: 'investors' },
+            { label: 'Regulators', slug: 'regulators' },
+            { label: 'Enterprise Procurement', slug: 'enterprise-procurement' },
           ],
         },
         {

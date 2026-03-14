@@ -1,43 +1,198 @@
----
 title: ARAF for Insurers
 description: How insurers can use ARAF governance signals for underwriting, renewal controls, and claims defensibility.
+## Insurers
+
+Insurance markets are the mechanism through which AI governance frameworks become economically mandatory. Regulation can specify governance requirements. Insurance makes non-compliance uninsurable.
+
+ARAF provides the structured governance signal the insurance market needs to assess, price, and condition autonomous system risk. This page describes how the ARAF scoring architecture maps to insurer diligence, underwriting, and portfolio segmentation functions.
+
+ARAF assessments are scoped to a defined deployment node. Any GBI score, certification status, or dimensional profile referenced on this page applies to the deployment node declared at assessment intake. Institutional reliance must be read against that declared scope.
+
+**The insurer governance problem**
+
+The underwriting question is not whether the system performs well under normal conditions. It is whether the governance architecture can absorb adverse consequences when they materialise  and whether contemporaneous evidence exists to establish what was known, governed, and documented at the time.
 ---
 
-ARAF is a governance standard for autonomous decision infrastructure. For insurers, its function is practical: convert governance quality from narrative assertion into a comparable underwriting signal.
+## 01. Why Insurance Markets Drive AI Governance
 
-This page maps current ARAF governance controls to insurer diligence needs, including entity verification, version integrity, route integrity, reassessment timing, and evidence reliability.
+The pattern is established. Aviation governance frameworks became operationally mandatory when Lloyd's made certification a coverage condition. Cybersecurity governance frameworks became operationally mandatory when insurers began requiring controls evidence at renewal. Nuclear and pharmaceutical liability regimes follow the same structure: governance requirements that regulation suggests, insurance makes binding.
 
-Last updated: March 2026.
+AI governance is following the same trajectory. The LMA's 2025 AI loss survey identified the absence of structured governance evidence as the primary barrier to AI liability underwriting at scale. Underwriters cannot price what they cannot measure. Actuarial tables cannot be built on narrative self-assessment.
 
-## Insurer Use Case
+ARAF occupies the position that underwriting requires: a structured, independently assessed governance signal that is comparable across entities, stable across time, and grounded in contemporaneous evidence rather than management representation.
 
-Insurers require a governance signal that can be used in:
+> **The market function.** An insurer that conditions coverage on ARAF Certified or Compliant status creates a governance floor for its portfolio. That floor propagates across the market. Organisations that cannot meet it pay the higher premium that reflects unstructured governance risk, or cannot obtain coverage at all. This is the mechanism through which insurance markets have always driven industry standards — not through mandate, but through pricing.
 
-- pre-bind underwriting diligence
-- renewal condition setting
-- claims defensibility review
-- portfolio-level risk segmentation
+---
 
-ARAF provides this through dimensional scoring, GBI/GCI thresholds, evidence quality tiers, and certification lifecycle controls.
+## 02. The Underwriting Problem ARAF Solves
 
-## Insurer Diligence Status Matrix
+Underwriting autonomous system liability requires answers to questions that management narrative cannot reliably supply.
 
-The matrix below translates recent site-audit themes into insurer-relevant control status.
+**What decisions does the system make autonomously, and at what autonomy level?**
+A system that recommends and a system that executes present different liability profiles. The autonomy gradient determines whether adverse outcomes are attributable to a decision-making process that governance could have constrained. Without a structured autonomy classification, underwriters are pricing liability exposure they cannot characterise.
 
-Status terms:
+**What is the quality of the governance evidence?**
+Self-reported governance controls are evidence of intent. Infrastructure-generated audit logs are evidence of operation. The difference is analytically significant when a claim requires reconstruction of what the system did, under what governance conditions, at the time of the adverse outcome. An assessment grounded in Tier 1 evidence supports a materially different reliance position than one grounded in management representation.
 
-- `Resolved`: control text is aligned on current active documentation routes.
-- `In Progress`: control objective is defined, with remaining alignment work in progress.
-- `Planned`: implementation item is scheduled but not yet published.
+**Where does liability sit in the Decision Supply Chain?**
+Most deployed autonomous systems are not built end-to-end by the deploying organisation. They involve foundation model providers, fine-tuning organisations, data providers, and integration contractors. The liability architecture determines whether the deploying organisation holds full residual liability or has contractually allocated exposure across the chain. An organisation that cannot produce contractual evidence of liability allocation is exposed to the full residual position regardless of its subjective intentions.
 
-| Control Area | Why It Matters for Insurers | Current Status | Primary Source |
-| --- | --- | --- | --- |
-| Maintainer legal entity consistency | Counterparty verification and legal attribution in underwriting files | Resolved | [FAQ](/faq/), [Standard Governance](/governance/standard-governance/) |
-| Version governance and changelog transparency | Methodology stability for pricing, exclusions, and comparability over time | Resolved | [Version History](/governance/version-history/) |
-| Legacy route control | Prevents stale or duplicate wording from entering underwriting records | In Progress | [Institutional Applications](/institutional-applications/), [Certification Framework](/certification/certification-framework/) |
-| Reassessment interval harmonization | Defines renewal cadence and ongoing condition monitoring | In Progress | [Certification Framework](/certification/certification-framework/) |
-| Governance terminology alignment | Reduces ambiguity in policy and diligence language | In Progress | [FAQ](/faq/), [Standard Governance](/governance/standard-governance/) |
-| Multiplier consistency across references | Ensures compounding-risk interpretation is uniform | In Progress | [Six Dimensions](/standard/six-dimensions/), [Governance Benchmark Index](/certification/governance-benchmark-index/) |
+**Has governance posture been maintained since the last assessment?**
+A point-in-time assessment does not establish what governance posture was at the time of the adverse outcome. Governance coherence — operational evidence that controls were exercised across the assessment window — is what bridges the assessment date and the loss date. Without it, coverage conditions tied to certification status may be subject to challenge at claims stage.
+
+ARAF answers each of these questions through its six-dimensional scoring architecture, evidence quality tier classification, and the Governance Coherence Index.
+
+---
+
+## 03. The ARAF Scoring Architecture for Underwriters
+
+ARAF produces three primary outputs that map directly to underwriting functions.
+
+### The Governance Benchmark Index (GBI)
+
+The GBI is a composite governance signal scored on a 1.0 to 5.0 scale. Lower scores indicate stronger governance posture. The GBI compresses the six-dimensional profile into a comparable institutional signal suitable for portfolio segmentation and premium loading decisions.
+
+The GBI is not a pass/fail score. It is a continuous signal. An underwriter can condition coverage on a GBI threshold, apply premium modifiers within bands, or use dimensional exposure profiles to set sublimits and exclusions. The scoring architecture is designed for this purpose.
+
+### Dimensional Exposure Profiles
+
+The six ARAF dimensions identify where governance exposure exists:
+
+**D1 Autonomy Gradient** — the level of autonomous operation. Determines whether governance failures are materially consequential or constrained by human oversight.
+
+**D2 Data Sensitivity Exposure** — the sensitivity of data processed. Determines whether a governance failure creates regulatory exposure in addition to civil liability.
+
+**D3 Contract Infrastructure** — the contractual architecture across the Decision Supply Chain. Determines whether liability allocation is documented and enforceable.
+
+**D4 Liability Architecture** — the explicit liability framework governing the system's outputs. Determines whether the organisation has structured its liability position or carries unexamined residual exposure.
+
+**D5 Commercial Leverage** — the degree of dependency on third-party AI providers. Determines whether a provider failure creates coverage gaps through force majeure or business interruption.
+
+**D6 Adaptive Stability** — the rate of change in the system's governance posture. Determines whether governance posture has drifted between assessment and loss date.
+
+These dimensions correspond directly to underwriting diligence questions. D3 and D4 map to liability allocation and contract review. D1 maps to severity assessment. D6 maps to the governance drift problem that creates coverage condition disputes at claims stage.
+
+### Multiplier Conditions
+
+Three structural multiplier conditions compound dimensional risk:
+
+**Systemic Escalation** — D1 ≥ 4 AND D4 ≥ 4. High autonomy combined with inadequate liability architecture. The system produces consequential decisions at scale with no structural liability containment. GBI penalty: +3.
+
+**Infrastructure Collapse** — D3 ≥ 4 AND D1 ≥ 3. Inadequate contract infrastructure combined with elevated autonomy. A provider failure can cascade through the Decision Supply Chain without contractual protection. GBI penalty: +2.
+
+**Leverage Collapse** — D5 ≥ 4 AND D4 ≥ 3. High provider dependency combined with inadequate liability architecture. Business interruption exposure amplified by no liability containment. GBI penalty: +2.
+
+Multiplier conditions are the governance equivalent of accumulation risk. They represent structural configurations where individual dimensional weaknesses combine to create exposure that cannot be understood or priced through the dimensions alone. An underwriter reviewing a dimensional profile without examining multiplier conditions is missing the compound risk.
+
+> **Political Cascade.** A fourth multiplier condition applies specifically to cross-border deployments: D5 ≥ 4 AND D3 ≥ 3, with single-provider dependency and government-adjacent customer concentration. This condition is most relevant for insurers with portfolios including public sector or regulated industry clients operating across jurisdictions where AI regulatory interventions — designation events, data localisation mandates, sector-specific prohibitions — create event risk that standard force majeure provisions do not address. GN-002 governs assessment of this condition.
+
+---
+
+## 04. The Governance Coherence Index (GCI) as a Reliance Instrument
+
+The GBI answers whether governance architecture is adequately designed. The GCI answers whether that architecture was actually exercised during the period under assessment.
+
+For insurers, this distinction is the difference between coverage conditions that hold at claims stage and coverage conditions that are subject to challenge.
+
+A certification based on GBI alone establishes that governance architecture was adequate at the point of assessment. It does not establish that governance controls were exercised in the period between assessment and loss. The GCI closes that gap. It is operational evidence — timestamped decision logs, AIOC meeting records, escalation records, monitoring outputs — that governance controls were exercised across a minimum 180-day window.
+
+### GCI Thresholds
+
+- **ARAF Certified** — GCI ≥ 0.85 across all assessed dimensions; Tier 1 evidence for at least 80 per cent of sampled controls
+- **ARAF Compliant** — GCI ≥ 0.70 across all assessed dimensions
+
+The GCI is scored per dimension, not as a single aggregate. An organisation with strong coherence on four dimensions and critical failures on two does not meet the threshold. Dimensional GCI scores must be reported individually, which means underwriters can identify precisely which governance controls lack operational evidence.
+
+The SOC 2 Type I / Type II parallel is instructive. Type I establishes design adequacy at a point in time. Type II establishes operational effectiveness over a period. ARAF GBI is Type I. ARAF GCI is Type II. Coverage conditions that rely on GBI alone are coverage conditions that rely on Type I evidence. For most autonomous system liability products, Type II evidence is what claims defensibility requires.
+
+---
+
+## 05. Certification Lifecycle as a Policy Condition Instrument
+
+ARAF certification has a defined validity architecture that maps to policy renewal cycles.
+
+| Certification Tier | Validity Period | Interim Requirement |
+|---|---|---|
+| ARAF Assessed | 60-day reliance window from report issue | None |
+| ARAF Compliant | 12 months | None |
+| ARAF Certified | 24 months | Mandatory 12-month interim surveillance |
+
+**Reliance Freshness.** An ARAF assessment report may be relied upon for 60 days from its issue date. Beyond 60 days, the report is stale for reliance purposes. Underwriters conditioning coverage on a current assessment should specify the 60-day reliance window in policy conditions.
+
+**Reassessment Triggers.** The following events invalidate certification status and require reassessment before certified status can be maintained:
+
+- Material change to system autonomy level (increase of more than one Autonomy Gradient level)
+- Substitution of a primary AI provider or model
+- Significant expansion of operational scope beyond the scope assessed
+- A material incident in which the governance architecture was engaged, tested, or found insufficient
+- Discovery of systematic governance drift outside the normal assessment cycle
+
+Organisations must notify their accredited assessor of triggering events within 60 days of occurrence. Continued use of certification following a triggering event without initiating reassessment is a certification breach.
+
+> **Policy condition design.** A well-structured AI liability policy condition should require: (1) current ARAF Certified or Compliant status at inception and renewal; (2) a reliance window of no more than 60 days from the assessment report date; (3) notification of reassessment trigger events within 60 days; and (4) production of the dimensional profile and GCI scores on request. These four conditions correspond directly to the ARAF certification lifecycle controls.
+
+---
+
+## 06. Evidence Quality and Claims Defensibility
+
+At claims stage, the question is not what governance documentation exists now. It is what governance evidence existed at the time of the adverse outcome. The ARAF evidence tier classification maps directly to the claims defensibility question.
+
+**Tier 1 — Infrastructure-generated, tamper-evident records.** System logs, automated decision records, enforcement action records. Highest admissibility. Contemporaneous and cannot be retrospectively assembled. A certification grounded in Tier 1 evidence supports claims defensibility in the strongest terms.
+
+**Tier 2 — Contemporaneous documentation.** Governance meeting records, approval documentation, escalation logs produced at the time of governance events. High admissibility. Acceptable for D3, D4, and D5 assessments where automated logs are not structurally available.
+
+**Tier 3 — Reconstructed documentation.** Evidence assembled retrospectively. Not admissible for ARAF Compliant or Certified coherence assessment. Where a certification rests on Tier 3 evidence, that limitation must be disclosed in the assessment report.
+
+**Tier 4 — Management representation.** Written assertions without contemporaneous records. Not admissible for coherence assessment at any certification tier. Where Tier 4 is the primary evidence source for a material control, the assessment must record a critical coherence finding.
+
+The evidence tier profile is a claims defensibility indicator. An insurer reviewing an assessment report where Tier 1 evidence supports 80 per cent or more of sampled controls holds materially stronger claims defensibility than one where the evidence profile is dominated by Tier 2 or Tier 3 records.
+
+---
+
+## 07. Underwriting Intake Checklist
+
+Use this checklist for each autonomous system within scope of coverage.
+
+- Confirm ARAF version assessed and assessment date. Apply 60-day reliance window.
+- Confirm maintainer entity: Institute for Autonomous Governance Pty Ltd (ACN 696 112 277).
+- Record GBI composite score and certification tier.
+- Record dimensional profile: note D1 (autonomy level), D3 (contract infrastructure), D4 (liability architecture), D6 (adaptive stability).
+- Screen for multiplier conditions: Systemic Escalation, Infrastructure Collapse, Leverage Collapse. Screen for Political Cascade where cross-border deployment is in scope.
+- Record GCI scores by dimension where Compliant or Certified status is sought. Note evidence tier profile.
+- Record reassessment trigger obligations and notification window (60 days).
+- Confirm whether ARAF Assessed, Compliant, or Certified status is current at inception.
+- For Certified status: confirm 12-month interim surveillance obligation is in the engagement terms.
+
+---
+
+## 08. Reliance Boundaries
+
+ARAF certification provides contemporaneous, independently assessed governance evidence. It does not create a statutory safe harbour and does not replace policy-specific underwriting judgement in any jurisdiction.
+
+Insurer reliance should treat ARAF as:
+
+- a governance classification signal for risk segmentation
+- an evidence-quality signal for claims defensibility assessment
+- a lifecycle-monitoring signal for renewal condition setting
+
+and not as a substitute for policy-specific underwriting judgement on the specific system, deployment context, and coverage structure under review.
+
+The assessment covers governance architecture at the time of assessment. It does not guarantee future system performance, absence of adverse outcomes, or conformity with regulatory requirements that post-date the assessment.
+
+---
+
+## Specification
+
+- [Six Dimensions](/standard/six-dimensions/)
+- [Governance Benchmark Index](/certification/governance-benchmark-index/)
+- [Governance Coherence Addendum](/certification/governance-coherence-addendum/)
+- [Certification Framework](/certification/certification-framework/)
+- [Decision Supply Chain](/decision-supply-chain/)
+- [Evidence Standard](/evidence/evidence-standard/)
+- [GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/)
+- [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/)
+- [All Institutional Applications](/institutional-applications/)
 | Duplicate route consolidation (GBI/Glossary) | Preserves single-source citation in underwriting templates | Planned | [Governance Benchmark Index](/certification/governance-benchmark-index/), [Glossary](/resources/glossary/) |
 | Pilot downloadable insurer artifacts | Supports intake documentation and market onboarding | Planned | [Pilot](/pilot/) |
 | Certification mark notice placement | Clarifies controlled use of certification designations | Planned | [Certification Framework](/certification/certification-framework/) |
