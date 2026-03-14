@@ -1,187 +1,313 @@
-title: "GN-001: Conducting an ARAF Governance Assessment"
-[new body content from gn001_page_content.md]
+---
+title: 'GN-001: Conducting an ARAF Governance Assessment'
+description: End-to-end operational methodology for accredited assessors conducting ARAF governance assessments.
+---
 
 *Assessor Guidance Note GN-001 · Agentic Risk Architecture Framework v3.0*
 
 ---
 
-This guidance note defines the end-to-end operational sequence for conducting an ARAF governance assessment. It applies from engagement setup through certification determination, report delivery, and post-assessment obligations.
+This guidance note provides end-to-end operational methodology for accredited assessors conducting ARAF governance assessments. It covers the full assessment lifecycle from engagement setup through report delivery and post-assessment obligations.
 
-GN-001 is the foundational assessor methodology document. It must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), [GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/), [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/), and the normative specification documents referenced in the cross-reference section below.
+GN-001 is the foundational assessor methodology document. GN-002 (Cross-Border Deployment Assessment) and GN-003 (Governance Coherence Assessment) are supplementary documents that extend this guidance for specific assessment contexts. Where a cross-border deployment is in scope, apply GN-002 alongside this note from Section 2 onwards. Where a Compliant or Certified determination is sought, apply GN-003 for the coherence evaluation component.
 
-![ARAF Assessment Lifecycle](/images/araf/araf_gn001_assessment_lifecycle.svg)
+This guidance note must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), which governs the conditions under which assessments may be conducted. Nothing in this note modifies those requirements.
 
-ARAF Assessment Lifecycle — Operational sequence applied by accredited assessors when conducting a governance architecture assessment under the Agentic Risk Architecture Framework (ARAF).
+![ARAF Assessment Lifecycle: operational sequence applied by accredited assessors when conducting a governance architecture assessment under the Agentic Risk Architecture Framework (ARAF)](/images/araf/araf_gn001_assessment_lifecycle.svg)
 
-Step 7 in the lifecycle sequence: Governance Coherence Assessment (GCI) — required for Compliant and Certified determinations.
-
----
-
-## Engagement Setup
-
-Establish engagement terms, assessor independence, methodology version, and scope boundaries before evidence requests begin.
-
-The engagement setup stage must confirm:
-
-- assessor independence and conflict disclosure status
-- assessment objective and intended institutional audiences
-- methodology version applied and documentation baseline
-- expected assessment outputs: dimensional profile, GBI score, multiplier analysis, and certification pathway position
-- engagement governance protocol, including escalation contacts and document control
+*ARAF Assessment Lifecycle — Operational sequence applied by accredited assessors when conducting a governance architecture assessment under the Agentic Risk Architecture Framework (ARAF).*
 
 ---
 
-## System Scoping and Decision Supply Chain Mapping
+## 1. Engagement Setup
 
-Define the assessed system boundary and map the full Decision Supply Chain before dimensional scoring.
+Before accepting any assessment engagement, the assessor must complete a pre-engagement independence check against the requirements set out in Section 3 of the Assessor Accreditation Standard. This is not optional and is not satisfied by a general declaration. The assessor must review each independence criterion against the specific organisation being assessed and document the outcome.
 
-The minimum scoping output is a chain-complete map covering all decision-forming links and accountability handoffs.
+Where a potential conflict of interest is identified, the assessor must disclose it to the organisation before accepting the engagement. Where a disclosed conflict cannot be adequately mitigated — for example, where the assessor has provided advisory services directly related to the governance architecture under assessment within the preceding 12 months — the assessor must decline.
 
-### Decision Supply Chain Template
+The engagement letter must specify:
+
+- the systems within scope, identified by name and function
+- the assessment window, including start and end dates
+- the certification tier being targeted, if any
+- the methodology version to be applied (current published version at engagement commencement)
+- the independence declaration and any disclosed conflicts with mitigation arrangements
+- the documentation standard to be applied to the assessment report
+
+Where the organisation has not identified a target certification tier, the assessor should clarify this before commencing. An assessment conducted without a target tier may still produce a valid GBI score and dimensional profile, but the evidence collection and coherence assessment procedures differ depending on whether Compliant or Certified status is sought.
+
+---
+
+## 2. System Scoping and Decision Supply Chain Mapping
+
+### Identifying systems within scope
+
+Not every autonomous system an organisation operates requires ARAF assessment. The scoping decision should be driven by consequence: systems that make or materially influence consequential decisions without per-decision human authorisation are within scope. Systems that produce recommendations requiring human approval before action are not autonomous in the ARAF sense, though they may warrant assessment if the practical independence of human review is limited.
+
+Confirm with the organisation which systems are proposed for assessment. Review the confirmation against the organisation's own system inventory where one exists. Where the proposed scope appears to exclude material autonomous systems, document the exclusion and its basis.
+
+### Mapping the Decision Supply Chain
+
+For each system in scope, produce a Decision Supply Chain map before dimensional scoring begins. The map must identify:
+
+- each link in the chain from training data origin to operational output
+- the party responsible for governance at each link (data provider, foundation model developer, fine-tuning provider, deploying organisation, downstream recipients)
+- the contractual relationship governing each link, including the jurisdiction of governing law
+- the jurisdictional boundaries crossed at each link
+- the governance accountability assignment at each link
+
+The chain map is both an assessment tool and a required report component. Produce it in sufficient detail for an institutional reader — board member, underwriter, or regulator — to understand who is accountable for what at each stage of decision formation.
+
+For cross-border deployments, apply GN-002 Section 2 from this point. The jurisdictional footprint mapping in GN-002 extends the chain map with a jurisdiction matrix that the standard chain map does not require.
+
+The infrastructure-versus-decision-participating provider distinction is analytically important. A cloud compute provider is infrastructure: it does not shape the content of decisions. A foundation model provider is decision-participating: its contribution shapes the content of every decision the system produces. The governance requirements, contractual provisions, and evidence obligations differ between these categories. The chain map must reflect this distinction.
+
+The following template structures the chain map required by this section. The assessment report must include a completed version of this template.
+
+### Decision Supply Chain Mapping Template
 
 | Chain Link | Function | Provider / Entity | Jurisdiction | Governance Responsibility | Contract Instrument | Decision Participation |
 |---|---|---|---|---|---|---|
-| Training Data Origin | Source and provenance of training corpus |  |  |  |  |  |
-| Foundation Model | Base model development and upstream controls |  |  |  |  |  |
-| Fine-Tuning Layer | Domain adaptation and alignment controls |  |  |  |  |  |
-| RAG Layer (if applicable) | Retrieval context and source governance |  |  |  |  |  |
-| Application Layer | Decision logic orchestration and policy binding |  |  |  |  |  |
-| Delivery Interface | Human/system interface where consequential output is acted upon |  |  |  |  |  |
+| Training Data Origin | Data creation / acquisition | | | Data provenance compliance | Data licence agreement | Indirect |
+| Foundation Model | Model architecture and training | | | Model training governance | AI service agreement | Direct |
+| Fine-Tuning Layer | Model specialisation | | | Dataset governance | Internal governance documentation | Direct |
+| RAG Layer (if applicable) | Runtime content retrieval | | | Content source governance | Internal policy | Direct |
+| Application Layer | Decision generation | Deploying organisation | | Operational governance | Internal operational procedures | Direct |
+| Delivery Interface | Output delivery | | | Customer interaction governance | Platform terms / customer contracts | Indirect |
+
+Assessors must ensure that the completed chain map identifies every party that influences decision formation, distinguishes decision-participating providers from infrastructure providers, identifies the jurisdictional footprint of the decision pipeline, and documents contractual governance at each link. The Jurisdiction column must use the full jurisdiction name, not an abbreviation.
 
 ---
 
-## Evidence Collection
+## 3. Evidence Collection
 
-Evidence collection must be chain-complete, contemporaneous where possible, and reconstructable by institutional reviewers.
+### Evidence categories
 
-Evidence tiers are defined as follows:
+ARAF governance evidence falls into four categories. Evidence collection should be organised by category, not by dimension, because a single piece of evidence may be relevant to multiple dimensions.
 
-- Tier 1 — infrastructure-generated records
-- Tier 2 — contemporaneous documentation
-- Tier 3 — reconstructed documentation
-- Tier 4 — management representation
+**Design evidence** addresses governance architecture at the point of system design and deployment authorisation. This includes system design documents, deployment authorisation records, initial governance assessments, AIOC establishment records, and board approval documentation.
 
-Tier 4 evidence is management representation without contemporaneous supporting records.
+**Deployment evidence** addresses the governance decisions made at the time of deployment. This includes model selection records, provider agreement terms, fine-tuning governance documentation, scope boundary definitions, and initial risk assessments.
 
-Not admissible for coherence assessment at any certification tier.
+**Operational evidence** addresses governance in production. This includes operational logs, AIOC decision records, monitoring reports, exception handling records, incident reports, escalation records, and reassessment records. Operational evidence is the primary evidence category for governance coherence assessment.
 
----
+**Outcome evidence** addresses governance responses to adverse outcomes. This includes incident investigation records, regulatory correspondence, litigation records, and remediation documentation. Outcome evidence is reactive but the protocol for producing it must be established proactively.
 
-## Dimensional Scoring
+### Evidence requests
 
-Assess governance posture across the six ARAF dimensions:
+Issue evidence requests by category before the assessment commences. Do not request evidence dimension by dimension — this signals to the organisation which dimensions are under scrutiny and may produce targeted rather than representative evidence.
 
-- D1 Autonomy Gradient
-- D2 Data Sensitivity Exposure
-- D3 Contract Infrastructure
-- D4 Liability Architecture
-- D5 Commercial Leverage
-- D6 Adaptive Stability
+A complete evidence request covers all four categories. Specify the format requirements for each category, including the authenticity and integrity requirements in the ARAF Evidence Standard.
 
-Dimensional scoring output must include per-dimension reasoning, evidence tier basis, and any limitations affecting confidence in the score.
+### Evidence quality tier classification
 
----
+As evidence is received, classify each item by quality tier:
 
-## Multiplier Assessment
+- **Tier 1** — infrastructure-generated, tamper-evident records (system logs, audit trails, automated governance records). Highest admissibility.
+- **Tier 2** — contemporaneous documentation produced at or near the time of the event (board minutes, AIOC decision logs, deployment authorisation records produced before the assessment). High admissibility.
+- **Tier 3** — reconstructed documentation produced after the event (retrospective governance narratives, policy documents prepared in anticipation of assessment). Lower admissibility.
+- **Tier 4** — management representation (written assertions without supporting contemporaneous records). Not admissible for coherence assessment at any certification tier.
 
-Evaluate multiplier conditions after dimensional scoring and before final composite interpretation.
+Identify Tier 4 situations early. Where management representation is the only available source for a material control, communicate this to the organisation before scoring. The organisation needs to understand that Tier 4 evidence cannot support a coherence finding and that the control in question will be assessed as not evidenced. This is not a punitive outcome — it is the correct assessment of the governance record. The presence of Tier 4 as the primary evidence source for any control is itself a governance finding requiring notation in the report.
 
-| Multiplier | Trigger Condition | Canonical Definition |
-|---|---|---|
-| Systemic Escalation | D1 &ge; 4 and D4 &ge; 4 | High autonomy with inadequate liability architecture. AE3 volume is high and liability framework is not designed to absorb consequences. |
-| Infrastructure Collapse | D3 &ge; 4 and D1 &ge; 3 | Significant autonomy with inadequate contract infrastructure. Liability allocation at the execution boundary is contractually ungoverned. |
-| Leverage Collapse | D5 &ge; 4 and D4 &ge; 3 | High commercial dependency with inadequate liability architecture. System becomes structurally resistant to remediation. |
-| Political Cascade | D5 &ge; 4 and D3 &ge; 3 with single-provider dependency and government-adjacent customer concentration | High commercial dependency combined with inadequate political force majeure or provider substitution provisions governing government designation events. |
+### Interview protocol
+
+Interviews with AIOC members, system owners, and operational teams supplement documentary evidence. They do not replace it. An interview that confirms what the documents show strengthens the evidence record. An interview that contradicts what the documents show, or that describes governance practices for which no documentary evidence exists, produces a Tier 4 situation.
+
+Interview notes must be contemporaneous — produced during or immediately after the interview, not reconstructed from memory. Where an interviewee makes a material representation that is not supported by documentary evidence, document the representation explicitly and classify it as Tier 4.
 
 ---
 
-## GBI Calculation and Coherence Assessment
+## 4. Dimensional Scoring
 
-Calculate the Governance Benchmark Index (GBI) from the six-dimensional profile and apply multiplier interpretation where triggered.
+Score each dimension independently before considering dimensional interactions. The multiplier assessment in Section 5 follows dimensional scoring and must not influence it.
 
-For ARAF Compliant and ARAF Certified determination attempts, Governance Coherence Index (GCI) assessment is mandatory and must be evaluated over the required operational window.
+For each dimension, the scoring process has three steps: review the evidence relevant to that dimension; apply the dimension's scoring criteria against the evidence; and document the scoring rationale, including the evidence reviewed, the criteria applied, and the basis for the score assigned.
 
-The GBI and GCI role split is fixed:
+### D1 — Autonomy Gradient
 
-- GBI assesses governance design adequacy
-- GCI assesses operational coherence
+D1 establishes the foundational governance burden. It is not simply a technical classification of what the system does — it is an assessment of whether the governance architecture is adequate for the autonomy level at which the system actually operates.
 
----
+The key distinction is between nominal and effective autonomy. A system nominally classified as supervised may operate at a higher effective autonomy level if the human oversight mechanism is inadequate for the decision volume, if exception handling procedures are poorly defined, or if scope boundaries are not enforced in practice.
 
-## Report Drafting
+Score the effective autonomy level, not the nominal classification. Where the organisation has classified its own system at a lower autonomy level than the evidence supports, document the discrepancy.
 
-Prepare a structured report with sufficient detail for boards, insurers, investors, regulators, and other institutional audiences to reconstruct assessment reasoning.
+A supervisory governance structure applied to a high-autonomy deployment is not an oversight structure. It is the appearance of oversight without the substance.
 
-The report must include scope, methodology version, dimensional findings, multiplier findings, evidence basis, certification determination basis, and limitations.
+### D2 — Data Sensitivity Exposure
 
-Validity periods must be stated explicitly as follows:
+Assess operational data sensitivity and training data provenance as separate risk categories. An adequate D2 score requires adequate governance of both.
 
-- ARAF Assessed — reliance period up to 60 days from report issue date
-- ARAF Compliant — certification valid up to 12 months
-- ARAF Certified — certification valid up to 24 months subject to 12-month surveillance
+For training data provenance, the assessment covers three layers: the foundation model layer (what representations has the foundation model developer made, and what warranties and indemnification are available); the fine-tuning layer (what is the legal basis for using each data category, and what documentation supports it); and the retrieval-augmented generation layer where applicable (what copyright exposure does runtime content retrieval create).
 
----
+Cross-border deployments create jurisdictional divergence in training data provenance obligations. Apply GN-002 Section 3 for D2 scoring in cross-border contexts.
 
-## Certification Determination and Communication
+### D3 — Contract Infrastructure
 
-Apply certification thresholds without modification and communicate determination with supporting dimensional and evidence rationale.
+D3 assesses the legal expression of governance — whether the contracts governing the system's operation adequately address the autonomous action consequences the system creates.
 
-Thresholds:
+Particular attention should be paid to: AI-specific liability provisions (or their absence); liability cap adequacy relative to the actual decision volume and consequence magnitude; force majeure provisions and whether they address jurisdictional events relevant to the deployment; provider substitution provisions; and negotiation governance processes.
 
-- ARAF Certified — GBI ≤ 1.75 AND GCI ≥ 0.85
-- ARAF Compliant — GBI ≤ 2.50 AND GCI ≥ 0.70
-- ARAF Assessed — any GBI score
+Contract infrastructure gaps are invisible until they matter. The absence of adequate provisions may not create an immediately visible operational problem but creates the governance deficit that D3 is designed to measure.
 
-Certification communication must state the certification tier, score basis, evidence basis, validity period, and reassessment obligations.
+### D4 — Liability Architecture
 
----
+D4 assesses how liability for autonomous action consequences is structured, documented, and governed. The central concept is the autonomous action consequence category: outcomes produced by the system's decisions without per-step human authorisation.
 
-## Post-Assessment Obligations
+Review whether the organisation has explicitly identified and documented autonomous action consequences for each material system. Assess whether liability caps in commercial agreements are adequate for the actual exposure the system creates — not the exposure a human-reviewed process would create. Assess whether carve-outs leave material exposure ungoverned, particularly force majeure, intellectual property, and consequential loss carve-outs.
 
-Post-assessment obligations apply to assessor records, surveillance, and reassessment trigger handling.
+The gap between autonomy level and liability architecture is the most common D4 finding. A system operating at Autonomy Gradient level 3 or above with liability caps structured for a supervised process has an ungoverned autonomous action consequence exposure.
 
-Minimum obligations include:
+### D5 — Commercial Leverage
 
-- communicate reassessment trigger obligations at determination issuance
-- monitor and document triggering events for Compliant and Certified outcomes
-- conduct 12-month surveillance for Certified outcomes
-- retain assessment records to support quality assurance and dispute review
+D5 assesses provider dependency and commercial concentration risk. The governance question is whether the organisation has adequate provider substitution capacity and contractual protection against concentration events.
 
-Reassessment trigger categories are maintained in the [Reassessment Trigger Taxonomy](/assessor-guidance/reassessment-trigger-taxonomy/).
+Assess the practical substitutability of each critical provider — not whether substitution is theoretically possible but whether it is operationally realistic within a timeframe that would allow the organisation to maintain service continuity. A provider who cannot be substituted within six months is a critical dependency regardless of contract terms.
 
----
+Government-adjacent customer concentration requires specific screening for Political Cascade conditions. If D5 scores at 4 or above, assess D3 for Political Cascade trigger conditions before completing the multiplier analysis.
 
-## Appendix A (Report Template)
+### D6 — Adaptive Stability
 
-Use this template structure for all issued reports:
+D6 assesses governance maintenance under operational conditions. The key question is whether the governance architecture remains adequate as the system, its operating environment, and the regulatory landscape change.
 
-- Executive Summary
-- Scope and Assessment Window
-- Design Adequacy Assessment (GBI)
-- Governance Coherence Assessment (GCI), where required
-- Evidence Summary
-- Findings and Observations
-- Scope Limitation and Disclaimer
-- Determination, Validity, and Reassessment Conditions
+Assess the retraining governance protocol, the event-triggered reassessment mechanism, the AIOC meeting cadence and decision authority, and the anomaly escalation process. An organisation with robust design governance but no mechanism for detecting and responding to governance drift has an incomplete governance architecture.
 
-Validity periods (mandatory wording):
-
-- ARAF Assessed — reliance period up to 60 days from report issue date
-- ARAF Compliant — certification valid up to 12 months
-- ARAF Certified — certification valid up to 24 months subject to 12-month surveillance
+The five operational conformance signals that inform D6 assessment are: boundary adherence (is the system operating within defined scope parameters); control invocation integrity (are governance controls being invoked as designed); audit trace completeness (does the evidence record allow reconstruction of governance decisions); behavioural drift (is the system's decision pattern consistent with its assessed governance posture); and governance scope drift (is the system's operational scope expanding beyond the assessed scope).
 
 ---
 
-## Cross-References
+## 5. Multiplier Assessment
 
-- [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/)
-- [GN-002: Cross-Border Deployment Assessment](/assessor-guidance/gn-002/)
-- [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/)
-- [Reassessment Trigger Taxonomy](/assessor-guidance/reassessment-trigger-taxonomy/)
-- [Decision Supply Chain](/standard/decision-supply-chain/)
-- [Six ARAF Dimensions](/standard/six-dimensions/)
-- [Governance Benchmark Index](/certification/governance-benchmark-index/)
-- [Certification Framework](/certification/certification-framework/)
+The multiplier assessment identifies compound governance weaknesses where dimensional interactions create risk greater than the sum of individual dimensional scores. Assess each of the four multiplier conditions after dimensional scoring is complete.
+
+**Systemic Escalation** (D1 ≥ 4 AND D4 ≥ 4): High autonomy combined with inadequate liability architecture creates an ungoverned exposure at scale. The combination means the system is making consequential decisions at high volume without the liability architecture to govern the consequences. +3 GBI penalty.
+
+**Infrastructure Collapse** (D3 ≥ 4 AND D1 ≥ 3): Inadequate contract infrastructure combined with operational autonomy creates accountability gaps that cannot be resolved after an adverse outcome. Where the contracts governing the system do not adequately address AI liability and the system operates at level 3 or above, the legal architecture for accountability has collapsed. +2 GBI penalty.
+
+**Leverage Collapse** (D5 ≥ 4 AND D4 ≥ 3): High provider dependency combined with inadequate liability architecture means the organisation cannot maintain operational continuity or manage adverse outcomes if a critical provider relationship fails. +2 GBI penalty.
+
+**Political Cascade** (D5 ≥ 4 AND D3 ≥ 3 with single-provider dependency and government-adjacent customer concentration): High commercial dependency combined with inadequate political force majeure or provider substitution provisions governing government designation events. A provider designation event converts customer concentration risk into existential revenue loss where contract infrastructure does not address the cascade mechanism. +2 GBI penalty.
+
+Document the multiplier reasoning for each condition assessed, whether or not the condition is triggered. Where a condition is not triggered, the reasoning should confirm the basis for that determination — not merely assert that the thresholds were not met.
+
+Where multiple multipliers are triggered, apply all penalties. The GBI composite score is the dimensional average plus all applicable multiplier penalties, subject to the maximum of 5.0.
+
+---
+
+## 6. GBI Calculation and Coherence Assessment
+
+### GBI calculation
+
+The GBI composite score is calculated as the unweighted average of the six dimensional scores, plus any applicable multiplier penalties. Apply the published calculation methodology without modification.
+
+The GBI score reflects design adequacy. It answers the question: is the governance architecture designed adequately for the autonomy level at which this system operates?
+
+### When coherence assessment applies
+
+Coherence assessment is required for all ARAF Compliant and ARAF Certified determination attempts. It is not required for ARAF Assessed outcomes.
+
+If the organisation's GBI score meets the threshold for Compliant (≤ 2.50) or Certified (≤ 1.75), the assessment must include a Governance Coherence Index (GCI) evaluation before a tier determination can be issued. A GBI score that meets the threshold is a necessary but not sufficient condition for Compliant or Certified status.
+
+For coherence assessment methodology, apply GN-003 in full. GN-003 covers the three coherence components (Authority Adherence, Control Exercise, Drift Detection), evidence sampling procedures, the 180-day assessment window requirements, and GCI calculation.
+
+The minimum 180-day separation between the GBI assessment date and the GCI assessment date must be enforced. Assessments commenced for organisations that have not been operating for 180 days cannot produce a Compliant or Certified determination regardless of GBI score. Document this constraint in the report.
+
+---
+
+## 7. Report Drafting
+
+The assessment report must satisfy the documentation standard in Section 5 of the Assessor Accreditation Standard. This section provides drafting guidance to assist assessors in meeting that standard. The report template is set out in [Appendix A](#appendix-a--araf-assessment-report-template).
+
+The report audience is institutional: boards, insurers, investors, and regulators. The report must be comprehensible to an informed institutional reader who has not been involved in the assessment. Dimensional scores without reasoning are not adequate. A report that communicates a GBI composite score without explaining how each dimension was scored and why produces a number, not governance infrastructure.
+
+### Required sections
+
+Every ARAF assessment report must include:
+
+**Executive Summary** — the system assessed, the assessment window, the GBI composite score, any triggered multipliers, the certification tier where thresholds are met, and the most significant governance findings.
+
+**Scope and Assessment Window** — the systems within scope, the explicit scope exclusions, the assessment window dates, the methodology version applied, and the assessor identity and accreditation reference.
+
+**Decision Supply Chain Map** — the chain map produced in Section 2, with accountability assignments and contractual relationships at each link.
+
+**Design Adequacy Assessment (GBI)** — for each of the six dimensions: the score, the scoring rationale, the evidence reviewed, the evidence quality tier classifications, and the basis for each classification.
+
+**Multiplier Analysis** — for each of the four multiplier conditions: whether it was triggered, the dimensional scores that informed the assessment, and the compound governance exposure the condition produces where triggered.
+
+**Governance Coherence Assessment (GCI)** — where coherence assessment applies: the three coherence component scores, the dimensional GCI profiles, the combined GCI score, the 180-day window dates, and the evidence sampled.
+
+**Evidence Summary** — the governance evidence reviewed, organised by evidence category (design, deployment, operational, outcome), with evidence gaps identified explicitly.
+
+**Remediation Roadmap** — where governance weaknesses are identified, specific remediation recommendations distinguishing structural risks from operational risks, with implications for remediation timelines and costs. The roadmap must be actionable: it must identify what needs to change, who needs to be accountable for the change, and what the governance outcome of adequate remediation would be.
+
+**Certification Determination** — the certification tier where thresholds are satisfied, or a clear explanation of why certification thresholds were not met and what the distance to the nearest threshold is.
+
+**Assessment Metadata** — report issue date, assessment window dates, assessor identity, accreditation reference, methodology version applied, and applicable validity period. Validity periods are tier-specific: ARAF Assessed findings may be relied upon for up to 60 days from the report issue date; ARAF Compliant certifications are valid for up to 12 months from the report issue date; ARAF Certified certifications are valid for up to 24 months from the report issue date, subject to successful completion of the mandatory 12-month interim surveillance assessment. State the applicable validity period and expiry date explicitly in the report metadata.
+
+### Scope limitation and reliance statement
+
+Every ARAF assessment report must include the following scope limitation and reliance statement. The statement appears verbatim. Do not omit or modify it. Where additional scope limitations apply — for example, where material systems were excluded from scope at the organisation's request, or where evidence limitations constrained the assessment — insert them after the standard statement, not in place of it.
+
+---
+
+**Assessment Basis**
+
+This assessment evaluates the governance architecture of the system identified in this report using the Agentic Risk Architecture Framework (ARAF) methodology, Version 3.0.
+
+The findings are based on evidence collected during the defined assessment window and validated as of the report issue date.
+
+The assessment evaluates governance design adequacy and, where applicable, governance coherence using the dimensional scoring, multiplier analysis, and calculation procedures defined in the ARAF specification and associated methodology guidance.
+
+**Reliance Period**
+
+Absent a reassessment trigger event, the findings in this report may be relied upon for a period of 60 days from the report issue date.
+
+After this period, organisations relying on the assessment should obtain confirmation from the deploying organisation or assessor that no reassessment trigger event has occurred.
+
+**Trigger-Based Reassessment**
+
+Reliance on this assessment is contingent on the system remaining materially consistent with the configuration and governance architecture evaluated during the assessment window.
+
+A reassessment may be required prior to the end of the reliance period if a material change event occurs, including but not limited to:
+
+- substitution or material modification of a foundation model or primary AI provider
+- a change in system autonomy that materially alters decision authority
+- expansion of system deployment scope into new jurisdictions or operational contexts
+- modification of contractual or liability architecture governing the system
+- a governance incident demonstrating failure of operational control mechanisms
+
+Where such events occur, the deploying organisation should consider the assessment no longer representative of current governance conditions until reassessment is completed.
+
+**Nature of the Assessment**
+
+An ARAF assessment evaluates the governance architecture supporting autonomous decision infrastructure.
+
+It does not constitute a guarantee of operational outcomes, a certification of technical safety performance, or a representation that governance controls will prevent all adverse events.
+
+The assessment provides a structured governance signal describing the adequacy and operational coherence of governance mechanisms in place at the time of evaluation.
+
+**Certification Determination**
+
+Where the assessment results support an ARAF certification outcome, the applicable certification tier is determined using the thresholds defined in the ARAF Certification Framework.
+
+Certification remains valid subject to the validity conditions and reassessment triggers defined in that framework.
+
+Organisations holding an ARAF certification are expected to maintain internal monitoring processes capable of identifying reassessment trigger events throughout the certification validity period.
+
+---
+
+### 11. Assessment Metadata
+
+| Field | Entry |
+|---|---|
+| Report issue date | |
+| Certification issuance date | |
+| Assessment window | |
+| Certification tier | |
+| Certification validity | ARAF Assessed: findings may be relied upon for 60 days from report issue date. ARAF Compliant: valid for up to 12 months from certification issuance date. ARAF Certified: valid for up to 24 months from certification issuance date, subject to 12-month interim surveillance assessment. |
+| Certification expiry date | |
+| Reassessment triggers | See RT-001 Reassessment Trigger Taxonomy |
+| Assessor signature | |
 
 ---
 
