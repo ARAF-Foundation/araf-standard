@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Certification — ARAF Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #0d0d0b;
+  --ink-mid: #3a3a35;
+  --ink-muted: #7a7a72;
+  --rule: #d4d0c8;
+  --paper: #f7f5f0;
+  --cream: #ede9e0;
+  --gold: #A88644;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--paper);
+  font-family: 'DM Mono', monospace;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* HEADER */
+.doc-header {
+  padding: 3rem 4rem 2.5rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.doc-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.logo-cell {
+  background: var(--ink);
+  border-radius: 1px;
+}
+
+.logo-cell.gold {
+  background: var(--gold);
+}
+
+.org-block {
+  text-align: right;
+}
+
+.org-name {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.doc-title-block {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.doc-series {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.doc-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.doc-subtitle {
+  font-size: 0.72rem;
+  color: var(--ink-mid);
+  letter-spacing: 0.04em;
+}
+
+.doc-meta {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.doc-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.doc-meta-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.doc-meta-value {
+  font-size: 0.72rem;
+  color: var(--ink);
+}
+
+/* MAIN LAYOUT */
+.doc-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 4rem 5rem;
+}
+
+/* OPENING STATEMENT */
+.opening-statement {
+  padding: 2rem 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+.opening-statement .lede {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.opening-statement p {
+  color: var(--ink-mid);
+  margin-bottom: 0.9rem;
+}
+
+.opening-statement p:last-child {
+  margin-bottom: 0;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-number {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.subsection {
+  margin-bottom: 2rem;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+}
+
+p {
+  margin-bottom: 0.9rem;
+  color: var(--ink-mid);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* CERTIFICATION TIERS */
+.tier-block {
+  border: 1px solid var(--rule);
+  margin-bottom: 0.75rem;
+}
+
+.tier-block:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+.tier-header {
+  background: var(--cream);
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.tier-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tier-threshold {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.tier-body {
+  padding: 0.9rem 1.25rem;
+}
+
+.tier-body p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  color: var(--ink-mid);
+}
+
+/* THREE FUNCTIONS */
+.function-list {
+  list-style: none;
+  padding: 0;
+}
+
+.function-item {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--rule);
+  border-bottom: none;
+}
+
+.function-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.function-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.function-body {
+  font-size: 0.8rem;
+  color: var(--ink-mid);
+  line-height: 1.65;
+}
+
+/* ACCREDITATION REQUIREMENTS */
+.requirement-list {
+  list-style: none;
+  padding: 0;
+}
+
+.requirement-item {
+  padding: 0.75rem 1rem 0.75rem 2.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.requirement-item:last-child {
+  border-bottom: none;
+}
+
+.requirement-item::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 1.05rem;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* LIFECYCLE SUBSECTIONS */
+.lifecycle-block {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  margin-bottom: 0.75rem;
+}
+
+.lifecycle-header {
+  padding: 0.6rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.lifecycle-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.lifecycle-body {
+  padding: 0.9rem 1.25rem;
+}
+
+.lifecycle-body p {
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.lifecycle-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* TRIGGER LIST */
+.trigger-list {
+  list-style: none;
+  padding: 0;
+  border: 1px solid var(--rule);
+}
+
+.trigger-list li {
+  padding: 0.75rem 1rem 0.75rem 2.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.trigger-list li:last-child {
+  border-bottom: none;
+}
+
+.trigger-list li::before {
+  content: "!";
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  font-size: 0.6rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* WITHDRAWAL LIST */
+.withdrawal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.withdrawal-list li {
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.withdrawal-list li:last-child {
+  border-bottom: none;
+}
+
+.withdrawal-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 5px;
+  height: 1px;
+  background: var(--ink);
+}
+
+/* FORESEEABILITY CALLOUT */
+.foreseeability-callout {
+  border-left: 3px solid var(--ink);
+  background: var(--cream);
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink);
+}
+
+.foreseeability-callout p {
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.foreseeability-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* ASSESSMENT STEPS */
+.assessment-steps {
+  list-style: none;
+  padding: 0;
+  counter-reset: step-item;
+}
+
+.assessment-steps li {
+  counter-increment: step-item;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.assessment-steps li:last-child {
+  border-bottom: none;
+}
+
+.assessment-steps li::before {
+  content: counter(step-item, decimal-leading-zero);
+  position: absolute;
+  left: 0.75rem;
+  top: 0.65rem;
+  font-size: 0.62rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+/* TRUSPE CALLOUT */
+.truste-note {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink-muted);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  background: var(--cream);
+}
+
+.truste-note p {
+  font-size: 0.78rem;
+  margin-bottom: 0;
+  color: var(--ink-mid);
+}
+
+/* CROSS-REF */
+.cross-ref {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* FOOTER */
+.doc-footer {
+  padding: 1.5rem 4rem;
+  border-top: 2px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer-left {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.footer-right {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  text-align: right;
+  line-height: 1.6;
+}
+
+@media print {
+  body { background: white; }
+  .doc-body { padding: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="doc-header">
+  <div class="doc-header-top">
+    <div class="logo-mark">
+      <div class="logo-cell gold"></div>
+      <div class="logo-cell"></div>
+      <div class="logo-cell"></div>
+      <div class="logo-cell"></div>
+      <div class="logo-cell gold"></div>
+      <div class="logo-cell"></div>
+    </div>
+    <div class="org-block">
+      <div class="org-name">Institute for Autonomous Governance<br>ARAF Standard</div>
+    </div>
+  </div>
+  <div class="doc-title-block">
+    <div class="doc-series">ARAF Standard</div>
+    <div class="doc-title">Certification</div>
+    <div class="doc-subtitle">Certification tiers, lifecycle, assessor accreditation, and the foreseeability standard</div>
+    <div class="doc-meta">
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Version</span>
+        <span class="doc-meta-value">1.0</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Status</span>
+        <span class="doc-meta-value">Published</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Date</span>
+        <span class="doc-meta-value">March 2026</span>
+      </div>
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Framework</span>
+        <span class="doc-meta-value">ARAF v3.0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BODY -->
+<main class="doc-body">
+
+  <!-- OPENING -->
+  <div class="opening-statement">
+    <div class="lede">Trust requires a signal.</div>
+    <p>Boards cannot oversee what they cannot compare. Insurers cannot price what they cannot classify. Investors cannot diligence what they cannot measure. Governance that has been built, documented, and independently assessed still cannot function as market infrastructure unless it can be communicated in a form that institutional audiences can use without conducting the full assessment themselves.</p>
+    <p>Certification is the mechanism that produces that communication: the compressed, independently verified signal that allows governance quality to travel through markets.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <div class="section-number">Section 1</div>
+    <div class="section-title">What Certification Does</div>
+    <p>ARAF certification performs three functions that parallel the role credit ratings perform for credit risk.</p>
+    <ul class="function-list">
+      <li class="function-item">
+        <div class="function-label">Information Compression</div>
+        <div class="function-body">A credit rating compresses the complex analysis of a borrower's creditworthiness into a single comparable symbol. An ARAF certification compresses the complex assessment of an autonomous system's governance posture into a GBI score and certification tier that communicates governance quality without requiring the recipient to conduct the full assessment. The assessment evaluates governance posture across six dimensions: autonomy level, data sensitivity exposure, contract infrastructure, liability architecture, commercial leverage, and adaptive stability.</div>
+      </li>
+      <li class="function-item">
+        <div class="function-label">Accountability Transfer</div>
+        <div class="function-body">When an accredited ARAF assessor issues a certification, it accepts professional responsibility for the quality of the assessment that produced it. That accountability transfer is what gives the signal credibility: it is not a claim by the organisation about itself, but a representation by an independent assessor operating under a defined methodology.</div>
+      </li>
+      <li class="function-item">
+        <div class="function-label">Market Creation</div>
+        <div class="function-body">Certification makes governance posture comparable across autonomous system deployments. Without comparability, governance quality cannot be priced. Without pricing, governance investment cannot produce a return. SOC 2 certification became a commercial prerequisite for enterprise software procurement. PCI DSS became a condition of payment network participation. ISO 27001 became a procurement requirement for government-facing technology vendors. ARAF certification applies the same market-forming mechanism to autonomous system governance.</div>
+      </li>
+    </ul>
+    <p style="margin-top:1.25rem;">The market is not waiting for perfect governance. It is waiting for measurable governance.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <div class="section-number">Section 2</div>
+    <div class="section-title">Certification Tiers</div>
+    <p>ARAF defines three certification tiers based on the Governance Benchmark Index (GBI). Lower GBI scores indicate stronger governance posture.</p>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-name">ARAF Assessed</span>
+      </div>
+      <div class="tier-body">
+        <p>Independent evaluation completed. The system's governance posture has been assessed and documented by an accredited assessor. The system may require remediation before reaching institutional thresholds.</p>
+      </div>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-name">ARAF Compliant</span>
+        <span class="tier-threshold">GBI &le; 2.50</span>
+      </div>
+      <div class="tier-body">
+        <p>Minimum institutional threshold met. The governance posture supports standard insurance coverage terms and satisfies the governance threshold that enterprise procurement and regulatory engagement require.</p>
+      </div>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-name">ARAF Certified</span>
+        <span class="tier-threshold">GBI &le; 1.75</span>
+      </div>
+      <div class="tier-body">
+        <p>Full agentic bankability supported. The governance posture supports the full conditions of institutional reliance: the system can be classified, governed, insured, financed, and relied upon by the institutional audiences that must assume responsibility for its behaviour. Certification at this tier supports the most favourable coverage terms, the strongest investor governance signal, and the fullest board assurance.</p>
+      </div>
+    </div>
+
+    <p>The tiers create a governance progression that institutions can track over time. An insurer can price conditional coverage during the remediation period and transition to standard terms upon Compliant certification. An investor can model the governance discount at one tier and the valuation benefit on reaching the next.</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <div class="section-number">Section 3</div>
+    <div class="section-title">The Assessor Accreditation Standard</div>
+    <p>Certification is only as credible as the assessors who produce it. The ARAF assessor accreditation standard establishes four requirements:</p>
+    <ul class="requirement-list">
+      <li class="requirement-item"><strong>Demonstrated qualification.</strong> Assessors must demonstrate competence in governance assessment methodology, including the six ARAF dimensions, the multiplier logic, and the evidentiary standard that governance records must satisfy.</li>
+      <li class="requirement-item"><strong>Documented methodology adherence.</strong> Assessors must conduct assessments according to the published ARAF methodology. The methodology is open (licensed under CC BY 4.0), making the assessment process independently reviewable by any institutional audience that relies on the output.</li>
+      <li class="requirement-item"><strong>Independence.</strong> Assessors must be independent of the organisation being assessed. No assessor may certify an organisation with which it has a commercial relationship that could compromise assessment objectivity.</li>
+      <li class="requirement-item"><strong>Accountability.</strong> Assessors are accountable for the quality of the assessments they produce. The accreditation standard includes a review mechanism that can result in accreditation withdrawal where assessors fail to meet the standard.</li>
+    </ul>
+    <div class="truste-note" style="margin-top:1.25rem;">
+      <p>The accreditation architecture was designed with specific reference to the failure mode documented in the FTC's 2014 action against TRUSTe, where inadequate assessor oversight produced over 1,000 certifications that did not reflect actual practice. Assessors are subject to accountability review, and accreditation is contingent on maintaining assessment quality.</p>
+    </div>
+    <p style="margin-top:1rem;"><strong>Self-certification</strong> does not satisfy the ARAF independence requirement. An organisation that produces its own ARAF assessment has produced a self-assessment, not a certification. Self-reported governance is evidence of intent. Independent assessment is evidence of fact.</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <div class="section-number">Section 4</div>
+    <div class="section-title">The Certification Lifecycle</div>
+    <p>Autonomous systems change faster than most governed assets. Models are retrained. Deployment contexts expand. Data sources evolve. A certification that was accurate at issuance may not describe the system operating six months later. The ARAF certification lifecycle follows the structural model that aviation applies to airworthiness: initial certification, event-triggered reassessment, and scheduled maintenance.</p>
+
+    <div class="lifecycle-block">
+      <div class="lifecycle-header">
+        <div class="lifecycle-label">Initial Assessment</div>
+      </div>
+      <div class="lifecycle-body">
+        <p>The initial ARAF assessment evaluates governance posture across all six dimensions and produces: GBI composite score &middot; Full dimensional profile &middot; Multiplier analysis &middot; Remediation roadmap (where required) &middot; Certification designation &middot; Assessment date and validity period.</p>
+      </div>
+    </div>
+
+    <div class="lifecycle-block">
+      <div class="lifecycle-header">
+        <div class="lifecycle-label">Scheduled Reassessment</div>
+      </div>
+      <div class="lifecycle-body">
+        <p>The maximum interval between formal reassessments is 12 months. Reassessment confirms that governance posture has been maintained, or identifies where it has changed and what remediation is required.</p>
+      </div>
+    </div>
+
+    <div class="lifecycle-block" style="margin-bottom:1.25rem;">
+      <div class="lifecycle-header">
+        <div class="lifecycle-label">Event-Triggered Reassessment</div>
+      </div>
+      <div class="lifecycle-body">
+        <p>Material changes trigger reassessment regardless of the ordinary reassessment cycle, including:</p>
+      </div>
+    </div>
+    <ul class="trigger-list" style="margin-bottom:1.25rem;">
+      <li>Significant model updates</li>
+      <li>New deployment contexts</li>
+      <li>Material changes to data sources</li>
+      <li>Anomaly patterns suggesting governance scope drift</li>
+      <li>Regulatory developments materially affecting governance obligations</li>
+      <li>Adverse outcomes implicating governance architecture</li>
+      <li>Material changes to contract infrastructure</li>
+      <li>A government action, including supply chain risk designation, affecting the organisation's primary AI provider or any material component of the Decision Supply Chain</li>
+    </ul>
+
+    <div class="lifecycle-block">
+      <div class="lifecycle-header">
+        <div class="lifecycle-label">Certification Withdrawal</div>
+      </div>
+      <div class="lifecycle-body">
+        <p>Certification may be withdrawn where:</p>
+        <ul class="withdrawal-list" style="margin-top:0.6rem;">
+          <li>Material changes were not notified or addressed</li>
+          <li>Governance posture deteriorates below the certified threshold</li>
+          <li>The assessment was based on materially inaccurate or incomplete information</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section">
+    <div class="section-number">Section 5</div>
+    <div class="section-title">Certification and the Foreseeability Standard</div>
+    <div class="foreseeability-callout">
+      <p>An organisation that has obtained ARAF Certified or ARAF Compliant status from an accredited assessor holds contemporaneous, independently produced evidence that its governance architecture was assessed against a defined standard and found adequate at the time of assessment.</p>
+      <p>That evidence does not constitute a statutory safe harbour. But it is precisely the kind of contemporaneous evidence that courts assessing the standard of care, insurers evaluating coverage, and regulators conducting supervisory review will find relevant to whether reasonable precautions were taken.</p>
+    </div>
+    <p>The governing test established in <span class="cross-ref">ASIC v Bekier [2026] FCA 196</span> applies directly: who was responsible, what did they know, what did they do. Certification is the infrastructure designed to answer those questions before they are asked.</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section">
+    <div class="section-number">Section 6</div>
+    <div class="section-title">Preparing for Assessment</div>
+    <p>An ARAF assessment is a governance decision. Organisations preparing for assessment should follow this sequence:</p>
+    <ol class="assessment-steps">
+      <li>Conduct a preliminary self-review against the six ARAF dimensions to identify the dimensional profile and likely remediation areas</li>
+      <li>Prepare governance documentation across the four evidence categories: design, deployment, operational, and outcome evidence</li>
+      <li>Engage an accredited ARAF assessor</li>
+      <li>Complete the structured assessment process, typically conducted over a period of weeks scaled to system complexity</li>
+      <li>Review the GBI score, dimensional profile, and remediation roadmap</li>
+      <li>Address remediation items before seeking higher certification where necessary</li>
+    </ol>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="doc-footer">
+  <div class="footer-left">
+    ARAF Standard &mdash; Certification v1.0<br>
+    Institute for Autonomous Governance Pty Ltd (ACN 696 112 277) &mdash; March 2026
+  </div>
+  <div class="footer-right">
+    Citation: Martin, Carly. <em>Agentic Risk Architecture Framework (ARAF), Version 3.0.</em><br>
+    Institute for Autonomous Governance Pty Ltd, 2026.
+  </div>
+</footer>
+
+</body>
+</html>

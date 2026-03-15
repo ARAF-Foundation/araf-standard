@@ -1,0 +1,145 @@
+---
+title: GN-001 Assessor Guidance
+description: Assessment guidance for ARAF practitioners. Covers Decision Supply Chain mapping, dimensional scoring procedure, and evidence capture requirements.
+sidebar:
+  label: GN-001 Assessor Guidance
+  order: 1
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+GN-001 is the primary operational guidance document for accredited ARAF assessors. It governs the assessment procedure applied across all ARAF certification tiers and should be read alongside the ARAF Standard, the Six Dimensions specification, and the Governance Coherence Addendum.
+
+This guidance document does not alter the normative requirements of the ARAF Standard. It specifies how assessors operationalise those requirements during the assessment process.
+
+---
+
+## 1. Assessment Scope and Preparation
+
+Before beginning a Decision Supply Chain mapping exercise, the assessor must confirm the following:
+
+The scope of the assessment has been agreed in writing with the organisation, including the specific systems, deployment contexts, and operational boundaries to which the assessment applies.
+
+The organisation has made available the documentation, system access, and personnel contact required for the assessment. Where access is limited, the assessor must note scope limitations in the assessment report.
+
+The applicable certification tier has been identified. The assessment procedure differs between the Assessed, Compliant, and Certified tiers, particularly in evidence requirements and the application of the Governance Coherence Index.
+
+The assessment window has been confirmed. For Compliant and Certified tiers, the minimum assessment window is 180 days. The assessment window must be specified in the final certification report.
+
+---
+
+## 2. Decision Supply Chain Mapping
+
+The Decision Supply Chain mapping exercise is the foundational step of every ARAF assessment. It establishes the governance object: the full chain of systems, actors, and processes through which the organisation produces consequential decisions.
+
+The assessor must map each component of the chain, including the data infrastructure that supplies inputs, the autonomous system or systems at the centre of the chain, any human review or approval stages, and the execution infrastructure that implements decisions. The map must identify each jurisdictional boundary crossed and each third-party provider involved at any stage.
+
+Chain mapping is not a documentation review exercise. The assessor must verify that the documented chain corresponds to the system as it operates, not only as it is specified.
+
+### Decision Event Identification
+
+For assessment purposes, a decision event occurs at the point where the system's decisions cross into consequential execution and an external outcome becomes possible.
+
+In traditional organisational processes, decision events correspond to identifiable human acts such as signing an approval or issuing an instruction. In agentic systems, decision events may occur through interactions between models, human interfaces, and automated infrastructure rather than through a single human action.
+
+Decision events are the points at which the system may execute an external action, commit resources, trigger contractual obligations, create regulatory exposure, or generate liability consequences.
+
+During the Decision Supply Chain mapping exercise, the assessor must identify the locations in the system where decisions cross into consequential execution. These points constitute the decision events for the purposes of Dimension 1 evaluation and governance evidence capture.
+
+For each decision event, the assessor must determine which actor or system controls the execution point and what evidence is generated at that moment. Evidence generated after the fact does not constitute contemporaneous governance evidence.
+
+Once decision events are identified, Dimension 1 scoring is applied to those events rather than to the system in the abstract.
+
+<Aside type="note" title="Scope of this concept">
+The decision event concept is used only for assessment procedure. It does not alter the dimensional boundary mappings defined in the ARAF Standard.
+</Aside>
+
+### Human Interaction and Decision Control
+
+In systems described as human-in-the-loop, the assessor must determine whether the human interaction actually controls the execution point or merely records acknowledgement of a recommendation.
+
+Where an automated system executes the consequential action after a human interaction step, the decision event occurs at the automated execution point rather than at the human interface.
+
+Human interaction alone does not constitute control of a decision event unless the system cannot execute the outcome without that human authorisation.
+
+The practical test is this: if the human interface fails or is bypassed, can the automated infrastructure still execute the consequential outcome? If yes, the decision event is controlled by the automated system, not by the human reviewer. The system's autonomy classification must reflect the actual execution architecture, not the presence of a human interface step.
+
+This is one of the most common sources of understated autonomy classification in enterprise deployments. Organisations frequently equate human interaction with human control. Governance depends on who controls the execution point, not on who observes or acknowledges a recommendation.
+
+### Deferred Execution Architectures
+
+In systems using asynchronous or queued execution architectures, the model output may not constitute the decision event.
+
+Where a model output is written to a queue or workflow system and executed later by downstream infrastructure, the decision event occurs at the point where the queued instruction is consumed and execution is committed.
+
+Assessors must therefore distinguish between recommendation generation and consequential execution when identifying decision events.
+
+The practical question is: at what point does the system commit to producing the external consequence? The component that makes that commitment is the decision event location. Model output written to a queue is a recommendation in infrastructure form. The decision event occurs downstream, when the queued instruction crosses into execution.
+
+This pattern appears frequently in financial transaction systems, customer service automation, logistics optimisation, fraud detection workflows, and enterprise process automation. In each case, the model output is one step in the decision production chain. The consequential authority often sits in the workflow layer rather than in the model itself.
+
+---
+
+## 3. Dimensional Scoring Procedure
+
+Dimensional scoring is applied after the Decision Supply Chain map is complete and decision events have been identified.
+
+Each dimension is scored on a 1.0 to 5.0 scale where 1.0 represents the strongest governance posture and 5.0 represents critical governance exposure. The scale mirrors the GBI scoring convention: lower scores indicate stronger governance.
+
+Dimension 1 scoring is applied to the decision events identified during chain mapping, not to the system as an abstract entity. The assessor evaluates the degree to which those decision events occur without per-step human authorisation.
+
+Dimensions 3, 4, and 5 are institutional-layer assessments. They evaluate contractual structure, liability architecture, and commercial leverage respectively. These dimensions are not runtime enforcement concepts and cannot be evaluated through technical audit alone. Assessors must review the relevant contractual and governance documentation alongside any technical evidence.
+
+Dimension 6 evaluates whether governance architecture remains stable as the system evolves. Assessors must review the organisation's change governance procedures, model version tracking, and operational scope documentation to evaluate adaptive stability.
+
+---
+
+## 4. Evidence Requirements
+
+Evidence requirements vary by certification tier.
+
+For the ARAF Assessed tier, design adequacy assessment is the standard. No operational coherence evidence is required.
+
+For the ARAF Compliant tier, Tier 1 or Tier 2 evidence is required across assessed dimensions. Where Tier 2 evidence is used in lieu of Tier 1 for Dimensions 1, 2, or 6, the assessment report must note the limitation. Tier 2 evidence is the expected standard for Dimensions 3, 4, and 5.
+
+For the ARAF Certified tier, Tier 1 evidence is required for at least 80% of sampled controls. Tier 2 evidence is acceptable for Dimensions 3, 4, and 5. Any control assessed on Tier 2 evidence must be individually identified in the assessment report.
+
+Evidence generated after the governance event it purports to record does not qualify as Tier 1 or Tier 2 evidence. The assessor must verify the timestamp and provenance of evidence, not only its existence.
+
+Evidence must be sampled across the full assessment window, not only from periods immediately preceding the assessment. Systematic sampling gaps within the window are a coherence finding.
+
+---
+
+## 5. Governance Coherence Assessment
+
+For Compliant and Certified tiers, the assessment incorporates the Governance Coherence Index alongside the GBI dimensional scores. The GCI evaluates whether governance architecture is actually exercised in operation, not only whether it is correctly designed.
+
+The GCI addresses three components: Authority Adherence, Control Exercise, and Drift Detection. Each is evaluated per dimension. The assessor must report GCI scores individually rather than as a single aggregate.
+
+The absence of recorded exceptions is a negative coherence indicator, not evidence of clean operation. Real deployments of autonomous systems always produce edge cases and governance events. Zero recorded exceptions suggests the governance process is not being exercised or that exception recording is not functional.
+
+Full GCI methodology is specified in the Governance Coherence Addendum.
+
+---
+
+## 6. Assessment Report Requirements
+
+Every assessment report must specify the certification tier, the GBI dimensional scores and composite score, the assessment window, and the evidence tier used per dimension.
+
+For Compliant and Certified assessments, the report must separately present design adequacy findings and operational coherence findings. The GCI dimensional scores must be reported individually.
+
+The following scope limitation must appear in every Compliant and Certified assessment report:
+
+> *This certification covers the governance architecture design and operational coherence of the assessed organisation during the assessment window specified above. It does not guarantee future system performance, safety, or absence of adverse outcomes. Certification is subject to re-assessment upon the occurrence of material change events as defined in the ARAF Standard.*
+
+---
+
+## 7. Re-Assessment Triggers
+
+The following events require mandatory reassessment before certified status can be maintained: material change to the system's autonomy level of more than one Autonomy Gradient level; substitution of a primary AI provider or model; significant expansion of operational scope beyond the scope assessed; a material incident in which the governance architecture was engaged, tested, or found insufficient; or discovery of systematic governance drift identified outside the normal assessment cycle.
+
+Organisations must notify their accredited assessor of triggering events within 60 days of occurrence. Continued use of a certification after a triggering event without initiating reassessment constitutes a certification breach.
+
+---
+
+*GN-001 | Institute for Autonomous Governance Pty Ltd | Version 1.0 | March 2026*
