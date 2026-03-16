@@ -1,0 +1,161 @@
+---
+title: Evidence Checklist
+description: Pilot evidence checklist for building a contemporaneous governance record aligned with ARAF dimensional, EIS-01, and certification requirements.
+sidebar:
+  label: Evidence Checklist
+  order: 2
+---
+
+This checklist helps pilot teams produce evidence that can support dimensional scoring, GBI interpretation, and certification pathway planning. Evidence must satisfy both the dimensional requirements (what governance areas to document) and the EIS-01 record structure requirements (what each evidence record must contain).
+
+---
+
+## 1. Pilot Definition
+
+- Pilot name, owner, and accountable executive recorded
+- System boundary and authorised autonomous actions defined
+- Commitment thresholds and stop conditions documented
+- In-scope jurisdictions and legal context identified
+- Target certification tier identified (Assessed, Compliant, or Certified) and evidence requirements for that tier understood
+
+---
+
+## 2. Decision Supply Chain Mapping
+
+- End-to-end chain mapped from data input to execution outcome: Data Inputs, Model Processing, Decision Formation, Execution, Institutional Exposure, and Governance Lifecycle
+- Internal and external parties identified by governance role and classified by provider type:
+  - **Commodity infrastructure providers** -- governance-neutral: cloud hosting, compute, storage
+  - **Decision-participating providers** -- governance-relevant: foundation model developers, data suppliers whose outputs shape decisions
+  - **Governance-participating vendors** -- governance-critical: platforms producing governance signals, compliance assessments, or oversight evidence. Reliance on a governance-participating vendor's outputs does not discharge the deploying organisation's governance obligation
+- Accountability assignments recorded for each chain link across the four-link chain (design, deployment, operational, outcome)
+- Boundary points for contract and liability obligations identified
+- Jurisdictional boundaries crossed in the chain recorded
+
+---
+
+## 3. Dimensional Evidence Minimums
+
+### Dimension 1 (Autonomy Gradient)
+
+- Decision authority definitions and operational autonomy level documented
+- Commitment authority (maximum financial or operational commitment without human authorisation) defined
+- Scope boundary controls and enforcement mechanisms documented
+- Exception handling rules (what occurs outside trained parameters) defined
+- Human oversight trigger rules and adequacy assessment for the autonomy level at which the system operates
+
+### Dimension 2 (Data Sensitivity Exposure)
+
+- Data class inventory covering: personal information, health information, financial information, commercially sensitive information, and data subject to jurisdictional transfer restrictions
+- Access and handling controls documented
+- Training data provenance records across three layers:
+  - **Foundation model layer:** developer representations and warranties
+  - **Fine-tuning layer:** legal basis, intellectual property rights, consent basis
+  - **RAG layer:** copyright exposure, accuracy exposure, data protection exposure at inference time
+
+### Dimension 3 (Contract Infrastructure)
+
+- Executed agreements for participating providers (customer agreements, vendor agreements, data processing agreements)
+- AI-specific governance and audit clauses identified
+- Responsibility allocation at execution boundaries documented
+- Liability adequacy assessment: whether liability provisions reflect actual exposure from autonomous operation rather than conventional software exposure
+- Negotiation governance: defined process for reviewing and approving deviations from standard contract positions
+
+### Dimension 4 (Liability Architecture)
+
+- AE3 (Autonomous Action Consequences) recognition: the organisation has explicitly identified and documented the AE3 category for each material autonomous system
+- Liability allocation map covering autonomous decision consequences
+- Cap and carve-out terms assessed for adequacy against actual AE3 exposure
+- Insurance position and coverage notes: whether coverage addresses consequences of autonomous system decisions
+
+### Dimension 5 (Commercial Leverage)
+
+- Dependency concentration analysis (proportion of critical function processed by the system)
+- Revenue concentration assessment (degree to which revenue depends on continuous operation)
+- Remediation leverage points and commercial resistance assessment
+- Escalation pathway where supplier non-compliance occurs
+- Lock-in dynamics: contractual and technical barriers to provider substitution or system removal
+
+### Dimension 6 (Adaptive Stability)
+
+- Change-control workflow for model or policy updates with governance impact assessment
+- Governance telemetry records: authority boundary adherence, oversight cadence, escalation events, scope compliance (distinct from engineering telemetry such as system performance, latency, and error rates)
+- Drift detection infrastructure: model version tracking, operational scope comparison against assessed scope, decision pattern analysis
+- Periodic governance review cadence documented
+
+---
+
+## 4. Evidence Record Structure (EIS-01)
+
+Each consequential decision must be reconstructable from a contemporaneous record containing four required components. A record missing any component does not satisfy Tier 1 evidence requirements regardless of the quality of the components it does contain.
+
+- **Execution Event:** what happened, when, and which system instance produced it. Confirm that execution timestamps, decision outputs, system instance identifiers, and scope references are captured for each consequential decision.
+- **Contextual State:** input data state at execution, model version reference, policy or rule set invoked, threshold parameters active. Confirm that the decision environment is recorded contemporaneously, not reconstructed after the fact.
+- **Authority and Attribution:** governance authority identifier, accountability holder at time of execution, deploying organisation identity. Where a human reviewer exercised a review function, the human determination and its basis must be recorded. Where no human review was performed, the record must affirmatively indicate this.
+- **Integrity Anchor:** tamper-resistant reference establishing that the record existed at the time claimed and has not been altered. The Integrity Anchor must be produced by infrastructure independent of the system that generated the decision record. Application-level timestamps generated by the same system do not satisfy this requirement. Acceptable mechanisms include: cryptographic hashing with external timestamping, append-only log infrastructure with independent integrity verification, external timestamp authority records, and signed immutable registry entries.
+
+### Governance agent outputs (where applicable)
+
+If automated governance systems (compliance assessment tools, governance scoring infrastructure, workflow validation mechanisms) produce evidence relied upon in the assessment:
+
+- Confirm the governance agent has been independently validated prior to the assessment period
+- Confirm each governance agent output record satisfies the four-component structure above
+- Document which governance conditions were assessed by governance agent outputs rather than infrastructure-generated logs
+- Prepare the scope limitation disclosure required by EIS-01 Section 7.4
+
+### 180-day evidence window
+
+For pilots targeting Compliant or Certified, evidence must span a minimum 180-day assessment window. Build evidence capture into operations from pilot launch so the window begins accumulating immediately. Evidence must be sampled across the entire window, not only from periods immediately preceding assessment.
+
+---
+
+## 5. Evidence Quality Tiering
+
+- **Tier 1** evidence identified where governance infrastructure produces contemporaneous, tamper-evident records with a valid Integrity Anchor. Confirm the Integrity Anchor mechanism is independent of the system producing the record.
+- **Tier 2** evidence identified where contemporaneous documentation supports governance decisions (board papers, AIOC minutes, deployment approval records) but an automated Integrity Anchor is absent.
+- **Tier 3** evidence flagged where records are reconstructed after the fact. Tier 3 does not support Compliant or Certified certification. Upgrade pathway identified for each Tier 3 item.
+- **Tier 4** (management representation without contemporaneous documentation) identified and flagged as inadmissible for any certification tier. Upgrade to contemporaneous documentation required before assessment.
+- Evidence uplift actions assigned to reduce Tier 3 and Tier 4 dependency, with owners and target dates.
+
+### Certification tier evidence requirements
+
+| Tier | ARAF Assessed | ARAF Compliant | ARAF Certified |
+|---|---|---|---|
+| Tier 1 | Not required | Required for D1, D2, D6 | Required for ≥ 80% of sampled controls |
+| Tier 2 | Acceptable | Acceptable for D3, D4, D5 | Acceptable for D3, D4, D5 (individually identified in report) |
+| Tier 3 | Acceptable | Does not support certification | Does not support certification |
+| Tier 4 | Not admissible | Not admissible | Not admissible |
+
+---
+
+## 6. Pilot Governance Outputs
+
+- Pilot dimensional profile draft across all six dimensions
+- Preliminary GBI composite score calculation
+- Multiplier condition check against all three canonical triggers:
+  - Systemic Escalation (D1 ≥ 4.0 and D4 ≥ 4.0) -- adds +3 to composite score
+  - Infrastructure Collapse (D3 ≥ 4.0 and D1 ≥ 3.0) -- adds +2 to composite score
+  - Leverage Collapse (D5 ≥ 4.0 and D4 ≥ 3.0) -- adds +2 to composite score
+- Compound Activation Principle applied: evaluate whether compound governance conditions exist even where one dimensional score falls marginally below a mechanical threshold
+- Remediation roadmap with owners, target dates, and sequencing (remediate the trigger dimension closest to its threshold first for greatest composite score movement)
+- Board or governance committee briefing pack
+
+---
+
+## 7. Readiness Review
+
+- Evidence pack is complete and export-ready
+- Four-component EIS-01 record structure confirmed for all consequential decisions
+- Evidence tier classification completed per dimension
+- Ownership for ongoing evidence maintenance assigned
+- Residual governance risks accepted or remediated
+- For Compliant or Certified: 180-day evidence window elapsed and governance artefacts sampled across the entire window
+- Pilot decision recorded: proceed, proceed with conditions, or pause
+
+---
+
+## Related Pages
+
+- [Worked Examples](/pilot/worked-examples/)
+- [Internal Preparation Checklist](/getting-started/internal-preparation-checklist/)
+- [Evidence Infrastructure Standard (EIS-01)](/evidence/evidence-infrastructure-standard/)
+- [Certification and Institutional Reliance](/certification/certification-framework/)

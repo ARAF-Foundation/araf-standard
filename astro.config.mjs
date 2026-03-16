@@ -26,6 +26,11 @@ export default defineConfig({
       status: 301,
       destination: '/assessor-guidance/getting-started/',
     },
+    '/methodology/assessor-accreditation-standard/': {
+      status: 301,
+      destination: '/assessor-guidance/assessor-accreditation-standard/',
+    },
+    '/methodology/evidence-standard/': { status: 301, destination: '/evidence/evidence-infrastructure-standard/' },
   },
   integrations: [
     starlight({
@@ -84,6 +89,7 @@ export default defineConfig({
             { label: 'Governance Benchmark Index', slug: 'certification/governance-benchmark-index' },
             { label: 'Governance Coherence Addendum', slug: 'certification/governance-coherence-addendum' },
             { label: 'Certification Framework', slug: 'certification/certification-framework' },
+            { label: 'GBI Institutional Reliance Guide', slug: 'certification/gbi-institutional-reliance-guide' },
           ],
         },
         {

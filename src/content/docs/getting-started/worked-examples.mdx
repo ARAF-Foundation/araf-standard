@@ -1,0 +1,156 @@
+---
+title: Worked Examples
+description: Practical examples showing how pilot teams can apply ARAF dimensional outputs, GBI signals, GCI coherence assessment, and evidence quality tiers.
+sidebar:
+  label: Worked Examples
+  order: 1
+---
+
+These worked examples show how ARAF outputs can be used in pilot governance decisions. Each example identifies the dimensional pressure points, the governance actions required, and the evidence that must be produced to support assessment.
+
+All evidence records should satisfy the four-component structure defined in EIS-01 (Execution Event, Contextual State, Authority and Attribution, Integrity Anchor) to qualify for Tier 1 classification. See the [Evidence Checklist](/pilot/evidence-checklist/) for the complete record structure requirements.
+
+---
+
+## Example 1: Customer Service Escalation Agent
+
+### Pilot context
+
+An organisation deploys an autonomous customer service agent that can approve low-value credits and initiate service actions without human approval.
+
+### Governance signal
+
+**D1 (Autonomy Gradient)** is elevated because the system can commit value and trigger operational changes without per-decision human authorisation. Commitment authority and scope boundary enforcement are the primary sub-factors.
+
+**D4 (Liability Architecture)** is moderate where customer remediation pathways are defined but not fully tested. AE3 (Autonomous Action Consequences) recognition is required: the organisation must document the category of consequences that arise from autonomous credit approvals.
+
+**D6 (Adaptive Stability)** is elevated because weekly model updates are not yet coupled to formal governance change approval. This is a Drift Detection risk: the system's behaviour may evolve away from the governance assumptions made at deployment.
+
+### Multiplier check
+
+D1 and D4 interact. If D1 reaches 4.0 and D4 reaches 4.0, Systemic Escalation activates (+3). Monitor both dimensions and prioritise D4 remediation -- AE3 recognition and liability cap adequacy -- before D1 escalates.
+
+### Pilot action
+
+- Set a hard commitment cap for autonomous credits with documented authority boundary
+- Add a mandatory escalation rule for edge-case categories with defined triggers
+- Require change-control approval before model updates go live, with governance impact assessment for each update
+- Establish governance telemetry: record authority boundary adherence, escalation events, and override instances separately from engineering telemetry (system performance, response times, error rates)
+
+### Evidence expected
+
+- Deployment approval record with scope boundary, cap settings, and accountability assignment across the four-link chain (design, deployment, operational, outcome)
+- Escalation logs showing when human intervention occurred, under what authority, and with what determination
+- Change approval records linked to each model release, with governance impact assessment
+- Governance telemetry records across the evidence window demonstrating Control Exercise (governance controls performed at required cadence) and Authority Adherence (decisions within defined boundaries)
+
+### Evidence tier target
+
+Deployment approval and change approval records are Tier 2 (contemporaneous documentation). Escalation logs and governance telemetry produced by infrastructure are Tier 1 if they include a valid Integrity Anchor. Confirm the Integrity Anchor is produced by infrastructure independent of the system generating the records.
+
+---
+
+## Example 2: Procurement Triage Assistant
+
+### Pilot context
+
+A procurement team uses an autonomous triage assistant to classify inbound requests, recommend suppliers, and draft purchase pathways.
+
+### Governance signal
+
+**D2 (Data Sensitivity Exposure)** rises where commercial terms and potentially sensitive pricing data are processed. Operational data sensitivity is the immediate concern. Training data provenance should be assessed across three layers: foundation model (developer representations), fine-tuning (if applicable), and RAG (any retrieval of proprietary procurement data at inference time).
+
+**D3 (Contract Infrastructure)** rises where supplier platform terms do not clearly allocate governance obligations for autonomous decision support. Vendor agreement adequacy and liability adequacy are the primary sub-factors.
+
+**D5 (Commercial Leverage)** rises if the team cannot enforce remediation commitments on the supplier, or if operational dependency creates lock-in dynamics that constrain governance remediation.
+
+### Multiplier check
+
+D3 and D1 interact for Infrastructure Collapse. If the triage assistant operates at D1 ≥ 3.0 and D3 reaches 4.0 (no AI-specific contract provisions, no liability allocation for autonomous outputs), Infrastructure Collapse activates (+2). Prioritise contract remediation.
+
+D5 and D4 interact for Leverage Collapse. If the organisation becomes dependent on a single supplier (D5 ≥ 4.0) with inadequate liability architecture (D4 ≥ 3.0), remediation becomes structurally resistant. Monitor dependency concentration.
+
+### Pilot action
+
+- Restrict ingestion to approved data classes with documented classification controls
+- Add contractual language covering decision traceability, audit access, and liability allocation for autonomous decision support outputs
+- Define supplier remediation timeframes and escalation consequences
+- Document provider classification: is the supplier a commodity infrastructure provider, a decision-participating provider, or a governance-participating vendor?
+
+### Evidence expected
+
+- Data classification controls and access policy evidence with data class inventory
+- Executed contract clauses allocating accountability for autonomous decision support, with AI-specific governance provisions
+- Supplier governance notices, remediation requests, and response records
+- Provider dependency mapping and fallback documentation
+
+### Evidence tier target
+
+Contract documentation and data classification policies are Tier 2. If the procurement system produces automated logs of data access, classification decisions, and triage outputs with infrastructure-generated timestamps and an independent Integrity Anchor, those records qualify for Tier 1.
+
+---
+
+## Example 3: Claims Routing and Prioritisation
+
+### Pilot context
+
+An insurer deploys a claims routing system that prioritises claims for handling urgency and allocates review pathways.
+
+### Governance signal
+
+**D4 (Liability Architecture)** becomes central because routing decisions affect customer outcomes and claim handling timelines. AE3 recognition is required: the system's autonomous routing decisions produce consequences -- delayed or accelerated claim handling -- that the organisation's liability architecture must address.
+
+**D6 (Adaptive Stability)** is elevated where model behaviour changes with new data and feedback loops. This is a Drift Detection question: the system may evolve its routing patterns away from the governance assumptions under which it was assessed.
+
+**GCI evaluation** depends on whether governance controls remain effective through updates. Control Exercise (are governance reviews happening at the required cadence?) and Drift Detection (has the system's behaviour diverged from assessed scope?) are evaluated over the 180-day evidence window.
+
+### Multiplier check
+
+D1 and D4 interact. If the routing system exercises significant autonomous authority (D1 ≥ 4.0) and the liability architecture does not address autonomous routing consequences (D4 ≥ 4.0), Systemic Escalation activates (+3). The volume of autonomous routing decisions is high and liability governance is inadequate to absorb them.
+
+### Pilot action
+
+- Define protected categories requiring human review before final routing, with documented override rules
+- Record rationale traces for priority assignments (this satisfies the Contextual State component of the EIS-01 record structure)
+- Introduce monthly governance review checkpoints tied to incident and complaint data (this generates Control Exercise evidence for GCI assessment)
+- Establish drift monitoring: compare current routing distributions against assessed distributions to detect systematic changes
+
+### Evidence expected
+
+- Routing policy with documented override rules and authority boundaries
+- Decision trace records for sampled claims, including the four EIS-01 components: what routing decision was made (Execution Event), under what model version and parameters (Contextual State), under whose authority (Authority and Attribution), with tamper-resistant verification (Integrity Anchor)
+- Governance review minutes, approved remediation actions, and evidence of governance control exercise across the 180-day window
+- Drift analysis reports comparing current routing patterns against assessed baseline
+
+### Evidence tier target
+
+Decision trace records with infrastructure-generated Integrity Anchors are Tier 1. Governance review minutes are Tier 2. If drift analysis is produced by an automated governance system, the governance agent output admissibility conditions under EIS-01 Section 7 apply: the governance agent must be independently validated, and each output must satisfy the four-component record structure.
+
+---
+
+## How to Use These Examples
+
+Use each example as a template:
+
+1. Define the pilot boundary and autonomous commitments.
+2. Map likely dimensional pressure points before deployment.
+3. Check multiplier conditions -- Systemic Escalation (D1 ≥ 4.0 and D4 ≥ 4.0), Infrastructure Collapse (D3 ≥ 4.0 and D1 ≥ 3.0), Leverage Collapse (D5 ≥ 4.0 and D4 ≥ 3.0). Apply the Compound Activation Principle where scores are near thresholds.
+4. Agree controls, ownership, and escalation triggers.
+5. Build contemporaneous evidence capture into operations from day one. Ensure each consequential decision produces a record satisfying the four EIS-01 components.
+6. Classify evidence by tier and confirm it meets the requirements for the target certification tier:
+   - **ARAF Assessed:** no minimum evidence tier required
+   - **ARAF Compliant:** Tier 1 required for D1, D2, D6; Tier 1 or Tier 2 acceptable for D3, D4, D5
+   - **ARAF Certified:** Tier 1 required for ≥ 80% of sampled controls; Tier 2 acceptable for D3, D4, D5
+   - **Tier 3** (reconstructed) does not support Compliant or Certified certification
+   - **Tier 4** (management representation) is excluded from all certification tiers
+
+For the full evidence record structure requirements, use the [Evidence Checklist](/pilot/evidence-checklist/).
+
+---
+
+## Related Pages
+
+- [Evidence Checklist](/pilot/evidence-checklist/)
+- [Internal Preparation Checklist](/getting-started/internal-preparation-checklist/)
+- [Evidence Infrastructure Standard (EIS-01)](/evidence/evidence-infrastructure-standard/)
+- [Certification and Institutional Reliance](/certification/certification-framework/)
