@@ -2,14 +2,46 @@
 title: Governance Benchmark Index
 description: Normative scoring model translating six-dimensional assessment into comparable governance classification.
 ---
+import { Image } from 'astro:assets';
 
-<div className="standard-page">
+The Governance Benchmark Index (GBI) is not a simple composite indicator of governance quality. It is a measure of governance stability: the degree to which the governance architecture is designed, exercised, and resilient to the failure modes specific to autonomous system deployment.
 
-The Governance Benchmark Index (GBI) is the composite scoring methodology used within ARAF to translate six-dimensional governance assessment into a comparable institutional signal.
+GBI scores should be read as indicators of governance risk intensity rather than as abstract quality scores. The scale runs from 1.0 (strongest governance posture) to 5.0 (critical governance exposure). This inversion is intentional. It mirrors the logic of credit ratings and classification society surveys: lower scores indicate greater institutional reliability.
 
-The GBI does not replace the dimensional profile. It compresses it. Its purpose is to make governance posture communicable across institutional settings without losing the underlying assessment logic.
+Because autonomous systems do not fail through isolated weaknesses alone, the GBI does not treat dimensional scores as simply additive. Where compound weaknesses exist across dimensions, multiplier logic applies to reflect the amplified systemic exposure.
 
-Technical safety standards tell you whether the system works. The GBI tells you whether the institution deploying it has the governance architecture to be held accountable when it does.
+The GBI is intended to support structured interpretation by boards, operators, assessors, insurers, investors and regulators. It is not a general maturity index. Its function is to make governance risk legible in a form that institutional audiences can act on.
+
+### Governance Stability Bands
+
+| GBI Score | Governance Stability | Risk Interpretation | Institutional Reading |
+|-----------|---------------------|---------------------|-----------------------|
+| 1.0–1.5 | High stability | Strong governance architecture with low structural fragility | Appropriate for high-trust institutional reliance |
+| 1.6–2.5 | Operational stability | Governance architecture is sound, with manageable weaknesses | Suitable for complex deployment with normal oversight |
+| 2.6–3.5 | Emerging fragility | Governance weaknesses are present and may impair resilience | Enhanced scrutiny advised |
+| 3.6–4.5 | Elevated systemic risk | Structural weaknesses materially increase failure or cascade risk | Constrained reliance pending remediation |
+| 4.6–5.0 | Structural failure | Governance breakdown likely or already evident | Not suitable for institutional reliance |
+| 1.0-1.5 | High stability | Strong governance architecture with low structural fragility | Appropriate for high-trust institutional reliance |
+| 1.6-2.5 | Operational stability | Governance architecture is sound, with manageable weaknesses | Suitable for complex deployment with normal oversight |
+| 2.6-3.5 | Emerging fragility | Governance weaknesses are present and may impair resilience | Enhanced scrutiny advised |
+| 3.6-4.5 | Elevated systemic risk | Structural weaknesses materially increase failure or cascade risk | Constrained reliance pending remediation |
+| 4.6-5.0 | Structural failure | Governance breakdown likely or already evident | Not suitable for institutional reliance |
+
+These bands are not compliance classifications. They indicate the relative stability of the governance architecture and the degree of caution appropriate for institutional reliance.
+
+![Governance Stability Bands](/images/diagrams/governance-stability-bands-2x.png)
+
+### Institutional Use of the GBI
+
+The GBI may be used as a structured governance signal in contexts including internal board oversight, insurance underwriting, investor diligence, regulatory review, and enterprise procurement. The same score carries different operational meaning depending on the audience.
+
+The GBI does not replace legal, technical or regulatory assessment. Its function is to provide a governance risk signal that is structured, comparable, and decision-useful across institutional contexts.
+
+### Distinction from Process-Only Frameworks
+
+Many AI governance frameworks define principles, management processes, or control expectations at a level of abstraction that makes consistent scoring impossible. Two organisations that both comply with a principles framework may have governance architectures with materially different risk profiles. A principles framework cannot distinguish between them. The GBI can.
+
+Because it scores against specific dimensional criteria, with defined scoring logic, multiplier conditions, and evidence quality requirements, it produces a signal that is consistent across entities, reproducible across assessors, and comparable across time periods.
 
 <nav className="standard-toc" aria-label="On this page">
 	<p><strong>On this page</strong></p>
@@ -26,7 +58,8 @@ Technical safety standards tell you whether the system works. The GBI tells you 
 		<li><a href="#dimensional-profile-vs-composite-score">Dimensional Profile vs Composite Score</a></li>
 		<li><a href="#certification-use">Certification Use</a></li>
 	</ul>
-</nav>
+
+	</nav>
 
 <a id="purpose-of-the-gbi"></a>
 ## 1. Purpose of the GBI
@@ -36,7 +69,6 @@ Institutional audiences need comparability. Boards, insurers, investors, and reg
 - comparable across entities
 - understandable without reproducing the full methodology
 - grounded in a structured assessment framework
-- capable of signalling threshold distinctions
 
 The GBI performs that function. It is the governance equivalent of a credit rating in bond markets or a classification society survey in marine insurance: an independently produced, comparably expressed signal that allows risk to be assessed rather than excluded. The underlying principle the GBI serves is that institutions can rely on autonomous systems only to the extent that the decisions those systems produce can be reconstructed from contemporaneous governance records. The GBI score is the compressed signal that communicates whether that condition is met.
 
@@ -44,7 +76,6 @@ The GBI performs that function. It is the governance equivalent of a credit rati
 ## 2. Scoring Logic
 
 Each autonomous system deployment is assessed across six dimensions:
-
 - Autonomy Gradient
 - Data Sensitivity Exposure
 - Contract Infrastructure
@@ -77,24 +108,25 @@ The choice of a numeric scale rather than a letter-grade system preserves the gr
 		</thead>
 		<tbody>
 			<tr>
-				<td>1.0–1.75</td>
+				<td>1.0-1.75</td>
 				<td>Strong governance posture</td>
 			</tr>
 			<tr>
-				<td>1.76–2.50</td>
+				<td>1.76-2.50</td>
 				<td>Minimum institutional threshold met</td>
 			</tr>
 			<tr>
-				<td>2.51–3.50</td>
+				<td>2.51-3.50</td>
 				<td>Material governance weakness requiring remediation</td>
 			</tr>
 			<tr>
-				<td>3.51–5.00</td>
+				<td>3.51-5.00</td>
 				<td>High governance risk / institutional inadequacy</td>
 			</tr>
 		</tbody>
 	</table>
-</div>
+
+Guidance on how institutional audiences — including insurers, regulators, investors, and boards — apply GBI signals in practice is provided in the [GBI Institutional Reliance Guide](/certification/gbi-institutional-reliance-guide/).
 
 Higher scores indicate greater governance risk, not higher governance maturity.
 
@@ -115,10 +147,6 @@ The GBI composite score is calculated in three steps.
 Step 1 - Base composite: sum the six dimensional scores and divide by six. Each dimension contributes equally to the base composite.
 
 Step 2 - Multiplier adjustment: identify active multipliers against the trigger conditions. Add the value of each active multiplier to the base composite. Where two multipliers are active simultaneously, both values are added (additive, not sequential).
-
-Step 3 - Scale ceiling: if the adjusted composite exceeds 5.0, the GBI is recorded as 5.0. A capped score indicates critical governance exposure. The precise adjusted figure above 5.0 carries no additional interpretive value.
-
-GBI = (D1 + D2 + D3 + D4 + D5 + D6) / 6 + active multiplier values, capped at 5.0
 
 ### Worked example (single multiplier)
 
@@ -268,8 +296,23 @@ Individual dimensional weaknesses are often manageable. Compound weaknesses crea
 
 Higher GBI numbers represent greater governance risk, not stronger governance performance.
 
+<a id="governance-risk-interpretation"></a>
+## 5. Governance Risk Interpretation
+
+| GBI Score | Governance Stability | Risk Interpretation | Institutional Reading |
+|-----------|---------------------|---------------------|-----------------------|
+| 1.0–1.5 | High stability | Strong governance architecture with low structural fragility | Appropriate for high-trust institutional reliance |
+| 1.6–2.5 | Operational stability | Governance architecture is sound, with manageable weaknesses | Suitable for complex deployment with normal oversight |
+| 2.6–3.5 | Emerging fragility | Governance weaknesses are present and may impair resilience | Enhanced scrutiny advised |
+| 3.6–4.5 | Elevated systemic risk | Structural weaknesses materially increase failure or cascade risk | Constrained reliance pending remediation |
+| 4.6–5.0 | Structural failure | Governance breakdown likely or already evident | Not suitable for institutional reliance |
+
+These bands are not compliance classifications. They indicate the relative stability of the governance architecture and the degree of caution appropriate for institutional reliance.
+
+![Governance Stability Bands](/images/diagrams/governance-stability-bands-2x.png)
+
 <a id="certification-thresholds"></a>
-## 5. Certification Thresholds
+## 6. Certification Thresholds
 
 The GBI anchors the certification thresholds within ARAF.
 
@@ -464,7 +507,6 @@ That distinction matters. The GBI is methodology. Certification is market infras
 Certification issued by accredited assessors operating under a defined methodology, with independence requirements, conflict disclosure protocols, and quality assurance processes, carries institutional weight that a self-reported score does not.
 
 The assessor ecosystem model follows established governance precedent: ISO certification is conducted by accredited certification bodies, PCI DSS compliance is assessed by Qualified Security Assessors, CREST-accredited penetration testing is conducted by firms demonstrating competence against a defined standard. ARAF certification follows the same structure.
-
 </div>
 
 ---
