@@ -3,64 +3,244 @@ title: Evidence Infrastructure Standard
 description: Minimum requirements for compliant governance decision records under ARAF. Defines the four-component canonical governance decision record, evidence tiers, D6 two-layer model, and governance agent output admissibility.
 sidebar:
   label: Evidence Infrastructure Standard (EIS-01)
-  order: 1
+  order: 2
 ---
 
-# Evidence Infrastructure Standard (EIS-01)
+*ARAF Implementation Specification &middot; EIS-01 &middot; Version 3.0 &middot; March 2026 &middot; Institute for Autonomous Governance Pty Ltd*
 
-**Version 3.0 · March 2026 · Institute for Autonomous Governance Pty Ltd**
-
-## 1. Canonical Properties
-
-The minimum structure of a compliant governance decision record under ARAF must satisfy four properties: authenticity, integrity, traceability, and chain of custody.
-
-## 2. Evidence Tier Requirements
-
-The evidence infrastructure standard defines four evidence tiers:
-
-| Tier | Description | Integrity Anchor |
-|------|-------------|-----------------|
-| 1    | Infrastructure-generated, tamper-evident records | Required |
-| 2    | Contemporaneous documentation | Optional |
-| 3    | Reconstructed documentation | Not admissible for certification |
-| 4    | Management representation | Excluded |
-
-## 3. D6 Two-Layer Model
-
-The D6 model distinguishes between design evidence and operational evidence. Both must be present for certification.
-
-## 4. Four-Component Canonical Record
-
-A compliant governance decision record must include:
-- Execution Event
-- Contextual State
-- Authority and Attribution
-- Integrity Anchor
-
-## 5. Certification Tier Requirements
-
-| Tier | Evidence Requirement |
-|------|---------------------|
-| Assessed | Tier 1 or Tier 2 |
-| Compliant | Tier 1 only |
-| Certified | Tier 1 only |
-
-## 6. Governance Agent Output Admissibility
-
-Governance agent outputs are admissible only if:
-- Condition 1: Output is produced by a governance agent operating under a defined protocol
-- Condition 2: Output is accompanied by a contemporaneous integrity anchor
-
-| Condition | Tier Classification |
-|-----------|--------------------|
-| Both satisfied | Tier 1 |
-| Condition 1 only | Tier 2 |
-| Condition 1 not satisfied | Excluded |
-
-## 7. Scope Limitation Requirement
-
-All governance decision records must include a scope limitation statement.
+[Download EIS-01 (PDF)](/downloads/EIS-01-Evidence-Infrastructure-Standard.pdf) &nbsp;&middot;&nbsp; [Standalone HTML](/documents/EIS-01-Evidence-Infrastructure-Standard.html)
 
 ---
 
-*Citation: Institute for Autonomous Governance Pty Ltd, Evidence Infrastructure Standard (EIS-01), Version 3.0, March 2026.*
+## 1. Purpose
+
+This Standard defines the minimum structure of a compliant governance decision record under the Agentic Risk Architecture Framework (ARAF). It specifies what records must exist so that a consequential autonomous decision is reconstructable from contemporaneous evidence.
+
+The ARAF Standard (Version 3.0, Clause 8) defines the properties that governance evidence must satisfy — authenticity, integrity, traceability, and chain of custody — and the tiers into which evidence falls. This Standard defines the internal structure of the record that satisfies those requirements at Tier 1.
+
+The Standard answers a single question:
+
+:::note[Governing question]
+What evidence must exist for a consequential autonomous decision to be reconstructable from contemporaneous records?
+:::
+
+It does not prescribe log formats, database schemas, or vendor tooling. Implementation architecture remains the responsibility of the deploying organisation. The Standard defines record requirements, not record formats.
+
+---
+
+## 2. Scope and Application
+
+This Standard applies to all consequential decisions produced by autonomous systems subject to ARAF assessment at the Compliant or Certified certification tier.
+
+A decision is consequential for the purposes of this Standard when it produces an outcome that commits the organisation, alters the rights or interests of a third party, or falls within the scope of an authority boundary defined in the system's governance architecture.
+
+This Standard does not apply to the ARAF Assessed tier, which evaluates design adequacy only and does not require operational evidence.
+
+:::note[Relationship to ARAF Standard v3.0, Clause 8]
+ARAF Standard v3.0, Clause 8 defines how governance coherence is evaluated across the 180-day evidence window. This Standard defines what a compliant Tier 1 evidence record contains. The two documents are complementary. Assessors applying Clause 8 should use this Standard to evaluate whether infrastructure-generated evidence satisfies the Tier 1 threshold.
+:::
+
+---
+
+## 3. The Canonical Governance Decision Record
+
+The canonical governance decision record is the minimum evidence object required for a consequential decision to be reconstructable. It is the unit of Tier 1 evidence under ARAF Standard v3.0, Clause 8.
+
+:::note[Normative requirement]
+A system satisfies the ARAF Evidence Infrastructure Standard when each consequential decision can be reconstructed from contemporaneous records containing the four required evidence components: Execution Event, Contextual State, Authority and Attribution, and Integrity Anchor.
+:::
+
+The four components are not independent. Together they produce reconstructability — the institutional property that allows governance to be demonstrated rather than asserted. A record missing any component is an incomplete governance record. An incomplete governance record does not satisfy Tier 1 evidence requirements, regardless of the quality of the components it does contain.
+
+The components are defined in Section 4. Their relationship to D6 and the Clause 8 evidence tiers is established in Sections 5 and 6.
+
+---
+
+## 4. The Four Evidence Components
+
+| Component | Purpose | Required fields |
+|---|---|---|
+| Execution Event | The observable action or decision produced by the system. What happened, when, and which system instance produced it. | Timestamp of execution; decision output or action taken; system instance identifier; scope reference |
+| Contextual State | The decision environment at execution time. What the system knew and under what operating conditions the decision was produced. | Input data state at execution; model version reference; policy or rule set invoked; threshold parameters active |
+| Authority and Attribution | The governance authority under which the decision occurred. Who controlled the system, who authorised the action, and under what authority boundary. The component most commonly absent from engineering telemetry. | Governance authority identifier; rule pack or GMP reference; accountability holder at time of execution; deploying organisation identity |
+| Integrity Anchor | A tamper-resistant reference establishing that the record existed at the time claimed and has not been altered. Converts a log entry into institutionally admissible evidence. | Cryptographic hash or signature; append-only log reference; external timestamp service record; signed registry entry |
+
+### Implementation Neutrality
+
+The Standard does not prescribe the technical mechanism by which each component is captured. Any implementation that produces contemporaneous, tamper-evident records containing the four components satisfies this Standard, regardless of the logging infrastructure, policy engine, or data architecture used.
+
+### Integrity Anchor Minimum Requirements
+
+The Integrity Anchor must satisfy two properties: temporal attestation (evidence that the record existed at the time claimed) and tamper resistance (evidence that the record has not been altered since creation).
+
+For Tier 1 classification, the Integrity Anchor must be produced by infrastructure independent of the system that generated the decision record. Application-level timestamps generated by the same system that produced the decision record do not satisfy this requirement, because they do not provide independent attestation.
+
+Acceptable Tier 1 mechanisms include, without limitation: cryptographic hashing with external timestamping; append-only log infrastructure with independent integrity verification; external timestamp authority records; and signed, immutable registry entries. The mechanism selected must be documented in the system's evidence architecture documentation and identified in the assessment report.
+
+---
+
+## 5. Relationship to D6 — Adaptive Stability
+
+Dimension 6 (Adaptive Stability) evaluates whether an organisation maintains governance continuity as the system, its operating environment, and the governance assumptions under which it was assessed change over time. D6 assessment relies on evidence that governance architecture remained operative and traceable across the assessment window.
+
+The D6 evidentiary model is a two-layer architecture: a runtime log layer and a model knowledge package (MKP) registry layer. Together these two layers produce the canonical governance decision record required by this Standard.
+
+For the purposes of this Standard, a model knowledge package (MKP) is the versioned collection of governance artefacts, control definitions, authority references, and configuration state that defines the governance architecture under which a specific system version operates. The MKP registry is the maintained repository of MKP versions. Each MKP version must be uniquely identifiable and queryable from the runtime log layer by reference to the MKP identifier recorded at execution time.
+
+| Layer | Function | Components Satisfied |
+|---|---|---|
+| Runtime log layer | Records execution events, contextual state, and enforcement actions contemporaneously at the action boundary | Execution Event, Contextual State |
+| MKP registry layer | Records governance artefacts, control definitions, and authority references; maintains version history queryable from the runtime log | Authority and Attribution, Integrity Anchor |
+
+:::note[Normative requirement]
+A system satisfies the D6 two-layer evidentiary requirement when both layers are present, maintained, and the traversal path from a runtime log entry to the corresponding MKP registry version is queryable.
+:::
+
+The two-layer model is not a gap in evidence infrastructure. It is the correct architecture. Separating the runtime execution record from the governance artefact registry preserves implementation neutrality at the enforcement layer while maintaining the authority chain required for institutional accountability.
+
+### D6 Closing Assessment Criterion
+
+For D6 assessment purposes, the three-part closing criterion is:
+
+| # | Criterion | Layer |
+|---|---|---|
+| 1 | MKP identifier is present in the runtime log at the time of each consequential decision | Runtime log |
+| 2 | The MKP registry exists, is maintained, and reflects the version active at execution | MKP registry |
+| 3 | The traversal path from runtime log entry to MKP registry version graph is queryable | Both layers |
+
+---
+
+## 6. Evidence Tier Mapping
+
+ARAF Standard v3.0, Clause 8 defines three evidence tiers. The four components of the canonical governance decision record map to those tiers as follows.
+
+| Component | Tier Satisfied | Basis |
+|---|---|---|
+| Execution Event | Tier 1 | Infrastructure-generated, contemporaneous with the decision event |
+| Contextual State | Tier 1 | Infrastructure-generated, captures decision environment at execution without retrospective assembly |
+| Authority and Attribution | Tier 1 (where infrastructure-generated) / Tier 2 (where contemporaneously documented) | May be captured by enforcement infrastructure or by governance documentation produced at the time of authority assignment. Either satisfies the evidence threshold for D3, D4, and D5; Tier 1 required for D1, D2, and D6 at Certified tier |
+| Integrity Anchor | Tier 1 prerequisite | Required for any record to qualify as Tier 1 evidence. Without an integrity anchor, the other three components constitute at most Tier 2 evidence |
+
+Where all four components are present and the Integrity Anchor is satisfied, the record constitutes Tier 1 infrastructure-generated evidence for Clause 8 purposes. Where the Integrity Anchor is absent, the record is classified as Tier 2 regardless of the quality of the other components.
+
+### Certification Tier Requirements
+
+| Certification Tier | Evidence Requirement |
+|---|---|
+| ARAF Assessed | No operational evidence required. Design adequacy assessment only. |
+| ARAF Compliant | Complete canonical records (all four components) required for D1, D2, and D6. Authority and Attribution component may be Tier 2 for D3, D4, and D5. |
+| ARAF Certified | Complete canonical records with Tier 1 Integrity Anchor required for at least 80% of sampled controls across D1, D2, and D6. Any control assessed without a complete record must be individually identified in the assessment report. |
+
+---
+
+## 7. Governance Agent Output
+
+### 7.1 Definition
+
+A governance agent output is a record produced by an automated system whose designated function is assessing, monitoring, or reporting on governance controls or compliance conditions that operate in relation to the system under assessment.
+
+Governance agent outputs are distinct from operational system logs. An operational system log records what the system under governance did. A governance agent output records an automated assessment of whether that system's governance controls operated correctly. The source of the record is a separate system performing a governance function, not the system performing an operational function.
+
+### 7.2 Admissibility Conditions
+
+A governance agent output is admissible as evidence under this Standard when both of the following conditions are satisfied in respect of the assessment period in which the outputs are relied upon. The assessment period must itself satisfy the Clause 8 minimum 180-day evidence span requirement.
+
+**Condition 1 — Independent Validation of the Governance Agent**
+
+The governance agent must have been independently validated prior to the assessment period in which its outputs are relied upon. Independent validation requires, at minimum:
+
+- a defined scope specification documenting the governance conditions the agent assesses and the standards or conditions against which it assesses them
+- evidence that the agent has been tested against known conditions, with documented false positive and false negative rates
+- a version record confirming which agent version produced each output relied upon in the assessment
+
+Outputs produced by a governance agent that has not been independently validated are not admissible at any tier. They may not be treated as Tier 2 evidence. They are excluded from the evidence base.
+
+The rationale for exclusion rather than demotion to Tier 2 is structural. An unvalidated governance agent produces outputs whose reliability is unknown. Treating those outputs as Tier 2 evidence would allow an organisation to substitute an unvalidated automated assessment for the contemporaneous documentation that Tier 2 is designed to accommodate. That substitution would undermine the evidentiary standard at the source category level.
+
+Where the governance agent is updated during the evidence window (including model version changes, rule set modifications, or configuration changes that alter assessment logic), the independent validation must be refreshed for the updated version before outputs produced by the updated version are admissible. Outputs produced by the prior validated version remain admissible for the period during which that version was active. The assessment report must identify any governance agent version changes that occurred during the evidence window and the validation status of each version.
+
+**Condition 2 — Four-Component Completeness**
+
+Each governance agent output record must satisfy the four-component requirement of Section 3. The four components apply to governance agent outputs as follows:
+
+| Component | Application to Governance Agent Output |
+|---|---|
+| Execution Event | The assessment event: what governance condition was assessed, when, and which governance agent version produced the assessment |
+| Contextual State | The state of the system under assessment at the time of the governance assessment, including the rule set or standards invoked and the threshold parameters applied |
+| Authority and Attribution | The governance authority under which the governance agent was deployed, the accountability holder responsible for the governance agent's configuration, and the deploying organisation. Where a human reviewer has exercised a review function, the human determination and its basis must form part of this record. Where no human review was performed, the record must affirmatively indicate that the assessment was produced without human review |
+| Integrity Anchor | A tamper-resistant reference applied to the governance agent output record itself. The integrity anchor applies to the governance agent output record, not only to the underlying operational log it assessed |
+
+### 7.3 Tier Classification
+
+| Admissibility Status | Tier Classification | Basis |
+|---|---|---|
+| Both conditions satisfied | Tier 1 | Independent validation and four-component completeness together produce the reliability required for infrastructure-generated evidence |
+| Condition 1 satisfied; Condition 2 not satisfied | Tier 2 | Validated source with incomplete record structure. Contemporaneous documentation standard applies |
+| Condition 1 not satisfied | Excluded | Unvalidated governance agent output. Not admissible at any tier |
+
+### 7.4 Scope Limitation Requirement
+
+:::danger[Normative requirement]
+Where a governance agent output forms any part of the evidence base for a GCI or GBI assessment conducted within the Clause 8 180-day evidence window, the assessment report must include a scope limitation statement identifying: which governance conditions were assessed by governance agent outputs rather than infrastructure-generated logs; the independent validation status of the governance agent at the assessment date; and any false positive or false negative conditions identified during validation that are material to the assessment.
+:::
+
+This requirement applies regardless of whether the governance agent outputs are classified as Tier 1 or Tier 2. It applies even where governance agent outputs constitute a minority of the evidence base.
+
+The scope limitation statement is a disclosure obligation, not a qualification of the assessment. Its purpose is to enable institutional audiences relying on the assessment to understand the composition of the evidence base and to apply appropriate weight to governance conditions assessed by automated rather than infrastructure-generated means.
+
+### 7.5 Relationship to Section 4 Components
+
+Governance agent outputs are one mechanism through which the Authority and Attribution component (Section 4) may be satisfied, subject to the admissibility conditions in 7.2.
+
+Governance agent outputs do not substitute for the Integrity Anchor, which must be independently satisfied for the governance agent output record itself. The integrity anchor requirement applies at two levels in a governance agent architecture: to the operational system log that the governance agent assessed, and to the governance agent output record produced by that assessment.
+
+:::note[Relationship to ARAF Standard v3.0, Clause 8 and the 180-Day Evidence Window]
+The admissibility conditions in Section 7.2 are assessed within and by reference to the Clause 8 180-day evidence window. Independent validation (Condition 1) must have occurred prior to the window in which the outputs are relied upon. Four-component completeness (Condition 2) is assessed against the same contemporaneity standard as all other Tier 1 evidence under this Standard.
+
+Governance agent outputs produced outside the 180-day window are not admissible for coherence assessment purposes under Clause 8, consistent with the general evidence window rule.
+:::
+
+---
+
+## 8. Institutional Implications
+
+### Engineering telemetry is not governance evidence
+
+Engineering telemetry — latency, throughput, error rates, model accuracy — answers the question: is the system performing as designed? It does not answer the question that institutional audiences require: is the governance of the system being exercised as authorised?
+
+A cryptographically anchored log of model outputs is not governance evidence unless it captures the governance authority under which those outputs occurred. The Authority and Attribution component is the element most commonly absent from organisations that believe their logging infrastructure satisfies evidence requirements. Its absence means the record cannot answer the three institutional accountability questions: who was responsible, what did they know, what did they do.
+
+### Reconstructability as the governing test
+
+The purpose of the four-component model is to produce reconstructability: the capacity to demonstrate, from contemporaneous records, how a consequential decision was produced, under what authority, and in what governance context. Reconstructability cannot be built after an adverse outcome has occurred. The governance record that satisfies institutional scrutiny must be produced at the moment of the decision it documents.
+
+Organisations that maintain complete canonical records satisfy this Standard continuously. Organisations that rely on retrospective reconstruction satisfy it only if that reconstruction can meet the authenticity, integrity, traceability, and chain of custody requirements the ARAF evidentiary standard imposes — which retrospective records typically cannot.
+
+### Insurer reliance
+
+Insurers underwriting coverage for autonomous system deployments require evidence that governance controls operated during the coverage period. The canonical governance decision record is the evidentiary foundation for that determination. An insurer evaluating a claim arising from an autonomous decision needs to establish what the system did, under what conditions, under whose authority, and whether that record is unaltered. The four components of this Standard map directly to those four institutional requirements.
+
+---
+
+## 9. Cross-References
+
+| Document | Relationship |
+|---|---|
+| ARAF Standard | Parent standard. The six governance dimensions and four-link accountability chain establish the governance context within which this Standard operates. |
+| ARAF Standard v3.0, Clause 8 (formerly GCA-01) | Defines evidence tiers referenced in Section 6, the 180-day coherence assessment window referenced in Sections 2 and 7, and the general evidence window rule applied to governance agent outputs in Section 7.5. Prior to ARAF Standard v3.0, this methodology was published as the Governance Coherence Addendum (GCA-01), which is now superseded. |
+| GBI Methodology | Dimensional scoring produces the risk profile that determines which evidence requirements apply at each certification tier. |
+| D6 — Adaptive Stability | The two-layer D6 evidentiary model is the canonical implementation architecture for this Standard. Section 5 establishes the explicit connection. |
+
+---
+
+### See also
+
+- [Evidence Standard](/evidence/evidence-standard/)
+- [Governance Coherence Addendum](/certification/governance-coherence-addendum/)
+- [Six ARAF Dimensions — D6](/standard/six-dimensions/)
+- [Certification Framework](/certification/certification-framework/)
+- [Downloads](/downloads/)
+
+---
+
+*EIS-01 &middot; Version 3.0 &middot; March 2026 &middot; Institute for Autonomous Governance Pty Ltd &middot; ACN 696 112 277*
