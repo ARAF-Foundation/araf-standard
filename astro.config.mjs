@@ -30,7 +30,7 @@ export default defineConfig({
       status: 301,
       destination: '/assessor-guidance/assessor-accreditation-standard/',
     },
-    '/methodology/evidence-standard/': { status: 301, destination: '/evidence/evidence-standard/' },
+    '/methodology/evidence-standard/': { status: 301, destination: '/evidence/evidence-infrastructure-standard/' },
   },
   integrations: [
     starlight({
