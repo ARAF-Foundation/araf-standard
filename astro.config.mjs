@@ -39,8 +39,8 @@ export default defineConfig({
         'The open governance standard for classification and certification infrastructure in autonomous system governance.',
 
       logo: {
-        light: './src/assets/araf-mark-primary-dark.svg',
-        dark: './src/assets/araf-mark-primary-light.svg',
+        light: './public/araf-mark-primary-dark.svg',
+        dark: './public/araf-mark-primary-light.svg',
         alt: 'ARAF Standard',
         replacesTitle: false,
       },
@@ -89,7 +89,6 @@ export default defineConfig({
             { label: 'Governance Benchmark Index', slug: 'certification/governance-benchmark-index' },
             { label: 'Governance Coherence Addendum', slug: 'certification/governance-coherence-addendum' },
             { label: 'Certification Framework', slug: 'certification/certification-framework' },
-            { label: 'GBI Institutional Reliance Guide', slug: 'certification/gbi-institutional-reliance-guide' },
           ],
         },
         {
