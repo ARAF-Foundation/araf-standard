@@ -21,7 +21,6 @@ Source scope: `src/content/docs/**/*.{md,mdx}`
 | `/certification/` | Certification | `certification.mdx` |
 | `/certification/certification-framework/` | Certification Framework | `certification/certification-framework.mdx` |
 | `/certification/governance-benchmark-index/` | Governance Benchmark Index | `certification/governance-benchmark-index.mdx` |
-| `/certification/governance-coherence-addendum/` | Governance Coherence Addendum | `certification/governance-coherence-addendum.mdx` |
 | `/decision-supply-chain/` | Decision Supply Chain | `decision-supply-chain.mdx` |
 | `/downloads/` | Downloads | `downloads.mdx` |
 | `/enterprise-procurement/` | ARAF for Enterprise Procurement | `enterprise-procurement.mdx` |

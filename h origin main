@@ -1,0 +1,11 @@
+[33mcommit 903139138e3c130ca1f10514f8beac582061df63[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeat/standard-multiplier-corrections[m[33m)[m
+Author: Carly Martin <carlymartin@venturebench.co>
+Date:   Tue Mar 17 12:55:34 2026 +1100
+
+    Resolve merge conflicts
+
+[33mcommit d4a6149d2f16fa19f12be5326b614f86fe475861[m
+Author: Carly Martin <carlymartin@venturebench.co>
+Date:   Tue Mar 17 12:54:27 2026 +1100
+
+    Remove old ARAF-Certification-v3_0.md (now .mdx)

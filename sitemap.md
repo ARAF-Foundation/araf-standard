@@ -68,7 +68,6 @@ Generated: 2026-03-13
 - /boards/
 - /certification/certification-framework/
 - /certification/governance-benchmark-index/
-- /certification/governance-coherence-addendum/
 - /decision-supply-chain/
 - /downloads/
 - /enterprise-procurement/

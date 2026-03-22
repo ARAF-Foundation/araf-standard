@@ -3,16 +3,17 @@ title: The Six ARAF Dimensions
 description: Normative six-dimension governance assessment model used by ARAF, including the D6 two-layer evidentiary model.
 ---
 
-## Overview
 
-Six dimensions. One composite score.
 
-The Six ARAF Dimensions provide the governance assessment framework for autonomous system deployments. They define how ARAF classifies, measures, and benchmarks governance posture across six dimensions that determine institutional readiness.
+The six ARAF dimensions define the minimum conditions required for a decision to be defensible.
 
-- Published by: Institute for Autonomous Governance Pty Ltd
-- Date: March 2026
-- Version: 3.0
-- Reference: araf-standard.org
+Each dimension addresses a different category of governance risk within the Decision Supply Chain.
+
+---
+
+A system that performs well technically but fails across these dimensions remains institutionally exposed.
+
+---
 
 The six dimensions are:
 
@@ -45,11 +46,12 @@ The six dimensions are assessed independently but interpreted together through t
 | **ARAF Compliant** | GBI &le; 2.50 | Governance posture meets institutional baseline across all six dimensions |
 | **ARAF Assessed** | Any score | Assessment completed. Dimensional profile available for institutional use |
 
+
 ## 1. Autonomy Gradient (D1)
 
 What decisions does the system make without requiring human authorisation for each individual decision?
 
-The Autonomy Gradient is the foundational dimension. Its score determines the governance burden all other dimensions must address. A system operating at high autonomy with weak liability architecture or contract infrastructure creates compounding exposure that multiplier logic is designed to capture.
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 ### What it assesses
 
@@ -67,9 +69,12 @@ D1 is foundational for boards, insurers, investors, and regulators because it de
 
 Machine-enforceable evidence is available for part of D1. Deterministic enforcement logs, including `FAIL_CLOSED`, `HARD_BLOCK` on scope violations, and `PASS_CONFIRMED` on benign inputs, can provide Tier 1 D1 evidence. Human oversight structure still requires institutional-layer evidence.
 
+
 ## 2. Data Sensitivity Exposure (D2)
 
 What data does the system process, and where does that data come from?
+
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 Data Sensitivity Exposure assesses two risk categories that require separate governance treatment. Operational data creates immediate exposure at the point of processing. Training data provenance creates latent exposure carried into every downstream decision.
 
@@ -89,9 +94,12 @@ For boards and legal counsel, D2 maps latent liability created before deployment
 
 Partial runtime evidence is available. Enforcement logs can evidence operational data handling at evaluation time. Training data provenance requires institutional-layer artefacts, including provider representations, fine-tuning legal basis, and IP clearance records.
 
+
 ## 3. Contract Infrastructure (D3)
 
 What legal architecture governs the deployment?
+
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 Contract Infrastructure assesses the legal architecture through which liability is allocated, obligations are defined, and accountability is assigned across the deployment chain. It is directly connected to the four accountability links: design, deployment, operational, and outcome.
 
@@ -138,9 +146,12 @@ D3 is a foundational liability dimension. Without adequate contract infrastructu
 
 D3 is an institutional-layer dimension. No enforcement log can satisfy D3. It is assessed through legal document review and accountability allocation quality.
 
+
 ## 4. Liability Architecture (D4)
 
 How is liability for the system's autonomous decisions structured, documented, and governed?
+
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 Liability Architecture assesses how liability for autonomous action consequences is structured. AE3 outcomes accumulate at operational speed, creating liability exposure that conventional frameworks were not designed to absorb.
 
@@ -160,9 +171,12 @@ For insurers, D4 is the coverage architecture dimension. It determines what must
 
 Enforcement evidence is the precondition, not the structure. Tier 1 enforcement logs demonstrate that controls operated when decisions were made. Independent assessment is still required to determine whether the liability structure itself is adequate.
 
+
 ## 5. Commercial Leverage (D5)
 
 How commercially dependent is the organisation on this system, and how does that dependency constrain governance remediation?
+
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 Commercial Leverage assesses the degree to which operational and commercial dependency limits governance remediation options. Where remediation disruption exceeds what the organisation is willing to accept, the governance gap becomes structural rather than contingent.
 
@@ -179,9 +193,12 @@ Commercial Leverage assesses the degree to which operational and commercial depe
 
 For investors, D5 is a structural risk signal. A high D5 score with high D3 or D4 indicates a governance deficit the commercial structure is working against correcting.
 
+
 ## 6. Adaptive Stability (D6)
 
 Can governance be maintained as the system and its deployment evolve?
+
+Failure in this dimension prevents a decision from being fully accountable under institutional scrutiny.
 
 Adaptive Stability assesses the organisation's capacity to maintain governance adequacy over time. A deployment that is governable at initial release may become inadequately governed months later if governance architecture does not evolve with system behaviour.
 

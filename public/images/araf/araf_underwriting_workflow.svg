@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <title>ARAF Underwriting Workflow — Financial Lines Insertion Point</title>
+  <desc>Six-step underwriting workflow showing where ARAF governance evidence inserts into the Financial Lines referred risk process. Step 1: Referral identified as AI-exposed risk. Step 2: ARAF evidence intake — governance pack requested from insured. Step 3: Governance pack produced — GBI score, dimensional profile, evidence tier, multiplier status. Step 4: Underwriter decision-support view — Proceed / Proceed with conditions / Hold / Decline. Step 5: File note completed using suggested text. Step 6: Decision delta and repeat-use signal recorded for pilot evaluation. Final underwriting authority remains entirely with the underwriter. From ARAF v3.0, 2026.</desc>
+  <defs>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
+  </defs>
+
+  <rect width="960" height="560" fill="#f7f5f0"/>
+  <rect x="20" y="20" width="920" height="520" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="20" y1="26" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="20" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="26" x2="940" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="20" x2="946" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="20" y1="534" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="540" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="534" x2="940" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="540" x2="946" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Header -->
+  <text x="480" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">ARAF UNDERWRITING WORKFLOW — FINANCIAL LINES REFERRED RISK INSERTION</text>
+  <line x1="40" y1="54" x2="920" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Subtitle -->
+  <text x="480" y="72" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">Governance evidence inserts at the referral stage only. No impact on straight-through business.</text>
+
+  <!-- Flow spine line -->
+  <line x1="80" y1="270" x2="880" y2="270" stroke="#e8e4db" stroke-width="1.5"/>
+
+  <!-- ── STEP 1 ── -->
+  <circle cx="113" cy="270" r="18" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="113" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#7a7a72" class="mono">01</text>
+
+  <rect x="40" y="94" width="148" height="142" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="40" y="94" width="148" height="3" fill="#7a7a72"/>
+  <text x="114" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">REFERRAL</text>
+  <text x="114" y="130" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0d0d0b" class="serif">File Identified</text>
+  <line x1="52" y1="138" x2="176" y2="138" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="114" y="155" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">AI-exposed referred</text>
+  <text x="114" y="168" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">risk meeting agreed</text>
+  <text x="114" y="181" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">acceptance criteria</text>
+  <text x="114" y="200" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">Underwriter flags</text>
+  <text x="114" y="212" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">AI deployment in</text>
+  <text x="114" y="224" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">risk description</text>
+
+  <!-- Connector line 1→2 -->
+  <line x1="188" y1="270" x2="208" y2="270" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="208,266 216,270 208,274" fill="#A88644"/>
+
+  <!-- ── STEP 2 ── -->
+  <circle cx="249" cy="270" r="18" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="249" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#7a7a72" class="mono">02</text>
+
+  <rect x="176" y="94" width="148" height="142" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="176" y="94" width="148" height="3" fill="#A88644"/>
+  <text x="250" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">INTAKE</text>
+  <text x="250" y="130" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0d0d0b" class="serif">Evidence Request</text>
+  <line x1="188" y1="138" x2="312" y2="138" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="250" y="155" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Governance pack</text>
+  <text x="250" y="168" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">requested from insured</text>
+  <text x="250" y="185" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">Insured provides ARAF</text>
+  <text x="250" y="197" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">assessment output or</text>
+  <text x="250" y="209" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">engages assessor</text>
+
+  <!-- Connector line 2→3 -->
+  <line x1="324" y1="270" x2="344" y2="270" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="344,266 352,270 344,274" fill="#A88644"/>
+
+  <!-- ── STEP 3 — KEY STEP, dark card ── -->
+  <circle cx="385" cy="270" r="18" fill="#0d0d0b" stroke="#A88644" stroke-width="1.5"/>
+  <text x="385" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#A88644" class="mono">03</text>
+
+  <rect x="312" y="86" width="148" height="158" fill="#0d0d0b" stroke="#A88644" stroke-width="1"/>
+  <rect x="312" y="86" width="148" height="3" fill="#A88644"/>
+  <text x="386" y="104" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">ARAF OUTPUT</text>
+  <text x="386" y="122" text-anchor="middle" font-size="9.5" font-weight="bold" fill="white" class="serif">Governance Pack</text>
+  <line x1="324" y1="130" x2="448" y2="130" stroke="#3a3a35" stroke-width="0.75"/>
+
+  <rect x="324" y="137" width="124" height="16" fill="#1a1a17"/>
+  <rect x="324" y="137" width="3" height="16" fill="#A88644"/>
+  <text x="334" y="149" font-size="7.5" fill="#A88644" class="mono">GBI</text>
+  <text x="358" y="149" font-size="7.5" fill="white" class="serif">Composite score</text>
+
+  <rect x="324" y="156" width="124" height="16" fill="#1a1a17"/>
+  <rect x="324" y="156" width="3" height="16" fill="#A88644"/>
+  <text x="334" y="168" font-size="7.5" fill="#A88644" class="mono">DIM</text>
+  <text x="358" y="168" font-size="7.5" fill="white" class="serif">Dimensional profile</text>
+
+  <rect x="324" y="175" width="124" height="16" fill="#1a1a17"/>
+  <rect x="324" y="175" width="3" height="16" fill="#A88644"/>
+  <text x="334" y="187" font-size="7.5" fill="#A88644" class="mono">EV</text>
+  <text x="358" y="187" font-size="7.5" fill="white" class="serif">Evidence tier</text>
+
+  <rect x="324" y="194" width="124" height="16" fill="#1a1a17"/>
+  <rect x="324" y="194" width="3" height="16" fill="#A88644"/>
+  <text x="334" y="206" font-size="7.5" fill="#A88644" class="mono">MUL</text>
+  <text x="358" y="206" font-size="7.5" fill="white" class="serif">Multiplier status</text>
+
+  <text x="386" y="232" text-anchor="middle" font-size="7" fill="#7a7a72" font-style="italic" class="serif">Fixed format · accredited</text>
+  <text x="386" y="244" text-anchor="middle" font-size="7" fill="#7a7a72" font-style="italic" class="serif">assessor · Tier 1 evidence</text>
+
+  <!-- Connector line 3→4 -->
+  <line x1="460" y1="270" x2="480" y2="270" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="480,266 488,270 480,274" fill="#A88644"/>
+
+  <!-- ── STEP 4 — Decision support ── -->
+  <circle cx="521" cy="270" r="18" fill="#0d0d0b" stroke="#A88644" stroke-width="1.5"/>
+  <text x="521" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#A88644" class="mono">04</text>
+
+  <rect x="448" y="86" width="148" height="158" fill="#0d0d0b" stroke="#A88644" stroke-width="1"/>
+  <rect x="448" y="86" width="148" height="3" fill="#A88644"/>
+  <text x="522" y="104" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">DECISION SUPPORT</text>
+  <text x="522" y="118" text-anchor="middle" font-size="9.5" font-weight="bold" fill="white" class="serif">Underwriter View</text>
+  <line x1="460" y1="126" x2="584" y2="126" stroke="#3a3a35" stroke-width="0.75"/>
+
+  <!-- Four outcome options -->
+  <rect x="460" y="133" width="124" height="18" fill="#1e3a1e"/>
+  <text x="522" y="146" text-anchor="middle" font-size="8" fill="#6bbf6b" font-weight="bold" class="serif">Proceed</text>
+
+  <rect x="460" y="154" width="124" height="18" fill="#1e3220"/>
+  <text x="522" y="167" text-anchor="middle" font-size="8" fill="#8fc98f" class="serif">Proceed with conditions</text>
+
+  <rect x="460" y="175" width="124" height="18" fill="#2a2a16"/>
+  <text x="522" y="188" text-anchor="middle" font-size="8" fill="#c9c070" class="serif">Hold — evidence required</text>
+
+  <rect x="460" y="196" width="124" height="18" fill="#2a1616"/>
+  <text x="522" y="209" text-anchor="middle" font-size="8" fill="#c97070" class="serif">Decline</text>
+
+  <text x="522" y="232" text-anchor="middle" font-size="7" fill="#7a7a72" font-style="italic" class="serif">Decision-support view only.</text>
+  <text x="522" y="244" text-anchor="middle" font-size="7" fill="#7a7a72" font-style="italic" class="serif">Authority remains with underwriter.</text>
+
+  <!-- Connector line 4→5 -->
+  <line x1="596" y1="270" x2="616" y2="270" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="616,266 624,270 616,274" fill="#A88644"/>
+
+  <!-- ── STEP 5 ── -->
+  <circle cx="657" cy="270" r="18" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="657" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#7a7a72" class="mono">05</text>
+
+  <rect x="584" y="94" width="148" height="142" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="584" y="94" width="148" height="3" fill="#A88644"/>
+  <text x="658" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">FILE RECORD</text>
+  <text x="658" y="130" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0d0d0b" class="serif">File Note</text>
+  <line x1="596" y1="138" x2="720" y2="138" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="658" y="155" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Copy-paste underwriting</text>
+  <text x="658" y="168" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">file note provided in</text>
+  <text x="658" y="181" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">governance pack</text>
+  <text x="658" y="200" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">Contemporaneous record</text>
+  <text x="658" y="212" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">of governance posture</text>
+  <text x="658" y="224" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">at bind time</text>
+
+  <!-- Connector line 5→6 -->
+  <line x1="732" y1="270" x2="752" y2="270" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="752,266 760,270 752,274" fill="#A88644"/>
+
+  <!-- ── STEP 6 ── -->
+  <circle cx="793" cy="270" r="18" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <text x="793" y="274" text-anchor="middle" font-size="10" font-weight="bold" fill="#7a7a72" class="mono">06</text>
+
+  <rect x="720" y="94" width="200" height="142" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="720" y="94" width="200" height="3" fill="#7a7a72"/>
+  <text x="820" y="112" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">EVALUATION</text>
+  <text x="820" y="130" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0d0d0b" class="serif">Decision Delta</text>
+  <line x1="732" y1="138" x2="908" y2="138" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="820" y="155" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Decision delta recorded</text>
+  <text x="820" y="168" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Repeat-use signal noted</text>
+  <text x="820" y="181" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Pilot evaluation feeds</text>
+  <text x="820" y="194" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">actuarial foundation</text>
+  <text x="820" y="214" text-anchor="middle" font-size="7.5" fill="#A88644" font-style="italic" class="serif">First proof of underwriting</text>
+  <text x="820" y="226" text-anchor="middle" font-size="7.5" fill="#A88644" font-style="italic" class="serif">workflow usefulness</text>
+
+  <!-- ── BELOW FLOW: two-zone annotation ── -->
+  <line x1="40" y1="310" x2="920" y2="310" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <!-- Standard workflow zone -->
+  <rect x="40" y="320" width="270" height="60" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="175" y="337" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">STANDARD WORKFLOW (UNCHANGED)</text>
+  <text x="175" y="353" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">Straight-through business unaffected.</text>
+  <text x="175" y="366" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">No systems integration required.</text>
+
+  <!-- ARAF insertion zone -->
+  <rect x="320" y="320" width="460" height="60" fill="#fdfaf5" stroke="#A88644" stroke-width="0.75"/>
+  <text x="550" y="337" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">ARAF INSERTION ZONE (STEPS 02 – 05)</text>
+  <text x="550" y="353" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Governance evidence layer added at referral stage only.</text>
+  <text x="550" y="366" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Fixed format output. No policy redesign. No bespoke drafting.</text>
+
+  <!-- Output zone -->
+  <rect x="790" y="320" width="130" height="60" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="855" y="337" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">PROOF POINT</text>
+  <text x="855" y="353" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">Actuarial data</text>
+  <text x="855" y="366" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">accumulates</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="400" x2="920" y2="400" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="480" y="420" text-anchor="middle" font-size="8.5" fill="#0d0d0b" font-weight="bold" font-style="italic" class="serif">The first commercial wedge: Financial Lines underwriting for AI-exposed referred risks.</text>
+  <text x="480" y="437" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">One insurer. One class. One workflow insertion point. One measurable proof of decision usefulness.</text>
+
+  <line x1="40" y1="450" x2="920" y2="450" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <!-- Scope boundary note -->
+  <rect x="40" y="460" width="870" height="48" fill="#fafaf8"/>
+  <text x="52" y="477" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">SCOPE BOUNDARY</text>
+  <text x="52" y="492" font-size="8" fill="#7a7a72" class="serif">ARAF provides a governance classification signal. It does not assess technical soundness, determine regulatory compliance, or replace underwriting judgment.</text>
+  <text x="52" y="505" font-size="8" fill="#7a7a72" class="serif">Final underwriting authority remains entirely with the underwriter and the applicable delegated authority chain.</text>
+
+  <text x="900" y="548" text-anchor="end" font-size="7" fill="#b0aca4" class="mono">ARAF v3.0 · 2026 · Institute for Autonomous Governance Pty Ltd</text>
+</svg>

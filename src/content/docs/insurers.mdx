@@ -1,18 +1,159 @@
 ---
-title: ARAF for Insurers
-description: How insurers can use ARAF governance signals for underwriting, renewal controls, and claims defensibility.
+
+
+# Governance classification for underwriting autonomous systems
+
 ---
-## Insurers
 
-Insurance markets are the mechanism through which AI governance frameworks become economically mandatory. Regulation can specify governance requirements. Insurance makes non-compliance uninsurable.
+## Opening
 
-ARAF provides the structured governance signal the insurance market needs to assess, price, and condition autonomous system risk. This page describes how the ARAF scoring architecture maps to insurer diligence, underwriting, and portfolio segmentation functions.
+Insurers cannot underwrite what they cannot classify.
 
-ARAF assessments are scoped to a defined deployment node. Any GBI score, certification status, or dimensional profile referenced on this page applies to the deployment node declared at assessment intake. Institutional reliance must be read against that declared scope.
+Autonomous systems introduce a category of risk that does not map cleanly to existing underwriting frameworks:
+decisions made at scale without per-step human authorisation.
 
-**The insurer governance problem**
+---
 
-The underwriting question is not whether the system performs well under normal conditions. It is whether the governance architecture can absorb adverse consequences when they materialise  and whether contemporaneous evidence exists to establish what was known, governed, and documented at the time.
+## The Problem
+
+This creates three underwriting challenges:
+
+* inability to distinguish governance quality across deployments
+* inability to assess liability allocation for autonomous decisions
+* inability to verify governance claims through evidence
+
+---
+
+## The ARAF Role
+
+ARAF provides:
+
+* classification of governance posture
+* dimensional visibility into risk structure
+* a comparable signal (GBI)
+* an evidence standard for verification
+
+---
+
+## AE3 (CRITICAL)
+
+Autonomous Action Consequences (AE3) represent the liability category produced by autonomous decisions.
+
+Existing policies do not consistently capture this exposure.
+
+Dimension 4 (Liability Architecture) defines whether that exposure is:
+
+* recognised
+* structured
+* insurable
+
+---
+
+## Underwriting Use
+
+Insurers use ARAF to:
+
+* assess governance adequacy before binding coverage
+* determine exclusions and pricing
+* evaluate evidence quality
+* monitor governance over time
+
+---
+
+## Certification Role
+
+Certification provides the signal required for underwriting decisions.
+
+Without a comparable signal, adverse selection dominates.
+With a comparable signal, governance can be priced.
+
+---
+
+Traditional frameworks assume:
+
+* human decision-makers
+* clear accountability
+* contained systems
+
+AI systems break all three.
+
+Without classification:
+
+* risk cannot be priced
+* coverage cannot be structured
+* exposure cannot be limited
+
+---
+
+## How Insurers Use ARAF
+
+**Underwriting**
+
+* classify systems before issuing cover
+
+**Pricing**
+
+* adjust premiums based on governance posture
+
+**Coverage Design**
+
+* structure exclusions and limits
+
+**Portfolio Monitoring**
+
+* track governance changes over time
+
+---
+
+## Certification as Signal
+
+ARAF certification provides:
+
+* independent verification
+* structured risk signal
+* consistent underwriting input
+
+Certification is issued by accredited assessors under the ARAF methodology.
+
+---
+
+## Outcome
+
+With ARAF:
+
+* risk becomes classifiable
+* underwriting becomes consistent
+* exposure becomes manageable
+
+---
+
+## Engage
+
+ARAF can be applied at:
+
+* pre-underwriting stage
+* renewal
+* portfolio review
+
+<div style={{ margin: '2.5rem 0 2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+	<a href="/apply/" className="araf-btn araf-btn--primary" style={{ fontSize: '1.1rem', padding: '1.1rem 2.2rem', fontWeight: 600, width: '100%', maxWidth: '340px', textAlign: 'center' }}>
+		Request Assessment
+	</a>
+</div>
+
+---
+
+## Underwriting Integration
+
+ARAF is designed to function as a classification layer within underwriting workflows.
+
+The GBI score provides:
+
+* a consistent risk tier signal
+* a basis for pricing differentiation
+* a framework for coverage structuring
+
+Without classification, underwriting remains exposed to adverse selection.
 ---
 
 ## 01. Why Insurance Markets Drive AI Governance
@@ -77,6 +218,7 @@ These dimensions correspond directly to underwriting diligence questions. D3 and
 
 ### Multiplier Conditions
 
+
 Three structural multiplier conditions compound dimensional risk:
 
 **Systemic Escalation** — D1 ≥ 4 AND D4 ≥ 4. High autonomy combined with inadequate liability architecture. The system produces consequential decisions at scale with no structural liability containment. GBI penalty: +3.
@@ -87,7 +229,7 @@ Three structural multiplier conditions compound dimensional risk:
 
 Multiplier conditions are the governance equivalent of accumulation risk. They represent structural configurations where individual dimensional weaknesses combine to create exposure that cannot be understood or priced through the dimensions alone. An underwriter reviewing a dimensional profile without examining multiplier conditions is missing the compound risk.
 
-> **Political Cascade.** A fourth multiplier condition applies specifically to cross-border deployments: D5 ≥ 4 AND D3 ≥ 3, with single-provider dependency and government-adjacent customer concentration. This condition is most relevant for insurers with portfolios including public sector or regulated industry clients operating across jurisdictions where AI regulatory interventions — designation events, data localisation mandates, sector-specific prohibitions — create event risk that standard force majeure provisions do not address. GN-002 governs assessment of this condition.
+**Note:** Political Cascade is not a canonical multiplier. It is classified as a material finding category. While it can create significant governance exposure—especially in cross-border deployments with government-adjacent customer concentration—it is assessed and reported separately from the three structural multipliers.
 
 ---
 

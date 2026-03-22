@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <title>Decision Supply Chain — Accountability Ownership Overlay</title>
+  <desc>The Decision Supply Chain showing five stages from Data Inputs through Institutional Exposure, with accountability ownership assigned at each stage. Stage 1 Data Inputs: Data provider and deploying organisation. Stage 2 Model Processing: Foundation model provider and fine-tuning organisation. Stage 3 Decision Formation: Deploying organisation — primary accountability holder. Stage 4 Execution Infrastructure: Cloud and integration contractors. Stage 5 Institutional Exposure: Deploying organisation retains full residual accountability regardless of supply chain structure. Four accountability boundaries marked: data boundary, inference boundary, action boundary, jurisdictional boundary. The organisation deploying the system retains accountability for the consequences of decisions the chain produces. From ARAF v3.0, 2026.</desc>
+  <defs>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
+  </defs>
+
+  <rect width="960" height="560" fill="#f7f5f0"/>
+  <rect x="20" y="20" width="920" height="520" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="20" y1="26" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="20" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="26" x2="940" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="20" x2="946" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="20" y1="534" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="540" x2="20" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="534" x2="940" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="540" x2="946" y2="540" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Header -->
+  <text x="480" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">DECISION SUPPLY CHAIN — ACCOUNTABILITY OWNERSHIP OVERLAY</text>
+  <line x1="40" y1="54" x2="920" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="72" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">The deploying organisation retains accountability for consequences of decisions the chain produces — regardless of supply chain structure.</text>
+
+  <!-- ── CHAIN STAGES ── -->
+  <!-- Stage 1: Data Inputs -->
+  <rect x="40" y="84" width="156" height="240" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="40" y="84" width="156" height="3" fill="#7a7a72"/>
+  <text x="118" y="102" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">STAGE 1</text>
+  <text x="118" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d0d0b" class="serif">Data Inputs</text>
+  <line x1="52" y1="128" x2="184" y2="128" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="118" y="144" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Training data</text>
+  <text x="118" y="157" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Operational data feeds</text>
+  <text x="118" y="170" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Retrieval sources</text>
+  <text x="118" y="183" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Privacy controls</text>
+  <line x1="52" y1="196" x2="184" y2="196" stroke="#e8e4db" stroke-width="0.75"/>
+  <!-- Ownership tag -->
+  <rect x="52" y="204" width="132" height="36" fill="white" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="118" y="218" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1" class="mono">ACCOUNTABLE</text>
+  <text x="118" y="232" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Data provider</text>
+  <text x="118" y="244" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="serif">+ deploying org (D2)</text>
+  <!-- D2 badge -->
+  <rect x="52" y="248" width="132" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="62" y="262" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D2</text>
+  <text x="80" y="262" font-size="7.5" fill="#7a7a72" class="serif">Data Sensitivity Exposure</text>
+  <!-- D3 badge -->
+  <rect x="52" y="270" width="132" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="62" y="284" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D3</text>
+  <text x="80" y="284" font-size="7.5" fill="#7a7a72" class="serif">Contract Infrastructure</text>
+
+  <!-- Boundary: Data -->
+  <line x1="196" y1="84" x2="196" y2="418" stroke="#A88644" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="196" y="430" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" class="mono" transform="rotate(-90,196,430)">DATA BOUNDARY</text>
+
+  <!-- Arrow -->
+  <line x1="196" y1="204" x2="210" y2="204" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="210,200 218,204 210,208" fill="#A88644"/>
+
+  <!-- Stage 2: Model Processing -->
+  <rect x="218" y="84" width="156" height="240" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="218" y="84" width="156" height="3" fill="#7a7a72"/>
+  <text x="296" y="102" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">STAGE 2</text>
+  <text x="296" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d0d0b" class="serif">Model Processing</text>
+  <line x1="230" y1="128" x2="362" y2="128" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="296" y="144" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Foundation model</text>
+  <text x="296" y="157" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Fine-tuning layer</text>
+  <text x="296" y="170" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">RAG / retrieval</text>
+  <text x="296" y="183" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Model versioning</text>
+  <line x1="230" y1="196" x2="362" y2="196" stroke="#e8e4db" stroke-width="0.75"/>
+  <rect x="230" y="204" width="132" height="36" fill="white" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="296" y="218" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1" class="mono">ACCOUNTABLE</text>
+  <text x="296" y="232" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Model provider</text>
+  <text x="296" y="244" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="serif">+ fine-tuning org (D5)</text>
+  <rect x="230" y="248" width="132" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="240" y="262" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D5</text>
+  <text x="258" y="262" font-size="7.5" fill="#7a7a72" class="serif">Commercial Leverage</text>
+  <rect x="230" y="270" width="132" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="240" y="284" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D1</text>
+  <text x="258" y="284" font-size="7.5" fill="#7a7a72" class="serif">Autonomy Gradient</text>
+
+  <!-- Boundary: Inference -->
+  <line x1="374" y1="84" x2="374" y2="418" stroke="#A88644" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="374" y="430" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" class="mono" transform="rotate(-90,374,430)">INFERENCE BOUNDARY</text>
+
+  <!-- Arrow -->
+  <line x1="374" y1="204" x2="388" y2="204" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="388,200 396,204 388,208" fill="#A88644"/>
+
+  <!-- Stage 3: Decision Formation — PRIMARY, dark -->
+  <rect x="396" y="84" width="166" height="240" fill="#0d0d0b" stroke="#A88644" stroke-width="1.5"/>
+  <rect x="396" y="84" width="166" height="3" fill="#A88644"/>
+  <text x="479" y="102" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">STAGE 3 · PRIMARY</text>
+  <text x="479" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="white" class="serif">Decision Formation</text>
+  <line x1="408" y1="128" x2="550" y2="128" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="479" y="144" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Governance controls</text>
+  <text x="479" y="157" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">AIOC oversight</text>
+  <text x="479" y="170" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Scope enforcement</text>
+  <text x="479" y="183" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Escalation logic</text>
+  <line x1="408" y1="196" x2="550" y2="196" stroke="#3a3a35" stroke-width="0.75"/>
+  <rect x="408" y="204" width="142" height="36" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="479" y="218" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">ACCOUNTABLE</text>
+  <text x="479" y="232" text-anchor="middle" font-size="8.5" fill="white" font-weight="bold" class="serif">Deploying organisation</text>
+  <text x="479" y="244" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="serif">primary accountability holder</text>
+  <rect x="408" y="248" width="142" height="20" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="418" y="262" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D4</text>
+  <text x="436" y="262" font-size="7.5" fill="#7a7a72" class="serif">Liability Architecture</text>
+  <rect x="408" y="270" width="142" height="20" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="418" y="284" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D6</text>
+  <text x="436" y="284" font-size="7.5" fill="#7a7a72" class="serif">Adaptive Stability</text>
+
+  <!-- Boundary: Action -->
+  <line x1="562" y1="84" x2="562" y2="418" stroke="#A88644" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="562" y="430" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" class="mono" transform="rotate(-90,562,430)">ACTION BOUNDARY</text>
+
+  <!-- Arrow -->
+  <line x1="562" y1="204" x2="576" y2="204" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="576,200 584,204 576,208" fill="#A88644"/>
+
+  <!-- Stage 4: Execution Infrastructure -->
+  <rect x="584" y="84" width="152" height="240" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="584" y="84" width="152" height="3" fill="#7a7a72"/>
+  <text x="660" y="102" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1.5" class="mono">STAGE 4</text>
+  <text x="660" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d0d0b" class="serif">Execution</text>
+  <line x1="596" y1="128" x2="724" y2="128" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="660" y="144" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Action admission</text>
+  <text x="660" y="157" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Integration layer</text>
+  <text x="660" y="170" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Cloud infrastructure</text>
+  <text x="660" y="183" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Audit logging</text>
+  <line x1="596" y1="196" x2="724" y2="196" stroke="#e8e4db" stroke-width="0.75"/>
+  <rect x="596" y="204" width="128" height="36" fill="white" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="660" y="218" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" letter-spacing="1" class="mono">ACCOUNTABLE</text>
+  <text x="660" y="232" text-anchor="middle" font-size="8" fill="#3a3a35" class="serif">Cloud / integration</text>
+  <text x="660" y="244" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="serif">contractors (D3)</text>
+  <rect x="596" y="248" width="128" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="606" y="262" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D3</text>
+  <text x="624" y="262" font-size="7.5" fill="#7a7a72" class="serif">Contract Infrastructure</text>
+  <rect x="596" y="270" width="128" height="20" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="606" y="284" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D1</text>
+  <text x="624" y="284" font-size="7.5" fill="#7a7a72" class="serif">Autonomy Gradient</text>
+
+  <!-- Arrow -->
+  <line x1="736" y1="204" x2="752" y2="204" stroke="#A88644" stroke-width="1.5"/>
+  <polygon points="752,200 760,204 752,208" fill="#A88644"/>
+
+  <!-- Stage 5: Institutional Exposure -->
+  <rect x="760" y="84" width="160" height="240" fill="#0d0d0b" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="760" y="84" width="160" height="3" fill="#A88644"/>
+  <text x="840" y="102" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1.5" class="mono">STAGE 5</text>
+  <text x="840" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="white" class="serif">Institutional</text>
+  <text x="840" y="133" text-anchor="middle" font-size="10" font-weight="bold" fill="white" class="serif">Exposure</text>
+  <line x1="772" y1="141" x2="908" y2="141" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="840" y="157" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Regulatory scrutiny</text>
+  <text x="840" y="170" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Litigation risk</text>
+  <text x="840" y="183" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Insurance coverage</text>
+  <text x="840" y="196" text-anchor="middle" font-size="8" fill="#d4d0c8" class="serif">Board accountability</text>
+  <line x1="772" y1="206" x2="908" y2="206" stroke="#3a3a35" stroke-width="0.75"/>
+  <rect x="772" y="214" width="128" height="36" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="836" y="228" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" letter-spacing="1" class="mono">ACCOUNTABILITY</text>
+  <text x="836" y="242" text-anchor="middle" font-size="8" fill="white" class="serif">Deploying org</text>
+  <text x="836" y="254" text-anchor="middle" font-size="7.5" fill="#7a7a72" class="serif">retains full residual</text>
+  <rect x="772" y="258" width="128" height="20" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="782" y="272" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D4</text>
+  <text x="800" y="272" font-size="7.5" fill="#7a7a72" class="serif">Liability Architecture</text>
+  <rect x="772" y="280" width="128" height="20" fill="#1a1a17" stroke="#3a3a35" stroke-width="0.75"/>
+  <text x="782" y="294" font-size="7.5" font-weight="bold" fill="#A88644" class="mono">D3</text>
+  <text x="800" y="294" font-size="7.5" fill="#7a7a72" class="serif">Contract Infrastructure</text>
+
+  <!-- ── ACCOUNTABILITY FLOW BAR BELOW CHAIN ── -->
+  <line x1="40" y1="340" x2="920" y2="340" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="480" y="358" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">ACCOUNTABILITY FOLLOWS THE CHAIN — NOT JUST THE MODEL AT ITS CENTRE</text>
+  <line x1="40" y1="366" x2="920" y2="366" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <!-- Three governance principles -->
+  <rect x="40" y="374" width="272" height="76" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="40" y="374" width="272" height="3" fill="#A88644"/>
+  <text x="176" y="392" text-anchor="middle" font-size="8" font-weight="bold" fill="#0d0d0b" class="serif">Chain Mapping</text>
+  <text x="176" y="408" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">AIOC maintains documented map of</text>
+  <text x="176" y="421" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">systems, actors, contracts, and</text>
+  <text x="176" y="434" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">jurisdictional boundaries at each link</text>
+
+  <rect x="324" y="374" width="312" height="76" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="324" y="374" width="312" height="3" fill="#A88644"/>
+  <text x="480" y="392" text-anchor="middle" font-size="8" font-weight="bold" fill="#0d0d0b" class="serif">Accountability Assignment at Each Link</text>
+  <text x="480" y="408" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Named accountability assignment and documented</text>
+  <text x="480" y="421" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">contractual basis required at every stage.</text>
+  <text x="480" y="434" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Undocumented accountability is unenforceable.</text>
+
+  <rect x="648" y="374" width="272" height="76" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="0.75"/>
+  <rect x="648" y="374" width="272" height="3" fill="#A88644"/>
+  <text x="784" y="392" text-anchor="middle" font-size="8" font-weight="bold" fill="#0d0d0b" class="serif">Evidence Continuity</text>
+  <text x="784" y="408" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Evidence record must follow the decision</text>
+  <text x="784" y="421" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">through every stage of the chain.</text>
+  <text x="784" y="434" text-anchor="middle" font-size="8" fill="#3a3a35" font-style="italic" class="serif">Gaps at any stage break reconstructability.</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="462" x2="920" y2="462" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="480" text-anchor="middle" font-size="8.5" fill="#0d0d0b" font-weight="bold" font-style="italic" class="serif">Governing test at each stage: Who was responsible? What did they know? What did they do?</text>
+  <text x="480" y="497" text-anchor="middle" font-size="8" fill="#7a7a72" class="serif">Contractual arrangements can allocate liability — but only if they were designed for that purpose and are adequately documented (D3).</text>
+  <text x="900" y="516" text-anchor="end" font-size="7" fill="#b0aca4" class="mono">ARAF v3.0 · 2026 · Institute for Autonomous Governance Pty Ltd</text>
+</svg>

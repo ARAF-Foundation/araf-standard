@@ -50,20 +50,22 @@ The GBI scale is intentionally inverted. It mirrors the logic of credit ratings:
 
 ### What is the multiplier logic?
 
-Governance weaknesses compound. ARAF incorporates four structural multipliers:
+
+Governance weaknesses compound. ARAF incorporates three structural multipliers:
 
 - Systemic Escalation: D1 at or above 4 and D4 at or above 4. High autonomy combined with inadequate liability architecture. The most severe compound exposure.
 - Infrastructure Collapse: D3 at or above 4 and D1 at or above 3. Significant autonomy combined with inadequate contract infrastructure. Liability allocation at the execution boundary is ungoverned contractually.
 - Leverage Collapse: D5 at or above 4 and D4 at or above 3. High commercial dependency combined with inadequate liability architecture. The system is structurally resistant to remediation.
-- Political Cascade: D5 at or above 4 and D3 at or above 3, with single-provider dependency and government-adjacent customer concentration. Government designation events can convert customer concentration into immediate revenue disruption where contract infrastructure does not address the cascade mechanism.
 
 Where a multiplier condition is present, the composite GBI score reflects compounded governance exposure, not a simple average. The dimensional profile is required alongside the composite score because multiplier activation depends on dimensional combinations that the composite alone does not reveal.
+
+**Note:** Political Cascade is not a canonical multiplier. It is classified as a material finding category. While it can create significant governance exposure—especially in cross-border deployments with government-adjacent customer concentration—it is assessed and reported separately from the three structural multipliers.
 
 ### What is political designation risk and why does ARAF assess it?
 
 Political designation risk is the exposure created when a government designates an AI provider as a supply chain risk, triggering cascade effects through enterprise customer procurement obligations. The February 2026 Anthropic-Pentagon designation event was the first documented instance: the US Pentagon designated a domestic AI company using a mechanism previously reserved for foreign adversaries, triggered by a contract negotiation dispute rather than a security vulnerability. The cascade was immediate: every enterprise whose AI products relied on the designated provider and whose customers held government procurement obligations faced revenue disruption that no existing contract clause addressed.
 
-ARAF assesses this risk across three dimensions. D3 (Contract Infrastructure) evaluates whether commercial agreements include political force majeure provisions and provider substitution rights with political designation triggers. D5 (Commercial Leverage) evaluates whether government-adjacent customer concentration creates cascade exposure. D6 (Adaptive Stability) evaluates whether the organisation monitors for government actions affecting its provider stack and has reassessment protocols for designation events. Where D5 and D3 scores combine with single-provider dependency and government-adjacent customer concentration, the Political Cascade multiplier captures the compounding exposure.
+ARAF assesses this risk across three dimensions. D3 (Contract Infrastructure) evaluates whether commercial agreements include political force majeure provisions and provider substitution rights with political designation triggers. D5 (Commercial Leverage) evaluates whether government-adjacent customer concentration creates cascade exposure. D6 (Adaptive Stability) evaluates whether the organisation monitors for government actions affecting its provider stack and has reassessment protocols for designation events. Where D5 and D3 scores combine with single-provider dependency and government-adjacent customer concentration, Political Cascade is classified as a material finding and reported as such in the assessment, not as a structural multiplier.
 
 ## Governance Coherence
 
@@ -72,6 +74,7 @@ ARAF assesses this risk across three dimensions. D3 (Contract Infrastructure) ev
 Governance Coherence is the evaluation layer that assesses whether documented governance architecture is actually exercised in operation. It applies across all six dimensions and is required for ARAF Compliant and Certified tiers. The design assessment (GBI) corresponds to SOC 2 Type I: point-in-time design adequacy. Governance Coherence corresponds to Type II: operational effectiveness over a defined period. The GBI and Governance Coherence Index (GCI) together determine certification tier eligibility. They cannot be produced simultaneously: a minimum 180-day assessment window separates the GBI assessment from GCI evaluation.
 
 The normative requirements are defined in the [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
+The normative requirements are defined in ARAF Standard v3.0, Clause 8 (Governance Coherence).
 
 ### What are the three coherence components?
 
@@ -83,11 +86,12 @@ Drift Detection is the component that distinguishes Governance Coherence from st
 
 ### How does the GCI affect the GBI score?
 
-The GCI operates as a divisor on the base GBI dimensional score:
 
-`Effective Dimension Score = GBI Dimension Score / GCI Dimension Score`
+The GCI operates as a modifier on the base GBI dimensional score:
 
-A GCI of 0.5 applied to a GBI dimensional score of 2.0 produces an effective score of 4.0, correctly reflecting that poor operational coherence significantly worsens the effective governance posture. Good governance design does not compensate for poor operational execution.
+`Effective Dimension Score = GBI Dimension Score × (2 − GCI Dimension Score)`
+
+A GCI of 0.5 applied to a GBI dimensional score of 2.0 produces an effective score of 1.0, correctly reflecting that poor operational coherence significantly reduces the effective governance posture. Good governance design does not compensate for poor operational execution.
 
 ## Certification
 
@@ -100,6 +104,7 @@ A GCI of 0.5 applied to a GBI dimensional score of 2.0 produces an effective sco
 These thresholds are provisional and subject to formal review after 50 completed assessments.
 
 Detailed tier logic and report obligations are defined in the [Certification Framework](/certification/certification-framework/) and [Governance Coherence Addendum](/certification/governance-coherence-addendum/).
+Detailed tier logic and report obligations are defined in the [Certification Framework](/certification/certification-framework/) and ARAF Standard v3.0, Clause 8 (Governance Coherence).
 
 ### Does ARAF certification constitute a legal safe harbour?
 
@@ -107,7 +112,7 @@ No. Certification does not constitute a statutory safe harbour in any jurisdicti
 
 ### What triggers reassessment?
 
-Organisations holding ARAF certification must notify their accredited assessor of material changes within 60 days of occurrence. Triggers include: material change to autonomy level, substitution of a primary AI provider or model, significant expansion of operational scope, a material incident in which the governance architecture was engaged or found insufficient, discovery of systematic governance drift, and regulatory developments materially affecting governance obligations. Continued use of a certification after a triggering event without initiating reassessment constitutes a certification breach.
+Organisations holding ARAF certification must notify their accredited assessor of material changes within 30 days of becoming aware of the occurrence. Triggers include: material change to autonomy level, substitution of a primary AI provider or model, significant expansion of operational scope, a material incident in which the governance architecture was engaged or found insufficient, discovery of systematic governance drift, and regulatory developments materially affecting governance obligations. Continued use of a certification after a triggering event without initiating reassessment constitutes a certification breach.
 
 ## Evidence And Reconstructability
 
@@ -152,9 +157,15 @@ ARAF provides a comparable, assessable governance signal across supervised organ
 
 The ARAF standard is maintained by Institute for Autonomous Governance Pty Ltd (ACN 696 112 277), incorporated in New South Wales in March 2026. The standard is published under Creative Commons Attribution 4.0 (CC BY 4.0). The Institute is structurally distinct from Venture Bench Pty Ltd, which serves as the founding implementation partner and operates as an accredited assessor under the same independence requirements that apply to all accredited assessors. The Institute does not conduct assessments. Venture Bench does not maintain the standard. This separation follows established governance precedent: ISO maintains standards; accredited certification bodies conduct assessments.
 
+
 ### What is the governance model for the standard?
 
-The standard is currently maintained under a Founding Stewardship governance model with governance authority held by the Institute. Five principles guide maintenance: purpose primacy, version discipline, public transparency, methodological consistency, and institutional usability. The governance model is designed to scale with the ecosystem: from the current founder-led stage, through an advisory stage incorporating institutional and technical contributors, toward a multi-stakeholder governance model as the certification ecosystem reaches institutional scale. Transition is triggered by ecosystem maturity, not calendar time.
+The standard currently operates under a **Founding Stewardship governance model**. This structure ensures methodological consistency, version discipline, and clear accountability during early adoption, before governance expands to include broader institutional participation.
+
+**Founding Stewardship governance model**
+> A governance structure in which the originating standards body maintains stewardship, version control, and methodological integrity during early-stage adoption, prior to expansion into multi-stakeholder institutional governance.
+
+Five principles guide maintenance: purpose primacy, version discipline, public transparency, methodological consistency, and institutional usability. The governance model is designed to scale with the ecosystem: from the current Founding Stewardship stage, through an advisory stage incorporating institutional and technical contributors, toward a multi-stakeholder governance model as the certification ecosystem reaches institutional scale. Transition will occur as institutional adoption increases.
 
 ### Who conducts ARAF assessments?
 

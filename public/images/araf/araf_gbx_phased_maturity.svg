@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <title>GBX Benchmark Intelligence — Phased Maturity Model</title>
+  <desc>Phased maturity model for the GBX benchmark and institutional intelligence layer. Phase 1 Current: Assessment delivery — individual assessment outputs, rights-cleared evidence under executed DPA, de-identification under approved anonymisation standard. Phase 2 Gated: Benchmark foundation — cohort threshold met, benchmark governance policy approved, aggregated de-identified dataset. Phase 3 Gated: Intelligence products — benchmark publication, institutional data licensing, signal intelligence. Phase 4 Future: Market infrastructure — sector analysis, portfolio monitoring, regulatory reference data. Each phase transition requires specific governance gates to be satisfied before proceeding. No benchmark product, data licence, or intelligence product may be published or licensed until Phase 2 gates are satisfied. From ARAF v3.0, 2026.</desc>
+  <defs>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.mono{font-family:'Courier New',Courier,monospace}</style>
+  </defs>
+
+  <rect width="960" height="520" fill="#f7f5f0"/>
+  <rect x="20" y="20" width="920" height="480" fill="#ffffff" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Registration marks -->
+  <line x1="20" y1="26" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="20" x2="20" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="26" x2="940" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="20" x2="946" y2="20" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="20" y1="494" x2="20" y2="500" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="14" y1="500" x2="20" y2="500" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="494" x2="940" y2="500" stroke="#d4d0c8" stroke-width="0.75"/>
+  <line x1="940" y1="500" x2="946" y2="500" stroke="#d4d0c8" stroke-width="0.75"/>
+
+  <!-- Header -->
+  <text x="480" y="48" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="3" class="mono">GBX — BENCHMARK AND INSTITUTIONAL INTELLIGENCE LAYER · PHASED MATURITY MODEL</text>
+  <line x1="40" y1="54" x2="920" y2="54" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="72" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">GBX is the future benchmark and institutional intelligence layer, built from rights-cleared, de-identified, evidence-disciplined ARAF assessments</text>
+  <text x="480" y="86" text-anchor="middle" font-size="9" fill="#3a3a35" font-style="italic" class="serif">once benchmark-governance, anonymisation, and cohort conditions are satisfied.</text>
+
+  <!-- Phase flow line -->
+  <line x1="80" y1="220" x2="880" y2="220" stroke="#e8e4db" stroke-width="1.5"/>
+
+  <!-- ── PHASE 1: CURRENT ── -->
+  <rect x="40" y="104" width="196" height="232" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="40" y="104" width="196" height="3" fill="#A88644"/>
+  <rect x="40" y="104" width="56" height="18" fill="#A88644"/>
+  <text x="68" y="117" text-anchor="middle" font-size="7" font-weight="bold" fill="white" class="mono">CURRENT</text>
+
+  <text x="138" y="136" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Assessment</text>
+  <text x="138" y="150" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Delivery</text>
+  <line x1="52" y1="158" x2="224" y2="158" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <rect x="52" y="164" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="172" font-size="8" fill="#3a3a35" class="serif">Individual assessments delivered</text>
+  <rect x="52" y="176" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="184" font-size="8" fill="#3a3a35" class="serif">Rights-cleared under executed DPA</text>
+  <rect x="52" y="190" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="198" font-size="8" fill="#3a3a35" class="serif">De-identification standard applied</text>
+  <rect x="52" y="204" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="212" font-size="8" fill="#3a3a35" class="serif">Evidence-disciplined outputs</text>
+
+  <!-- Status indicator -->
+  <circle cx="138" cy="254" r="16" fill="#1e3a1e" stroke="#6bbf6b" stroke-width="1.5"/>
+  <text x="138" y="259" text-anchor="middle" font-size="8" font-weight="bold" fill="#6bbf6b" class="mono">LIVE</text>
+
+  <text x="138" y="286" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">Assessment revenue</text>
+  <text x="138" y="298" text-anchor="middle" font-size="7.5" fill="#7a7a72" font-style="italic" class="serif">funds Phase 2 gates</text>
+  <text x="138" y="314" text-anchor="middle" font-size="7" fill="#A88644" font-style="italic" class="serif">Near-term revenue layer</text>
+
+  <!-- Gate 1 -->
+  <rect x="236" y="196" width="64" height="50" fill="#0d0d0b" stroke="#A88644" stroke-width="1"/>
+  <text x="268" y="215" text-anchor="middle" font-size="7" font-weight="bold" fill="#A88644" class="mono">GATE 1</text>
+  <text x="268" y="229" text-anchor="middle" font-size="7.5" fill="white" class="serif">DPA executed</text>
+  <text x="268" y="241" text-anchor="middle" font-size="7.5" fill="white" class="serif">Anon approved</text>
+  <line x1="236" y1="221" x2="220" y2="221" stroke="#A88644" stroke-width="1"/>
+  <line x1="300" y1="221" x2="316" y2="221" stroke="#A88644" stroke-width="1"/>
+  <polygon points="316,217 324,221 316,225" fill="#A88644"/>
+
+  <!-- ── PHASE 2: GATED ── -->
+  <rect x="324" y="104" width="196" height="232" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="324" y="104" width="196" height="3" fill="#7a7a72"/>
+  <rect x="324" y="104" width="62" height="18" fill="#7a7a72"/>
+  <text x="355" y="117" text-anchor="middle" font-size="7" font-weight="bold" fill="white" class="mono">GATED</text>
+
+  <text x="422" y="136" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Benchmark</text>
+  <text x="422" y="150" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Foundation</text>
+  <line x1="336" y1="158" x2="508" y2="158" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <rect x="336" y="164" width="6" height="6" fill="#7a7a72"/>
+  <text x="348" y="172" font-size="8" fill="#7a7a72" class="serif">Cohort threshold met</text>
+  <rect x="336" y="176" width="6" height="6" fill="#7a7a72"/>
+  <text x="348" y="184" font-size="8" fill="#7a7a72" class="serif">Benchmark governance policy approved</text>
+  <rect x="336" y="190" width="6" height="6" fill="#7a7a72"/>
+  <text x="348" y="198" font-size="8" fill="#7a7a72" class="serif">Anonymisation standard verified</text>
+  <rect x="336" y="204" width="6" height="6" fill="#7a7a72"/>
+  <text x="348" y="212" font-size="8" fill="#7a7a72" class="serif">Aggregated de-identified dataset</text>
+
+  <!-- Locked indicator -->
+  <circle cx="422" cy="254" r="16" fill="#2a2a26" stroke="#7a7a72" stroke-width="1"/>
+  <text x="422" y="259" text-anchor="middle" font-size="10" fill="#7a7a72" class="serif">⊠</text>
+
+  <text x="422" y="286" text-anchor="middle" font-size="7.5" fill="#b0aca4" font-style="italic" class="serif">Requires Gate 1 + cohort</text>
+  <text x="422" y="298" text-anchor="middle" font-size="7.5" fill="#b0aca4" font-style="italic" class="serif">threshold satisfied</text>
+
+  <!-- Gate 2 -->
+  <rect x="520" y="196" width="64" height="50" fill="#0d0d0b" stroke="#7a7a72" stroke-width="1"/>
+  <text x="552" y="215" text-anchor="middle" font-size="7" font-weight="bold" fill="#7a7a72" class="mono">GATE 2</text>
+  <text x="552" y="229" text-anchor="middle" font-size="7.5" fill="#d4d0c8" class="serif">Cohort reached</text>
+  <text x="552" y="241" text-anchor="middle" font-size="7.5" fill="#d4d0c8" class="serif">Gov. policy live</text>
+  <line x1="520" y1="221" x2="504" y2="221" stroke="#7a7a72" stroke-width="1"/>
+  <line x1="584" y1="221" x2="600" y2="221" stroke="#7a7a72" stroke-width="1"/>
+  <polygon points="600,217 608,221 600,225" fill="#7a7a72"/>
+
+  <!-- ── PHASE 3: GATED ── -->
+  <rect x="608" y="104" width="196" height="232" fill="#f7f5f0" stroke="#d4d0c8" stroke-width="1"/>
+  <rect x="608" y="104" width="196" height="3" fill="#7a7a72"/>
+  <rect x="608" y="104" width="62" height="18" fill="#7a7a72"/>
+  <text x="639" y="117" text-anchor="middle" font-size="7" font-weight="bold" fill="white" class="mono">GATED</text>
+
+  <text x="706" y="136" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Intelligence</text>
+  <text x="706" y="150" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0d0d0b" class="serif">Products</text>
+  <line x1="620" y1="158" x2="792" y2="158" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <rect x="620" y="164" width="6" height="6" fill="#b0aca4"/>
+  <text x="632" y="172" font-size="8" fill="#b0aca4" class="serif">Benchmark publication</text>
+  <rect x="620" y="176" width="6" height="6" fill="#b0aca4"/>
+  <text x="632" y="184" font-size="8" fill="#b0aca4" class="serif">Institutional data licensing</text>
+  <rect x="620" y="190" width="6" height="6" fill="#b0aca4"/>
+  <text x="632" y="198" font-size="8" fill="#b0aca4" class="serif">Sector signal intelligence</text>
+  <rect x="620" y="204" width="6" height="6" fill="#b0aca4"/>
+  <text x="632" y="212" font-size="8" fill="#b0aca4" class="serif">Rights-cleared licensing cohorts</text>
+
+  <circle cx="706" cy="254" r="16" fill="#1a1a17" stroke="#5a5a52" stroke-width="1"/>
+  <text x="706" y="259" text-anchor="middle" font-size="10" fill="#5a5a52" class="serif">⊠</text>
+
+  <text x="706" y="286" text-anchor="middle" font-size="7.5" fill="#b0aca4" font-style="italic" class="serif">Future state. Not a</text>
+  <text x="706" y="298" text-anchor="middle" font-size="7.5" fill="#b0aca4" font-style="italic" class="serif">current product offer.</text>
+
+  <!-- Arrow to Phase 4 -->
+  <line x1="804" y1="221" x2="820" y2="221" stroke="#5a5a52" stroke-width="1" stroke-dasharray="3,3"/>
+  <polygon points="820,217 828,221 820,225" fill="#5a5a52"/>
+
+  <!-- ── PHASE 4: FUTURE ── -->
+  <rect x="828" y="104" width="112" height="232" fill="#1a1a17" stroke="#5a5a52" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="828" y="104" width="112" height="3" fill="#5a5a52"/>
+  <text x="884" y="124" text-anchor="middle" font-size="7" font-weight="bold" fill="#5a5a52" letter-spacing="1" class="mono">FUTURE</text>
+
+  <text x="884" y="148" text-anchor="middle" font-size="9" font-weight="bold" fill="#7a7a72" class="serif">Market</text>
+  <text x="884" y="162" text-anchor="middle" font-size="9" font-weight="bold" fill="#7a7a72" class="serif">Infrastructure</text>
+  <line x1="840" y1="170" x2="928" y2="170" stroke="#3a3a35" stroke-width="0.5"/>
+  <text x="884" y="185" text-anchor="middle" font-size="7.5" fill="#5a5a52" class="serif">Sector analysis</text>
+  <text x="884" y="198" text-anchor="middle" font-size="7.5" fill="#5a5a52" class="serif">Portfolio monitoring</text>
+  <text x="884" y="211" text-anchor="middle" font-size="7.5" fill="#5a5a52" class="serif">Regulatory reference</text>
+  <text x="884" y="224" text-anchor="middle" font-size="7.5" fill="#5a5a52" class="serif">Signal licensing</text>
+
+  <text x="884" y="286" text-anchor="middle" font-size="7" fill="#5a5a52" font-style="italic" class="serif">Standards</text>
+  <text x="884" y="298" text-anchor="middle" font-size="7" fill="#5a5a52" font-style="italic" class="serif">economics moat</text>
+
+  <!-- ── GATE REQUIREMENTS TABLE ── -->
+  <line x1="40" y1="352" x2="920" y2="352" stroke="#d4d0c8" stroke-width="0.75"/>
+  <text x="480" y="370" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#7a7a72" letter-spacing="2" class="mono">GATE PREREQUISITES — NONE ARE WAIVABLE</text>
+  <line x1="40" y1="376" x2="920" y2="376" stroke="#e8e4db" stroke-width="0.75"/>
+
+  <rect x="40" y="383" width="424" height="72" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <rect x="40" y="383" width="424" height="3" fill="#A88644"/>
+  <text x="252" y="400" text-anchor="middle" font-size="8" font-weight="bold" fill="#A88644" class="mono">GATE 1 · PHASE 1 → 2</text>
+  <rect x="52" y="406" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="414" font-size="8" fill="#3a3a35" class="serif">DPA executed with each participating data provider</text>
+  <rect x="52" y="420" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="428" font-size="8" fill="#3a3a35" class="serif">Anonymisation standard formally approved by Institute</text>
+  <rect x="52" y="434" width="6" height="6" fill="#A88644"/>
+  <text x="64" y="442" font-size="8" fill="#3a3a35" class="serif">Cross-border data controls documented and verified</text>
+  <rect x="52" y="448" width="6" height="6" fill="#A88644"/>
+
+  <rect x="476" y="383" width="444" height="72" fill="#f7f5f0" stroke="#e8e4db" stroke-width="0.75"/>
+  <rect x="476" y="383" width="444" height="3" fill="#7a7a72"/>
+  <text x="698" y="400" text-anchor="middle" font-size="8" font-weight="bold" fill="#7a7a72" class="mono">GATE 2 · PHASE 2 → 3</text>
+  <rect x="488" y="406" width="6" height="6" fill="#7a7a72"/>
+  <text x="500" y="414" font-size="8" fill="#3a3a35" class="serif">Minimum cohort threshold met (defined in benchmark governance policy)</text>
+  <rect x="488" y="420" width="6" height="6" fill="#7a7a72"/>
+  <text x="500" y="428" font-size="8" fill="#3a3a35" class="serif">Benchmark governance policy formally approved by Institute Board</text>
+  <rect x="488" y="434" width="6" height="6" fill="#7a7a72"/>
+  <text x="500" y="442" font-size="8" fill="#3a3a35" class="serif">Withdrawal, suppression, and re-identification controls verified in operation</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="462" x2="920" y2="462" stroke="#e8e4db" stroke-width="0.75"/>
+  <text x="480" y="479" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">No benchmark dataset publication, institutional data licensing, benchmark report sponsorship, or external intelligence product may commence</text>
+  <text x="480" y="493" text-anchor="middle" font-size="8" fill="#7a7a72" font-style="italic" class="serif">until benchmark participation consent, anonymisation controls, minimum cohort thresholds, and benchmark governance approvals are in force.</text>
+  <text x="900" y="512" text-anchor="end" font-size="7" fill="#b0aca4" class="mono">ARAF v3.0 · 2026 · Institute for Autonomous Governance Pty Ltd</text>
+</svg>
