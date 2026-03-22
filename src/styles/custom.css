@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap');
 
 /* ARAF Standard visual design system — v2.0 March 2026 */
 
@@ -41,8 +41,8 @@
   --sl-color-gray-6: var(--araf-rule);
 
   /* Typography */
-  --sl-font: 'DM Mono', 'Courier New', monospace;
-  --sl-font-system: 'DM Mono', 'Courier New', monospace;
+  --sl-font: 'Inter', Arial, Helvetica, sans-serif;
+  --sl-font-system: 'Inter', Arial, Helvetica, sans-serif;
   --sl-font-mono: 'DM Mono', 'Courier New', monospace;
 }
 
@@ -68,37 +68,34 @@ html,
 body {
   background: var(--araf-paper);
   color: var(--araf-ink-mid);
-  font-family: 'DM Mono', 'Courier New', monospace;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.7;
+  max-width: 100vw;
 }
 
+
 /* Typography system */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
-  line-height: 1.25;
+  line-height: 1.15;
   color: var(--araf-ink);
   font-style: normal;
 }
-
-h1 { font-size: 2.25rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.1rem; }
+h1 { font-size: 3.25rem; line-height: 1.1; }
+h2 { font-size: 2rem; line-height: 1.15; }
+h3 { font-size: 1.25rem; line-height: 1.2; }
 
 :where(p, li, dd, blockquote, figcaption) {
-  font-family: 'DM Mono', 'Courier New', monospace;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--araf-ink-mid);
+  max-width: 70ch;
 }
 
 p {
@@ -110,7 +107,7 @@ p {
 }
 
 :where(a, button, input, select, textarea, label, small, summary) {
-  font-family: 'DM Mono', 'Courier New', monospace;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-style: normal;
 }
 
@@ -648,10 +645,10 @@ a:focus-visible {
 }
 
 .araf-hero__headline {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--araf-paper);
   max-width: 18ch;
   margin-bottom: 1.5rem;
@@ -733,10 +730,10 @@ a:focus-visible {
 }
 
 .araf-section__heading {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 1.75rem;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.15;
   margin-bottom: 1rem;
   color: var(--araf-ink);
 }
@@ -919,8 +916,8 @@ a:focus-visible {
 .araf-step__content { padding: 1.75rem 2rem; }
 
 .araf-step__content h3 {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 1.125rem;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--araf-paper);
   margin-bottom: 0.6rem;
@@ -1097,8 +1094,8 @@ araf-cert-card--certified { border-top-color: var(--araf-ink); }
 }
 
 .araf-apply-option h3 {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 1.125rem;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--araf-paper);
 }
