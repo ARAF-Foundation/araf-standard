@@ -69,7 +69,6 @@ export default defineConfig({
         {
           label: 'THE STANDARD',
           items: [
-            { label: 'Specification Index', slug: 'specification-index' },
             { label: 'Architecture Specification', slug: 'standard/architecture-specification' },
             { label: 'Governance Ontology', slug: 'standard/governance-ontology' },
             { label: 'Six Dimensions', slug: 'standard/six-dimensions' },
@@ -79,7 +78,6 @@ export default defineConfig({
         {
           label: 'EVIDENCE AND ASSESSMENT',
           items: [
-            { label: 'Evidence Standard', slug: 'evidence/evidence-standard' },
             { label: 'Evidence Infrastructure Standard (EIS-01)', slug: 'evidence/evidence-infrastructure-standard' },
           ],
         },
@@ -87,7 +85,6 @@ export default defineConfig({
           label: 'CERTIFICATION AND SCORING',
           items: [
             { label: 'Governance Benchmark Index', slug: 'certification/governance-benchmark-index' },
-            { label: 'Governance Coherence Addendum', slug: 'certification/governance-coherence-addendum' },
             { label: 'Certification Framework', slug: 'certification/certification-framework' },
           ],
         },
@@ -99,7 +96,6 @@ export default defineConfig({
             { label: 'What to Expect During an Assessment', slug: 'assessor-guidance/what-to-expect' },
             { label: 'GN-001: Conducting an ARAF Governance Assessment', slug: 'assessor-guidance/gn-001' },
             { label: 'GN-002: Cross-Border Deployment Assessment', slug: 'assessor-guidance/gn-002' },
-            { label: 'GN-003: Governance Coherence Assessment', slug: 'assessor-guidance/gn-003' },
             { label: 'Assessor Accreditation Standard', slug: 'assessor-guidance/assessor-accreditation-standard' },
           ],
         },
@@ -118,8 +114,6 @@ export default defineConfig({
           items: [
             { label: 'Worked Examples', slug: 'pilot/worked-examples' },
             { label: 'Evidence Checklist', slug: 'pilot/evidence-checklist' },
-            { label: 'Downloadable Participation Agreement (PDF)', slug: 'pilot/participation-agreement' },
-            { label: 'Downloadable Founder Assessment Brief (PDF)', slug: 'pilot/founder-assessment-brief' },
             { label: 'Downloads', slug: 'downloads' },
           ],
         },
