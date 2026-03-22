@@ -106,9 +106,9 @@ During the initial deployment period (first 20 certifications), the following ca
 |---|---|
 | **Dual-Assessor** | All GCI scores must be independently validated by a second accredited assessor. |
 | **Range Reporting** | GCI scores reported as a range (e.g., 0.75–0.85) rather than a point estimate. |
-| **Inter-Rater Tracking** | Scoring differences between assessors must be documented and submitted to the ARAF Standards Authority. |
+| **Inter-Rater Tracking** | Scoring differences between assessors must be documented and submitted to the Institute for Autonomous Governance Pty Ltd (ACN 696 112 277). |
 | **Threshold Review** | Provisional thresholds reviewed and adjusted as needed after 20 and 50 assessments. |
-
+| **Inter-Rater Tracking** | Scoring differences between assessors must be documented and submitted to the Institute for Autonomous Governance Pty Ltd (ACN 696 112 277). |
 ---
 
 ## § 05 Evidence Requirements

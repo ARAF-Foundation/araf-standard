@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap');
 
-/* ARAF Standard visual design system */
+/* ARAF Standard visual design system — v2.0 March 2026 */
 
 :root,
 :root[data-theme='light'],
@@ -9,10 +9,12 @@
   --araf-ink: #0d0d0b;
   --araf-ink-mid: #3a3a35;
   --araf-ink-muted: #7a7a72;
-  --araf-rule: #d4d0c8;
+  --araf-mid: #5a5750;
+  --araf-rule: #D4D0C8;
   --araf-paper: #f7f5f0;
   --araf-cream: #ede9e0;
   --araf-gold: #A88644;
+  --araf-gold-lt: #C4A868;
   --araf-gold-dim: #9C7A3C;
   --araf-dark: #0d0d0b;
   --araf-white: #ffffff;
@@ -39,9 +41,9 @@
   --sl-color-gray-6: var(--araf-rule);
 
   /* Typography */
-  --sl-font: Inter, Arial, Helvetica, sans-serif;
-  --sl-font-system: Inter, Arial, Helvetica, sans-serif;
-  --sl-font-mono: "DM Mono", "Courier New", monospace;
+  --sl-font: 'DM Mono', 'Courier New', monospace;
+  --sl-font-system: 'DM Mono', 'Courier New', monospace;
+  --sl-font-mono: 'DM Mono', 'Courier New', monospace;
 }
 
 /* Global constraints */
@@ -66,10 +68,10 @@ html,
 body {
   background: var(--araf-paper);
   color: var(--araf-ink-mid);
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'DM Mono', 'Courier New', monospace;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.9375rem;
+  line-height: 1.7;
 }
 
 /* Typography system */
@@ -79,31 +81,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
   color: var(--araf-ink);
   font-style: normal;
 }
 
-h1 {
-  font-size: 2.25rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.1rem; }
 
 :where(p, li, dd, blockquote, figcaption) {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'DM Mono', 'Courier New', monospace;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.9375rem;
+  line-height: 1.7;
   color: var(--araf-ink-mid);
 }
 
@@ -116,7 +110,7 @@ p {
 }
 
 :where(a, button, input, select, textarea, label, small, summary) {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'DM Mono', 'Courier New', monospace;
   font-style: normal;
 }
 
@@ -128,7 +122,7 @@ pre,
 table,
 th,
 td {
-  font-family: "DM Mono", "Courier New", monospace;
+  font-family: 'DM Mono', 'Courier New', monospace;
 }
 
 :where(nav, .sidebar-content, .sl-breadcrumbs, .meta-note, .pagination-links, .sl-link-button) {
@@ -137,7 +131,7 @@ td {
 
 .sidebar-content .group-label,
 .sidebar-content .group-label .large {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'DM Mono', 'Courier New', monospace;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #A88644;
@@ -160,7 +154,7 @@ td {
   .q-num,
   .all-caps-label
 ) {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'DM Mono', 'Courier New', monospace;
   font-weight: 400;
   font-size: 0.65rem;
   letter-spacing: 0.16em;
@@ -207,7 +201,7 @@ th,
 td,
 blockquote,
 article,
-.card,
+card,
 .sl-markdown-content :where(h2, h3, h4),
 .sl-markdown-content :where(table, thead, tbody, tr, th, td) {
   border-color: var(--araf-rule);
@@ -366,9 +360,9 @@ a:focus-visible {
 
   background: var(--inst-paper);
   color: var(--inst-ink-mid);
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  font-size: 0.9375rem;
+  line-height: 1.7;
   border: 1px solid var(--inst-rule);
 }
 
@@ -388,9 +382,9 @@ a:focus-visible {
 
 .enterprise-procurement-page .site-brand {
   margin: 0;
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--inst-ink);
 }
 
@@ -425,10 +419,10 @@ a:focus-visible {
 .enterprise-procurement-page .hero h2,
 .enterprise-procurement-page .section-title,
 .enterprise-procurement-page .problem-statement {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
   color: var(--inst-ink);
 }
 
@@ -605,6 +599,556 @@ a:focus-visible {
   font-weight: 400;
 }
 
+/* ── HOMEPAGE COMPONENTS ─────────────────────────────────────────── */
+
+/* Hero */
+.araf-hero {
+  background: var(--araf-ink);
+  color: var(--araf-paper);
+  padding: 6rem 2rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.araf-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(212,208,200,0.04) 39px,
+      rgba(212,208,200,0.04) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(212,208,200,0.03) 79px,
+      rgba(212,208,200,0.03) 80px
+    );
+  pointer-events: none;
+}
+
+.araf-hero__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.araf-hero__label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--araf-gold);
+  margin-bottom: 2rem;
+}
+
+.araf-hero__headline {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--araf-paper);
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+}
+
+.araf-hero__subhead {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--araf-rule);
+  max-width: 54ch;
+  margin-bottom: 2rem;
+}
+
+.araf-hero__key-line {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--araf-gold-lt);
+  border-left: 2px solid var(--araf-gold);
+  padding-left: 1.25rem;
+  margin-bottom: 3rem;
+  max-width: 50ch;
+  line-height: 1.5;
+}
+
+.araf-hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.araf-btn {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-decoration: none;
+}
+
+.araf-btn--primary {
+  background: var(--araf-gold);
+  color: var(--araf-ink);
+  border-color: var(--araf-gold);
+}
+
+.araf-btn--primary:hover {
+  background: var(--araf-gold-lt);
+  text-decoration: none;
+}
+
+.araf-btn--secondary {
+  background: transparent;
+  color: var(--araf-rule);
+  border-color: rgba(212,208,200,0.3);
+}
+
+.araf-btn--secondary:hover {
+  border-color: var(--araf-rule);
+  color: var(--araf-paper);
+  text-decoration: none;
+}
+
+/* Shared section styles */
+.araf-section {
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--araf-rule);
+}
+
+.araf-section__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.araf-section__heading {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  color: var(--araf-ink);
+}
+
+.araf-section__lead {
+  font-size: 1.0625rem;
+  color: var(--araf-mid);
+  max-width: 68ch;
+  margin-bottom: 3rem;
+  line-height: 1.65;
+}
+
+.araf-section__closing-note {
+  margin-top: 2.5rem;
+  font-style: italic;
+  color: var(--araf-mid);
+  font-size: 0.9375rem;
+}
+
+/* Problem section */
+.araf-section--problem { background: var(--araf-cream); }
+
+.araf-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--araf-rule);
+  border: 1px solid var(--araf-rule);
+}
+
+.araf-problem-item {
+  background: var(--araf-cream);
+  padding: 1.75rem;
+}
+
+.araf-problem-item__audience {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--araf-gold);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.araf-problem-item p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--araf-mid);
+}
+
+/* Outputs section */
+.araf-section--outputs { background: var(--araf-paper); }
+
+.araf-outputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2px;
+  background: var(--araf-rule);
+  border: 1px solid var(--araf-rule);
+  margin-bottom: 2rem;
+}
+
+.araf-output-item {
+  background: var(--araf-paper);
+  padding: 1.75rem;
+  position: relative;
+}
+
+.araf-output-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 100%;
+  background: var(--araf-gold);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.araf-output-item:hover::before { opacity: 1; }
+
+.araf-output-item h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--araf-ink);
+}
+
+.araf-output-item p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--araf-mid);
+}
+
+.araf-outputs-technical {
+  border: 1px solid var(--araf-rule);
+  border-left: 3px solid var(--araf-gold);
+  background: var(--araf-cream);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.araf-outputs-technical__label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--araf-gold);
+  margin-bottom: 0.875rem;
+}
+
+.araf-outputs-technical__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.araf-outputs-technical__list li {
+  font-size: 0.875rem;
+  color: var(--araf-mid);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.araf-outputs-technical__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--araf-rule);
+}
+
+.araf-outputs-usage {
+  font-style: italic;
+  color: var(--araf-mid);
+  font-size: 0.9375rem;
+  border-top: 1px solid var(--araf-rule);
+  padding-top: 1.5rem;
+}
+
+/* How it works */
+.araf-section--how {
+  background: var(--araf-ink);
+  color: var(--araf-paper);
+}
+
+.araf-section--how .araf-section__heading { color: var(--araf-paper); }
+.araf-section--how .araf-section__lead { color: var(--araf-rule); }
+
+.araf-steps {
+  display: grid;
+  gap: 0;
+  border: 1px solid rgba(212,208,200,0.15);
+}
+
+.araf-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  border-bottom: 1px solid rgba(212,208,200,0.1);
+  transition: background 0.18s;
+}
+
+.araf-step:last-child { border-bottom: none; }
+.araf-step:hover { background: rgba(255,255,255,0.03); }
+
+.araf-step__number {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--araf-gold);
+  letter-spacing: 0.1em;
+  padding: 2rem 1.5rem 1.75rem;
+  border-right: 1px solid rgba(212,208,200,0.1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.araf-step__content { padding: 1.75rem 2rem; }
+
+.araf-step__content h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--araf-paper);
+  margin-bottom: 0.6rem;
+}
+
+.araf-step__content p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(212,208,200,0.7);
+  margin-bottom: 0.875rem;
+  max-width: 58ch;
+}
+
+.araf-step__link {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--araf-gold);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.araf-step__link:hover { color: var(--araf-gold-lt); text-decoration: none; }
+
+/* Institutional audience grid */
+.araf-section--institutional { background: var(--araf-paper); }
+
+.araf-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--araf-rule);
+  border: 1px solid var(--araf-rule);
+}
+
+.araf-audience-card {
+  background: var(--araf-paper);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--araf-ink);
+  text-decoration: none;
+  transition: background 0.18s;
+  border-top: 2px solid transparent;
+}
+
+.araf-audience-card:hover {
+  background: var(--araf-cream);
+  border-top-color: var(--araf-gold);
+  text-decoration: none;
+}
+
+.araf-audience-card__label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--araf-gold);
+  font-weight: 500;
+}
+
+.araf-audience-card p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--araf-mid);
+  flex: 1;
+}
+
+.araf-audience-card__link {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--araf-gold);
+  letter-spacing: 0.05em;
+}
+
+/* Certification */
+.araf-section--certification { background: var(--araf-cream); }
+
+.araf-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--araf-rule);
+  border: 1px solid var(--araf-rule);
+  margin-bottom: 1.5rem;
+}
+
+.araf-cert-card {
+  background: var(--araf-cream);
+  padding: 1.75rem;
+  border-top: 3px solid transparent;
+}
+
+.araf-cert-card--assessed { border-top-color: var(--araf-rule); }
+.araf-cert-card--compliant { border-top-color: var(--araf-gold); }
+araf-cert-card--certified { border-top-color: var(--araf-ink); }
+
+.araf-cert-card__tier {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: var(--araf-ink);
+}
+
+.araf-cert-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--araf-mid);
+}
+
+.araf-cert-actor {
+  font-size: 0.875rem;
+  color: var(--araf-mid);
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--araf-rule);
+  padding-top: 1.25rem;
+}
+
+.araf-cert-note { font-size: 0.875rem; }
+.araf-cert-note a { color: var(--araf-gold); }
+
+/* Apply section */
+.araf-section--apply {
+  background: var(--araf-ink);
+  color: var(--araf-paper);
+}
+
+.araf-section--apply .araf-section__heading { color: var(--araf-paper); }
+.araf-section--apply .araf-section__lead { color: var(--araf-rule); }
+
+.araf-independence-statement {
+  border: 1px solid rgba(212,208,200,0.2);
+  border-left: 3px solid var(--araf-gold);
+  background: rgba(168,134,68,0.06);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.araf-independence-statement__heading {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--araf-gold);
+  margin-bottom: 0.75rem;
+}
+
+.araf-independence-statement p:last-child {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(212,208,200,0.75);
+  margin-bottom: 0;
+}
+
+.araf-apply-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: rgba(212,208,200,0.15);
+  border: 1px solid rgba(212,208,200,0.15);
+  margin-bottom: 2rem;
+}
+
+.araf-apply-option {
+  background: var(--araf-ink);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.araf-apply-option h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--araf-paper);
+}
+
+.araf-apply-option p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(212,208,200,0.7);
+  flex: 1;
+}
+
+.araf-apply-disclaimer {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.65;
+  color: rgba(212,208,200,0.4);
+  border-top: 1px solid rgba(212,208,200,0.1);
+  padding-top: 1.5rem;
+  max-width: 68ch;
+}
+
+/* Standard note */
+.araf-section--standard-note { background: var(--araf-paper); }
+
+.araf-section--standard-note p {
+  max-width: 68ch;
+  color: var(--araf-mid);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.araf-standard-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--araf-rule);
+}
+
+.araf-standard-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--araf-gold);
+}
+
+.araf-standard-links a:hover { color: var(--araf-ink); }
+
 /* Mobile adjustments */
 @media (min-width: 900px) {
   .audience-grid,
@@ -631,5 +1175,14 @@ a:focus-visible {
   .enterprise-procurement-page .risk-grid,
   .enterprise-procurement-page .investor-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .araf-hero__headline { font-size: 1.875rem; }
+  .araf-step { grid-template-columns: 1fr; }
+  .araf-step__number {
+    padding: 1.25rem 1.75rem 0;
+    border-right: none;
   }
 }
