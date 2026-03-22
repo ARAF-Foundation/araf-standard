@@ -2,9 +2,7 @@
 
 /* ARAF Standard visual design system — v2.0 March 2026 */
 
-:root,
-:root[data-theme='light'],
-:root[data-theme='dark'] {
+:root {
   /* Colour tokens */
   --araf-ink: #0d0d0b;
   --araf-ink-mid: #3a3a35;
@@ -44,6 +42,13 @@
   --sl-font: 'Inter', Arial, Helvetica, sans-serif;
   --sl-font-system: 'Inter', Arial, Helvetica, sans-serif;
   --sl-font-mono: 'DM Mono', 'Courier New', monospace;
+
+  /* Global heading scaling */
+  --header-height: 4.5rem;
+  --page-top-space: clamp(1.75rem, 4vh, 3.5rem);
+  --page-bottom-space: clamp(1rem, 2.5vh, 2rem);
+  --page-title-max: 14ch;
+  --page-reading-max: 860px;
 }
 
 /* Global constraints */
@@ -85,9 +90,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--araf-ink);
   font-style: normal;
 }
-h1 { font-size: 3.25rem; line-height: 1.1; }
-h2 { font-size: 2rem; line-height: 1.15; }
-h3 { font-size: 1.25rem; line-height: 1.2; }
 
 :where(p, li, dd, blockquote, figcaption) {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -198,7 +200,11 @@ th,
 td,
 blockquote,
 article,
-
+card,
+.sl-markdown-content :where(h2, h3, h4),
+.sl-markdown-content :where(table, thead, tbody, tr, th, td) {
+  border-color: var(--araf-rule);
+}
 
 /* Certification as Infrastructure & How ARAF Works blocks */
 .cert-infra {
