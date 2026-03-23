@@ -125,6 +125,7 @@ export default defineConfig({
             { label: 'Investors', slug: 'investors' },
             { label: 'Regulators', slug: 'regulators' },
             { label: 'Enterprise Procurement', slug: 'enterprise-procurement' },
+             { label: 'Founders & Infrastructure Builders', slug: 'institutional-applications/founders-infrastructure-builders' },
           ],
         },
         {
