@@ -21,7 +21,6 @@ metaDescription: ARAF is the governance classification infrastructure for instit
     </div>
   </div>
 </div>
-
 ---
 
 ## Where governance actually happens
@@ -31,11 +30,40 @@ AI governance does not fail at the level of policy—it fails at the moment a de
 Inside organisations, consequential decisions are produced through a distributed chain of systems, data, contracts, and human approvals. That chain rarely produces a complete, defensible record of how those decisions were made.
 
 ARAF defines the structure required to make those decisions:
-
-- traceable
-- governable
 - defensible under scrutiny
 
+## How ARAF Governs Decisions
+
+ARAF governs the relationship between three conditions that must hold simultaneously for institutional reliance on an autonomous system to be justified.
+
+**Evidence**
+What is true at the moment a decision is made.
+
+Governance begins before the decision. The state the system acts on must be contemporaneous, attributable, and verifiable: not inferred, assumed, or assembled after the fact. Evidence is not documentation of what happened. It is the infrastructure-generated record that makes what happened demonstrable.
+
+**Decision**
+What the system is authorised to do.
+
+The decision layer is where scope, authority, accountability, and oversight operate. It defines what the system is permitted to decide, who is accountable for that decision, and what oversight adequacy looks like at the level of autonomy the system operates.
+
+**Execution**
+What the system is allowed to change.
+
+Execution is the commitment boundary: the point at which a decision becomes an action with consequences in the world. Governance at the execution layer determines whether authority limits are enforced at runtime, whether the execution record is tamper-resistant, and whether the action can be reversed or remediated.
+
+---
+
+These three conditions correspond to the three failure modes that produce institutional loss in autonomous system deployments:
+
+- a system that acts on state that was not valid
+- a system that acts beyond its authority
+- a system that executes without enforced limits or an admissible record
+
+**Governance that addresses only execution does not address the first two.**
+
+---
+
+This structure is implemented through the [Decision Supply Chain](/standard/decision-supply-chain/): the six-stage model through which ARAF maps evidence, decision, and execution governance to the specific operational surface where each is assessed.
 ---
 
 ## What breaks without governance architecture
