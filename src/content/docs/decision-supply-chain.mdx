@@ -1,7 +1,9 @@
----
 title: Decision Supply Chain
 description: How modern organisations produce consequential decisions through distributed networks of systems, actors, and providers — and the governance infrastructure required to govern them.
----
+
+Governance of autonomous systems is governance of the full decision path.
+
+Organisations are already producing consequential decisions through distributed systems.
 
 
 
@@ -136,9 +138,6 @@ Each ARAF dimension addresses a governance requirement at a specific stage of th
 				<td>Can governance be maintained as the system and its deployment evolve?</td>
 				<td>D6: Adaptive Stability</td>
 			</tr>
-		</tbody>
-	</table>
-</div>
 
 The dimensions assess governance at each stage of the chain. Technical safety standards assess whether the system operates correctly at each stage. Both are necessary. ARAF addresses whether the institution deploying the system can demonstrate accountability for the decisions the chain produces.
 
@@ -150,17 +149,11 @@ Institutions can rely on autonomous systems only to the extent that the decision
 
 This requirement applies not only to the autonomous system at the centre of the chain but to every link through which the decision travels.
 
-Data sources, human review stages, and execution infrastructure all contribute to the decision outcome. If governance records are incomplete at any stage of the chain, the decision cannot be reconstructed.
-
-Institutional reliability therefore depends on governance architecture that produces complete, contemporaneous evidence records across the entire Decision Supply Chain.
 
 ## 5. Why the Chain Matters for Accountability
 
 Institutional accountability ultimately resolves to three questions:
 
-- Who was responsible?
-- What did they know?
-- What did they do?
 
 These questions must be answerable for every link in the Decision Supply Chain, not only for the autonomous system itself.
 
@@ -174,9 +167,6 @@ They will ask:
 - what each participant in the chain knew and did.
 
 A decision produced by distributed infrastructure therefore has a chain of accountability, not a single point of accountability.
-
-The chain is only as governable as its least governed link.
-
 ## 6. The Chain in Practice
 
 ![ARAF Decision Supply Chain architecture: four layers (Data, Model, Human Review, Execution) with three governance boundaries](/images/araf/araf_dsc_architecture.svg)
@@ -194,6 +184,33 @@ Governs how models interact with inputs and produce outputs.
 **Action Boundary**  
 Governs the consequential actions the system is permitted to trigger.
 
+		## Governance Across the Decision Path
+
+		ARAF assesses governance across the full decision path rather than at a single control point. A governance architecture that addresses only one stage does not govern the decision path.
+
+		For interpretive purposes, the decision path comprises five governance layers:
+
+		**Stage 01 — Admissibility.** Whether the request, state, provenance, authority, and context are eligible to enter the governed system. Admissibility is assessed before model invocation or equivalent decision initiation. Its absence is a governance failure at the earliest stage of the path. Maps to: data boundary. Assessed under D2.
+
+		**Stage 02 — Decision Formation.** Whether the system's emerging decision is being formed within defined governance conditions, escalation thresholds, and intervention rules. The question is not only whether the system has authority to act, but whether the decision being formed is appropriate for the specific task and circumstances at that moment. Maps to: inference boundary. Assessed under D1.
+ The concept of [decision integrity](/standard/decision-integrity/) is central to this stage.
+		**Stage 03 — Action Boundary.** Whether the proposed output is permitted to cross into operational consequence. Authorisation to act is not the same as admissibility to commit. Maps to: action boundary. Assessed under D1 and D3.
+
+		**Stage 04 — Traceability.** Whether the path from input to consequence is reconstructable through reliable, contemporaneous evidence. Governance that only evaluates after the decision has propagated is not governance. It is documentation of what already happened. Maps to: evidence architecture. Assessed across all dimensions.
+
+		**Stage 05 — Post-Deployment Monitoring.** Whether the organisation monitors behavioural drift, recurring failure patterns, governance degradation, and cross-system signals over time. Where multiple governed systems operate in parallel, monitoring must extend beyond single-system review to include portfolio-level signals. Maps to: lifecycle layer. Assessed under D6.
+
+		ARAF does not prescribe how decisions are shaped in-flight. It defines the governance and evidentiary conditions under which those decisions are institutionally defensible.
+
+		### Mapping: Boundaries and Stages
+
+		| Decision Path Stage | ARAF Boundary | Primary Dimension |
+		|---|---|---|
+		| Input admissibility | Data boundary | D2 |
+		| Decision formation | Inference boundary | D1 |
+		| Commit and execution | Action boundary | D1, D3 |
+		| Trace and chain integrity | All boundaries | All dimensions |
+		| Post-deployment monitoring | Lifecycle layer | D6 |
 **Jurisdictional Boundary**  
 Governs where the decision's consequences take legal effect.
 
