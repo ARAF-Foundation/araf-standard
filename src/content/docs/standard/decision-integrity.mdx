@@ -1,0 +1,105 @@
+---
+title: Decision Integrity
+description: Decision integrity concerns whether a system's emerging decision is governed for fitness to context before that decision is relied upon, propagated, or allowed to become operationally consequential.
+---
+
+Decision integrity concerns whether a system's emerging decision is governed for fitness to context before that decision is relied upon, propagated, or allowed to become operationally consequential.
+
+A system may be authorised to act and still produce a decision that is unfit for the specific conditions in which it is operating. Where institutional reliance is at stake, ARAF treats that as a governance question.
+
+:::note[ARAF positioning]
+ARAF does not prescribe how decisions are shaped in-flight. It defines the governance and evidentiary conditions under which those decisions are institutionally defensible.
+:::
+
+---
+
+## Why the Concept Matters
+
+Many governance models focus on whether a system is permitted to operate, whether an actor is authorised, or whether a policy exists at the boundary of use. Those controls remain necessary. They do not fully answer a different question: whether the decision being formed should be permitted to continue, to be relied upon, or to become consequential in the context in which it arises.
+
+Decision integrity addresses that gap.
+
+A system can be fully authorised, processing legitimate data, operating within defined scope — and still produce a decision that is wrong for the context in which it is deployed. That is not an access control failure. It is a decision integrity failure.
+
+### What decision integrity is not
+
+Decision integrity is not a claim that governance can guarantee correctness. It is not a requirement for a specific inference-time product, runtime stack, or inline supervision mechanism. It is not a mandate for human review of every decision, and it is not a replacement for authority controls, audit controls, or post-deployment monitoring.
+
+Decision integrity is a governance concept. It concerns whether the organisation has defined the conditions under which an emerging decision is fit to proceed.
+
+---
+
+## Core Governance Questions
+
+For ARAF purposes, decision integrity requires the organisation to address five questions:
+
+**Context fitness.** Has the organisation defined the conditions under which a decision is fit or unfit for the relevant context?
+
+**Escalation thresholds.** Has the organisation defined when uncertainty, anomaly, or sensitivity requires pause, escalation, override, or review?
+
+**Confidence conditions.** Has the organisation defined whether confidence, uncertainty, or reliability indicators affect continued autonomous operation?
+
+**Intervention authority.** Has the organisation defined who or what may interrupt, approve, reject, or redirect a decision path?
+
+**Evaluator independence.** Has the organisation distinguished, where appropriate to risk, between the system generating the decision and the function evaluating whether that decision may continue?
+
+---
+
+## Relationships to Adjacent Concepts
+
+**Admissibility** governs entry to the decision path. Decision integrity governs formation once the path has begun. The two concepts are related but distinct: admissibility governs entry; decision integrity governs formation.
+
+**The action boundary** governs whether a proposed outcome may cross into operational consequence. Decision integrity governs whether the emerging decision should be allowed to mature to that point in the first place. The two control questions interact and must not be collapsed.
+
+**Traceability.** Decision integrity claims are strongest where governance conditions, escalation events, and intervention outcomes are evidenced contemporaneously.
+
+---
+
+## Failure Conditions
+
+Decision integrity is considered deficient where:
+
+- Non-admissible inputs enter the system without a defined governance check.
+- Decisions are executed outside defined thresholds without escalation or intervention.
+- No escalation or halt mechanism exists for high-risk or high-uncertainty decisions.
+- Evaluation is performed by the same system without structural independence in high-reliance contexts.
+- No contemporaneous evidence exists to justify the decision at the time it was made.
+
+---
+
+## Minimum Institutional Expectation
+
+At minimum, an organisation making a strong governance claim must define: context-fitness criteria; escalation thresholds; intervention rules; decision-to-action transition conditions; and evidence of review, override, or continued progression where relevant.
+
+ARAF does not require a single method for achieving those outcomes. It requires that the organisation can explain and evidence how they are achieved.
+
+---
+
+## Institutional Implication
+
+Decision integrity is the condition that determines whether:
+
+- A board can defend oversight.
+- An insurer can underwrite exposure.
+- A regulator can assess compliance.
+- An investor can rely on governance posture.
+
+A system that operates correctly but cannot demonstrate decision integrity remains institutionally fragile.
+
+---
+
+## Where This Sits in ARAF
+
+| | |
+|---|---|
+| **Primary dimension** | D1 — Autonomy Gradient (context fitness, escalation, intervention, evaluator independence) |
+| **Related dimensions** | D2 — Data Sensitivity Exposure (admissibility at entry) |
+| | D4 — Liability Architecture (consequences of incorrect decisions) |
+| | D6 — Adaptive Stability (whether integrity is maintained over time) |
+| **Decision Supply Chain stage** | Stage 02 — Decision Formation, between admissibility (Stage 01) and the action boundary (Stage 03) |
+
+---
+
+*ARAF Standard v3.0 · Institute for Autonomous Governance Pty Ltd · [araf-standard.org](https://araf-standard.org) · CC BY 4.0*
+
+*Related: [Decision Supply Chain](/decision-supply-chain/) · [Six Dimensions](/standard/six-dimensions/) · [GN-001 Assessor Guidance](/assessor-guidance/assessor-guidance-note/)*
