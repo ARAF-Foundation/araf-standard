@@ -1,9 +1,32 @@
----
 title: 'GN-001: Conducting an ARAF Governance Assessment'
-description: End-to-end operational methodology for accredited assessors conducting ARAF governance assessments.
----
+Assessment must cover the full decision path, not isolated system components.
 
 *Assessor Guidance Note GN-001 · Agentic Risk Architecture Framework v3.0*
+
+
+## Decision Path Coverage Test
+
+An assessor must verify that governance is evidenced across the full decision path. The assessor evaluates governance coverage and evidentiary sufficiency. The assessor does not require any specific runtime architecture, model topology, or vendor-specific implementation.
+
+**1. Admissibility controls exist.** The organisation has defined and evidenced checks for request, state, provenance, authority, and context before entry into the governed decision path. Assessment concern: materially non-admissible requests enter the decision path without a defined governance check or without retained evidence.
+
+**2. Decision integrity is governed.** The organisation has defined context-fitness criteria, escalation thresholds, intervention rules, and accountable ownership of those controls. Assessment concern: autonomous outputs can proceed to operational significance without defined criteria, escalation rules, or intervention conditions.
+
+**3. The action boundary is defined.** The organisation has identified when a proposed decision becomes operationally consequential, with approval, halt, override, or escalation conditions specified. Assessment concern: the organisation cannot identify when a decision becomes binding or effective.
+
+**4. The trace is reconstructable.** Evidence is sufficient to reconstruct the material path from initiating condition through decision, intervention, consequence, and review. Assessment concern: the organisation cannot materially reconstruct what happened or who was accountable.
+
+**5. Monitoring extends beyond single system where required.** Where multiple governed systems are deployed, monitoring is not limited to isolated system review. Assessment concern: deployment footprint requires cross-system visibility but monitoring is confined to isolated checks.
+
+**6. Accountability is assigned across the chain.** Roles and responsibilities are assigned across decision generation, approval, evaluation, oversight, and remediation, with independence and conflict conditions defined. Assessment concern: consequential decisions are generated, approved, and evaluated within overlapping functions without disclosure.
+
+Where any stage is ungoverned, report: which stage lacks coverage; what evidence is missing; whether the gap is a design gap, evidence gap, accountability gap, monitoring gap, or independence gap.
+
+See also: [Decision Supply Chain](/decision-supply-chain/) · [Decision Integrity](/standard/decision-integrity/)
+
+Download: [Decision Path Coverage Checklist (PDF)](/downloads/ARAF-Assessor-Checklist-Appendix.pdf)
+
+## 7. Report Drafting
 ---
 
 This guidance note provides end-to-end operational methodology for accredited assessors conducting ARAF governance assessments. It covers the full assessment lifecycle from engagement setup through report delivery and post-assessment obligations.
