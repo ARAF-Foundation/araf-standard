@@ -61,9 +61,13 @@ Failure in this dimension prevents a decision from being fully accountable under
 - Scope boundary enforcement through technical and contractual controls.
 - Human oversight adequacy proportionate to deployed autonomy level.
 
+**Decision integrity governance.** Does the governance architecture address whether decisions being formed are fit for the context in which they are being made, not only whether the system has authority to act? Decision integrity governance requires defined context fitness criteria, documented escalation thresholds connected to action, and an evaluation function independent of the system producing the decision. A governance architecture that addresses authorisation without addressing context fitness has governed the permission question while leaving the decision integrity question open. Failure condition: autonomous outputs can proceed to operational significance without defined context-fitness criteria, escalation rules, or accountable intervention rules.
+
 ### Institutional implication
 
 D1 is foundational for boards, insurers, investors, and regulators because it determines exposure scale at the point of autonomous decision execution.
+
+A system operating within scope but without decision integrity governance is not fully governed. The autonomy level determines the scale of the problem. The decision integrity governance determines whether that problem has been addressed.
 
 ### Evidence profile
 
@@ -79,6 +83,10 @@ Failure in this dimension prevents a decision from being fully accountable under
 Data Sensitivity Exposure assesses two risk categories that require separate governance treatment. Operational data creates immediate exposure at the point of processing. Training data provenance creates latent exposure carried into every downstream decision.
 
 ### What it assesses
+
+- Before the data boundary is crossed, governance must also address input admissibility: whether the request, state, provenance, and authority presenting at the boundary are eligible to enter the decision path at all. Admissibility is a distinct control objective from data sensitivity classification. Failure condition: materially non-admissible requests or states enter the system without a defined governance check or retained evidence of that check.
+
+→ See [Decision Integrity](/standard/decision-integrity/)
 
 - Operational data categories, including sensitivity classification, access governance, and handling controls.
 - Training data provenance, including legal basis, IP clearance, and consent frameworks for training and fine-tuning datasets.
@@ -206,7 +214,9 @@ Adaptive Stability assesses the organisation's capacity to maintain governance a
 
 - Governance maintenance processes and formal reassessment triggers.
 - Change governance over model and rule updates.
-- Monitoring architecture and behavioural drift detection.
+- **Monitoring architecture.** Is the monitoring architecture designed to produce governance telemetry, not merely engineering telemetry? A system generating extensive performance metrics but no governance records has operational monitoring without operational accountability.
+
+**Portfolio and fleet monitoring.** Where the organisation deploys more than one governed system, does monitoring extend beyond single-system stability to cross-system and portfolio-level signals? Correlated drift across systems, repeated escalation patterns across deployments, and recurring admissibility failures that no individual system review will surface are governance signals requiring portfolio-level detection. The AIOC register is the instrument through which portfolio monitoring is conducted. Failure condition: governance monitoring is limited to isolated system review despite a deployment footprint that reasonably requires cross-system visibility.
 - Provider designation monitoring for government actions affecting the primary AI provider stack.
 - MKP version lineage and rule evolution governance.
 - AIOC authority over governance rule-set changes.
@@ -265,6 +275,8 @@ A deterministic system enforcing the wrong rules is deterministically wrong. Rul
 ### Institutional implication
 
 For insurers, D6 is the ongoing governance maintenance signal across the coverage period. A high D6 score indicates that governance posture at policy inception may not match governance posture at claim time.
+
+For boards, Dimension 6 is the portfolio governance signal as well as the single-system maintenance signal. An AIOC that maintains an inventory without conducting cross-system governance analysis has inventory management without portfolio governance.
 
 ## Compound Risk
 
