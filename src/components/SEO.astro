@@ -3,8 +3,10 @@ export interface Props {
   title: string;
   description: string;
   canonical?: string;
+  ogImage?: string;
+  twitterHandle?: string;
 }
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, ogImage, twitterHandle } = Astro.props;
 ---
 <head>
   <title>{title}</title>
@@ -14,9 +16,9 @@ const { title, description, canonical } = Astro.props;
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "ARAF",
-      "url": "https://araf-standard.netlify.app/",
-      "logo": "https://araf-standard.netlify.app/images/araf/logo.png"
+      "name": title,
+      "url": canonical || '',
+      "logo": ogImage || '',
     })}
   </script>
   <!-- Open Graph Meta Tags -->
@@ -24,12 +26,12 @@ const { title, description, canonical } = Astro.props;
   <meta property="og:description" content={description} />
   {canonical && <meta property="og:url" content={canonical} />}
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://araf-standard.netlify.app/images/araf/logo.png" />
+  <meta property="og:image" content={ogImage || ''} />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://araf-standard.netlify.app/images/araf/logo.png" />
-  <meta name="twitter:site" content="@arafstandard" />
+  <meta name="twitter:image" content={ogImage || ''} />
+  {twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
 </head>

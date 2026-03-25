@@ -1,0 +1,10 @@
+| File/Location                                 | Field                | Current Value Type         | Risk/Issue                                 | Recommended Fix                                  |
+|-----------------------------------------------|----------------------|----------------------------|----------------------------------------------|--------------------------------------------------|
+| astro.config.mjs                             | site, title, desc, keywords | Hard-coded string           | May drift from page-level content            | Centralize defaults, allow override per page      |
+| src/components/SEO.astro                     | title, description, canonical, OG/Twitter tags, JSON-LD | Hard-coded + props | OG/Twitter image & handle reused everywhere  | Allow per-page override, use dynamic images       |
+| src/content/docs/**/*.mdx                    | title, description, metaTitle, metaDescription | Hard-coded string           | Duplicates, reused descriptions, drift       | Remove duplication, ensure unique/targeted values |
+| public/**/*.svg                              | <title>              | Hard-coded string           | Not always matching page/brand               | Standardize SVG titles, match brand/page          |
+| public/**/*.pdf                              | /Title               | Hard-coded string           | Not always matching page/brand               | Standardize PDF titles, match brand/page          |
+| Canonical references (various)               | canonical            | Mixed (SEO & non-SEO)        | Possible confusion, inconsistent logic       | Audit all uses, ensure only SEO canonicals in meta|
+| src/components/SEO.astro                     | OG/Twitter image, handle | Hard-coded string           | Same preview for all pages                   | Use page-specific images/handles where possible   |
+| src/content/docs/**/*.mdx                    | metaTitle/metaDescription | Duplicates title/description | Unnecessary duplication                      | Remove, or generate dynamically from content      |

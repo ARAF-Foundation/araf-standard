@@ -1,3 +1,34 @@
+a:focus-visible {
+  outline: 2px solid #A88644;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Accessibility: Skip to content link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+  background: #fff;
+  color: #0d0d0b;
+  padding: 0.75em 1.5em;
+  border: 2px solid #A88644;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  transition: left 0.2s;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  outline: none;
+  box-shadow: 0 0 0 3px #A88644;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap');
 
 /* ARAF Standard visual design system — v2.0 March 2026 */

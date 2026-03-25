@@ -1,8 +1,18 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-export default defineConfig({
+// Centralized site metadata for SEO
+const siteMetadata = {
   site: 'https://araf-standard.org',
+  organization: 'ARAF Foundation',
+  defaultTitle: 'ARAF Standard',
+  defaultDescription: 'The open governance standard for classification and certification infrastructure in autonomous system governance.',
+  defaultOgImage: '/images/araf/logo.png',
+  twitterHandle: '@arafstandard',
+};
+
+export default defineConfig({
+  site: siteMetadata.site,
   cacheDir: './node_modules/.astro-cache',
   redirects: {
     '/certification/': { status: 301, destination: '/certification/certification-framework/' },
@@ -34,14 +44,13 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: 'ARAF Standard',
-      description:
-        'The open governance standard for classification and certification infrastructure in autonomous system governance.',
+      title: siteMetadata.defaultTitle,
+      description: siteMetadata.defaultDescription,
 
       logo: {
         light: './public/araf-mark-primary-dark.svg',
         dark: './public/araf-mark-primary-light.svg',
-        alt: 'ARAF Standard',
+        alt: siteMetadata.defaultTitle,
         replacesTitle: false,
       },
 
@@ -163,14 +172,7 @@ export default defineConfig({
             content: '#f7f5f0',
           },
         },
-        {
-          tag: 'meta',
-          attrs: {
-            name: 'keywords',
-            content:
-              'ARAF, Agentic Risk Architecture Framework, AI governance, autonomous systems, trust architecture, decision supply chain, certification standard',
-          },
-        },
+        // Removed keywords meta tag per SEO SOP
       ],
 
       favicon: '/araf-favicon.svg',
