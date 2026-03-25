@@ -1,20 +1,21 @@
-title: "GN-002: Cross-Border Deployment Assessment"
-description: "Assessor Guidance Note GN-002."
-canonical: "/docs/assessor-guidance/gn-002/"
-title: "GN-002: Cross-Border Deployment Assessment"
+
+---
+title: GN-002: Cross-Border Deployment Assessment
 description: Assessor Guidance Note GN-002.
+canonical: /docs/assessor-guidance/gn-002/
+twitterHandle: "@arafstandard"
+layout: ../../../components/BaseLayout.astro
+---
 
 # GN-002: Cross-Border Deployment Assessment
 
 *Assessor Guidance Note GN-002 · Agentic Risk Architecture Framework v3.0*
-
 
 This guidance note provides supplementary methodology for assessors conducting ARAF governance assessments where the system under assessment operates across more than one jurisdiction. It extends GN-001 and must be applied in conjunction with it, not as a standalone document.
 
 Where GN-001 is the foundational practice guide, GN-002 addresses the specific compound complexity that cross-border deployment introduces. The assessor applies GN-001 throughout and layers GN-002 on top from Section 2 onwards. Any GN-001 procedure that does not have a cross-border extension in GN-002 applies without modification.
 
 This guidance note must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), [GN-001: Conducting an ARAF Governance Assessment](/assessor-guidance/gn-001/), and the normative specification documents referenced in Section 9.
-
 
 ![ARAF Jurisdictional Footprint Matrix: five-column mapping instrument cross-referencing Decision Supply Chain links against jurisdictional obligation categories, with mandatory Political Cascade screening row and regulatory trajectory assessment panel](/images/araf/araf_gn002_jurisdictional_footprint_matrix.svg)
 
@@ -67,140 +68,3 @@ Cross-border deployment creates simultaneous compound problems across four of th
 Jurisdictional accountability for AI inference is established at the inference boundary. In cross-border deployments, the jurisdiction that governs accountability for a given decision may depend on where the inference occurs, where the decision is implemented, and where the affected party is located.
 
 The assessor must identify which jurisdiction's accountability standard applies to each material decision type and assess whether the governance architecture reflects those standards. A supervisory oversight structure adequate for one jurisdiction's human oversight requirements may be inadequate under another jurisdiction's requirements for the same system.
-
-Score the effective autonomy level against the most demanding applicable standard in the deployment footprint. Document the jurisdictional basis for the score.
-
-### D2 — Data Sensitivity Exposure
-
-Cross-border transfer restrictions create direct scoring implications. The D2 assessment must address operational data sensitivity separately in each jurisdiction — different categories of data attract regulatory protection in different jurisdictions — and must address training data provenance across the full jurisdictional footprint.
-
-The jurisdictional divergence on training data memorisation is analytically significant. Different jurisdictions have reached different conclusions on whether model memorisation of training data constitutes ongoing reproduction for copyright purposes. A single provenance governance position may be insufficient across the deployment footprint. The assessor must evaluate whether the organisation has jurisdiction-specific provenance documentation, or a documentation approach that is assessable against the most demanding applicable standard.
-
-Cross-border data transfer mechanisms — adequacy decisions, standard contractual clauses, binding corporate rules, and equivalent instruments — must each be assessed for adequacy given the system's actual data flows. The existence of a transfer mechanism does not establish its adequacy; the assessor must evaluate whether the mechanism is appropriate for the data categories transferred and the jurisdictions involved.
-
-### D3 — Contract Infrastructure
-
-Contract infrastructure in cross-border deployments must address: which jurisdiction's law governs each contract; which jurisdiction has enforcement jurisdiction over disputes arising from the system's operation; and whether force majeure provisions adequately address jurisdictional events in each relevant jurisdiction.
-
-Jurisdictional events include government designation events, regulatory interventions, data localisation mandates, and sector-specific prohibitions that could affect the system's operation or a provider's ability to perform. The assessor must evaluate whether the force majeure provisions in each material contract address the specific jurisdictional event types relevant to the deployment footprint — not merely the generic force majeure language that contract infrastructure typically contains.
-
-The Political Cascade multiplier is particularly relevant in cross-border deployments. Political Cascade is most likely to trigger where government-adjacent customer concentration intersects with inadequate political force majeure provisions governing designation events in one or more jurisdictions. Multi-jurisdictional government exposure is a mandatory Political Cascade screening item in every cross-border assessment. Document the screening determination explicitly, whether or not the multiplier is triggered.
-
-### D4 — Liability Architecture
-
-Cross-border deployment creates overlapping and potentially contradictory liability frameworks. The assessor must evaluate whether the organisation's liability architecture reflects the most demanding applicable framework across the deployment footprint, not merely the framework of its home jurisdiction.
-
-Where the deployment footprint includes EU-adjacent operations, the EU Product Liability Directive creates lifecycle strict liability: the system can become defective through retraining or self-learning after market placement. This means each retraining cycle is a potential new product defect event, creating a reassessment trigger obligation that operates independently of the ARAF reassessment trigger regime. The assessor must document whether the organisation's liability architecture reflects this and whether the retraining governance protocol addresses it.
-
-Liability caps structured for a single jurisdiction may be inadequate when cross-border adverse outcomes create multi-jurisdictional litigation exposure. Assess whether the liability caps in each material agreement are adequate for the combined cross-border exposure the system creates, not merely the single-jurisdiction exposure the agreement was drafted to address.
-
-### D5 — Commercial Leverage
-
-Cross-border deployment creates provider dependency risks that are invisible in single-jurisdiction assessments. Where a critical provider is subject to regulatory designation risk in a jurisdiction that is also a material customer jurisdiction — the most acute form being government-adjacent operations in jurisdictions where provider designation is a policy instrument — the concentration risk is compounded.
-
-The assessor must evaluate whether the organisation has provider substitution capacity that is realistic given the regulatory environment in each deployment jurisdiction, not merely technically feasible in the abstract. A substitution that is operationally viable in one jurisdiction may be regulatory-constrained in another. The practical substitutability assessment must account for jurisdictional constraints on substitution, not merely technical and commercial ones.
-
-### D6 — Adaptive Stability
-
-Governance drift detection must function across all jurisdictions in the deployment footprint. A monitoring framework calibrated to one jurisdiction's regulatory requirements will miss drift signals generated by changing requirements in other jurisdictions.
-
-The assessor must evaluate whether the organisation's governance monitoring infrastructure tracks regulatory development across all deployment jurisdictions, not merely its home jurisdiction. The trajectory from principle-based to specification-based requirements means that governance adequacy against current principles may become inadequate as those principles are specified into rules. The D6 assessment must include an evaluation of whether the organisation's governance monitoring is tracking that trajectory in each applicable jurisdiction and whether an adaptation plan exists.
-
----
-
-## 4. Regulatory Exposure Mapping
-
-The assessor must produce a regulatory exposure map as a standalone assessment output, separate from the dimensional scoring. The map identifies, for each jurisdiction in the deployment footprint:
-
-- the primary regulatory frameworks governing the system's operation
-- the current status of each framework: voluntary, mandatory, or transitional
-- the trajectory of each framework across the three dimensions: voluntary to mandatory, principle to specificity, domestic to extraterritorial
-- the organisation's documented alignment with each framework
-- the governance investment the framework trajectory implies within the assessment horizon
-
-The regulatory exposure map is both an assessment tool and a required report component. It translates the abstract risk of regulatory change into specific governance investment requirements that boards, insurers, and investors can evaluate.
-
-Where the organisation has active regulatory sandbox participation in a deployment jurisdiction, this is a D3 and D4 strengthening factor. Sandbox participation represents demonstrated governance adequacy to that jurisdiction's regulator under supervised conditions. The assessor should recognise this explicitly and document its basis in the scoring rationale.
-
----
-
-## 5. Tax and Commercial Structuring Considerations
-
-This section is scoped narrowly. GN-002 is an assessor guidance note, not a tax advisory document. The assessor's role is to identify whether the organisation's entity structure creates governance gaps, not to advise on optimal tax structuring.
-
-The governance question is whether there is misalignment between the entity that operates the system and the entity that bears liability for its decisions. In cross-border autonomous system deployments, the entity that sells the product, the entity that bears contractual liability, the entity that employs the governance personnel, and the entity that owns the intellectual property may be different entities in different jurisdictions. That misalignment creates D3 and D4 governance gaps that the assessor must identify.
-
-The specific flags the assessor should document are: intellectual property held in a jurisdiction different from the jurisdiction of deployment operation; liability structure that routes claims through an entity without adequate assets to satisfy them; and employment of governance personnel in a jurisdiction different from the jurisdiction of operational accountability.
-
-The assessor does not resolve these issues. The assessor documents them as governance gaps requiring legal and tax advice, with implications for D3 and D4 scoring, and includes them in the remediation roadmap.
-
----
-
-## 6. Brand and Reputational Architecture Assessment
-
-The governance question is whether the organisation has assessed and documented the reputational consequences of adverse outcomes in each deployment jurisdiction and whether that assessment has informed the governance architecture.
-
-Cross-border deployments create reputational exposure that is not symmetrical across jurisdictions. An adverse outcome in a government-adjacent deployment in a jurisdiction with high media visibility may have reputational consequences in other deployment jurisdictions even where the legal exposure is contained. Incident response architecture that addresses the legal accountability requirements in the jurisdiction where an incident occurred may leave multi-jurisdictional reputational exposure unaddressed.
-
-The assessor must evaluate whether the organisation's incident response architecture addresses multi-jurisdictional reputational exposure. This maps primarily to D5 (Commercial Leverage) and D6 (Adaptive Stability). A governance architecture that addresses legal accountability but not reputational architecture in a multi-jurisdictional deployment has an incomplete D6 adaptive response capability.
-
----
-
-## 7. Cross-Border Evidence Continuity
-
-Evidence continuity across the Decision Supply Chain becomes significantly more complex in cross-border deployments. Evidence generated in one jurisdiction may not be admissible, transferable, or retainable in another.
-
-The assessor must evaluate whether the organisation's evidence architecture addresses three distinct problems. First, data sovereignty requirements that restrict where governance evidence can be stored — evidence that is legally required to remain in one jurisdiction may not be available for proceedings in another. Second, admissibility requirements that affect whether evidence generated in one jurisdiction is usable in proceedings in another — the standards for authentic and admissible evidence differ across jurisdictions. Third, retention requirements that vary across jurisdictions, creating the risk that evidence adequate for one jurisdiction's requirements is deficient for another's.
-
-Where evidence continuity gaps are identified, they must be documented in the evidence summary section of the assessment report and reflected in the dimensional scoring where they create governance exposure. An organisation that cannot produce an adequate cross-jurisdictional evidence record has a D2 and D3 gap regardless of how well its single-jurisdiction evidence practice is maintained.
-
----
-
-## 8. Report Requirements for Cross-Border Assessments
-
-The standard assessment report format from GN-001 applies, with the following additions required for every cross-border assessment.
-
-**Jurisdiction matrix** — the output of the jurisdictional footprint mapping in Section 2, cross-referencing each Decision Supply Chain link against each applicable regulatory framework. This is a required standalone exhibit, not a narrative summary.
-
-**Regulatory exposure map** — the output of the regulatory exposure mapping in Section 4, identifying framework status, trajectory, and governance investment implications for each applicable jurisdiction.
-
-**Cross-border multiplier analysis** — the standard multiplier analysis from GN-001, with an explicit notation confirming that Political Cascade has been screened for multi-jurisdictional government-adjacent customer concentration and stating the basis for the screening determination.
-
-**Jurisdiction-specific remediation roadmap** — where governance gaps are identified in specific jurisdictions, the remediation roadmap must distinguish between gaps that affect the entire deployment and gaps that are jurisdiction-specific. Jurisdiction-specific remediation actions must identify the jurisdiction, the gap, the responsible party, and the estimated timeline.
-
-For Compliant and Certified reports, the design adequacy findings and operational coherence findings must be separated explicitly across the jurisdictional footprint, not merely in aggregate. An institutional reader — particularly an underwriter writing cross-border coverage — needs to understand whether a governance finding is uniform across jurisdictions or whether it reflects jurisdiction-specific exposure.
-
----
-
-## Relationship to Other Documents
-
-| Document | Relationship |
-|---|---|
-| GN-001: Conducting an ARAF Governance Assessment | Foundational methodology; GN-002 extends but does not replace it |
-| Assessor Accreditation Standard | Governs accreditation conditions; GN-002 supplements but does not modify it |
-| GN-003: Governance Coherence Assessment | Applies to coherence evaluation across the jurisdictional footprint |
-| Decision Supply Chain | Normative specification for chain mapping extended by Section 2 |
-| Six ARAF Dimensions | Normative specification for dimensional scoring adjusted by Section 3 |
-| Certification Framework | Normative specification for certification determination |
-| Governance Coherence Addendum | Normative specification for GCI assessment in cross-border contexts |
-
----
-
-## See also
-
-- [GN-001: Conducting an ARAF Governance Assessment](/assessor-guidance/gn-001/)
-- [GN-003: Governance Coherence Assessment](/assessor-guidance/gn-003/)
-- [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/)
-- [Decision Supply Chain](/standard/decision-supply-chain/)
-- [Six ARAF Dimensions](/standard/six-dimensions/)
-- [Governance Benchmark Index](/certification/governance-benchmark-index/)
-- [Certification Framework](/certification/certification-framework/)
-- [Governance Coherence Addendum](/certification/governance-coherence-addendum/)
-
----
-
-*Martin, Carly. Agentic Risk Architecture Framework (ARAF), Assessor Guidance Note GN-002: Cross-Border Deployment Assessment, Version 3.0. Institute for Autonomous Governance Pty Ltd, 2026.*
-
----
-
-*© 2026 Institute for Autonomous Governance Pty Ltd*
