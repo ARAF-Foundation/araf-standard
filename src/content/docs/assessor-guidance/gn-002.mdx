@@ -12,6 +12,65 @@ layout: ../../../components/BaseLayout.astro
 
 This guidance note provides supplementary methodology for assessors conducting ARAF governance assessments where the system under assessment operates across more than one jurisdiction. It extends GN-001 and must be applied in conjunction with it, not as a standalone document.
 
+This guidance note must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), [GN-001: Conducting an ARAF Governance Assessment](/assessor-guidance/gn-001/), and the normative specification documents referenced in Section 9.
+
+![ARAF Jurisdictional Footprint Matrix: five-column mapping instrument cross-referencing Decision Supply Chain links against jurisdictional obligation categories, with mandatory Political Cascade screening row and regulatory trajectory assessment panel](/images/araf/araf_gn002_jurisdictional_footprint_matrix.svg)
+
+## 1. The Cross-Border Assessment Problem
+
+Cross-border deployment is not simply more of the same assessment work. It creates a structural problem that a single-jurisdiction assessment methodology cannot address.
+
+The structural problem is extraterritorial regulatory reach. The most demanding jurisdictional requirement in the deployment footprint effectively sets the standard for the entire system. The EU AI Act applies to any system affecting EU residents regardless of where the deploying organisation is incorporated. The Australian Privacy Act applies to systems processing data of Australian residents regardless of where that processing occurs. Regulatory frameworks are moving from domestic to extraterritorial in scope, from voluntary to mandatory status, and from principle-based to specification-based requirements. The assessor must evaluate the deployment against the trajectory of those frameworks, not merely their current state.
+
+The core GN-002 principle is this: a cross-border deployment cannot be governed by a single jurisdiction's standards. The assessment scope must encompass every jurisdiction in which the system operates, processes data, produces decisions, or creates legal consequences.
+
+This principle has a direct implication for scope definition. Before commencing dimensional scoring, the assessor must establish the complete jurisdictional footprint of the deployment. That footprint is the scope within which the assessment operates.
+
+---
+
+## 2. Jurisdictional Footprint Mapping
+
+Jurisdictional footprint mapping is the foundational procedure for every cross-border assessment. It must be completed before dimensional scoring begins. It is an extension of the Decision Supply Chain mapping required by GN-001 Section 2, with a jurisdictional layer added at each chain link.
+
+### The jurisdiction matrix
+
+For each link in the Decision Supply Chain, the assessor must identify:
+
+- the jurisdiction in which the link operates
+- the jurisdiction whose law governs the contractual relationship at that link
+- the jurisdictions in which the data processed at that link originated
+- the jurisdictions in which the decisions produced at that link create legal consequences
+- the jurisdictions in which the system's outputs are consumed by end users or downstream systems
+
+These will frequently not be the same jurisdiction. A system may be built in one jurisdiction, trained on data from multiple jurisdictions, deployed by an operator in another jurisdiction, and produce decisions affecting residents in a further set of jurisdictions. Each of those facts carries distinct regulatory obligations.
+
+The minimum output from this procedure is a jurisdiction matrix cross-referencing each chain link against each applicable regulatory framework. This matrix is the foundation document for the rest of the cross-border assessment. It must be included in the assessment report as a standalone exhibit.
+
+### Regulatory framework identification
+
+For each jurisdiction identified in the footprint, the assessor must identify the primary regulatory frameworks governing the system's operation in that jurisdiction. This includes AI-specific frameworks, data protection frameworks, sector-specific requirements, and liability frameworks that apply to autonomous system deployments.
+
+The three regulatory trajectories that inform the assessor's analysis are: voluntary to mandatory status; principle-based to specification-based requirements; and domestic to extraterritorial scope. The assessor must note, for each applicable framework, where it currently sits on each trajectory and what governance investment that trajectory implies within the assessment horizon.
+
+---
+
+## 3. Dimensional Scoring Adjustments for Cross-Border Deployment
+
+Cross-border deployment creates simultaneous compound problems across four of the six dimensions. Each dimension requires specific cross-border guidance. A dimension that scores adequately in a single-jurisdiction assessment may score materially differently once the full jurisdictional footprint is mapped.
+
+### D1 — Autonomy Gradient
+
+Jurisdictional accountability for AI inference is established at the inference boundary. In cross-border deployments, the jurisdiction that governs accountability for a given decision may depend on where the inference occurs, where the decision is implemented, and where the affected party is located.
+
+The assessor must identify which jurisdiction's accountability standard applies to each material decision type and assess whether the governance architecture reflects those standards. A supervisory oversight structure adequate for one jurisdiction's human oversight requirements may be inadequate under another jurisdiction's requirements for the same system.
+---
+
+# GN-002: Cross-Border Deployment Assessment
+
+*Assessor Guidance Note GN-002 · Agentic Risk Architecture Framework v3.0*
+
+This guidance note provides supplementary methodology for assessors conducting ARAF governance assessments where the system under assessment operates across more than one jurisdiction. It extends GN-001 and must be applied in conjunction with it, not as a standalone document.
+
 
 This guidance note must be read in conjunction with the [Assessor Accreditation Standard](/assessor-guidance/assessor-accreditation-standard/), [GN-001: Conducting an ARAF Governance Assessment](/assessor-guidance/gn-001/), and the normative specification documents referenced in Section 9.
 
