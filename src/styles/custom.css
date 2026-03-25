@@ -852,15 +852,16 @@ a:focus-visible {
   text-decoration: none;
 }
 
+
 .araf-btn--secondary {
   background: transparent;
-  color: var(--araf-rule);
+  color: #444444; /* Improved contrast */
   border-color: rgba(212,208,200,0.3);
 }
 
 .araf-btn--secondary:hover {
   border-color: var(--araf-rule);
-  color: var(--araf-paper);
+  color: #222; /* Improved contrast on hover */
   text-decoration: none;
 }
 
@@ -886,7 +887,7 @@ a:focus-visible {
 
 .araf-section__lead {
   font-size: 1.0625rem;
-  color: var(--araf-mid);
+  color: #444444; /* Improved contrast */
   max-width: 68ch;
   margin-bottom: 3rem;
   line-height: 1.65;
@@ -929,7 +930,7 @@ a:focus-visible {
 .araf-problem-item p {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: var(--araf-mid);
+  color: #333333; /* Improved contrast */
 }
 
 /* Outputs section */
@@ -973,7 +974,7 @@ a:focus-visible {
 .araf-output-item p {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: var(--araf-mid);
+  color: #333333; /* Improved contrast */
 }
 
 .araf-outputs-technical {

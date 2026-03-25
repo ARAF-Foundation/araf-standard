@@ -19,5 +19,17 @@ const { title, description, canonical } = Astro.props;
       "logo": "https://araf-standard.netlify.app/images/araf/logo.png"
     })}
   </script>
-  <!-- Add Open Graph and Twitter meta tags as needed -->
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {canonical && <meta property="og:url" content={canonical} />}
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://araf-standard.netlify.app/images/araf/logo.png" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://araf-standard.netlify.app/images/araf/logo.png" />
+  <meta name="twitter:site" content="@arafstandard" />
 </head>

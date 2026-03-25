@@ -1,0 +1,25 @@
+---
+import NavBar from './NavBar.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import SEO from './SEO.astro';
+import CTA from './CTA.astro';
+import NewsletterSignup from './NewsletterSignup.astro';
+const { title, description, canonical, crumbs } = Astro.props;
+---
+<SEO title={title} description={description} canonical={canonical} />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<body>
+  <NavBar />
+  <main>
+    {Astro.slots.default}
+    <Breadcrumbs crumbs={crumbs} />
+    <CTA />
+    <NewsletterSignup />
+  </main>
+</body>
