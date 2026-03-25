@@ -1,0 +1,23 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+const { title, description, canonical } = Astro.props;
+---
+<head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {canonical && <link rel="canonical" href={canonical} />}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ARAF",
+      "url": "https://araf-standard.netlify.app/",
+      "logo": "https://araf-standard.netlify.app/images/araf/logo.png"
+    })}
+  </script>
+  <!-- Add Open Graph and Twitter meta tags as needed -->
+</head>

@@ -1,0 +1,18 @@
+---
+const crumbs = [
+  { href: '/', label: 'Home' },
+  { href: '/standard/', label: 'Standard' },
+  { href: '/standard/six-dimensions/', label: 'Six Dimensions' }
+];
+---
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    {crumbs.map((crumb, i) => (
+      <li>
+        {i < crumbs.length - 1
+          ? <a href={crumb.href}>{crumb.label}</a>
+          : <span aria-current="page">{crumb.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
