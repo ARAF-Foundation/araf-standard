@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Governance for In-House Legal Teams — Institute for Autonomous Governance</title>
+<meta name="description" content="A practical operating model for in-house legal teams. Covers privilege gaps, agents, MCP connectors, ZDR, and a six-step governance framework grounded in EIS-01.">
+<meta name="author" content="Carly Martin, Institute for Autonomous Governance">
+<meta property="og:title" content="AI Governance for In-House Legal Teams: A Practical Operating Model">
+<meta property="og:description" content="A practical operating model for in-house legal teams. Covers privilege gaps after Heppner, agents going off-script, MCP connectors, and a six-step governance framework.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Institute for Autonomous Governance">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Governance for In-House Legal Teams">
+<meta name="twitter:description" content="A practical operating model for in-house legal teams governing AI adoption.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Hybrid palette: ARAF warmth + institutional depth */
+  --paper:       #f5f3ef;
+  --ink:         #1a1a18;
+  --navy:        #1c2b3a;
+  --steel:       #3d5a72;
+  --steel-light: #5b7a94;
+  --gold:        #A88644;
+  --gold-muted:  #c4a96a;
+  --cream:       #eceae4;
+  --rule:        #d0cdc5;
+  --mid:         #5a5750;
+  --light-text:  #7a7670;
+  --callout-bg:  #eef1f4;
+  --callout-border: #3d5a72;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Layout ─── */
+
+.page-header {
+  background: var(--navy);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header .org {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+
+.page-header .toolkit-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 7px 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.page-header .toolkit-link:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.hero {
+  background: var(--navy);
+  padding: 72px 40px 64px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  margin-bottom: 28px;
+  display: block;
+}
+
+.hero h1 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.hero-standfirst {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.72);
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero-meta .byline {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+.hero-meta .byline strong {
+  display: block;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+/* Nav anchors */
+.toc-bar {
+  background: var(--cream);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.toc-bar nav {
+  display: inline-flex;
+  gap: 0;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.toc-bar a {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-decoration: none;
+  padding: 14px 18px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  display: inline-block;
+}
+.toc-bar a:hover {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+}
+
+/* Body */
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 40px 96px;
+}
+
+p {
+  margin-bottom: 1.45em;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 3em;
+  margin-bottom: 0.8em;
+  padding-top: 2.5em;
+  border-top: 1px solid var(--rule);
+  letter-spacing: -0.01em;
+  scroll-margin-top: 60px;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Callout boxes */
+.callout {
+  background: var(--callout-bg);
+  border-left: 3px solid var(--callout-border);
+  padding: 28px 32px;
+  margin: 2.5em 0;
+}
+
+.callout-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.callout h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 12px;
+}
+
+.callout p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 0.8em;
+  color: var(--ink);
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+/* Heartburn box */
+.heartburn-box {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  padding: 32px 36px;
+  margin: 2.5em 0;
+}
+
+.heartburn-box .box-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.heartburn-box h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 1.5em 0 0.4em;
+}
+
+.heartburn-box h3:first-of-type { margin-top: 0; }
+
+.heartburn-box p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-bottom: 0.7em;
+}
+
+/* Six-step model */
+.steps {
+  margin: 2.5em 0;
+  counter-reset: step-counter;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0 20px;
+  margin-bottom: 4px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 22px 24px 22px 0;
+  counter-increment: step-counter;
+}
+
+.step-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--steel-light);
+  padding-left: 24px;
+  padding-top: 3px;
+  font-weight: 500;
+}
+
+.step-num::before {
+  content: counter(step-counter, decimal-leading-zero);
+  display: block;
+  font-size: 18px;
+  font-family: 'Libre Baskerville', serif;
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
+  letter-spacing: 0;
+}
+
+.step-content h4 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--mid);
+  margin-bottom: 0;
+}
+
+.step-content .ref {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--steel-light);
+  margin-top: 6px;
+  display: block;
+}
+
+/* 90-day list */
+.action-list {
+  background: var(--navy);
+  padding: 32px 36px;
+  margin: 2.5em 0;
+}
+
+.action-list .box-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.action-list ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: action-counter;
+}
+
+.action-list ol li {
+  counter-increment: action-counter;
+  padding: 12px 0 12px 44px;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.85);
+}
+
+.action-list ol li:last-child { border-bottom: none; }
+
+.action-list ol li::before {
+  content: counter(action-counter, decimal-leading-zero);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold-muted);
+  position: absolute;
+  left: 0;
+  top: 14px;
+}
+
+/* Stat pull */
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin: 2.5em 0;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 24px 22px;
+  text-align: center;
+}
+
+.stat-card .number {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-card .label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.45;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--rule);
+  padding: 6px 28px;
+  margin: 2em 0;
+  color: var(--mid);
+}
+
+blockquote p {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--mid);
+  margin-bottom: 10px;
+}
+
+blockquote cite {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  color: var(--steel-light);
+}
+
+/* Toolkit CTA */
+.toolkit-cta {
+  background: var(--navy);
+  padding: 48px 40px;
+  margin: 3em 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+
+.toolkit-cta h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.toolkit-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+.toolkit-cta ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.toolkit-cta ul li {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.05em;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.toolkit-cta ul li:last-child { border-bottom: none; }
+
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 28px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.cta-btn:hover { background: var(--gold-muted); }
+
+/* Endnotes */
+.endnotes {
+  margin-top: 4em;
+  padding-top: 2.5em;
+  border-top: 1px solid var(--rule);
+}
+
+.endnotes h2 {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  margin-bottom: 1.5em;
+}
+
+.endnotes ol {
+  list-style: none;
+  counter-reset: note-counter;
+  padding: 0;
+}
+
+.endnotes ol li {
+  counter-increment: note-counter;
+  padding: 8px 0 8px 36px;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--mid);
+  border-bottom: 1px solid var(--rule);
+}
+
+.endnotes ol li:last-child { border-bottom: none; }
+
+.endnotes ol li::before {
+  content: counter(note-counter);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--steel-light);
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+/* Disclosure */
+.disclosure {
+  margin-top: 3em;
+  padding: 20px 24px;
+  background: var(--cream);
+  border-left: 3px solid var(--rule);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--mid);
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 3em 0;
+}
+
+/* Footer */
+.page-footer {
+  background: var(--navy);
+  padding: 32px 40px;
+  text-align: center;
+  page-break-before: avoid;
+  break-before: avoid;
+}
+
+.page-footer p {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .page-header { padding: 16px 20px; }
+  .hero { padding: 48px 20px 40px; }
+  .article-body { padding: 48px 20px 72px; }
+  .toc-bar { padding: 0 20px; }
+  .stat-row { grid-template-columns: 1fr; gap: 2px; }
+  .toolkit-cta { grid-template-columns: 1fr; }
+  .cta-btn { display: block; text-align: center; }
+  .step { grid-template-columns: 40px 1fr; }
+}
+
+/* ── Visual 1: Governance flow diagram ── */
+.gov-flow {
+  margin: 2.5em 0;
+  background: var(--navy);
+  padding: 36px 32px;
+}
+.gov-flow-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  margin-bottom: 28px;
+  display: block;
+}
+.gov-flow-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  position: relative;
+}
+.gov-flow-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.gov-flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--navy);
+  z-index: 2;
+}
+.gov-flow-node {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 2px solid var(--steel-light);
+  width: 100%;
+  padding: 18px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  position: relative;
+}
+.gov-flow-step:not(:last-child) .gov-flow-node {
+  margin-right: 8px;
+}
+.gov-flow-step:last-child .gov-flow-node {
+  min-width: 0;
+  overflow: visible;
+}
+.gov-flow-arrow {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-muted);
+  font-size: 18px;
+  z-index: 3;
+  line-height: 1;
+}
+.gov-flow-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(168,134,68,0.15);
+  border: 1px solid rgba(168,134,68,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.gov-flow-icon svg { display: block; }
+.gov-flow-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.3;
+}
+.gov-flow-sub {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.42);
+  line-height: 1.4;
+  display: none;
+}
+@media (min-width: 680px) { .gov-flow-sub { display: block; } }
+@media (max-width: 680px) {
+  .gov-flow-steps { flex-direction: column; gap: 2px; }
+  .gov-flow-step::after { display: none; }
+  .gov-flow-step:not(:last-child) .gov-flow-node { margin-right: 0; margin-bottom: 0; }
+  .gov-flow-node { flex-direction: row; text-align: left; padding: 14px 16px; gap: 14px; border-top: none; border-left: 2px solid var(--steel-light); }
+  .gov-flow-arrow { display: none; }
+}
+@media print {
+  .gov-flow-node { padding: 12px 6px 10px; }
+  .gov-flow-title { font-size: 9px; letter-spacing: 0.05em; }
+  .gov-flow-icon { width: 26px; height: 26px; }
+  .gov-flow-step:not(:last-child) .gov-flow-node { margin-right: 6px; }
+  .toc-bar { display: none; }
+}
+
+/* ── Visual 2: Pressure points 2x2 grid ── */
+.pressure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 2em 0 0;
+}
+.pressure-cell {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 22px 24px 20px;
+}
+.pressure-cell-type {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-bottom: 8px;
+  display: block;
+}
+.pressure-cell h4 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.pressure-cell p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mid);
+  margin-bottom: 0;
+}
+.pressure-cell p + p { margin-top: 0.6em; }
+@media (max-width: 540px) {
+  .pressure-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Visual 3: ZDR split diagram ── */
+.zdr-diagram {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: 1.5em 0 0.5em;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 16px;
+}
+.zdr-row {
+  display: table-row;
+}
+.zdr-col {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 33%;
+  padding: 0 6px;
+}
+.zdr-col-sep {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 20px;
+  font-size: 16px;
+  color: var(--rule);
+  padding: 0;
+}
+.zdr-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+.zdr-box {
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 12px 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.zdr-status {
+  margin-top: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.zdr-status.fail { color: #b84040; }
+.zdr-status.pass { color: #3a7a4a; }
+.zdr-col.combined .zdr-box {
+  border-color: var(--steel);
+  background: var(--callout-bg);
+}
+.zdr-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  color: var(--mid);
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.04em;
+  display: block;
+}
+
+/* ── Visual 4: EIS-01 four-component chain ── */
+.eis-chain {
+  margin: 1.5em 0 0.5em;
+  border: 1px solid var(--rule);
+  background: #fff;
+  overflow: hidden;
+}
+.eis-chain-header {
+  background: var(--navy);
+  padding: 12px 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+.eis-chain-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.eis-component {
+  padding: 18px 16px;
+  border-right: 1px solid var(--rule);
+  position: relative;
+}
+.eis-component:last-child { border-right: none; }
+.eis-component-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  display: block;
+}
+.eis-component h5 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.eis-component p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--mid);
+  margin-bottom: 0;
+}
+.eis-chain-footer {
+  border-top: 1px solid var(--rule);
+  padding: 10px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  color: var(--steel-light);
+  background: var(--cream);
+  letter-spacing: 0.03em;
+}
+.eis-chain-footer strong {
+  color: var(--navy);
+}
+@media (max-width: 600px) {
+  .eis-chain-body { grid-template-columns: 1fr 1fr; }
+  .eis-component:nth-child(2) { border-right: none; }
+  .eis-component { border-bottom: 1px solid var(--rule); }
+  .eis-component:nth-child(3), .eis-component:nth-child(4) { border-bottom: none; }
+}
+
+/* ── Visual 5: Framework comparison mini-table ── */
+.framework-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0 0.5em;
+  font-size: 14px;
+}
+.framework-table thead tr {
+  background: var(--navy);
+}
+.framework-table thead th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 400;
+}
+.framework-table tbody tr {
+  border-bottom: 1px solid var(--rule);
+  background: #fff;
+}
+.framework-table tbody tr:last-child { border-bottom: none; }
+.framework-table tbody tr:nth-child(even) { background: var(--cream); }
+.framework-table td {
+  padding: 13px 16px;
+  vertical-align: top;
+  line-height: 1.5;
+  color: var(--ink);
+  font-family: 'Source Sans 3', sans-serif;
+}
+.framework-table td:first-child {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.framework-table td .strength { color: #3a7a4a; font-size: 13px; }
+.framework-table td .limitation { color: #7a5a3a; font-size: 13px; }
+.framework-table-wrap {
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+  margin: 1.5em 0 0.5em;
+}
+.framework-table-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+
+/* ── Engagement section ── */
+.engagement {
+  margin: 3em 0;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--steel);
+  background: #fff;
+  overflow: hidden;
+}
+.engagement-header {
+  padding: 28px 32px 0;
+}
+.engagement-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  display: block;
+  margin-bottom: 12px;
+}
+.engagement-header h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+.engagement-header p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--mid);
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.engagement-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.engagement-option {
+  padding: 22px 24px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.engagement-option:nth-child(even) { border-right: none; }
+.engagement-option:nth-child(3),
+.engagement-option:nth-child(4) { border-bottom: none; }
+.engagement-option-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+}
+.engagement-option h4 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.engagement-option p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--mid);
+  margin-bottom: 0;
+}
+.engagement-footer {
+  background: var(--cream);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--rule);
+}
+.engagement-footer p {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--mid);
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.engagement-footer a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  border: 1px solid var(--navy);
+  padding: 10px 20px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+.engagement-footer a:hover {
+  background: var(--navy);
+  color: #fff;
+}
+@media (max-width: 540px) {
+  .engagement-options { grid-template-columns: 1fr; }
+  .engagement-option { border-right: none; border-bottom: 1px solid var(--rule); }
+  .engagement-option:last-child { border-bottom: none; }
+  .engagement-footer { flex-direction: column; align-items: flex-start; }
+}
+
+
+/* ── Legal disclaimer ── */
+.legal-disclaimer {
+  margin-top: 2em;
+  padding: 18px 24px;
+  background: var(--cream);
+  border-left: 3px solid var(--rule);
+  font-family: 'DM Mono', monospace;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--mid);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.legal-disclaimer strong {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="page-header">
+  <span class="org">Institute for Autonomous Governance</span>
+  <a href="https://join.araf-standard.org" class="toolkit-link" target="_blank" rel="noopener">Download Toolkit</a>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-label">Practitioner Resource &nbsp;·&nbsp; In-House Legal</span>
+    <h1>AI Governance for In-House Legal Teams: A Practical Operating Model for the World We Actually Live In</h1>
+    <p class="hero-standfirst">In-house legal teams do not need a perfect AI governance framework before acting. They need an operating model that can identify live usage, classify risk, and make adoption governable now.</p>
+    <div class="hero-meta">
+      <div class="byline">
+        <strong>Carly Martin</strong>
+        Founder, Institute for Autonomous Governance
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky nav -->
+<div class="toc-bar">
+  <nav>
+    <a href="#question">The question</a>
+    <a href="#unsolved">Why unsolved</a>
+    <a href="#heartburn">Four pressure points</a>
+    <a href="#model">Six-step model</a>
+    <a href="#dual">Legal's dual role</a>
+    <a href="#90days">90 days</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#endnotes">Notes</a>
+  </nav>
+</div>
+
+<!-- Body -->
+<main class="article-body">
+
+  <!-- Section 1 -->
+  <h2 id="question">The Question In-House Teams Are Really Asking</h2>
+
+  <p>A GC recently asked a blunt question on LinkedIn: does anyone have practical, actionable guidance on AI governance for in-house legal teams? Not a vendor pitch. Not a policy that sits on a shelf. Something that reflects the reality that AI is already being used across the organisation, whether legal formally approved it or not.</p>
+
+  <p>The comments made the problem clear. This field does not feel settled. Existing frameworks often do not match operational reality, yet in-house teams are being asked to govern live adoption while the rules, tools, and risk patterns keep changing.</p>
+
+  <p>What follows is not a complete answer to AI governance. It is a practical operating model for in-house legal teams trying to govern AI use in organisations where adoption is already ahead of policy.</p>
+
+  <!-- Stats -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <span class="number">80%</span>
+      <span class="label">of employees use AI in their roles; only 22% use exclusively employer-provided tools</span>
+    </div>
+    <div class="stat-card">
+      <span class="number">57%</span>
+      <span class="label">of employees actively hide their AI usage at work</span>
+    </div>
+    <div class="stat-card">
+      <span class="number">7%</span>
+      <span class="label">of organisations have a documented AI governance framework that is actively followed</span>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <h2 id="unsolved">Why This Field Still Feels Unsolved</h2>
+
+  <p>AI governance for in-house legal is not a solved discipline, and pretending otherwise is part of the problem. But organisations do not get to defer the issue until a perfect framework appears.</p>
+
+  <p>The practical task for legal is narrower and harder: identify where AI is already being used, distinguish low-consequence productivity use from high-consequence decision use, and put in place controls that make adoption governable rather than invisible.</p>
+
+  <p>Employee AI use is now widespread, and a large proportion of that use still occurs outside employer-provided environments. The term "shadow AI" is counterproductive. It implies employees are doing something wrong by using tools that make them more productive. A more useful framing: you have ungoverned AI. The goal is visibility, controlled pathways, and accountable use, not blanket prohibition.</p>
+
+  <p>Research into governance failure identifies three root causes: misaligned goals, unclear ownership, and unchanged workflows. A static policy document addresses none of these. Policies are necessary, but insufficient on their own. They tell people what they cannot do without creating a structure for what they can do, under what conditions, with what oversight. Governance needs to be operational, adaptive, and able to account for developments such as agents, connectors, and increasing model capability.</p>
+
+
+  <!-- Visual 1: Governance flow diagram -->
+  <div class="gov-flow">
+    <span class="gov-flow-label">The governance operating model</span>
+    <div class="gov-flow-steps">
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node">
+          <div class="gov-flow-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6" stroke="#A88644" stroke-width="1.5"/>
+              <path d="M5 8h6M8 5v6" stroke="#A88644" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title">Live AI<br>adoption</span>
+          <span class="gov-flow-sub">Approved and unapproved tools in active use</span>
+        </div>
+      </div>
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node">
+          <div class="gov-flow-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="7" r="3.5" stroke="#A88644" stroke-width="1.5"/>
+              <path d="M8 11v3" stroke="#A88644" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M2 7a6 6 0 0 1 12 0" stroke="#A88644" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title">Visibility</span>
+          <span class="gov-flow-sub">Inventory of tools, data flows, and autonomous connections</span>
+        </div>
+      </div>
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node">
+          <div class="gov-flow-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="3" width="12" height="10" rx="1" stroke="#A88644" stroke-width="1.5"/>
+              <path d="M5 6h6M5 9h4" stroke="#A88644" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title">Classification</span>
+          <span class="gov-flow-sub">Risk tier assigned by consequence, not tool name</span>
+        </div>
+      </div>
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node">
+          <div class="gov-flow-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 5l4 3-4 3" stroke="#A88644" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title">Control<br>pathways</span>
+          <span class="gov-flow-sub">Approved tools, data rules, human review requirements</span>
+        </div>
+      </div>
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node">
+          <div class="gov-flow-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#A88644" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="8" cy="8" r="2" stroke="#A88644" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title">Escalation /<br>oversight</span>
+          <span class="gov-flow-sub">Kill switches, approval gates, incident response</span>
+        </div>
+      </div>
+
+      <div class="gov-flow-step">
+        <div class="gov-flow-node" style="border-top-color: var(--gold);">
+          <div class="gov-flow-icon" style="background: rgba(168,134,68,0.25); border-color: rgba(168,134,68,0.5);">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13l3-4 3 2 4-6" stroke="#A88644" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="13" cy="4" r="1.5" fill="#A88644"/>
+            </svg>
+          </div>
+          <span class="gov-flow-title" style="color: var(--gold-muted);">Evidence /<br>defensibility</span>
+          <span class="gov-flow-sub">Contemporaneous records, audit trail, reconstructability</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <h2 id="heartburn">The Four Things Giving In-House Teams Immediate Heartburn</h2>
+
+  <p>Four specific pressure points are driving the sense that existing governance artefacts are lagging operational reality.</p>
+
+  <!-- Visual 2: Pressure points 2x2 grid -->
+  <div class="pressure-grid">
+    <div class="pressure-cell">
+      <span class="pressure-cell-type">Legal exposure</span>
+      <h4>1. Privilege instability after Heppner</h4>
+      <p>In February 2026, Judge Rakoff held in <em>United States v. Heppner</em> that a defendant's communications with Anthropic's consumer Claude platform were protected by neither attorney-client privilege nor work product doctrine. The court found no privileged relationship, no reasonable expectation of confidentiality, and that sharing AI outputs with lawyers afterward did not "alchemically change" them into privileged communications.</p>
+      <p>In-house teams should treat unmanaged consumer AI tools as inappropriate for privileged, confidential, or trade secret material. Enterprise platforms with negotiated ZDR and contractual training prohibitions may satisfy Kovel requirements, but this remains untested in court.</p>
+      <p>The same principle extends to autonomous decision records. Heppner's logic is that governance cannot be asserted after the fact; it must be demonstrable from records produced independently of the system being assessed. A log the system generated about its own actions does not establish institutional admissibility.<sup>[17]</sup></p>
+    </div>
+    <div class="pressure-cell">
+      <span class="pressure-cell-type">Operational risk</span>
+      <h4>2. Agents going off-script</h4>
+      <p>Recent incidents have shown that autonomous systems can expose restricted information, ignore operational constraints, or continue acting after instructions were meant to stop them. In one case, an AI agent autonomously exposed proprietary code and business strategies to unauthorised users for approximately two hours. In another, an agent deleted hundreds of messages after an automated process stripped its safety instructions during context management.</p>
+      <p>Nearly half of CISOs surveyed in 2026 had observed AI agents exhibiting unintended or unauthorised behaviour, and only 5% were confident they could contain a compromised AI agent.<sup>[9]</sup></p>
+    </div>
+    <div class="pressure-cell">
+      <span class="pressure-cell-type">Infrastructure risk</span>
+      <h4>3. Connectors, MCP, and permission sprawl</h4>
+      <p>Model Context Protocol (MCP) gives AI agents standardised access to external tools and enterprise systems. Once a tool is connected, it is controlled by the model, with no human operating the lever. If an MCP-connected model sends an erroneous notice to a counterparty, submits a regulatory filing with incorrect data, or modifies a contract record, the legal consequences flow back to the organisation.</p>
+      <p>Because MCP connectors can chain together, errors propagate across multiple systems before they are caught. The more autonomy built into the workflow, the wider the potential blast radius of a single error.<sup>[11]</sup></p>
+    </div>
+    <div class="pressure-cell">
+      <span class="pressure-cell-type">Contractual risk</span>
+      <h4>4. Opaque training data and vendor uncertainty</h4>
+      <p>Most organisations cannot confirm what data their AI vendors trained on, whether their inputs are being used to improve models, or what happens to their data if the vendor becomes subject to a litigation hold. In 2025, a US court ordered a major AI provider to preserve all user interactions as part of a copyright lawsuit. Only customers with enterprise or Zero Data Retention agreements were excluded.</p>
+      <p>Vendors also add AI capabilities mid-contract, creating gaps where existing terms no longer address the actual risks.<sup>[13]</sup></p>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <h2 id="model">A Practical Six-Step Operating Model</h2>
+
+  <p>The consensus among practitioners is to build on what you already have (privacy, vendor risk, data governance) rather than creating AI governance from scratch, and to layer in AI-specific controls where existing processes fall short.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Map what is actually happening</h4>
+        <p>Before writing or rewriting policy, inventory every AI tool in use, including personal subscriptions and MCP connectors. You cannot govern use you cannot see. Cross-reference IT procurement records, expense reports, and network logs.</p>
+        <span class="ref">Toolkit: Annexure A, AI Inventory Template</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Classify by risk, not by tool</h4>
+        <p>Not every AI use case carries the same risk. Marketing copy and autonomous underwriting are fundamentally different governance conversations. Use a tiered classification that drives proportional controls: standard, elevated, high, and autonomous.</p>
+        <span class="ref">Toolkit: Annexure B, Risk Classification Matrix</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Secure the data layer</h4>
+        <p>For any deployment handling sensitive, confidential, or privileged information, require Zero Data Retention configurations. ZDR has two components: a contractual commitment in the vendor agreement and a technical implementation through the relevant API configuration. One without the other is insufficient.</p>
+        <!-- Visual 3: ZDR split diagram -->
+        <div style="margin: 1.5em 0 0.5em; background: var(--cream); border: 1px solid var(--rule); padding: 16px; page-break-inside: avoid; break-inside: avoid;">
+          <table style="width: 100%; border-collapse: separate; border-spacing: 6px;">
+            <tr>
+              <td style="text-align: center; vertical-align: top; width: 38%; padding: 0 6px;">
+                <span style="font-family: DM Mono, monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #b84040; display: block; margin-bottom: 8px;">Contractual only</span>
+                <div style="border: 1px solid var(--rule); background: #fff; padding: 12px 8px; font-size: 13px; line-height: 1.4; color: var(--ink);">Written agreement to not retain data</div>
+                <div style="margin-top: 8px; font-family: DM Mono, monospace; font-size: 10px; color: #b84040;">&#x2715; Insufficient alone</div>
+              </td>
+              <td style="text-align: center; vertical-align: middle; width: 12px; font-size: 16px; color: var(--rule); padding: 0;">+</td>
+              <td style="text-align: center; vertical-align: top; width: 38%; padding: 0 6px;">
+                <span style="font-family: DM Mono, monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #3a7a4a; display: block; margin-bottom: 8px;">Both required</span>
+                <div style="border: 1px solid var(--steel); background: var(--callout-bg); padding: 12px 8px; font-size: 13px; line-height: 1.4; color: var(--ink);"><strong>Contractual + Technical</strong><br>ZDR endpoint</div>
+                <div style="margin-top: 8px; font-family: DM Mono, monospace; font-size: 10px; color: #3a7a4a;">&#x2713; Satisfies requirement</div>
+              </td>
+              <td style="text-align: center; vertical-align: middle; width: 12px; font-size: 16px; color: var(--rule); padding: 0;">&#x2260;</td>
+              <td style="text-align: center; vertical-align: top; width: 38%; padding: 0 6px;">
+                <span style="font-family: DM Mono, monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #b84040; display: block; margin-bottom: 8px;">Technical only</span>
+                <div style="border: 1px solid var(--rule); background: #fff; padding: 12px 8px; font-size: 13px; line-height: 1.4; color: var(--ink);">Dedicated API endpoint configured</div>
+                <div style="margin-top: 8px; font-family: DM Mono, monospace; font-size: 10px; color: #b84040;">&#x2715; Insufficient alone</div>
+              </td>
+            </tr>
+          </table>
+          <p style="font-family: DM Mono, monospace; font-size: 10.5px; color: var(--mid); text-align: center; margin-top: 10px; letter-spacing: 0.04em;">Source: vLex analysis &nbsp;&#xB7;&nbsp; EIS-01, Section 4 (Contextual State independence requirement)</p>
+        </div>
+        <span class="ref">Toolkit: Annexure C, AI Vendor Due Diligence Checklist</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Create approved pathways</h4>
+        <p>Employees will continue using AI whether or not formal approval catches up. The governance objective is to move usage into visible, managed pathways rather than forcing it into unmanaged ones. For each risk tier, define what tools are approved, what data can be input, what human review is required, and how outputs are documented.</p>
+        <span class="ref">Toolkit: Annexure D, Acceptable Use Framework</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Address agents and connectors specifically</h4>
+        <p>Traditional AI governance assumes a human types a prompt and reviews an output. Agents and MCP connectors break that model. For autonomous deployments, require: agent identity verification, short-lived scoped credentials, policy gates on every tool call, sandboxed execution, approval workflows for sensitive actions, and complete action lineage logging.</p>
+        <p style="margin-top: 1.2em; padding-top: 1em; border-top: 1px solid var(--rule);">Logging alone is insufficient. For each consequential autonomous decision, the record must establish four things: what the system did and when (Execution Event); what state it acted on, captured at execution time by independent infrastructure and not reconstructed afterward (Contextual State); who or what authorised the action (Authority and Attribution); and a tamper-evident integrity anchor produced independently of the system that generated the record. A decision log missing any of these components does not establish reconstructability. It establishes that something happened. That is not the same thing.<sup>[17]</sup></p>
+        <!-- Visual 4: EIS-01 four-component chain -->
+        <div class="eis-chain">
+          <div class="eis-chain-header">EIS-01 &mdash; Canonical governance decision record: four required components</div>
+          <div class="eis-chain-body">
+            <div class="eis-component">
+              <span class="eis-component-num">C1</span>
+              <h5>Execution Event</h5>
+              <p>What the system did, when, and which system instance produced it. The primary event record.</p>
+            </div>
+            <div class="eis-component">
+              <span class="eis-component-num">C2</span>
+              <h5>Contextual State</h5>
+              <p>Input data state at execution, model version, policy set invoked. Must be captured contemporaneously &mdash; not reconstructed after the fact.</p>
+            </div>
+            <div class="eis-component">
+              <span class="eis-component-num">C3</span>
+              <h5>Authority &amp; Attribution</h5>
+              <p>Who or what authorised the action. Links the decision to the governance architecture under which it was produced.</p>
+            </div>
+            <div class="eis-component" style="border-right:none; background: var(--callout-bg);">
+              <span class="eis-component-num">C4</span>
+              <h5>Integrity Anchor</h5>
+              <p>Tamper-evident reference produced by infrastructure independent of the system. Without C4, the record is at most Tier 2 evidence regardless of C1&ndash;C3 quality.</p>
+            </div>
+          </div>
+          <div class="eis-chain-footer">A record missing any component does not establish <strong>reconstructability</strong>. &nbsp;&#xB7;&nbsp; Source: EIS-01 Evidence Infrastructure Standard, Institute for Autonomous Governance (March 2026)</div>
+        </div>
+        <span class="ref">Toolkit: Annexure E, Autonomous Agent Controls Checklist &nbsp;&middot;&nbsp; EIS-01, Evidence Infrastructure Standard</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <h4>Align to a framework and build measurable governance</h4>
+        <p>For teams that need a more formal governance classification layer, frameworks such as NIST AI RMF, ISO 42001, the EU AI Act, or ARAF's Governance Benchmark Index can provide structure. The question is not which framework name appears on the slide deck. The question is whether your organisation can classify use cases, allocate accountability, control high-consequence deployments, and evidence governance when challenged.</p>
+        <!-- Visual 5: Framework comparison mini-table -->
+        <div class="framework-table-wrap">
+          <table class="framework-table">
+            <thead>
+              <tr>
+                <th>Framework</th>
+                <th>Primary strength</th>
+                <th>Key limitation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>NIST AI RMF</td>
+                <td><span class="strength">Flexible, sector-agnostic. Strong risk-based foundation. Widely adopted as baseline.</span></td>
+                <td><span class="limitation">Voluntary. No certification pathway. Does not produce externally verifiable governance signals.</span></td>
+              </tr>
+              <tr>
+                <td>ISO 42001</td>
+                <td><span class="strength">First certifiable AI management system standard. Third-party verifiable. Useful for procurement and regulatory purposes.</span></td>
+                <td><span class="limitation">Does not yet address autonomous agent governance specifically. Certification is resource-intensive.</span></td>
+              </tr>
+              <tr>
+                <td>EU AI Act</td>
+                <td><span class="strength">Compliance ceiling for EU operations. Risk-based classification with defined conformity assessment for high-risk systems.</span></td>
+                <td><span class="limitation">Jurisdiction-limited. Compliance framing rather than governance architecture. Limited agent-specific provisions.</span></td>
+              </tr>
+              <tr>
+                <td>ARAF / GBI</td>
+                <td><span class="strength">Designed specifically for autonomous system deployments. Produces measurable GBI score for boards, insurers, and institutional stakeholders. Open standard (CC BY 4.0).</span></td>
+                <td><span class="limitation">Newer standard. Accredited assessor ecosystem still building. Requires institutional familiarity to interpret.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="framework-table-caption">Practitioner consensus: use NIST as the risk-based foundation, ISO 42001 where certifiable governance is required, EU AI Act as the compliance ceiling for EU operations, and ARAF/GBI where measurable governance signals are needed for institutional stakeholders.</p>
+        <span class="ref">Toolkit: Annexure F, Framework Alignment Guide</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <h2 id="dual">Legal as Both Governed Function and Governance Function</h2>
+
+  <p>The legal team needs to be using AI itself to credibly advise the organisation. A legal department that prohibits AI internally while advising business units on AI governance lacks both the practical understanding and the institutional credibility to lead.</p>
+
+  <p>Internal credibility matters here. A legal team that has no governed internal AI use of its own will struggle to set realistic rules for the rest of the enterprise.</p>
+
+  <p>That means the legal team's own AI adoption, with appropriate guardrails, humans in the loop, and enterprise-grade tools, is a governance accelerant, not a governance risk.</p>
+
+  <blockquote>
+    <p>"Rather than viewing governance as a compliance exercise or a brake on innovation, leading organisations will recognise it as an accelerator. With clear guardrails, defined ownership, and transparent evaluation processes, teams can move faster and avoid costly missteps."</p>
+    <cite>ValidMind, 2026</cite>
+  </blockquote>
+
+  <!-- Section 6 -->
+  <h2 id="90days">What a Legal Team Can Do in the Next 90 Days</h2>
+
+  <p>None of these steps require a perfect framework. All of them make your organisation materially more governable than it was 90 days ago.</p>
+
+  <div class="action-list">
+    <span class="box-label">90-Day Action List</span>
+    <ol>
+      <li>Map actual usage across the organisation, including personal subscriptions and unapproved tools.</li>
+      <li>Define no-go zones for privileged, confidential, and highly sensitive material.</li>
+      <li>Classify your top use cases by consequence, not by vendor name.</li>
+      <li>Create approved pathways for low-risk and high-consequence use.</li>
+      <li>Review vendor terms for retention, training, permissions, and connector access.</li>
+      <li>Establish an escalation path for agents and autonomous actions, including a kill switch and incident protocol.</li>
+    </ol>
+  </div>
+
+  <p>AI governance for in-house legal is not yet a settled discipline. But that is not a reason to wait. The organisations that will handle this transition best will not be those with the longest policies or the loudest AI strategy. They will be the ones that can see where AI is being used, distinguish low-consequence productivity use from high-consequence decision use, and build controls that make adoption governable in practice.</p>
+
+  <p>The legal team that answers that question with a system, not a document, is the one that will define how governed AI adoption works in practice.</p>
+
+
+  <!-- Engagement section -->
+  <div class="engagement">
+    <div class="engagement-header">
+      <span class="engagement-label">Working with the Institute</span>
+      <h3>Knowing what to do and having the architecture to do it are different problems.</h3>
+      <p>This article gives you an operating model. The harder part is implementation: building governance infrastructure that holds up under board scrutiny, insurer due diligence, and regulatory examination. That is where Carly Martin and the Institute for Autonomous Governance work with legal and governance teams directly.</p>
+    </div>
+    <div class="engagement-options">
+      <div class="engagement-option">
+        <span class="engagement-option-num">01</span>
+        <h4>ARAF assessment of your AI deployments</h4>
+        <p>A structured assessment of your autonomous system governance against the six ARAF dimensions, producing a Governance Benchmark Index score and a certification-ready report your board, insurers, and institutional counterparties can rely on.</p>
+      </div>
+      <div class="engagement-option">
+        <span class="engagement-option-num">02</span>
+        <h4>Governance architecture advisory</h4>
+        <p>Working with your legal, risk, and technology teams to design an operating model that maps your AI deployment footprint, classifies risk, builds control pathways, and constructs the evidence infrastructure required for defensibility.</p>
+      </div>
+      <div class="engagement-option">
+        <span class="engagement-option-num">03</span>
+        <h4>Practitioner sessions and events</h4>
+        <p>Carly works with legal teams, board governance committees, and industry groups on practical AI governance sessions. If your organisation or association is looking for a practitioner voice on this topic, get in touch.</p>
+      </div>
+      <div class="engagement-option">
+        <span class="engagement-option-num">04</span>
+        <h4>Start with a conversation</h4>
+        <p>If you are trying to work out where your organisation sits on this and what a sensible next step looks like, the most useful starting point is usually a direct conversation. No pitch. Just a practical discussion about where the gaps are and what would actually move the needle.</p>
+      </div>
+    </div>
+    <div class="engagement-footer">
+      <p>Institute for Autonomous Governance &nbsp;&middot;&nbsp; araf-standard.org</p>
+      <a href="/cdn-cgi/l/email-protection#2f4c4e5d43566f4e5d4e49025c5b4e414b4e5d4b01405d48">Get in touch</a>
+    </div>
+  </div>
+
+  <!-- Toolkit CTA -->
+  <div class="toolkit-cta" id="toolkit">
+    <div>
+      <h3>Download the Toolkit</h3>
+      <p>Operational templates for legal, risk, and governance teams. Adapt internally. Review quarterly.</p>
+      <ul>
+        <li>Annexure A &nbsp;·&nbsp; AI Inventory Template</li>
+        <li>Annexure B &nbsp;·&nbsp; Risk Classification Matrix</li>
+        <li>Annexure C &nbsp;·&nbsp; AI Vendor Due Diligence Checklist</li>
+        <li>Annexure D &nbsp;·&nbsp; Acceptable Use Framework</li>
+        <li>Annexure E &nbsp;·&nbsp; Autonomous Agent Controls Checklist</li>
+        <li>Annexure F &nbsp;·&nbsp; Framework Alignment Guide</li>
+      </ul>
+    </div>
+    <a href="https://join.araf-standard.org" class="cta-btn" target="_blank" rel="noopener">Download PDF</a>
+  </div>
+
+  <!-- Endnotes -->
+  <div class="endnotes" id="endnotes">
+    <h2>Endnotes</h2>
+    <ol>
+      <li>IBM survey of 1,000 US office workers (2025): 80% use AI in their roles; only 22% rely exclusively on employer-provided tools. Harmonic Security analysis of 22.4 million enterprise GenAI prompts: employees at over 90% of organisations use AI through personal accounts IT never approved.</li>
+      <li>eSecurity Planet (2025): 57% of employees actively hide AI usage at work.</li>
+      <li>Consilio 2026 Global Survey: 7% have a documented AI governance framework actively followed; 14% have no formal governance.</li>
+      <li>MIT research on AI governance failure identifies three root causes: misaligned goals, unclear ownership, and unchanged workflows.</li>
+      <li><em>United States v. Heppner</em>, No. 25 Cr. 503 (JSR) (S.D.N.Y.), ruling from the bench February 10, 2026; written memorandum February 17, 2026.</li>
+      <li>Venable analysis: enterprise AI platforms with negotiated confidentiality terms may satisfy Kovel requirements, but this remains untested.</li>
+      <li>Meta Sev 1 incident, March 18, 2026: AI agent autonomously exposed proprietary code and business strategies to unauthorised engineers for approximately two hours. Reported by EDRM/ComplexDiscovery.</li>
+      <li>Meta OpenClaw agent incident, February 2026: agent deleted over 200 messages after context window compaction stripped safety instructions. Reported by EDRM/ComplexDiscovery.</li>
+      <li>Saviynt 2026 CISO AI Risk Report: 47% of CISOs observed unintended agent behaviour; 5% confident in containment capability.</li>
+      <li>Anthropic's Model Context Protocol (MCP), described as a standardised interface for AI agents to access external tools and data sources.</li>
+      <li>Pillsbury (March 2026): legal consequences of MCP-connected agent errors flow back to the organisation.</li>
+      <li>OpenAI confirmed ZDR customers were excluded from the New York Times litigation preservation order because their data was never retained.</li>
+      <li>WilmerHale (2025): vendors adding AI capabilities mid-contract creates contractual gaps where existing terms no longer address key risks.</li>
+      <li>Squire Patton Boggs: build on existing privacy, data governance, and vendor assessment processes rather than creating AI governance from scratch.</li>
+      <li>vLex: ZDR requires both a contractual commitment and a dedicated technical endpoint; one without the other is insufficient.</li>
+      <li>EDRM/JDSupra (March 2026): minimum viable agent controls include identity verification, scoped credentials, policy gates, sandboxed execution, approval workflows, and action lineage logging.</li>
+      <li>EIS-01 Evidence Infrastructure Standard and EIS-01 Addendum: State Validity and Evidence-Bound Decisioning (Institute for Autonomous Governance, March 2026). The canonical governance decision record comprises four components: Execution Event, Contextual State, Authority and Attribution, and Integrity Anchor. The Addendum establishes that Contextual State assembled retrospectively shifts from Tier 1 to Tier 2 evidence regardless of the quality of other components, and that inability to evidence decision basis weakens liability architecture under D4 regardless of contractual coverage.</li>
+    </ol>
+  </div>
+
+  <hr>
+
+  <div class="disclosure">
+    Carly Martin is the Founder of the Institute for Autonomous Governance and the author of the Agentic Risk Architecture Framework (ARAF), which is referenced in this article. ARAF is an open standard licensed under CC BY 4.0.
+  </div>
+
+  <div class="legal-disclaimer">
+    <strong>Legal disclaimer</strong>
+    This article is published for general informational purposes only. It does not constitute legal advice and must not be relied upon as such. Nothing in this article creates an attorney-client or solicitor-client relationship between the reader and the Institute for Autonomous Governance, Carly Martin, or any associated entity. The legal analysis in this article reflects publicly available information as at March 2026, including judicial decisions and regulatory developments known at that date, and may not reflect subsequent changes in the law. Readers should obtain independent legal advice in relation to their specific circumstances before taking or refraining from any action.
+  </div>
+
+</main>
+
+<footer class="page-footer">
+  <p>Institute for Autonomous Governance &nbsp;&middot;&nbsp; araf-standard.org &nbsp;&middot;&nbsp; &copy; 2026</p>
+</footer>
+
+</body>
+</html>
