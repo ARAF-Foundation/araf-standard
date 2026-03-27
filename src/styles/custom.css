@@ -1324,6 +1324,35 @@ araf-cert-card--certified { border-top-color: var(--araf-ink); }
 
 .araf-standard-links a:hover { color: var(--araf-ink); }
 
+.site-legal-footer {
+  border-top: 1px solid var(--araf-rule);
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+}
+
+.site-legal-footer p {
+  margin: 0;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.site-legal-footer a {
+  color: var(--araf-gold);
+  text-decoration: none;
+}
+
+.site-legal-footer a:hover,
+.site-legal-footer a:focus-visible {
+  color: var(--araf-ink);
+  text-decoration: underline;
+}
+
+.site-legal-footer .footer-sep {
+  color: var(--araf-rule);
+  margin: 0 0.5rem;
+}
+
 /* Mobile adjustments */
 @media (min-width: 900px) {
   .audience-grid,

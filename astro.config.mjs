@@ -153,7 +153,18 @@ export default defineConfig({
             { label: 'Diagrams', slug: 'resources/diagrams' },
           ],
         },
+        {
+          label: 'Legal',
+          items: [
+            { label: 'Terms of Use', link: '/legal/terms-of-use/' },
+            { label: 'Privacy Policy', link: '/legal/privacy-policy/' },
+          ],
+        },
       ],
+
+      components: {
+        Footer: './src/components/Footer.astro',
+      },
 
       customCss: ['./src/styles/custom.css'],
 
