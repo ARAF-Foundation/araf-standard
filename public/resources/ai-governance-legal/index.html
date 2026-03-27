@@ -1139,21 +1139,17 @@ hr {
   <!-- Section 1 -->
   <h2 id="question">The Question In-House Teams Are Really Asking</h2>
 
-  <p>A GC recently asked a blunt question on LinkedIn: does anyone have practical, actionable guidance on AI governance for in-house legal teams? Not a vendor pitch. Not a policy that sits on a shelf. Something that reflects the reality that AI is already being used across the organisation, whether legal formally approved it or not.</p>
+  <p>A GC recently posted on LinkedIn asking for practical, actionable guidance on AI governance for in-house legal teams. Not a vendor pitch. Not a policy that sits on a shelf. Something that reflects the reality that AI is already being used across the organisation, in ways legal did not approve and cannot yet see.</p>
 
-  <p>The comments made the problem clear. This field does not feel settled. Existing frameworks often do not match operational reality, yet in-house teams are being asked to govern live adoption while the rules, tools, and risk patterns keep changing.</p>
+  <p>The comments confirmed what most practitioners already sense. Privileged material is entering consumer AI platforms. Autonomous agents are taking consequential actions without per-decision human authorisation. Vendor terms leave real exposure sitting in the gaps. And if something goes wrong, most organisations cannot yet demonstrate that their governance was operational, evidenced, and real.</p>
 
-  <p>What follows is not a complete answer to AI governance. It is a practical operating model for in-house legal teams trying to govern AI use in organisations where adoption is already ahead of policy.</p>
+  <p>What follows is not a complete answer to AI governance. It is a practical operating model for in-house legal teams governing AI use in organisations where adoption has already outrun policy.</p>
 
   <!-- Stats -->
   <div class="stat-row">
     <div class="stat-card">
       <span class="number">80%</span>
       <span class="label">of employees use AI in their roles; only 22% use exclusively employer-provided tools</span>
-    </div>
-    <div class="stat-card">
-      <span class="number">57%</span>
-      <span class="label">of employees actively hide their AI usage at work</span>
     </div>
     <div class="stat-card">
       <span class="number">7%</span>
@@ -1271,7 +1267,6 @@ hr {
       <h4>1. Privilege instability after Heppner</h4>
       <p>In February 2026, Judge Rakoff held in <em>United States v. Heppner</em> that a defendant's communications with Anthropic's consumer Claude platform were protected by neither attorney-client privilege nor work product doctrine. The court found no privileged relationship, no reasonable expectation of confidentiality, and that sharing AI outputs with lawyers afterward did not "alchemically change" them into privileged communications.</p>
       <p>In-house teams should treat unmanaged consumer AI tools as inappropriate for privileged, confidential, or trade secret material. Enterprise platforms with negotiated ZDR and contractual training prohibitions may satisfy Kovel requirements, but this remains untested in court.</p>
-      <p>The same principle extends to autonomous decision records. Heppner's logic is that governance cannot be asserted after the fact; it must be demonstrable from records produced independently of the system being assessed. A log the system generated about its own actions does not establish institutional admissibility.<sup>[17]</sup></p>
     </div>
     <div class="pressure-cell">
       <span class="pressure-cell-type">Operational risk</span>
@@ -1282,16 +1277,18 @@ hr {
     <div class="pressure-cell">
       <span class="pressure-cell-type">Infrastructure risk</span>
       <h4>3. Connectors, MCP, and permission sprawl</h4>
-      <p>Model Context Protocol (MCP) gives AI agents standardised access to external tools and enterprise systems. Once a tool is connected, it is controlled by the model, with no human operating the lever. If an MCP-connected model sends an erroneous notice to a counterparty, submits a regulatory filing with incorrect data, or modifies a contract record, the legal consequences flow back to the organisation.</p>
-      <p>Because MCP connectors can chain together, errors propagate across multiple systems before they are caught. The more autonomy built into the workflow, the wider the potential blast radius of a single error.<sup>[11]</sup></p>
+      <p>Model Context Protocol (MCP) gives AI agents standardised access to external tools and enterprise systems. Once connected, the model controls the lever. If an MCP-connected agent sends an erroneous notice to a counterparty, submits a filing with incorrect data, or modifies a contract record, the legal consequences flow back to the organisation.</p>
+      <p>Connectors chain together, which means errors propagate across multiple systems before they are caught. The more autonomy in the workflow, the wider the blast radius of a single failure.<sup>[11]</sup></p>
     </div>
     <div class="pressure-cell">
       <span class="pressure-cell-type">Contractual risk</span>
       <h4>4. Opaque training data and vendor uncertainty</h4>
-      <p>Most organisations cannot confirm what data their AI vendors trained on, whether their inputs are being used to improve models, or what happens to their data if the vendor becomes subject to a litigation hold. In 2025, a US court ordered a major AI provider to preserve all user interactions as part of a copyright lawsuit. Only customers with enterprise or Zero Data Retention agreements were excluded.</p>
-      <p>Vendors also add AI capabilities mid-contract, creating gaps where existing terms no longer address the actual risks.<sup>[13]</sup></p>
+      <p>Most organisations cannot confirm what data their AI vendors trained on, whether inputs are being used to improve models, or what happens to their data if the vendor faces a litigation hold. In 2025, a US court ordered a major AI provider to preserve all user interactions as part of a copyright lawsuit. Only customers with enterprise or Zero Data Retention agreements were excluded.</p>
+      <p>Vendors add capabilities mid-contract. Existing terms rarely keep pace with actual risk.<sup>[13]</sup></p>
     </div>
   </div>
+
+  <div style="margin: 1.5em 0; padding: 16px 22px; border-left: 4px solid var(--steel); background: var(--callout-bg); font-size: 15.5px; line-height: 1.65; color: var(--ink);">Governance cannot be asserted after the fact. It must be demonstrable from records produced independently of the system being assessed. A log the system generated about its own actions does not establish institutional admissibility.<sup>[17]</sup></div>
 
   <!-- Section 4 -->
   <h2 id="model">A Practical Six-Step Operating Model</h2>
@@ -1477,8 +1474,9 @@ hr {
   <div class="engagement">
     <div class="engagement-header">
       <span class="engagement-label">Working with the Institute</span>
+      <p style="font-size: 15px; color: var(--mid); margin-bottom: 1.2em; font-family: 'Source Sans 3', sans-serif; font-style: italic;">For some teams, the challenge is no longer understanding the problem. It is building the governance architecture to operationalise it.</p>
       <h3>Knowing what to do and having the architecture to do it are different problems.</h3>
-      <p>This article gives you an operating model. The harder part is implementation: building governance infrastructure that holds up under board scrutiny, insurer due diligence, and regulatory examination. That is where Carly Martin and the Institute for Autonomous Governance work with legal and governance teams directly.</p>
+      <p>This article gives you an operating model. The harder part is implementation: building governance classification infrastructure, evidence architecture, and institutional accountability structures that hold up under board scrutiny, insurer due diligence, and regulatory examination. That is where Carly Martin and the Institute for Autonomous Governance work with legal and governance teams directly.</p>
     </div>
     <div class="engagement-options">
       <div class="engagement-option">
@@ -1512,7 +1510,7 @@ hr {
   <div class="toolkit-cta" id="toolkit">
     <div>
       <h3>Download the Toolkit</h3>
-      <p>Operational templates for legal, risk, and governance teams. Adapt internally. Review quarterly.</p>
+      <p>Working documents legal and governance teams can adapt into live internal process. Not thought pieces. Operational templates for immediate use.</p>
       <ul>
         <li>Annexure A &nbsp;·&nbsp; AI Inventory Template</li>
         <li>Annexure B &nbsp;·&nbsp; Risk Classification Matrix</li>
@@ -1522,7 +1520,7 @@ hr {
         <li>Annexure F &nbsp;·&nbsp; Framework Alignment Guide</li>
       </ul>
     </div>
-    <a href="/downloads/ai-governance-legal-article.pdf" class="cta-btn" target="_blank" rel="noopener" download>Download PDF</a>
+    <a href="https://join.araf-standard.org" class="cta-btn" target="_blank" rel="noopener">Download PDF</a>
   </div>
 
   <!-- Endnotes -->
